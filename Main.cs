@@ -9,9 +9,10 @@ namespace final_project
         public static void  Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var new_form = new EnglishGame2.GameForm();
+            var new_form = new Game_Udi();
+            var store_form = new StoreForm();
             //var hebrew_form = new Hebrew_Memory_Matching_Game.
-            Application.Run(new_form);
+            Application.Run(store_form);
         }
     }
 }
