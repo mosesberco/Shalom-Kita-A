@@ -32,6 +32,7 @@ namespace final_project
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_Udi));
             this.lblQuestion = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,9 +52,10 @@ namespace final_project
             // 
             this.lblQuestion.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold);
             this.lblQuestion.ForeColor = System.Drawing.Color.White;
-            this.lblQuestion.Location = new System.Drawing.Point(240, 140);
+            this.lblQuestion.Location = new System.Drawing.Point(320, 172);
+            this.lblQuestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(454, 154);
+            this.lblQuestion.Size = new System.Drawing.Size(605, 190);
             this.lblQuestion.TabIndex = 0;
             this.lblQuestion.Text = "Question";
             this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,9 +69,10 @@ namespace final_project
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Gill Sans MT", 21.75F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(561, 303);
+            this.button2.Location = new System.Drawing.Point(748, 373);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 96);
+            this.button2.Size = new System.Drawing.Size(195, 118);
             this.button2.TabIndex = 2;
             this.button2.Tag = "2";
             this.button2.Text = "button2";
@@ -86,9 +89,10 @@ namespace final_project
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Gill Sans MT", 21.75F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(254, 303);
+            this.button1.Location = new System.Drawing.Point(339, 373);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 96);
+            this.button1.Size = new System.Drawing.Size(195, 118);
             this.button1.TabIndex = 3;
             this.button1.Tag = "1";
             this.button1.Text = "button1";
@@ -105,9 +109,10 @@ namespace final_project
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Gill Sans MT", 21.75F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(254, 437);
+            this.button3.Location = new System.Drawing.Point(339, 538);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 96);
+            this.button3.Size = new System.Drawing.Size(195, 118);
             this.button3.TabIndex = 4;
             this.button3.Tag = "3";
             this.button3.Text = "button3";
@@ -124,9 +129,10 @@ namespace final_project
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Gill Sans MT", 21.75F);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(561, 437);
+            this.button4.Location = new System.Drawing.Point(748, 538);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 96);
+            this.button4.Size = new System.Drawing.Size(195, 118);
             this.button4.TabIndex = 5;
             this.button4.Tag = "4";
             this.button4.Text = "button4";
@@ -135,25 +141,30 @@ namespace final_project
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(355, 143);
+            this.progressBar1.Location = new System.Drawing.Point(473, 176);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(4);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(237, 20);
+            this.progressBar1.Size = new System.Drawing.Size(316, 25);
             this.progressBar1.TabIndex = 6;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(692, 0);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(923, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(238, 138);
+            this.pictureBox1.Size = new System.Drawing.Size(317, 170);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(10, -9);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(13, -11);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(181, 146);
+            this.pictureBox2.Size = new System.Drawing.Size(241, 180);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -165,27 +176,29 @@ namespace final_project
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1041, 138);
+            this.panel1.Size = new System.Drawing.Size(1388, 170);
             this.panel1.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(113)))), ((int)(((byte)(103)))));
-            this.label1.Location = new System.Drawing.Point(275, -16);
+            this.label1.Location = new System.Drawing.Point(367, -20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(411, 179);
+            this.label1.Size = new System.Drawing.Size(548, 220);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Add and Sub\r\n Game";
+            this.label1.Text = "Add and Subtract\r\n Game";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Game_Udi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(113)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(949, 550);
+            this.ClientSize = new System.Drawing.Size(1265, 677);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
@@ -193,6 +206,7 @@ namespace final_project
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lblQuestion);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Game_Udi";
             this.Text = "Game";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
