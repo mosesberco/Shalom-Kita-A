@@ -14,7 +14,9 @@ namespace final_project
             //var hebrew_form = new Hebrew_Memory_Matching_Game.
             Application.Run(store_form);*/
             //var game = new EnsglishBuildWordsGameMenu();
-            Application.Run(new_form);
+            //Application.Run(new_form);
+            var game_Diana = new GameScreen();
+            Application.Run(new GameScreen());
         }
     }
 }

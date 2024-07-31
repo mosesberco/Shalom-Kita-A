@@ -61,6 +61,12 @@
     <Compile Include="EnsglishBuildWordsGameMenu.Designer.cs">
       <DependentUpon>EnsglishBuildWordsGameMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameScreen.Designer.cs">
+      <DependentUpon>GameScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Itemstore.cs" />
     <Compile Include="Math_udi.cs">
       <SubType>Form</SubType>
@@ -191,12 +197,16 @@
     <EmbeddedResource Include="EnsglishBuildWordsGameMenu.resx">
       <DependentUpon>EnsglishBuildWordsGameMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameScreen.resx">
+      <DependentUpon>GameScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Math_udi.resx">
       <DependentUpon>Math_udi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
