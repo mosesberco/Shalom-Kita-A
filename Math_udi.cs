@@ -108,6 +108,8 @@ namespace final_project
             }
             return false;
         }
+
+
         private bool checkAnswer(int btnANswer) { return btnANswer == this.questions[this.index].getCorrectAnswer(); }
         internal void setButtons()
         {

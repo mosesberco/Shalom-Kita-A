@@ -37,7 +37,30 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseOperations.cs" />
+    <Compile Include="EnglishBuildWordsGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnglishBuildWordsGame.Designer.cs">
+      <DependentUpon>EnglishBuildWordsGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnglishMemoryGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnglishMemoryGame.Designer.cs">
+      <DependentUpon>EnglishMemoryGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnglishMemoryGameMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnglishMemoryGameMenu.Designer.cs">
+      <DependentUpon>EnglishMemoryGameMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnsglishBuildWordsGameMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnsglishBuildWordsGameMenu.Designer.cs">
+      <DependentUpon>EnsglishBuildWordsGameMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Itemstore.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -175,9 +198,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Math_udi.resx">
       <DependentUpon>Math_udi.cs</DependentUpon>
     </EmbeddedResource>
