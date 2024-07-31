@@ -4,11 +4,12 @@ using System.IO;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace LoginRegister
+namespace final_project
 {
     class DatabaseOperations
     {
-        private string pathToExcel = @"C:\Users\liora\source\repos\LoginRegister\LoginRegister\Users.xlsx";
+        private string pathToExcel = @"..\..\Users.xlsx";
+
 
         public DatabaseOperations()
         {

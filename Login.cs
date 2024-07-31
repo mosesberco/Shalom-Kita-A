@@ -1,6 +1,4 @@
-﻿using LoginRegister;
-using OfficeOpenXml;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,18 +42,22 @@ namespace final_project
 
         private bool ValidateLogin(string username, string password)
         {
-            string filePath = @"C://Users//liora//source//repos//LoginRegister//LoginRegister//Users.xlsx";
-            FileInfo fileInfo = new FileInfo(filePath);
+            string filePath = @"C://Users//liora//source//repos//LoginRegister//LoginRegister//Users.txt";
 
-            using (ExcelPackage package = new ExcelPackage(fileInfo))
+            if (!File.Exists(filePath))
             {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets["Users"];
-                int rowCount = worksheet.Dimension.Rows;
+                MessageBox.Show("User file not found.");
+                return false;
+            }
 
-                for (int row = 2; row <= rowCount; row++)
+            var lines = File.ReadAllLines(filePath);
+            foreach (var line in lines)
+            {
+                var parts = line.Split(',');
+                if (parts.Length == 2)
                 {
-                    string storedUsername = worksheet.Cells[row, 1].Value.ToString();
-                    string storedPassword = worksheet.Cells[row, 2].Value.ToString();
+                    string storedUsername = parts[0];
+                    string storedPassword = parts[1];
 
                     if (username == storedUsername && password == storedPassword)
                     {
@@ -77,11 +79,9 @@ namespace final_project
             string username = usernameTextBox.Text;
             string password = passwordTextBox.Text;
 
-            DatabaseOperations db = new DatabaseOperations();
-            if (db.ValidateUser(username, password))
+            if (ValidateLogin(username, password))
             {
                 MessageBox.Show("Login successful!");
-
             }
             else
             {
