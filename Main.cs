@@ -10,10 +10,11 @@ namespace final_project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var new_form = new Game_Udi();
-            var x =new DatabaseOperations();
-            var store_form = new StoreForm();
+            var DB =new Database();
+            var store_form = new StoreForm(206872871, DB);
             //var hebrew_form = new Hebrew_Memory_Matching_Game.
-            //Application.Run(store_form);
+            Application.Run(store_form);
+            DB.Dispose();
             //var game = new EnsglishBuildWordsGameMenu();
             //var form = new Register();
             //Application.Run(new_form);

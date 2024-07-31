@@ -172,7 +172,7 @@ namespace final_project
                 return; // If validation fails, stop the registration process
             }
 
-            DatabaseOperations db = new DatabaseOperations();
+            Database db = new Database();
 
             if (db.RegisterUser(username, password, id, email, gender))
             {

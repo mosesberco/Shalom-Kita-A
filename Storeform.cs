@@ -15,23 +15,26 @@ namespace final_project
 {
     public partial class StoreForm : Form
     {
-        private decimal wallet;
+        private int wallet;
+        private int user_id;
         private List<Itemstore> items;
         private FlowLayoutPanel flowLayoutPanel;
         //private Label walletLabel;
+        private Database DB;
         private TextBox nameTextBox;
         private TextBox priceTextBox;
         private TextBox imagePathTextBox;
         private Button addButton;
 
-        public StoreForm()
+        public StoreForm(int id, Database DB)
         {
+            this.DB = DB;
             //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             InitializeComponent();
             InitializeCustomComponents();
             this.Resize += new EventHandler(StoreForm_Resize);
-
-            wallet = 100; // Initialize wallet with a default value
+            user_id = id;
+            wallet = DB.GetBalance(user_id); // Initialize wallet with a default value
             items = new List<Itemstore>();
             LoadItems();
             UpdateWalletLabel();
@@ -104,7 +107,7 @@ namespace final_project
         private void AddButton_Click(object sender, EventArgs e)
         {
             string name = nameTextBox.Text;
-            if (!decimal.TryParse(priceTextBox.Text, out decimal price))
+            if (!int.TryParse(priceTextBox.Text, out int price))
             {
                 MessageBox.Show("Invalid price");
                 return;
@@ -201,7 +204,7 @@ namespace final_project
                     foreach (var row in rows)
                     {
                         var name = row.Cell(1).GetValue<string>();
-                        var price = row.Cell(2).GetValue<decimal>();
+                        var price = row.Cell(2).GetValue<int>();
                         var imagePath = row.Cell(3).GetValue<string>();
 
                         string fullImagePath = Path.Combine(Application.StartupPath, @"..\..\..\" + imagePath);
@@ -230,7 +233,7 @@ namespace final_project
 
                 using (var workbook = fileExists ? new XLWorkbook(filePath) : new XLWorkbook())
                 {
-                    var worksheet = fileExists ? workbook.Worksheet("items") : workbook.Worksheets.Add("items");
+                    var worksheet = fileExists ? workbook.Worksheet("store") : workbook.Worksheets.Add("store");
 
                     var lastRow = worksheet.LastRowUsed()?.RowNumber() ?? 0;
                     var newRow = worksheet.Row(lastRow + 1);
@@ -238,6 +241,7 @@ namespace final_project
                     newRow.Cell(1).Value = item.Name;
                     newRow.Cell(2).Value = item.Price;
                     newRow.Cell(3).Value = DateTime.Now.ToString();
+                    newRow.Cell(4).Value = user_id;
 
                     workbook.SaveAs(filePath);
                 }
@@ -254,6 +258,7 @@ namespace final_project
                 wallet -= item.Price;
                 UpdateWalletLabel();
                 Add_To_excel(item);
+                DB.SetBalance(user_id, wallet);
                 MessageBox.Show($"You bought {item.Name}!");
             }
             else
