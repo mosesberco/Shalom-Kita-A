@@ -62,7 +62,7 @@
     <Compile Include="EnsglishBuildWordsGameMenu.Designer.cs">
       <DependentUpon>EnsglishBuildWordsGameMenu.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
+
     <Compile Include="HebrewGame_sapir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,15 +72,15 @@
     <Compile Include="Hebrew_Etai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hebrew_Etai.Designer.cs">
-      <DependentUpon>Hebrew_Etai.cs</DependentUpon>
-=======
+	  <Compile Include="Hebrew_Etai.Designer.cs">
+		  <DependentUpon>Hebrew_Etai.cs</DependentUpon>
+	  </Compile>
+
     <Compile Include="GameScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GameScreen.Designer.cs">
       <DependentUpon>GameScreen.cs</DependentUpon>
->>>>>>> origin/dianaMerge
     </Compile>
     <Compile Include="Itemstore.cs" />
     <Compile Include="Login.cs">
@@ -219,8 +219,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <EmbeddedResource Include="EnglishMemoryGame.resx">
       <DependentUpon>EnglishMemoryGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,7 +231,6 @@
     <EmbeddedResource Include="GameScreen.resx">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> origin/dianaMerge
     <EmbeddedResource Include="Math_udi.resx">
       <DependentUpon>Math_udi.cs</DependentUpon>
     </EmbeddedResource>
