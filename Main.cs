@@ -18,14 +18,11 @@ namespace final_project
             Application.Run(hebrew_game);
             DB.Dispose();
             //var game = new EnsglishBuildWordsGameMenu();
-<<<<<<< HEAD
             //var form = new Register();
             //Application.Run(new_form);
-=======
             //Application.Run(new_form);
             var game_Diana = new GameScreen();
             Application.Run(new GameScreen());
->>>>>>> origin/dianaMerge
         }
     }
 }
