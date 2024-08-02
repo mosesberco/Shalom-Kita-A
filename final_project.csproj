@@ -37,6 +37,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="EnglishBuildWordsGame.cs">
       <SubType>Form</SubType>
@@ -62,7 +68,19 @@
     <Compile Include="EnsglishBuildWordsGameMenu.Designer.cs">
       <DependentUpon>EnsglishBuildWordsGameMenu.cs</DependentUpon>
     </Compile>
-
+    <Compile Include="ChangeUserName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeUserName.Designer.cs">
+      <DependentUpon>ChangeUserName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="UserInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface.Designer.cs">
+      <DependentUpon>UserInterface.cs</DependentUpon>
+    </Compile>
     <Compile Include="HebrewGame_sapir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,10 +90,9 @@
     <Compile Include="Hebrew_Etai.cs">
       <SubType>Form</SubType>
     </Compile>
-	  <Compile Include="Hebrew_Etai.Designer.cs">
-		  <DependentUpon>Hebrew_Etai.cs</DependentUpon>
-	  </Compile>
-
+    <Compile Include="Hebrew_Etai.Designer.cs">
+      <DependentUpon>Hebrew_Etai.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +236,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeUserName.resx">
+      <DependentUpon>ChangeUserName.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnglishMemoryGame.resx">
       <DependentUpon>EnglishMemoryGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +254,9 @@
     <EmbeddedResource Include="GameScreen.resx">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Math_udi.resx">
       <DependentUpon>Math_udi.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface.resx">
+      <DependentUpon>UserInterface.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
