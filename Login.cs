@@ -42,6 +42,9 @@ namespace final_project
 
         private bool ValidateLogin(string username, string password)
         {
+
+            var DB = new Database();
+            return DB.ValidateUser(username, password);
             string filePath = @"C://Users//liora//source//repos//LoginRegister//LoginRegister//Users.txt";
 
             if (!File.Exists(filePath))

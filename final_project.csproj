@@ -62,6 +62,12 @@
     <Compile Include="EnsglishBuildWordsGameMenu.Designer.cs">
       <DependentUpon>EnsglishBuildWordsGameMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HebrewGame_sapir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HebrewGame_sapir.Designer.cs">
+      <DependentUpon>HebrewGame_sapir.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hebrew_Etai.cs">
       <SubType>Form</SubType>
     </Compile>

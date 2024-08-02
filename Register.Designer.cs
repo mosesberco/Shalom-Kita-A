@@ -52,9 +52,8 @@ namespace final_project
             this.genderTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.genderTextBox.FormattingEnabled = true;
             this.genderTextBox.Items.AddRange(new object[] {
-            "none",
-            "boy",
-            "girl"});
+            "Male",
+            "Female"});
             this.genderTextBox.Location = new System.Drawing.Point(276, 322);
             this.genderTextBox.Name = "genderTextBox";
             this.genderTextBox.Size = new System.Drawing.Size(218, 24);
@@ -188,6 +187,7 @@ namespace final_project
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.passwordTextBox.Location = new System.Drawing.Point(276, 129);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(218, 30);
             this.passwordTextBox.TabIndex = 22;
             this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
