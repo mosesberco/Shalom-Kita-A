@@ -13,6 +13,7 @@ namespace final_project
 {
     public partial class GameScreen : Form
     {
+        private User user;
         private class QuestionData
         {
             public string ImageName { get; set; }
@@ -105,9 +106,11 @@ namespace final_project
         private TextBox[] answerTextBoxes;
         private string[] animalImages = { "cat", "dog", "elephant", "tiger", "monkey" }; // Add all animal image names without .png
         private QuestionData currentQuestion;
+        private int score = 0;
 
-        public GameScreen()
+        public GameScreen(User user)
         {
+            this.user = user;
             InitializeComponent();
             SetupControls();
             NewRound();
@@ -155,6 +158,7 @@ namespace final_project
                 if (count == correctCount)
                 {
                     MessageBox.Show("Good Job!");
+                    score += 2;
                     submitButtons[index].Enabled = false;
                 }
                 else
@@ -176,6 +180,9 @@ namespace final_project
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
+            var DB = new Database();
+            var balance = DB.GetBalance(int.Parse(user.ID));
+            DB.SetBalance(int.Parse(user.ID), (score / 10) + balance);
             Application.Exit();
         }
     }

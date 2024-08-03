@@ -16,14 +16,16 @@ namespace final_project
         List<Question_udi> wrong_answers = new List<Question_udi>();
         int totalQuestions, index, score;
         Random random = new Random();
+        private User user;
 
-        public Game_Udi()
+        public Game_Udi(User user)
         {
             InitializeComponent();
             this.questions = Question_udi.generateQuestions(10);
             this.totalQuestions = 10;
             this.index = 0;
             this.score = 0;
+            this.user = user;
             nextQuestion();
             setButtons();
 
@@ -61,7 +63,13 @@ namespace final_project
             this.index++;
             if (gameOver())
             {
+                var DB = new Database();
+                var balance = DB.GetBalance(int.Parse(user.ID));
+                DB.SetBalance(int.Parse(user.ID), (score/10)+balance);
+                //MessageBox.Show($"You earned {score / 10} points this game!","Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 this.Close();
+
                 Application.Exit();
             }
             else
@@ -103,6 +111,9 @@ namespace final_project
                     message += "Congratulations! You got all questions right!";
                 }
                 MessageBox.Show(message, "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"You earned {score / 10} points this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                
 
                 return true;
             }

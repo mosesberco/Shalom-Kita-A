@@ -13,6 +13,7 @@ namespace final_project
     public partial class HebrewGame_sapir : Form
     {
         //משחק אות פותחת
+        private User user;
         private int correctanswer;
         private int questionNumber;
         private int totalQuestions = 5;
@@ -35,8 +36,9 @@ namespace final_project
 
         // Initializes a new instance of the "Form1" class.
         // Sets up the timer, random generator, and answer buttons.
-        public HebrewGame_sapir()
+        public HebrewGame_sapir(User user)
         {
+            this.user = user;
             InitializeComponent();
             InitializeTimer();
             random = new Random();
@@ -187,6 +189,10 @@ namespace final_project
             coins = correctanswer * 100;
             startOver.Visible = true;
             isDelayActive = false;
+            var DB = new Database();
+            var balance = DB.GetBalance(int.Parse(user.ID));
+            DB.SetBalance(int.Parse(user.ID), (correctanswer) + balance);
+            Close();
 
         }
 

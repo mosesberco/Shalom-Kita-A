@@ -12,8 +12,10 @@ namespace final_project
 {
     public partial class EnglishMemoryGameMenu : Form
     {
-        public EnglishMemoryGameMenu()
+        private User user;
+        public EnglishMemoryGameMenu(User user)
         {
+            this.user = user;   
             InitializeComponent();
             LabelInsrtuctions.Text = "ברוך הבא למשחק הזכרון!\nלפניך דקה וחצי להתאים 8 תמונות למשמעות שלהם באנגלית\nכל התאמה " +
                 "תזכה אותך בנקודה, וכל נקודה שווה 100 מטבעות לחשבונך\nבהצלחה";
@@ -26,7 +28,7 @@ namespace final_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EnglishMemoryGame gameForm = new EnglishMemoryGame();
+            EnglishMemoryGame gameForm = new EnglishMemoryGame(user);
             gameForm.Show();
         }
     }

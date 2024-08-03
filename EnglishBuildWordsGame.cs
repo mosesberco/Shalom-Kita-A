@@ -24,9 +24,11 @@ namespace final_project
         private int currentScore;
         private int timeRemaining;
         private List<string> checkedWords;
+        private User user;
 
-        public EnglishBuildWordsGame()
+        public EnglishBuildWordsGame(User user)
         {
+            this.user = user;
             InitializeComponent();
             InitializeGameComponents();
             LoadRandomGroupFromExcel();
@@ -52,7 +54,7 @@ namespace final_project
             List<string> allGroups = new List<string>();
             groupWordsDict = new Dictionary<string, List<string>>();
             // Specify your Excel file path
-            string filePath = @"C:\Users\ishti\source\repos\EnglishGame1\EnglishGame1\GameData.xlsx";
+            string filePath = @"..\..\EnglishBuildWordsGameData.xlsx";
 
             try
             {
@@ -147,6 +149,9 @@ namespace final_project
             {
                 gameTimer.Stop();
                 MessageBox.Show("Time's up! Final Score: " + currentScore);
+                var DB = new Database();
+                var balance = DB.GetBalance(int.Parse(user.ID));
+                DB.SetBalance(int.Parse(user.ID), (currentScore/ 10) + balance);
                 // Optionally, you can disable input here
             }
         }

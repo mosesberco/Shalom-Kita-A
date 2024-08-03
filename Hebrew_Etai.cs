@@ -14,7 +14,7 @@ namespace final_project
     {
         // List to hold the pairs of images
         List<Tuple<string, string>> imagePairs = new List<Tuple<string, string>>();
-
+        private User user;
         string firstChoice;
         string secondChoice;
         int tries;
@@ -25,8 +25,9 @@ namespace final_project
         int countDownTime;
         bool gameOver = false;
         int score = 0;
-        public Hebrew_Etai()
+        public Hebrew_Etai(User user)
         {
+            this.user = user;
             InitializeComponent();
             InitializeImagePairs(); // Initialize image pairs
             LoadPictures(); // Load picture boxes onto the form
@@ -218,6 +219,9 @@ namespace final_project
             if (pictures.All(o => o.Tag == null))
             {
                 score = 50 - tries + this.countDownTime;
+                var DB = new Database();
+                var balance = DB.GetBalance(int.Parse(user.ID));
+                DB.SetBalance(int.Parse(user.ID), balance+score);
                 GameOver(" כל הכבוד ניצחת! זכית ב" + score + " מטבעות ");
             }
         }

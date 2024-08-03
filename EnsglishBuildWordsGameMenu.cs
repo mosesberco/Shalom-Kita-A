@@ -12,9 +12,11 @@ namespace final_project
 {
     public partial class EnsglishBuildWordsGameMenu : Form
     {
-        public EnsglishBuildWordsGameMenu()
+        private User user;
+        public EnsglishBuildWordsGameMenu(User user)
         {
             InitializeComponent();
+            this.user = user;               
             // Set form title
             this.Text = "Memory Game for Kids";
 
@@ -36,7 +38,7 @@ namespace final_project
             MessageBox.Show("Game Starting/...");
             this.Hide();
             // Create an instance of GameForm
-            EnglishBuildWordsGame gameForm = new EnglishBuildWordsGame();
+            EnglishBuildWordsGame gameForm = new EnglishBuildWordsGame(user);
             // Show GameForm
             gameForm.Show();
         }

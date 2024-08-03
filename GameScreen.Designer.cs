@@ -81,7 +81,7 @@
             this.label2.Size = new System.Drawing.Size(312, 126);
             this.label2.TabIndex = 13;
             this.label2.Text = "Instructions:\r\nCount the animals that appear in the picture and answer the questi" +
-    "ons correctly.\r\nEach correct answer earns you $25 in the digital wallet\r\n\r\n";
+    "ons correctly.\r\nEach correct answer earns you $2 in the digital wallet\r\n\r\n";
             // 
             // buttonExit
             // 

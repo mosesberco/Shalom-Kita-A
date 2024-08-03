@@ -15,6 +15,8 @@ namespace final_project
     {
         int moneyPerPoint = 100;
 
+        private User user;
+
         int score = 0;
 
         int Timer = 90;
@@ -76,8 +78,9 @@ namespace final_project
         Label firstClicked, secondClicked;
 
 
-        public EnglishMemoryGame()
+        public EnglishMemoryGame(User user)
         {
+            this.user = user;
             InitializeComponent();
             AssignIconsToSquares();
         }
@@ -230,16 +233,21 @@ namespace final_project
                 if (score == 0)
                 {
                     MessageBox.Show("Time's Up!\nYour score is 0/8 :(\nTry again don't give up!");
-                    Close();
                 }
+                
                 else if (score > 0 && score < 8)
                 {
                     MessageBox.Show("Well done!\nYour score is " + score + "/8\n" + "You've earned " + score * moneyPerPoint + " coins.");
-                    Close();
+                }
+                var DB = new Database();
+                var balance = DB.GetBalance(int.Parse(user.ID));
+                DB.SetBalance(int.Parse(user.ID), (score) + balance);
+                
+                Close();
                 }
             }
 
-        }
+        
 
         private void CheckForWinner()
         {
