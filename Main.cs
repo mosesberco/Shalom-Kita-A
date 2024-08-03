@@ -13,10 +13,12 @@ namespace final_project
             var DB =new Database();
             //var store_form = new StoreForm(206872871, DB);
             //var hebrew_game = new Register();
-            User user = new User("moses", "bro", "1234" , 
-                "m@g.c", "Male", 10_000);
-            var Game_diana = new GameScreen(user);
-            Application.Run(Game_diana);
+            DB.RegisterUser("moses", "bro", "1234",
+                "m@g.c", "Male");
+            DB.SetBalance(1234, 1000);
+            User user = new User("moses", "bro", "1234" , "m@g.c", "Male", 10_000);
+            var store = new StoreForm(user);
+            Application.Run(store);
             //new_form.ShowDialog();
             //var hebrew_form = new Hebrew_Memory_Matching_Game.
             //Application.Run(hebrew_game);

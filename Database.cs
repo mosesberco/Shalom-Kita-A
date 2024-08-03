@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using System.IO;
 using System.Windows.Forms;
-using Excel = Microsoft.Office.Interop.Excel;
+using ClosedXML.Excel;
 
 namespace final_project
 {
@@ -12,7 +11,7 @@ namespace final_project
 
         public Database()
         {
-            Console.WriteLine($"Excel file path: {pathToExcel}");
+            Console.WriteLine($"Excel file path: {Path.GetFullPath(pathToExcel)}");
             if (File.Exists(pathToExcel))
             {
                 Console.WriteLine("Excel file exists.");
@@ -24,45 +23,32 @@ namespace final_project
             }
         }
 
-        private void OpenExcelFile(out Excel.Application xlApp, out Excel.Workbook xlWorkbook, out Excel._Worksheet xlWorksheet, out Excel.Range xlRange)
+        private void OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet)
         {
-            xlApp = new Excel.Application();
-            Console.WriteLine(Path.GetFullPath(pathToExcel));
-            xlWorkbook = xlApp.Workbooks.Open(Path.GetFullPath(pathToExcel));
-            xlWorksheet = (Excel._Worksheet)xlWorkbook.Sheets["Users"];
-            xlRange = xlWorksheet.UsedRange;
+            xlWorkbook = new XLWorkbook(Path.GetFullPath(pathToExcel));
+            xlWorksheet = xlWorkbook.Worksheet("Users");
         }
 
         private void CreateExcelFile()
         {
-            Excel.Application xlApp = null;
-            Excel.Workbook xlWorkbook = null;
-            Excel._Worksheet xlWorksheet = null;
-
             try
             {
-                xlApp = new Excel.Application();
-                xlWorkbook = xlApp.Workbooks.Add(Type.Missing);
-                xlWorksheet = (Excel._Worksheet)xlWorkbook.Sheets[1];
+                var xlWorkbook = new XLWorkbook();
+                var xlWorksheet = xlWorkbook.Worksheets.Add("Users");
 
-                xlWorksheet.Name = "Users";
-                xlWorksheet.Cells[1, 1] = "Username";
-                xlWorksheet.Cells[1, 2] = "Password";
-                xlWorksheet.Cells[1, 3] = "ID";
-                xlWorksheet.Cells[1, 4] = "Email";
-                xlWorksheet.Cells[1, 5] = "Gender";
-                xlWorksheet.Cells[1, 6] = "Balance";
+                xlWorksheet.Cell(1, 1).Value = "Username";
+                xlWorksheet.Cell(1, 2).Value = "Password";
+                xlWorksheet.Cell(1, 3).Value = "ID";
+                xlWorksheet.Cell(1, 4).Value = "Email";
+                xlWorksheet.Cell(1, 5).Value = "Gender";
+                xlWorksheet.Cell(1, 6).Value = "Balance";
 
-                xlWorkbook.SaveAs(Path.GetFullPath(pathToExcel));
+                xlWorkbook.Save();
                 Console.WriteLine("Excel file created successfully.");
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error creating Excel file: {ex.Message}");
-            }
-            finally
-            {
-                CleanUp(xlApp, xlWorkbook, xlWorksheet, null);
             }
         }
 
@@ -70,23 +56,26 @@ namespace final_project
         {
             int isValidIndex = -1;
 
-            OpenExcelFile(out Excel.Application xlApp, out Excel.Workbook xlWorkbook, out Excel._Worksheet xlWorksheet, out Excel.Range xlRange);
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
             try
             {
-                for (int i = 2; i <= xlRange.Rows.Count; i++)
+                var rows = xlWorksheet.RangeUsed().RowsUsed();
+                foreach (var row in rows)
                 {
-                    if (xlRange.Cells[i, 1].Value2?.ToString() == username &&
-                        xlRange.Cells[i, 2].Value2?.ToString() == password)
+                    if (row.RowNumber() == 1) continue; // Skip header row
+
+                    if (row.Cell(1).GetValue<string>() == username &&
+                        row.Cell(2).GetValue<string>() == password)
                     {
-                        isValidIndex = i;
+                        isValidIndex = row.RowNumber();
                         break;
                     }
                 }
             }
             finally
             {
-                CleanUp(xlApp, xlWorkbook, xlWorksheet, xlRange);
+                xlWorkbook.Dispose();
             }
 
             return isValidIndex;
@@ -96,17 +85,19 @@ namespace final_project
         {
             bool isRegistered = false;
 
-            OpenExcelFile(out Excel.Application xlApp, out Excel.Workbook xlWorkbook, out Excel._Worksheet xlWorksheet, out Excel.Range xlRange);
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
             try
             {
-                int row = xlRange.Rows.Count + 1;
-                xlWorksheet.Cells[row, 1] = username;
-                xlWorksheet.Cells[row, 2] = password;
-                xlWorksheet.Cells[row, 3] = id;
-                xlWorksheet.Cells[row, 4] = email;
-                xlWorksheet.Cells[row, 5] = gender;
-                xlWorksheet.Cells[row, 6] = 0;
+                var lastRow = xlWorksheet.LastRowUsed().RowNumber();
+                var newRow = lastRow + 1;
+
+                xlWorksheet.Cell(newRow, 1).Value = username;
+                xlWorksheet.Cell(newRow, 2).Value = password;
+                xlWorksheet.Cell(newRow, 3).Value = id;
+                xlWorksheet.Cell(newRow, 4).Value = email;
+                xlWorksheet.Cell(newRow, 5).Value = gender;
+                xlWorksheet.Cell(newRow, 6).Value = 0;
 
                 xlWorkbook.Save();
                 isRegistered = true;
@@ -117,7 +108,7 @@ namespace final_project
             }
             finally
             {
-                CleanUp(xlApp, xlWorkbook, xlWorksheet, xlRange);
+                xlWorkbook.Dispose();
             }
 
             return isRegistered;
@@ -125,15 +116,18 @@ namespace final_project
 
         public void SetBalance(int id, int wallet)
         {
-            OpenExcelFile(out Excel.Application xlApp, out Excel.Workbook xlWorkbook, out Excel._Worksheet xlWorksheet, out Excel.Range xlRange);
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
             try
             {
-                for (int i = 2; i <= xlRange.Rows.Count; i++)
+                var rows = xlWorksheet.RangeUsed().RowsUsed();
+                foreach (var row in rows)
                 {
-                    if (xlRange.Cells[i, 3].Value2.ToString() == id.ToString())
+                    if (row.RowNumber() == 1) continue; // Skip header row
+
+                    if (row.Cell(3).GetValue<string>() == id.ToString())
                     {
-                        xlRange.Cells[i, 6].Value = wallet;
+                        row.Cell(6).Value = wallet;
                         xlWorkbook.Save();
                         break;
                     }
@@ -145,30 +139,26 @@ namespace final_project
             }
             finally
             {
-                CleanUp(xlApp, xlWorkbook, xlWorksheet, xlRange);
+                xlWorkbook.Dispose();
             }
-        }
-
-        public Excel.Workbook GetXlWorkbook()
-        {
-            OpenExcelFile(out Excel.Application xlApp, out Excel.Workbook xlWorkbook, out Excel._Worksheet xlWorksheet, out Excel.Range xlRange);
-            CleanUp(xlApp, null, xlWorksheet, xlRange);
-            return xlWorkbook;
         }
 
         public int GetBalance(int id)
         {
             int balance = -1;
 
-            OpenExcelFile(out Excel.Application xlApp, out Excel.Workbook xlWorkbook, out Excel._Worksheet xlWorksheet, out Excel.Range xlRange);
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
             try
             {
-                for (int i = 2; i <= xlRange.Rows.Count; i++)
+                var rows = xlWorksheet.RangeUsed().RowsUsed();
+                foreach (var row in rows)
                 {
-                    if (xlRange.Cells[i, 3].Value2.ToString() == id.ToString())
+                    if (row.RowNumber() == 1) continue; // Skip header row
+
+                    if (row.Cell(3).GetValue<string>() == id.ToString())
                     {
-                        balance = (int)(xlRange.Cells[i, 6].Value);
+                        balance = row.Cell(6).GetValue<int>();
                         break;
                     }
                 }
@@ -179,22 +169,26 @@ namespace final_project
             }
             finally
             {
-                CleanUp(xlApp, xlWorkbook, xlWorksheet, xlRange);
+                xlWorkbook.Dispose();
             }
 
             return balance;
         }
+
         public void SetUsername(int id, string newUsername)
         {
-            OpenExcelFile(out Excel.Application xlApp, out Excel.Workbook xlWorkbook, out Excel._Worksheet xlWorksheet, out Excel.Range xlRange);
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
             try
             {
-                for (int i = 2; i <= xlRange.Rows.Count; i++)
+                var rows = xlWorksheet.RangeUsed().RowsUsed();
+                foreach (var row in rows)
                 {
-                    if (xlRange.Cells[i, 3].Value2.ToString() == id.ToString())
+                    if (row.RowNumber() == 1) continue; // Skip header row
+
+                    if (row.Cell(3).GetValue<string>() == id.ToString())
                     {
-                        xlRange.Cells[i, 1].Value = newUsername;
+                        row.Cell(1).Value = newUsername;
                         xlWorkbook.Save();
                         break;
                     }
@@ -206,21 +200,24 @@ namespace final_project
             }
             finally
             {
-                CleanUp(xlApp, xlWorkbook, xlWorksheet, xlRange);
+                xlWorkbook.Dispose();
             }
         }
 
         public void SetPassword(int id, string newPassword)
         {
-            OpenExcelFile(out Excel.Application xlApp, out Excel.Workbook xlWorkbook, out Excel._Worksheet xlWorksheet, out Excel.Range xlRange);
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
             try
             {
-                for (int i = 2; i <= xlRange.Rows.Count; i++)
+                var rows = xlWorksheet.RangeUsed().RowsUsed();
+                foreach (var row in rows)
                 {
-                    if (xlRange.Cells[i, 3].Value2.ToString() == id.ToString())
+                    if (row.RowNumber() == 1) continue; // Skip header row
+
+                    if (row.Cell(3).GetValue<string>() == id.ToString())
                     {
-                        xlRange.Cells[i, 2].Value = newPassword;
+                        row.Cell(2).Value = newPassword;
                         xlWorkbook.Save();
                         break;
                     }
@@ -232,59 +229,30 @@ namespace final_project
             }
             finally
             {
-                CleanUp(xlApp, xlWorkbook, xlWorksheet, xlRange);
+                xlWorkbook.Dispose();
             }
-        }
-
-
-        private void CleanUp(Excel.Application xlApp, Excel.Workbook xlWorkbook, Excel._Worksheet xlWorksheet, Excel.Range xlRange)
-        {
-            if (xlRange != null) Marshal.ReleaseComObject(xlRange);
-            if (xlWorksheet != null) Marshal.ReleaseComObject(xlWorksheet);
-            if (xlWorkbook != null)
-            {
-                xlWorkbook.Close(false);
-                Marshal.ReleaseComObject(xlWorkbook);
-            }
-            if (xlApp != null)
-            {
-                xlApp.Quit();
-                Marshal.ReleaseComObject(xlApp);
-            }
-
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-        }
-
-        public void Dispose()
-        {
-            // No action needed here, as each method handles its own cleanup
         }
 
         public User LoadUserData(int index)
         {
-            Excel.Application xlApp = null;
-            Excel.Workbook xlWorkbook = null;
-            Excel._Worksheet xlWorksheet = null;
-            Excel.Range xlRange = null;
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
             try
             {
-                OpenExcelFile(out xlApp, out xlWorkbook, out xlWorksheet, out xlRange);
-
-                if (index < 2 || index > xlRange.Rows.Count)
+                if (index < 2 || index > xlWorksheet.LastRowUsed().RowNumber())
                 {
                     throw new ArgumentException("Invalid index");
                 }
 
-                User user = new User(
-                 username: xlRange.Cells[index, 1].Value2?.ToString(),
-                 password: xlRange.Cells[index, 2].Value2?.ToString(),
-                 id: xlRange.Cells[index, 3].Value2?.ToString(),
-                 email: xlRange.Cells[index, 4].Value2?.ToString(),
-                 gender: xlRange.Cells[index, 5].Value2?.ToString(),
-                 balance: Convert.ToInt32(xlRange.Cells[index, 6].Value2)
-             );;
+                var row = xlWorksheet.Row(index);
+                var user = new User(
+                    username: row.Cell(1).GetValue<string>(),
+                    password: row.Cell(2).GetValue<string>(),
+                    id: row.Cell(3).GetValue<string>(),
+                    email: row.Cell(4).GetValue<string>(),
+                    gender: row.Cell(5).GetValue<string>(),
+                    balance: row.Cell(6).GetValue<int>()
+                );
 
                 if (string.IsNullOrEmpty(user.ID))
                 {
@@ -295,8 +263,13 @@ namespace final_project
             }
             finally
             {
-                CleanUp(xlApp, xlWorkbook, xlWorksheet, xlRange);
+                xlWorkbook.Dispose();
             }
+        }
+
+        public void Dispose()
+        {
+            // No action needed here, as each method handles its own cleanup
         }
     }
 }

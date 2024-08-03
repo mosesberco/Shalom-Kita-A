@@ -16,24 +16,24 @@ namespace final_project
     public partial class StoreForm : Form
     {
         private int wallet;
+        private Database DB;
         private User user;
         private List<Itemstore> items;
         private FlowLayoutPanel flowLayoutPanel;
         //private Label walletLabel;
-        private Database DB;
         private TextBox nameTextBox;
         private TextBox priceTextBox;
         private TextBox imagePathTextBox;
         private Button addButton;
 
-        public StoreForm(User user, Database DB)
+        public StoreForm(User user)
         {
-            this.DB = DB;
             //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             InitializeComponent();
             InitializeCustomComponents();
             this.Resize += new EventHandler(StoreForm_Resize);
             this.user = user;
+            this.DB = new Database();
             wallet = DB.GetBalance(int.Parse(user.ID)); // Initialize wallet with a default value
             items = new List<Itemstore>();
             LoadItems();
@@ -243,7 +243,9 @@ namespace final_project
                     newRow.Cell(3).Value = DateTime.Now.ToString();
                     newRow.Cell(4).Value = user.ID;
 
-                    workbook.SaveAs(filePath);
+
+                    workbook.Save();
+                    //workbook.SaveAs(filePath);
                 }
             }
             catch (Exception ex)
