@@ -27,6 +27,7 @@ namespace final_project
         private void OpenExcelFile(out Excel.Application xlApp, out Excel.Workbook xlWorkbook, out Excel._Worksheet xlWorksheet, out Excel.Range xlRange)
         {
             xlApp = new Excel.Application();
+            Console.WriteLine(Path.GetFullPath(pathToExcel));
             xlWorkbook = xlApp.Workbooks.Open(Path.GetFullPath(pathToExcel));
             xlWorksheet = (Excel._Worksheet)xlWorkbook.Sheets["Users"];
             xlRange = xlWorksheet.UsedRange;
@@ -65,9 +66,9 @@ namespace final_project
             }
         }
 
-        public bool ValidateUser(string username, string password)
+        public int ValidateUser(string username, string password)
         {
-            bool isValid = false;
+            int isValidIndex = -1;
 
             OpenExcelFile(out Excel.Application xlApp, out Excel.Workbook xlWorkbook, out Excel._Worksheet xlWorksheet, out Excel.Range xlRange);
 
@@ -78,7 +79,7 @@ namespace final_project
                     if (xlRange.Cells[i, 1].Value2?.ToString() == username &&
                         xlRange.Cells[i, 2].Value2?.ToString() == password)
                     {
-                        isValid = true;
+                        isValidIndex = i;
                         break;
                     }
                 }
@@ -88,7 +89,7 @@ namespace final_project
                 CleanUp(xlApp, xlWorkbook, xlWorksheet, xlRange);
             }
 
-            return isValid;
+            return isValidIndex;
         }
 
         public bool RegisterUser(string username, string password, string id, string email, string gender)
@@ -258,6 +259,44 @@ namespace final_project
         public void Dispose()
         {
             // No action needed here, as each method handles its own cleanup
+        }
+
+        public User LoadUserData(int index)
+        {
+            Excel.Application xlApp = null;
+            Excel.Workbook xlWorkbook = null;
+            Excel._Worksheet xlWorksheet = null;
+            Excel.Range xlRange = null;
+
+            try
+            {
+                OpenExcelFile(out xlApp, out xlWorkbook, out xlWorksheet, out xlRange);
+
+                if (index < 2 || index > xlRange.Rows.Count)
+                {
+                    throw new ArgumentException("Invalid index");
+                }
+
+                User user = new User(
+                 username: xlRange.Cells[index, 1].Value2?.ToString(),
+                 password: xlRange.Cells[index, 2].Value2?.ToString(),
+                 id: xlRange.Cells[index, 3].Value2?.ToString(),
+                 email: xlRange.Cells[index, 4].Value2?.ToString(),
+                 gender: xlRange.Cells[index, 5].Value2?.ToString(),
+                 balance: Convert.ToInt32(xlRange.Cells[index, 6].Value2)
+             );;
+
+                if (string.IsNullOrEmpty(user.ID))
+                {
+                    throw new InvalidOperationException("User data not found");
+                }
+
+                return user;
+            }
+            finally
+            {
+                CleanUp(xlApp, xlWorkbook, xlWorksheet, xlRange);
+            }
         }
     }
 }

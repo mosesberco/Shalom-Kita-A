@@ -9,20 +9,22 @@ namespace final_project
         public static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var new_form = new Game_Udi();
+            //var new_form = new Game_Udi();
             var DB =new Database();
-            var store_form = new StoreForm(206872871, DB);
-            var hebrew_game = new Register();
+            //var store_form = new StoreForm(206872871, DB);
+            //var hebrew_game = new Register();
+            var logIn = new Login();
+            Application.Run(logIn);
             //new_form.ShowDialog();
             //var hebrew_form = new Hebrew_Memory_Matching_Game.
-            Application.Run(hebrew_game);
+            //Application.Run(hebrew_game);
             DB.Dispose();
             //var game = new EnsglishBuildWordsGameMenu();
             //var form = new Register();
             //Application.Run(new_form);
             //Application.Run(new_form);
-            var game_Diana = new GameScreen();
-            Application.Run(new GameScreen());
+            //var game_Diana = new GameScreen();
+            //Application.Run(new GameScreen());
         }
     }
 }
