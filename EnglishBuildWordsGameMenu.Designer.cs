@@ -1,7 +1,7 @@
 ﻿
 namespace final_project
 {
-    partial class EnsglishBuildWordsGameMenu
+    partial class EnglishBuildWordsGameMenu
     {
         /// <summary>
         /// Required designer variable.

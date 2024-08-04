@@ -77,7 +77,8 @@ namespace final_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            Close();
         }
 
 

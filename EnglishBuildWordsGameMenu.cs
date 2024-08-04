@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace final_project
 {
-    public partial class EnsglishBuildWordsGameMenu : Form
+    public partial class EnglishBuildWordsGameMenu : Form
     {
         private User user;
-        public EnsglishBuildWordsGameMenu(User user)
+        public EnglishBuildWordsGameMenu(User user)
         {
             InitializeComponent();
             this.user = user;               
