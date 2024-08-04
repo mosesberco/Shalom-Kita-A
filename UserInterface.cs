@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace final_project
@@ -6,6 +7,8 @@ namespace final_project
     public partial class UserInterface : Form
     {
         private User userActive;
+        private Dictionary<string, string> items = new Dictionary<string, string>();
+
         private Database database;
 
         public UserInterface(Database db, int userIndex)
@@ -16,6 +19,13 @@ namespace final_project
             UpdateForm();
         }
 
+        private void loadItems()
+        {
+            var storeDB = new Database(@"../../../storeitems.xlsx");
+
+            items.Clear();
+            items = storeDB.GetItemsByUserId(userActive);
+        }
         private void LoadUser(int userIndex)
         {
             this.userActive = database.LoadUserData(userIndex);

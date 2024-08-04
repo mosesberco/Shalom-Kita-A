@@ -242,6 +242,7 @@ namespace final_project
                     newRow.Cell(2).Value = item.Price;
                     newRow.Cell(3).Value = DateTime.Now.ToString();
                     newRow.Cell(4).Value = user.ID;
+                    newRow.Cell(5).Value = item.ImagePath;
 
 
                     workbook.Save();
