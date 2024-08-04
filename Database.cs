@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using ClosedXML.Excel;
@@ -9,8 +10,9 @@ namespace final_project
     {
         private string pathToExcel = @"..\..\Users.xlsx";
 
-        public Database()
+        public Database(string pathToExcel = @"..\..\Users.xlsx")
         {
+            this.pathToExcel = pathToExcel;
             Console.WriteLine($"Excel file path: {Path.GetFullPath(pathToExcel)}");
             if (File.Exists(pathToExcel))
             {
@@ -266,6 +268,40 @@ namespace final_project
                 xlWorkbook.Dispose();
             }
         }
+        public Dictionary<string, string> GetItemsByUserId(User user)
+        {
+            //pathToExcel = @"../../../storeitems.xlsx";
+            var items = new Dictionary<string, string>();
+
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
+
+            try
+            {
+                var rows = xlWorksheet.RangeUsed().RowsUsed();
+                foreach (var row in rows)
+                {
+                    if (row.RowNumber() == 1) continue; // Skip header row
+
+                    if (row.Cell(4).GetValue<string>() == int.Parse(user.ID).ToString())
+                    {
+                        var itemName = row.Cell(1).GetValue<string>();
+                        var itemPath = row.Cell(5).GetValue<string>();
+                        items.Add(itemName, itemPath);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting items by user ID: {ex.Message}");
+            }
+            finally
+            {
+                xlWorkbook.Dispose();
+            }
+
+            return items;
+        }
+
 
         public void Dispose()
         {
