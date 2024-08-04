@@ -28,8 +28,6 @@ namespace final_project
             this.user = user;
             nextQuestion();
             setButtons();
-
-
             progressBar1.Maximum = totalQuestions;
         }
         public void nextQuestion()
@@ -80,10 +78,10 @@ namespace final_project
         }
         private void ResetButtonColors()
         {
-            button1.BackColor = Color.FromArgb(240, 113, 103);
-            button2.BackColor = Color.FromArgb(240, 113, 103);
-            button3.BackColor = Color.FromArgb(240, 113, 103);
-            button4.BackColor = Color.FromArgb(240, 113, 103);
+            button1.BackColor = Color.DarkSeaGreen;
+            button2.BackColor = Color.DarkSeaGreen;
+            button3.BackColor = Color.DarkSeaGreen;
+            button4.BackColor = Color.DarkSeaGreen;
         }
         private void SetButtonsEnabled(bool enabled)
         {
@@ -96,7 +94,7 @@ namespace final_project
         {
             if (this.index == 10)
             {
-                string message = $"Your score is {this.score}/{this.totalQuestions}\nYour Grade is {this.score}!!!\n\n";
+                string message = $"Your score is {this.score}/{this.totalQuestions*10}\nYour Grade is {this.score}!!!\n\n";
                 if (wrong_answers.Count > 0)
                 {
                     message += "Questions you got wrong:\n\n";
@@ -113,15 +111,14 @@ namespace final_project
                 MessageBox.Show(message, "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MessageBox.Show($"You earned {score / 10} points this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                
-
                 return true;
             }
             return false;
         }
-
-
-        private bool checkAnswer(int btnANswer) { return btnANswer == this.questions[this.index].getCorrectAnswer(); }
+        private bool checkAnswer(int btnANswer)
+        {
+            return btnANswer == this.questions[this.index].getCorrectAnswer();
+        }
         internal void setButtons()
         {
             Button[] buttons = { button1, button2, button3, button4 };
