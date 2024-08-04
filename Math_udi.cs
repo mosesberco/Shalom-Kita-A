@@ -34,6 +34,7 @@ namespace final_project
         public void nextQuestion()
         {
             lblQuestion.Text = $"#{this.index+1}.  "+this.questions[this.index].toString();
+            scoreLabel.Text = $"Score : {this.score}/{this.totalQuestions}";
         }
         private async void checkAnswerEvent(object sender, EventArgs e)
         {
@@ -43,18 +44,18 @@ namespace final_project
             if (checkAnswer(btnAnswer))
 
             {
-                this.score += 10;
+                score += 1;
                 clickedButton.BackColor = Color.Green;
             }
             else
             {
-                this.wrong_answers.Add(this.questions[index]);
+                wrong_answers.Add(this.questions[index]);
                 clickedButton.BackColor = Color.Red;
             }
             // Disable all buttons to prevent multiple clicks
             SetButtonsEnabled(false);
             // Wait for 1 second
-            await Task.Delay(1000);
+            await Task.Delay(1100);
             // Reset button colors and re-enable them
             ResetButtonColors();
             SetButtonsEnabled(true);
@@ -64,7 +65,7 @@ namespace final_project
             {
                 var DB = new Database();
                 var balance = DB.GetBalance(int.Parse(user.ID));
-                DB.SetBalance(int.Parse(user.ID), (score/10)+balance);
+                DB.SetBalance(int.Parse(user.ID), score + balance);
                 //MessageBox.Show($"You earned {score / 10} points this game!","Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
@@ -95,7 +96,7 @@ namespace final_project
         {
             if (this.index == 10)
             {
-                string message = $"Your score is {this.score}/{this.totalQuestions*10}\nYour Grade is {this.score}!!!\n\n";
+                string message = $"Your score is {this.score}/{this.totalQuestions}\nYour Grade is {this.score}!!!\n\n";
                 if (wrong_answers.Count > 0)
                 {
                     message += "Questions you got wrong:\n\n";
@@ -110,7 +111,7 @@ namespace final_project
                     message += "Congratulations! You got all questions right!";
                 }
                 MessageBox.Show(message, "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show($"You earned {score / 10} points this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"You earned {score} points this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return true;
             }

@@ -45,6 +45,7 @@ namespace final_project
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.userData = new System.Windows.Forms.Label();
+            this.scoreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -205,12 +206,23 @@ namespace final_project
             this.userData.TabIndex = 11;
             this.userData.Text = "user data";
             // 
+            // scoreLabel
+            // 
+            this.scoreLabel.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.scoreLabel.Location = new System.Drawing.Point(12, 235);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(190, 40);
+            this.scoreLabel.TabIndex = 12;
+            this.scoreLabel.Text = "score";
+            // 
             // Game_Udi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(949, 550);
+            this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.userData);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
@@ -248,5 +260,6 @@ namespace final_project
 
         private Label label2;
         private Label userData;
+        private Label scoreLabel;
     }
 }
