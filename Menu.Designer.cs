@@ -48,7 +48,7 @@ namespace final_project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(459, 39);
+            this.label1.Location = new System.Drawing.Point(466, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 0;
@@ -131,7 +131,7 @@ namespace final_project
             // 
             // userData
             // 
-            this.userData.Location = new System.Drawing.Point(761, 38);
+            this.userData.Location = new System.Drawing.Point(761, 58);
             this.userData.Name = "userData";
             this.userData.Size = new System.Drawing.Size(249, 52);
             this.userData.TabIndex = 2;

@@ -29,6 +29,7 @@ namespace final_project
             nextQuestion();
             setButtons();
             progressBar1.Maximum = totalQuestions;
+            userData.Text = $"Username : {user.Username}\nBalance : {user.Balance}";
         }
         public void nextQuestion()
         {
