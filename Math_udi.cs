@@ -68,7 +68,7 @@ namespace final_project
 
                 this.Close();
 
-                Application.Exit();
+                //Application.Exit();
             }
             else
             {

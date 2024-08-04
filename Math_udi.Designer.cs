@@ -43,6 +43,7 @@ namespace final_project
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -136,7 +137,7 @@ namespace final_project
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(349, 147);
+            this.progressBar1.Location = new System.Drawing.Point(30, 195);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(237, 20);
             this.progressBar1.TabIndex = 6;
@@ -181,8 +182,18 @@ namespace final_project
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(411, 144);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Add and Subtract";
+            this.label1.Text = "חיבור וחיסור";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 147);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(270, 34);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "בחר את התשובה הנכונה";
             // 
             // Game_Udi
             // 
@@ -190,6 +201,7 @@ namespace final_project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(949, 550);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
@@ -203,6 +215,7 @@ namespace final_project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -221,5 +234,7 @@ namespace final_project
         #region Windows Form Designer generated code
 
         #endregion
+
+        private Label label2;
     }
 }

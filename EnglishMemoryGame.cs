@@ -244,8 +244,8 @@ namespace final_project
                 DB.SetBalance(int.Parse(user.ID), (score) + balance);
                 
                 Close();
-                }
             }
+        }
 
         
 
