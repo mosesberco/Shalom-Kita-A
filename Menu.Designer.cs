@@ -31,14 +31,13 @@ namespace final_project
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.userData = new System.Windows.Forms.Label();
-            this.login = new System.Windows.Forms.Button();
             this.Store = new System.Windows.Forms.Button();
             this.LogOut = new System.Windows.Forms.Button();
             this.userInterface = new System.Windows.Forms.Button();
@@ -67,25 +66,36 @@ namespace final_project
             this.panel1.Size = new System.Drawing.Size(747, 355);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // button6
             // 
-            this.button1.Location = new System.Drawing.Point(59, 38);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 96);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "english 1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button6.Font = new System.Drawing.Font("Aharoni", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(596, 214);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(136, 96);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "עברית 2";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button2
+            // button5
             // 
-            this.button2.Location = new System.Drawing.Point(329, 38);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 96);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "math 1";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button5.Location = new System.Drawing.Point(329, 214);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(136, 96);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "math 2";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(59, 214);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(136, 96);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "english 2";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -98,36 +108,25 @@ namespace final_project
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button2
             // 
-            this.button4.Location = new System.Drawing.Point(59, 214);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 96);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "english 2";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button2.Location = new System.Drawing.Point(329, 38);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 96);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "math 1";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button5
+            // button1
             // 
-            this.button5.Location = new System.Drawing.Point(329, 214);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(136, 96);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "math 2";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Aharoni", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(596, 214);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(136, 96);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "עברית 2";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button1.Location = new System.Drawing.Point(59, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 96);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "english 1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // userData
             // 
@@ -136,16 +135,6 @@ namespace final_project
             this.userData.Size = new System.Drawing.Size(249, 52);
             this.userData.TabIndex = 2;
             this.userData.Text = "user data";
-            // 
-            // login
-            // 
-            this.login.Location = new System.Drawing.Point(29, 38);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(171, 52);
-            this.login.TabIndex = 3;
-            this.login.Text = "Login";
-            this.login.UseVisualStyleBackColor = true;
-            this.login.Click += new System.EventHandler(this.login_Click);
             // 
             // Store
             // 
@@ -159,7 +148,7 @@ namespace final_project
             // 
             // LogOut
             // 
-            this.LogOut.Location = new System.Drawing.Point(29, 119);
+            this.LogOut.Location = new System.Drawing.Point(29, 38);
             this.LogOut.Name = "LogOut";
             this.LogOut.Size = new System.Drawing.Size(171, 52);
             this.LogOut.TabIndex = 5;
@@ -185,7 +174,6 @@ namespace final_project
             this.Controls.Add(this.userInterface);
             this.Controls.Add(this.LogOut);
             this.Controls.Add(this.Store);
-            this.Controls.Add(this.login);
             this.Controls.Add(this.userData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -208,7 +196,6 @@ namespace final_project
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label userData;
-        private System.Windows.Forms.Button login;
         private System.Windows.Forms.Button Store;
         private System.Windows.Forms.Button LogOut;
         private System.Windows.Forms.Button userInterface;

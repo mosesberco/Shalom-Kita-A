@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace final_project
 {
-    //Add Login form 
     public partial class Menu : Form
     {
         private User user;
@@ -19,22 +18,22 @@ namespace final_project
             InitializeComponent();
             this.user = user;
             updateUserData(user);
-            checkUser();
+            //checkUser();
         }
 
-        private void checkUser()
-        {
-            if (user != null)
-            {
-                this.login.Enabled = false;
-                this.LogOut.Enabled = true;
-            }
-            else
-            {
-                this.login.Enabled = true;
-                this.LogOut.Enabled = false;
-            }
-        }
+        //private void checkUser()
+        //{
+        //    if (user != null)
+        //    {
+        //        this.login.Enabled = false;
+        //        this.LogOut.Enabled = true;
+        //    }
+        //    else
+        //    {
+        //        this.login.Enabled = true;
+        //        this.LogOut.Enabled = false;
+        //    }
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -77,12 +76,6 @@ namespace final_project
                 userData.Text = $"Username : {user.Username}\nBalance : {user.Balance}";
         }
 
-        private void login_Click(object sender, EventArgs e)    //return value - the user that logged in
-        {
-            var loginForm = new Login();
-            loginForm.Show();
-        }
-
         private void Store_Click(object sender, EventArgs e)    //fix sizing, img loading, buying errors
         {
             var storeForm = new StoreForm(user);
@@ -91,9 +84,13 @@ namespace final_project
 
         private void LogOut_Click(object sender, EventArgs e)
         {
-            this.user = null;
-            updateUserData(user);
-            checkUser();
+            //this.user = null;
+            //updateUserData(user);
+            //checkUser();
+            Login login = new Login();
+            login.Show();
+            Close();
+            
         }
 
         private void userInterface_Click(object sender, EventArgs e)    //fix userInterface logic - index?! ,, db?!,, where top X button????????!!!!!!!!
