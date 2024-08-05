@@ -29,238 +29,267 @@ namespace final_project
         /// </summary>
         private void InitializeComponent()
         {
-            this.genderTextBox = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.txtGen = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.Label();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.Label();
-            this.txtusername = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtusername = new MaterialSkin.Controls.MaterialLabel();
+            this.txtPass = new MaterialSkin.Controls.MaterialLabel();
+            this.txtID = new MaterialSkin.Controls.MaterialLabel();
+            this.txtEmail = new MaterialSkin.Controls.MaterialLabel();
+            this.txtGen = new MaterialSkin.Controls.MaterialLabel();
+            this.usernameTextBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.passwordTextBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.idTextBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.emailTextBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.genderTextBox = new MaterialSkin.Controls.MaterialComboBox();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            this.materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
             this.SuspendLayout();
             // 
-            // genderTextBox
+            // txtusername
             // 
-            this.genderTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.genderTextBox.FormattingEnabled = true;
-            this.genderTextBox.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.genderTextBox.Location = new System.Drawing.Point(276, 322);
-            this.genderTextBox.Name = "genderTextBox";
-            this.genderTextBox.Size = new System.Drawing.Size(218, 24);
-            this.genderTextBox.TabIndex = 33;
-            this.genderTextBox.SelectedIndexChanged += new System.EventHandler(this.genderTextBox_SelectedIndexChanged);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Info;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.Location = new System.Drawing.Point(568, 390);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 38);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(309, 416);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 25);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Back to login";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label7.Location = new System.Drawing.Point(248, 372);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(269, 25);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "Already have an account ?";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Info;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(672, 392);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 36);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // showPasswordCheckBox
-            // 
-            this.showPasswordCheckBox.AutoSize = true;
-            this.showPasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordCheckBox.Location = new System.Drawing.Point(552, 138);
-            this.showPasswordCheckBox.Name = "showPasswordCheckBox";
-            this.showPasswordCheckBox.Size = new System.Drawing.Size(122, 21);
-            this.showPasswordCheckBox.TabIndex = 28;
-            this.showPasswordCheckBox.Text = "show password";
-            this.showPasswordCheckBox.UseVisualStyleBackColor = true;
-            this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
-            // 
-            // txtGen
-            // 
-            this.txtGen.AutoSize = true;
-            this.txtGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.txtGen.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtGen.Location = new System.Drawing.Point(130, 318);
-            this.txtGen.Name = "txtGen";
-            this.txtGen.Size = new System.Drawing.Size(90, 25);
-            this.txtGen.TabIndex = 27;
-            this.txtGen.Text = "Gender:";
-            this.txtGen.Click += new System.EventHandler(this.txtGen_Click);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.AutoSize = true;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.txtEmail.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtEmail.Location = new System.Drawing.Point(130, 256);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(72, 25);
-            this.txtEmail.TabIndex = 26;
-            this.txtEmail.Text = "Email:";
-            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
-            // 
-            // txtID
-            // 
-            this.txtID.AutoSize = true;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.txtID.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtID.Location = new System.Drawing.Point(130, 195);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(40, 25);
-            this.txtID.TabIndex = 25;
-            this.txtID.Text = "ID:";
-            this.txtID.Click += new System.EventHandler(this.txtID_Click);
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.emailTextBox.Location = new System.Drawing.Point(276, 256);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(218, 30);
-            this.emailTextBox.TabIndex = 24;
-            this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.idTextBox.Location = new System.Drawing.Point(276, 195);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(218, 30);
-            this.idTextBox.TabIndex = 23;
-            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.passwordTextBox.Location = new System.Drawing.Point(276, 129);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(218, 30);
-            this.passwordTextBox.TabIndex = 22;
-            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.usernameTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.usernameTextBox.Location = new System.Drawing.Point(276, 69);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(218, 30);
-            this.usernameTextBox.TabIndex = 21;
-            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
+            this.txtusername.BackColor = System.Drawing.Color.Transparent;
+            this.txtusername.Depth = 0;
+            this.txtusername.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.txtusername.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.txtusername.Location = new System.Drawing.Point(74, 121);
+            this.txtusername.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtusername.Name = "txtusername";
+            this.txtusername.Size = new System.Drawing.Size(92, 24);
+            this.txtusername.TabIndex = 40;
+            this.txtusername.Text = "Username";
             // 
             // txtPass
             // 
             this.txtPass.AutoSize = true;
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.txtPass.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtPass.Location = new System.Drawing.Point(130, 129);
+            this.txtPass.BackColor = System.Drawing.Color.Transparent;
+            this.txtPass.Depth = 0;
+            this.txtPass.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPass.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.txtPass.Location = new System.Drawing.Point(77, 186);
+            this.txtPass.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(111, 25);
-            this.txtPass.TabIndex = 20;
-            this.txtPass.Text = "password:";
-            this.txtPass.Click += new System.EventHandler(this.txtPass_Click);
+            this.txtPass.Size = new System.Drawing.Size(89, 24);
+            this.txtPass.TabIndex = 35;
+            this.txtPass.Text = "Password";
             // 
-            // txtusername
+            // txtID
             // 
-            this.txtusername.AutoSize = true;
-            this.txtusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.txtusername.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtusername.Location = new System.Drawing.Point(130, 69);
-            this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(123, 25);
-            this.txtusername.TabIndex = 19;
-            this.txtusername.Text = "User name:";
-            this.txtusername.Click += new System.EventHandler(this.txtusername_Click);
+            this.txtID.AutoSize = true;
+            this.txtID.BackColor = System.Drawing.Color.Transparent;
+            this.txtID.Depth = 0;
+            this.txtID.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.txtID.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.txtID.Location = new System.Drawing.Point(143, 247);
+            this.txtID.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(20, 24);
+            this.txtID.TabIndex = 36;
+            this.txtID.Text = "ID";
             // 
-            // label1
+            // txtEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(334, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 29);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Register";
+            this.txtEmail.AutoSize = true;
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmail.Depth = 0;
+            this.txtEmail.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.txtEmail.Location = new System.Drawing.Point(106, 301);
+            this.txtEmail.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(60, 24);
+            this.txtEmail.TabIndex = 37;
+            this.txtEmail.Text = "EMAIL";
+            // 
+            // txtGen
+            // 
+            this.txtGen.AutoSize = true;
+            this.txtGen.BackColor = System.Drawing.Color.Transparent;
+            this.txtGen.Depth = 0;
+            this.txtGen.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.txtGen.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.txtGen.Location = new System.Drawing.Point(97, 347);
+            this.txtGen.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtGen.Name = "txtGen";
+            this.txtGen.Size = new System.Drawing.Size(66, 24);
+            this.txtGen.TabIndex = 38;
+            this.txtGen.Text = "Gender";
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.usernameTextBox.Depth = 0;
+            this.usernameTextBox.Font = new System.Drawing.Font("Roboto", 12F);
+            this.usernameTextBox.Location = new System.Drawing.Point(172, 103);
+            this.usernameTextBox.MaxLength = 32767;
+            this.usernameTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.usernameTextBox.Multiline = false;
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(195, 50);
+            this.usernameTextBox.TabIndex = 39;
+            this.usernameTextBox.Text = "";
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordTextBox.Depth = 0;
+            this.passwordTextBox.Font = new System.Drawing.Font("Roboto", 12F);
+            this.passwordTextBox.Location = new System.Drawing.Point(172, 160);
+            this.passwordTextBox.MaxLength = 32767;
+            this.passwordTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.passwordTextBox.Multiline = false;
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Password = true;
+            this.passwordTextBox.Size = new System.Drawing.Size(195, 50);
+            this.passwordTextBox.TabIndex = 40;
+            this.passwordTextBox.Text = "";
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.idTextBox.Depth = 0;
+            this.idTextBox.Font = new System.Drawing.Font("Roboto", 12F);
+            this.idTextBox.Location = new System.Drawing.Point(172, 221);
+            this.idTextBox.MaxLength = 32767;
+            this.idTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.idTextBox.Multiline = false;
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(195, 50);
+            this.idTextBox.TabIndex = 41;
+            this.idTextBox.Text = "";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailTextBox.Depth = 0;
+            this.emailTextBox.Font = new System.Drawing.Font("Roboto", 12F);
+            this.emailTextBox.Location = new System.Drawing.Point(172, 275);
+            this.emailTextBox.MaxLength = 32767;
+            this.emailTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.emailTextBox.Multiline = false;
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(195, 50);
+            this.emailTextBox.TabIndex = 42;
+            this.emailTextBox.Text = "";
+            // 
+            // genderTextBox
+            // 
+            this.genderTextBox.AutoResize = false;
+            this.genderTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.genderTextBox.Depth = 0;
+            this.genderTextBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.genderTextBox.DropDownHeight = 174;
+            this.genderTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderTextBox.DropDownWidth = 121;
+            this.genderTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.genderTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.genderTextBox.FormattingEnabled = true;
+            this.genderTextBox.IntegralHeight = false;
+            this.genderTextBox.ItemHeight = 43;
+            this.genderTextBox.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.genderTextBox.Location = new System.Drawing.Point(172, 328);
+            this.genderTextBox.MaxDropDownItems = 4;
+            this.genderTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.genderTextBox.Name = "genderTextBox";
+            this.genderTextBox.Size = new System.Drawing.Size(195, 49);
+            this.genderTextBox.TabIndex = 43;
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.DrawShadows = true;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(147, 434);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.Size = new System.Drawing.Size(230, 36);
+            this.materialButton1.TabIndex = 44;
+            this.materialButton1.Text = "Already have an account?";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton2.Depth = 0;
+            this.materialButton2.DrawShadows = true;
+            this.materialButton2.HighEmphasis = true;
+            this.materialButton2.Icon = null;
+            this.materialButton2.Location = new System.Drawing.Point(205, 386);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.Size = new System.Drawing.Size(89, 36);
+            this.materialButton2.TabIndex = 45;
+            this.materialButton2.Text = "Register";
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.UseAccentColor = false;
+            this.materialButton2.UseVisualStyleBackColor = true;
+            this.materialButton2.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // materialButton3
+            // 
+            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton3.Depth = 0;
+            this.materialButton3.DrawShadows = true;
+            this.materialButton3.HighEmphasis = true;
+            this.materialButton3.Icon = null;
+            this.materialButton3.Location = new System.Drawing.Point(226, 482);
+            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton3.Name = "materialButton3";
+            this.materialButton3.Size = new System.Drawing.Size(52, 36);
+            this.materialButton3.TabIndex = 46;
+            this.materialButton3.Text = "EXIT";
+            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton3.UseAccentColor = false;
+            this.materialButton3.UseVisualStyleBackColor = true;
+            this.materialButton3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // materialCheckbox1
+            // 
+            this.materialCheckbox1.Depth = 0;
+            this.materialCheckbox1.Location = new System.Drawing.Point(370, 173);
+            this.materialCheckbox1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox1.Name = "materialCheckbox1";
+            this.materialCheckbox1.Ripple = true;
+            this.materialCheckbox1.Size = new System.Drawing.Size(163, 37);
+            this.materialCheckbox1.TabIndex = 47;
+            this.materialCheckbox1.Text = "Show password";
+            this.materialCheckbox1.UseVisualStyleBackColor = true;
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(550, 550);
+            this.Controls.Add(this.materialCheckbox1);
+            this.Controls.Add(this.materialButton3);
+            this.Controls.Add(this.materialButton2);
+            this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.genderTextBox);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.showPasswordCheckBox);
-            this.Controls.Add(this.txtGen);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.txtGen);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtusername);
-            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -268,22 +297,19 @@ namespace final_project
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox genderTextBox;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox showPasswordCheckBox;
-        private System.Windows.Forms.Label txtGen;
-        private System.Windows.Forms.Label txtEmail;
-        private System.Windows.Forms.Label txtID;
-        private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.Label txtPass;
-        private System.Windows.Forms.Label txtusername;
-        private System.Windows.Forms.Label label1;
+        private MaterialSkin.Controls.MaterialLabel txtusername;
+        private MaterialSkin.Controls.MaterialLabel txtPass;
+        private MaterialSkin.Controls.MaterialLabel txtID;
+        private MaterialSkin.Controls.MaterialLabel txtEmail;
+        private MaterialSkin.Controls.MaterialLabel txtGen;
+        private MaterialSkin.Controls.MaterialTextBox usernameTextBox;
+        private MaterialSkin.Controls.MaterialTextBox passwordTextBox;
+        private MaterialSkin.Controls.MaterialTextBox idTextBox;
+        private MaterialSkin.Controls.MaterialTextBox emailTextBox;
+        private MaterialSkin.Controls.MaterialComboBox genderTextBox;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private MaterialSkin.Controls.MaterialButton materialButton3;
+        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox1;
     }
 }

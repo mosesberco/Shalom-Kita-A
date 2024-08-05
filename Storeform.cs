@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace final_project
 {
     public partial class StoreForm : Form
@@ -26,11 +27,11 @@ namespace final_project
         private TextBox imagePathTextBox;
         private Button addButton;
 
+
         public StoreForm(User user)
         {
             //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             InitializeComponent();
-            InitializeCustomComponents();
             this.Resize += new EventHandler(StoreForm_Resize);
             this.user = user;
             this.DB = new Database();

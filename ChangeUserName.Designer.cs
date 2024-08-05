@@ -29,62 +29,76 @@ namespace final_project
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
-            this.newUserName = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.newUserName = new MaterialSkin.Controls.MaterialTextBox();
+            this.button1 = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
-            // label4
+            // materialLabel1
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Teal;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(118, 14);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(237, 30);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "הכנס שם משתמש חדש";
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel1.Location = new System.Drawing.Point(99, 94);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(184, 24);
+            this.materialLabel1.TabIndex = 9;
+            this.materialLabel1.Text = "Enter new username";
             // 
             // newUserName
             // 
-            this.newUserName.Location = new System.Drawing.Point(282, 82);
-            this.newUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.newUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.newUserName.Depth = 0;
+            this.newUserName.Font = new System.Drawing.Font("Roboto", 12F);
+            this.newUserName.Location = new System.Drawing.Point(118, 121);
+            this.newUserName.MaxLength = 50;
+            this.newUserName.MouseState = MaterialSkin.MouseState.OUT;
+            this.newUserName.Multiline = false;
             this.newUserName.Name = "newUserName";
-            this.newUserName.Size = new System.Drawing.Size(190, 26);
-            this.newUserName.TabIndex = 7;
+            this.newUserName.Size = new System.Drawing.Size(147, 50);
+            this.newUserName.TabIndex = 10;
+            this.newUserName.Text = "";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(126, 82);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.Depth = 0;
+            this.button1.DrawShadows = true;
+            this.button1.HighEmphasis = true;
+            this.button1.Icon = null;
+            this.button1.Location = new System.Drawing.Point(159, 180);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.button1.MouseState = MaterialSkin.MouseState.HOVER;
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "שמור";
+            this.button1.Size = new System.Drawing.Size(58, 36);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Save";
+            this.button1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.button1.UseAccentColor = false;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ChangeUserName
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 137);
+            this.ClientSize = new System.Drawing.Size(390, 260);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.newUserName);
-            this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.materialLabel1);
             this.Name = "ChangeUserName";
-            this.Text = "ChangeUserName";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Change User Name";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox newUserName;
-        private System.Windows.Forms.Button button1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialTextBox newUserName;
+        private MaterialSkin.Controls.MaterialButton button1;
     }
 }

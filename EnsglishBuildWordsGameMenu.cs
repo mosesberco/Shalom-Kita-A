@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,26 +12,27 @@ using System.Windows.Forms;
 
 namespace final_project
 {
-    public partial class EnsglishBuildWordsGameMenu : Form
+    public partial class EnglishBuildWordsGameMenu : MaterialForm
     {
         private User user;
         public EnsglishBuildWordsGameMenu(User user)
         {
             InitializeComponent();
-            this.user = user;               
-            // Set form title
-            this.Text = "Memory Game for Kids";
+            this.user = user;
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange700, Primary.Orange600, Primary.Green100, Accent.Green200, TextShade.WHITE);
+            //// Set background image
+            //this.BackgroundImageLayout = ImageLayout.Stretch;
 
-            // Set background image
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-
-            // Title Label
-            Label titleLabel = new Label();
-            titleLabel.Text = "Welcome to \"Create the Words\"";
-            titleLabel.Font = new Font("Arial", 24, FontStyle.Bold);
-            titleLabel.AutoSize = true;
-            titleLabel.Location = new Point(100, 20);
-            this.Controls.Add(titleLabel);
+            //// Title Label
+            //Label titleLabel = new Label();
+            //titleLabel.Text = "Welcome to \"Create the Words\"";
+            //titleLabel.Font = new Font("Arial", 24, FontStyle.Bold);
+            //titleLabel.AutoSize = true;
+            //titleLabel.Location = new Point(100, 20);
+            //this.Controls.Add(titleLabel);
 
         }
 
@@ -44,6 +47,11 @@ namespace final_project
         }
 
         private void TitleGame_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnglishBuildWordsGameMenu_Load(object sender, EventArgs e)
         {
 
         }

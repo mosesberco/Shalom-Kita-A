@@ -8,31 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace final_project
 {
-    public partial class Login : Form
+    public partial class Login : MaterialForm
     {
         private Database DB;
         public Login()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
             this.DB = new Database();
-        }
-
-        private void usernameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -100,10 +91,10 @@ namespace final_project
             }
         }
 
-        private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
-        }
+        //private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
+        //}
 
         
     }

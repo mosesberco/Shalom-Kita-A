@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace final_project
 {
-    public partial class Hebrew_Etai : Form
+    public partial class Hebrew_Etai : MaterialForm
     {
         // List to hold the pairs of images
         List<Tuple<string, string>> imagePairs = new List<Tuple<string, string>>();
@@ -29,6 +31,10 @@ namespace final_project
         {
             this.user = user;
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Green700, Primary.Green800, Primary.Indigo900, Accent.Amber400, TextShade.WHITE);
             InitializeImagePairs(); // Initialize image pairs
             LoadPictures(); // Load picture boxes onto the form
         }

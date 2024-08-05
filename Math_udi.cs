@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,37 +12,41 @@ using System.Windows.Forms;
 
 namespace final_project
 {
-    public partial class Game_Udi : Form
+    public partial class Game_Udi : MaterialForm
     {
         Question_udi[] questions;
         List<Question_udi> wrong_answers = new List<Question_udi>();
         int totalQuestions, index, score;
         Random random = new Random();
         private User user;
-
+        private MaterialButton[] buttons;
         public Game_Udi(User user)
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Green800, Primary.Green900, Primary.Orange700, Accent.Orange400, TextShade.WHITE);
             this.questions = Question_udi.generateQuestions(10);
             this.totalQuestions = 10;
             this.index = 0;
             this.score = 0;
             this.user = user;
+            buttons = new MaterialButton[] { button1, button2, button3, button4 };
             nextQuestion();
             setButtons();
             progressBar1.Maximum = totalQuestions;
         }
         public void nextQuestion()
         {
-            lblQuestion.Text = $"#{this.index+1}.  "+this.questions[this.index].toString();
+            lblQuestion.Text = $"#{this.index + 1}.  " + this.questions[this.index].toString();
         }
         private async void checkAnswerEvent(object sender, EventArgs e)
         {
-            Button clickedButton = (Button)sender;
+            MaterialButton clickedButton = (MaterialButton)sender;
             int btnAnswer = int.Parse(clickedButton.Text);
 
             if (checkAnswer(btnAnswer))
-
             {
                 this.score += 10;
                 clickedButton.BackColor = Color.Green;
@@ -50,25 +56,20 @@ namespace final_project
                 this.wrong_answers.Add(this.questions[index]);
                 clickedButton.BackColor = Color.Red;
             }
-            // Disable all buttons to prevent multiple clicks
+
             SetButtonsEnabled(false);
-            // Wait for 1 second
             await Task.Delay(1000);
-            // Reset button colors and re-enable them
             ResetButtonColors();
             SetButtonsEnabled(true);
             progressBar1.Value = this.index + 1;
             this.index++;
+
             if (gameOver())
             {
                 var DB = new Database();
                 var balance = DB.GetBalance(int.Parse(user.ID));
-                DB.SetBalance(int.Parse(user.ID), (score/10)+balance);
-                //MessageBox.Show($"You earned {score / 10} points this game!","Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                DB.SetBalance(int.Parse(user.ID), (score / 10) + balance);
                 this.Close();
-
-                Application.Exit();
             }
             else
             {
@@ -76,25 +77,27 @@ namespace final_project
                 nextQuestion();
             }
         }
+
         private void ResetButtonColors()
         {
-            button1.BackColor = Color.DarkSeaGreen;
-            button2.BackColor = Color.DarkSeaGreen;
-            button3.BackColor = Color.DarkSeaGreen;
-            button4.BackColor = Color.DarkSeaGreen;
+            foreach (var button in buttons)
+            {
+                button.BackColor = Color.DarkSeaGreen;
+            }
         }
+
         private void SetButtonsEnabled(bool enabled)
         {
-            button1.Enabled = enabled;
-            button2.Enabled = enabled;
-            button3.Enabled = enabled;
-            button4.Enabled = enabled;
+            foreach (var button in buttons)
+            {
+                button.Enabled = enabled;
+            }
         }
-        private bool gameOver()         //CFG
+        private bool gameOver()
         {
             if (this.index == 10)
             {
-                string message = $"Your score is {this.score}/{this.totalQuestions*10}\nYour Grade is {this.score}!!!\n\n";
+                string message = $"Your score is {this.score}/{this.totalQuestions * 10}\nYour Grade is {this.score}!!!\n\n";
                 if (wrong_answers.Count > 0)
                 {
                     message += "Questions you got wrong:\n\n";
@@ -115,13 +118,13 @@ namespace final_project
             }
             return false;
         }
-        private bool checkAnswer(int btnANswer)
+
+        private bool checkAnswer(int btnAnswer)
         {
-            return btnANswer == this.questions[this.index].getCorrectAnswer();
+            return btnAnswer == this.questions[this.index].getCorrectAnswer();
         }
         internal void setButtons()
         {
-            Button[] buttons = { button1, button2, button3, button4 };
             int correctIndex = random.Next(0, 4);
             int correctAnswer = this.questions[index].getCorrectAnswer();
             HashSet<int> usedNumbers = new HashSet<int> { correctAnswer };

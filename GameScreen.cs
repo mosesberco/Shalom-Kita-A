@@ -8,12 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace final_project
 {
-    public partial class GameScreen : Form
+    public partial class GameScreen : MaterialForm
     {
         private User user;
+        private Timer gameTimer;
+        private int remainingTime = 60;
+        private Menu mainMenu;
         private class QuestionData
         {
             public string ImageName { get; set; }
@@ -98,12 +103,11 @@ namespace final_project
         // Add more questions here
         };
 
-
         private Random random = new Random();
         private PictureBox largePictureBox;
         private PictureBox[] smallPictureBoxes;
-        private Button[] submitButtons;
-        private TextBox[] answerTextBoxes;
+        private MaterialButton[] submitButtons;
+        private MaterialTextBox[] answerTextBoxes;
         private string[] animalImages = { "cat", "dog", "elephant", "tiger", "monkey" }; // Add all animal image names without .png
         private QuestionData currentQuestion;
         private int score = 0;
@@ -112,24 +116,53 @@ namespace final_project
         {
             this.user = user;
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange800, Primary.Orange900, Primary.Orange600, Accent.LightGreen400, TextShade.WHITE);
             SetupControls();
+            DisplayUserDetails();
+            SetupTimer();
             NewRound();
+        }
+        private void SetupTimer()
+        {
+            gameTimer = new Timer();
+            gameTimer.Interval = 1000; // 1 second
+            gameTimer.Tick += GameTimer_Tick;
+        }
+
+        private void DisplayUserDetails()
+        {
+            MaterialLabel userDetailsLabel = (MaterialLabel)this.Controls.Find("userDetailsLabel", true)[0];
+            userDetailsLabel.Text = $"User: {user.Username}\nBalance: ${user.Balance}";
+        }
+        private void GameTimer_Tick(object sender, EventArgs e)
+        {
+            remainingTime--;
+            MaterialLabel timerLabel = (MaterialLabel)this.Controls.Find("timerLabel", true)[0];
+            timerLabel.Text = $"Time: {remainingTime}";
+
+            if (remainingTime <= 0)
+            {
+                gameTimer.Stop();
+                MessageBox.Show("Time's up! Moving to the next question.");
+                NewRound();
+            }
         }
 
         private void SetupControls()
         {
             largePictureBox = pictureBoxQuestion;
             smallPictureBoxes = new PictureBox[] { pictureBoxAnswer1, pictureBoxAnswer2, pictureBoxAnswer3 };
-            submitButtons = new Button[] { buttonSubmit1, buttonSubmit2, buttonSubmit3 };
-            answerTextBoxes = new TextBox[] { textBoxAnswer1, textBoxAnswer2, textBoxAnswer3 };
+            submitButtons = new MaterialButton[] { buttonSubmit1, buttonSubmit2, buttonSubmit3 };
+            answerTextBoxes = new MaterialTextBox[] { textBoxAnswer1, textBoxAnswer2, textBoxAnswer3 };
             buttonExit.Click += buttonExit_Click;
             for (int i = 0; i < submitButtons.Length; i++)
             {
                 int index = i;
                 submitButtons[i].Click += (sender, e) => CheckAnswer(index);
             }
-
-
         }
 
         private void NewRound()
@@ -147,6 +180,10 @@ namespace final_project
                 answerTextBoxes[i].Clear();
                 submitButtons[i].Enabled = true;
             }
+            remainingTime = 60;
+            MaterialLabel timerLabel = (MaterialLabel)this.Controls.Find("timerLabel", true)[0];
+            timerLabel.Text = $"Time: {remainingTime}";
+            gameTimer.Start();
         }
 
         private void CheckAnswer(int index)
@@ -173,7 +210,8 @@ namespace final_project
 
             if (submitButtons.All(b => !b.Enabled))
             {
-                MessageBox.Show("A new round is starting now!");
+                gameTimer.Stop();
+                MessageBox.Show($"Round complete! You scored {score} points.");
                 NewRound();
             }
         }
@@ -183,7 +221,7 @@ namespace final_project
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
             DB.SetBalance(int.Parse(user.ID), (score / 10) + balance);
-            Application.Exit();
+            mainMenu.Show();
         }
     }
 }

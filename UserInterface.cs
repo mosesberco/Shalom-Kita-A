@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace final_project
 {
-    public partial class UserInterface : Form
+    public partial class UserInterface : MaterialForm
     {
         private User userActive;
         private Database database;
@@ -11,6 +13,10 @@ namespace final_project
         public UserInterface(Database db, int userIndex)
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
             database = db;
             LoadUser(userIndex);
             UpdateForm();

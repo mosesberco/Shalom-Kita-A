@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace final_project
 {
-    public partial class EnglishMemoryGame : Form
+    public partial class EnglishMemoryGame : MaterialForm
     {
         int moneyPerPoint = 100;
 
@@ -82,6 +84,10 @@ namespace final_project
         {
             this.user = user;
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Purple600, Primary.Purple800, Primary.Grey200, Accent.Amber100, TextShade.WHITE);
             AssignIconsToSquares();
         }
 

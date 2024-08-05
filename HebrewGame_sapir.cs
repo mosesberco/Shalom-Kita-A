@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace final_project
 {
-    public partial class HebrewGame_sapir : Form
+    public partial class HebrewGame_sapir : MaterialForm
     {
         //משחק אות פותחת
         private User user;
@@ -40,6 +42,10 @@ namespace final_project
         {
             this.user = user;
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Red800, Primary.Red900, Primary.Orange900, Accent.Orange400, TextShade.WHITE);
             InitializeTimer();
             random = new Random();
             questionNumber = 0;

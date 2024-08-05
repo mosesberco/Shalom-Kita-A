@@ -29,83 +29,96 @@ namespace final_project
         /// </summary>
         private void InitializeComponent()
         {
-            this.TitleGame = new System.Windows.Forms.TextBox();
-            this.TitleWord = new System.Windows.Forms.Label();
-            this.CheckIfWordInGroup = new System.Windows.Forms.Button();
-            this.TxtFD1 = new System.Windows.Forms.RichTextBox();
+            this.TitleGame = new MaterialSkin.Controls.MaterialTextBox();
+            this.TitleWord = new MaterialSkin.Controls.MaterialLabel();
+            this.CheckIfWordInGroup = new MaterialSkin.Controls.MaterialButton();
+            this.TxtFD1 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.SuspendLayout();
             // 
             // TitleGame
             // 
-            this.TitleGame.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.TitleGame.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TitleGame.Cursor = System.Windows.Forms.Cursors.PanSouth;
-            this.TitleGame.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleGame.Location = new System.Drawing.Point(348, 85);
+            this.TitleGame.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TitleGame.Depth = 0;
+            this.TitleGame.Font = new System.Drawing.Font("Roboto", 12F);
+            this.TitleGame.Location = new System.Drawing.Point(249, 83);
+            this.TitleGame.MaxLength = 50;
+            this.TitleGame.MouseState = MaterialSkin.MouseState.OUT;
+            this.TitleGame.Multiline = false;
             this.TitleGame.Name = "TitleGame";
-            this.TitleGame.Size = new System.Drawing.Size(287, 36);
-            this.TitleGame.TabIndex = 0;
+            this.TitleGame.Size = new System.Drawing.Size(310, 50);
+            this.TitleGame.TabIndex = 5;
             this.TitleGame.Text = "Try to built as many words you can!";
-            this.TitleGame.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TitleGame.TextChanged += new System.EventHandler(this.TitleGame_TextChanged);
             // 
             // TitleWord
             // 
             this.TitleWord.AutoSize = true;
-            this.TitleWord.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleWord.Location = new System.Drawing.Point(394, 272);
+            this.TitleWord.Depth = 0;
+            this.TitleWord.Font = new System.Drawing.Font("Roboto", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.TitleWord.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
+            this.TitleWord.Location = new System.Drawing.Point(255, 220);
+            this.TitleWord.MouseState = MaterialSkin.MouseState.HOVER;
             this.TitleWord.Name = "TitleWord";
-            this.TitleWord.Size = new System.Drawing.Size(225, 37);
-            this.TitleWord.TabIndex = 2;
+            this.TitleWord.Size = new System.Drawing.Size(342, 58);
+            this.TitleWord.TabIndex = 6;
             this.TitleWord.Text = "Write The Word!";
-            this.TitleWord.Click += new System.EventHandler(this.TitleWord_Click);
             // 
             // CheckIfWordInGroup
             // 
-            this.CheckIfWordInGroup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CheckIfWordInGroup.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckIfWordInGroup.Location = new System.Drawing.Point(348, 317);
+            this.CheckIfWordInGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CheckIfWordInGroup.Depth = 0;
+            this.CheckIfWordInGroup.DrawShadows = true;
+            this.CheckIfWordInGroup.HighEmphasis = true;
+            this.CheckIfWordInGroup.Icon = null;
+            this.CheckIfWordInGroup.Location = new System.Drawing.Point(281, 325);
+            this.CheckIfWordInGroup.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.CheckIfWordInGroup.MouseState = MaterialSkin.MouseState.HOVER;
             this.CheckIfWordInGroup.Name = "CheckIfWordInGroup";
-            this.CheckIfWordInGroup.Size = new System.Drawing.Size(109, 23);
-            this.CheckIfWordInGroup.TabIndex = 3;
+            this.CheckIfWordInGroup.Size = new System.Drawing.Size(115, 36);
+            this.CheckIfWordInGroup.TabIndex = 7;
             this.CheckIfWordInGroup.Text = "Check Word";
-            this.CheckIfWordInGroup.UseMnemonic = false;
+            this.CheckIfWordInGroup.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.CheckIfWordInGroup.UseAccentColor = false;
             this.CheckIfWordInGroup.UseVisualStyleBackColor = true;
             this.CheckIfWordInGroup.Click += new System.EventHandler(this.CheckIfWordInGroup_Click);
             // 
             // TxtFD1
             // 
-            this.TxtFD1.Location = new System.Drawing.Point(496, 317);
+            this.TxtFD1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.TxtFD1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtFD1.Depth = 0;
+            this.TxtFD1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TxtFD1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.TxtFD1.Hint = "";
+            this.TxtFD1.Location = new System.Drawing.Point(433, 315);
+            this.TxtFD1.MouseState = MaterialSkin.MouseState.HOVER;
             this.TxtFD1.Name = "TxtFD1";
-            this.TxtFD1.Size = new System.Drawing.Size(109, 21);
-            this.TxtFD1.TabIndex = 4;
+            this.TxtFD1.Size = new System.Drawing.Size(210, 46);
+            this.TxtFD1.TabIndex = 8;
             this.TxtFD1.Text = "";
             this.TxtFD1.TextChanged += new System.EventHandler(this.TxtFD1_TextChanged);
             // 
-            // GameForm
+            // EnglishBuildWordsGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 450);
+            this.ClientSize = new System.Drawing.Size(879, 573);
             this.Controls.Add(this.TxtFD1);
             this.Controls.Add(this.CheckIfWordInGroup);
             this.Controls.Add(this.TitleWord);
             this.Controls.Add(this.TitleGame);
-            this.Name = "GameForm";
+            this.Name = "EnglishBuildWordsGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameForm";
-            this.Load += new System.EventHandler(this.GameForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TitleGame;
-        private System.Windows.Forms.Label TitleWord;
-        private System.Windows.Forms.Button CheckIfWordInGroup;
-        private System.Windows.Forms.RichTextBox TxtFD1;
+        private MaterialSkin.Controls.MaterialTextBox TitleGame;
+        private MaterialSkin.Controls.MaterialLabel TitleWord;
+        private MaterialSkin.Controls.MaterialButton CheckIfWordInGroup;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox TxtFD1;
     }
 }

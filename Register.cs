@@ -8,21 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace final_project
 {
-    public partial class Register : Form
+    public partial class Register : MaterialForm
     {
         public Register()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
-        private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
-        }
+        //private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
+        //}
 
         private void usernameTextBox_TextChanged(object sender, EventArgs e)
         {

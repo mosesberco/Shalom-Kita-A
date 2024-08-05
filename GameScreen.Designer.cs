@@ -28,78 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.instrLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.pictureBoxAnswer2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxQuestion = new System.Windows.Forms.PictureBox();
+            this.buttonSubmit1 = new MaterialSkin.Controls.MaterialButton();
+            this.buttonSubmit2 = new MaterialSkin.Controls.MaterialButton();
+            this.buttonSubmit3 = new MaterialSkin.Controls.MaterialButton();
+            this.buttonExit = new MaterialSkin.Controls.MaterialButton();
+            this.textBoxAnswer1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.textBoxAnswer2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.textBoxAnswer3 = new MaterialSkin.Controls.MaterialTextBox();
             this.pictureBoxAnswer1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxAnswer3 = new System.Windows.Forms.PictureBox();
-            this.buttonSubmit1 = new System.Windows.Forms.Button();
-            this.buttonSubmit2 = new System.Windows.Forms.Button();
-            this.buttonSubmit3 = new System.Windows.Forms.Button();
-            this.textBoxAnswer1 = new System.Windows.Forms.TextBox();
-            this.textBoxAnswer2 = new System.Windows.Forms.TextBox();
-            this.textBoxAnswer3 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.timerLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.userDetailsLabel = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer3)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(113)))), ((int)(((byte)(103)))));
-            this.panel1.Controls.Add(this.buttonExit);
-            this.panel1.Controls.Add(this.instrLabel);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 126);
-            this.panel1.TabIndex = 0;
-            // 
-            // instrLabel
-            // 
-            this.instrLabel.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold);
-            this.instrLabel.ForeColor = System.Drawing.Color.White;
-            this.instrLabel.Location = new System.Drawing.Point(417, 0);
-            this.instrLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.instrLabel.Name = "instrLabel";
-            this.instrLabel.Size = new System.Drawing.Size(517, 126);
-            this.instrLabel.TabIndex = 0;
-            this.instrLabel.Text = "Count the Animals";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(113)))), ((int)(((byte)(103)))));
-            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 12F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(312, 126);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Instructions:\r\nCount the animals that appear in the picture and answer the questi" +
-    "ons correctly.\r\nEach correct answer earns you $2 in the digital wallet\r\n\r\n";
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(1037, 85);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(122, 38);
-            this.buttonExit.TabIndex = 11;
-            this.buttonExit.Text = "EXIT GAME";
-            this.buttonExit.UseVisualStyleBackColor = false;
-            // 
             // pictureBoxAnswer2
             // 
+            this.pictureBoxAnswer2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxAnswer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxAnswer2.Location = new System.Drawing.Point(676, 495);
+            this.pictureBoxAnswer2.Location = new System.Drawing.Point(576, 452);
             this.pictureBoxAnswer2.Name = "pictureBoxAnswer2";
             this.pictureBoxAnswer2.Size = new System.Drawing.Size(218, 217);
             this.pictureBoxAnswer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,98 +63,188 @@
             // 
             this.pictureBoxQuestion.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxQuestion.Location = new System.Drawing.Point(3, 129);
+            this.pictureBoxQuestion.Location = new System.Drawing.Point(15, 187);
             this.pictureBoxQuestion.Name = "pictureBoxQuestion";
-            this.pictureBoxQuestion.Size = new System.Drawing.Size(670, 583);
-            this.pictureBoxQuestion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxQuestion.Size = new System.Drawing.Size(555, 442);
+            this.pictureBoxQuestion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxQuestion.TabIndex = 17;
             this.pictureBoxQuestion.TabStop = false;
             // 
+            // buttonSubmit1
+            // 
+            this.buttonSubmit1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonSubmit1.Depth = 0;
+            this.buttonSubmit1.DrawShadows = true;
+            this.buttonSubmit1.HighEmphasis = true;
+            this.buttonSubmit1.Icon = null;
+            this.buttonSubmit1.Location = new System.Drawing.Point(810, 264);
+            this.buttonSubmit1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.buttonSubmit1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonSubmit1.Name = "buttonSubmit1";
+            this.buttonSubmit1.Size = new System.Drawing.Size(69, 36);
+            this.buttonSubmit1.TabIndex = 22;
+            this.buttonSubmit1.Text = "Check";
+            this.buttonSubmit1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.buttonSubmit1.UseAccentColor = false;
+            this.buttonSubmit1.UseVisualStyleBackColor = true;
+            // 
+            // buttonSubmit2
+            // 
+            this.buttonSubmit2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonSubmit2.Depth = 0;
+            this.buttonSubmit2.DrawShadows = true;
+            this.buttonSubmit2.HighEmphasis = true;
+            this.buttonSubmit2.Icon = null;
+            this.buttonSubmit2.Location = new System.Drawing.Point(810, 576);
+            this.buttonSubmit2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.buttonSubmit2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonSubmit2.Name = "buttonSubmit2";
+            this.buttonSubmit2.Size = new System.Drawing.Size(69, 36);
+            this.buttonSubmit2.TabIndex = 26;
+            this.buttonSubmit2.Text = "Check";
+            this.buttonSubmit2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.buttonSubmit2.UseAccentColor = false;
+            this.buttonSubmit2.UseVisualStyleBackColor = true;
+            // 
+            // buttonSubmit3
+            // 
+            this.buttonSubmit3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonSubmit3.Depth = 0;
+            this.buttonSubmit3.DrawShadows = true;
+            this.buttonSubmit3.HighEmphasis = true;
+            this.buttonSubmit3.Icon = null;
+            this.buttonSubmit3.Location = new System.Drawing.Point(1189, 408);
+            this.buttonSubmit3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.buttonSubmit3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonSubmit3.Name = "buttonSubmit3";
+            this.buttonSubmit3.Size = new System.Drawing.Size(69, 36);
+            this.buttonSubmit3.TabIndex = 27;
+            this.buttonSubmit3.Text = "Check";
+            this.buttonSubmit3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.buttonSubmit3.UseAccentColor = false;
+            this.buttonSubmit3.UseVisualStyleBackColor = true;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.AutoSize = false;
+            this.buttonExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonExit.Depth = 0;
+            this.buttonExit.DrawShadows = true;
+            this.buttonExit.HighEmphasis = true;
+            this.buttonExit.Icon = null;
+            this.buttonExit.Location = new System.Drawing.Point(13, 655);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.buttonExit.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(155, 46);
+            this.buttonExit.TabIndex = 28;
+            this.buttonExit.Text = "EXIT ";
+            this.buttonExit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.buttonExit.UseAccentColor = false;
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // textBoxAnswer1
+            // 
+            this.textBoxAnswer1.BackColor = System.Drawing.Color.White;
+            this.textBoxAnswer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAnswer1.Depth = 0;
+            this.textBoxAnswer1.Font = new System.Drawing.Font("Roboto", 12F);
+            this.textBoxAnswer1.Location = new System.Drawing.Point(800, 205);
+            this.textBoxAnswer1.MaxLength = 50;
+            this.textBoxAnswer1.MouseState = MaterialSkin.MouseState.OUT;
+            this.textBoxAnswer1.Multiline = false;
+            this.textBoxAnswer1.Name = "textBoxAnswer1";
+            this.textBoxAnswer1.Size = new System.Drawing.Size(100, 50);
+            this.textBoxAnswer1.TabIndex = 29;
+            this.textBoxAnswer1.Text = "";
+            // 
+            // textBoxAnswer2
+            // 
+            this.textBoxAnswer2.BackColor = System.Drawing.Color.White;
+            this.textBoxAnswer2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAnswer2.Depth = 0;
+            this.textBoxAnswer2.Font = new System.Drawing.Font("Roboto", 12F);
+            this.textBoxAnswer2.Location = new System.Drawing.Point(800, 507);
+            this.textBoxAnswer2.MaxLength = 50;
+            this.textBoxAnswer2.MouseState = MaterialSkin.MouseState.OUT;
+            this.textBoxAnswer2.Multiline = false;
+            this.textBoxAnswer2.Name = "textBoxAnswer2";
+            this.textBoxAnswer2.Size = new System.Drawing.Size(100, 50);
+            this.textBoxAnswer2.TabIndex = 30;
+            this.textBoxAnswer2.Text = "";
+            // 
+            // textBoxAnswer3
+            // 
+            this.textBoxAnswer3.BackColor = System.Drawing.Color.White;
+            this.textBoxAnswer3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAnswer3.Depth = 0;
+            this.textBoxAnswer3.Font = new System.Drawing.Font("Roboto", 12F);
+            this.textBoxAnswer3.Location = new System.Drawing.Point(1176, 349);
+            this.textBoxAnswer3.MaxLength = 50;
+            this.textBoxAnswer3.MouseState = MaterialSkin.MouseState.OUT;
+            this.textBoxAnswer3.Multiline = false;
+            this.textBoxAnswer3.Name = "textBoxAnswer3";
+            this.textBoxAnswer3.Size = new System.Drawing.Size(100, 50);
+            this.textBoxAnswer3.TabIndex = 31;
+            this.textBoxAnswer3.Text = "";
+            // 
             // pictureBoxAnswer1
             // 
+            this.pictureBoxAnswer1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxAnswer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxAnswer1.Location = new System.Drawing.Point(679, 132);
+            this.pictureBoxAnswer1.Location = new System.Drawing.Point(576, 128);
             this.pictureBoxAnswer1.Name = "pictureBoxAnswer1";
-            this.pictureBoxAnswer1.Size = new System.Drawing.Size(215, 217);
+            this.pictureBoxAnswer1.Size = new System.Drawing.Size(218, 217);
             this.pictureBoxAnswer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxAnswer1.TabIndex = 18;
+            this.pictureBoxAnswer1.TabIndex = 32;
             this.pictureBoxAnswer1.TabStop = false;
             // 
             // pictureBoxAnswer3
             // 
+            this.pictureBoxAnswer3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxAnswer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxAnswer3.Location = new System.Drawing.Point(930, 320);
+            this.pictureBoxAnswer3.Location = new System.Drawing.Point(952, 286);
             this.pictureBoxAnswer3.Name = "pictureBoxAnswer3";
-            this.pictureBoxAnswer3.Size = new System.Drawing.Size(205, 217);
+            this.pictureBoxAnswer3.Size = new System.Drawing.Size(218, 217);
             this.pictureBoxAnswer3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxAnswer3.TabIndex = 19;
+            this.pictureBoxAnswer3.TabIndex = 33;
             this.pictureBoxAnswer3.TabStop = false;
             // 
-            // buttonSubmit1
+            // materialLabel1
             // 
-            this.buttonSubmit1.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSubmit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSubmit1.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonSubmit1.ForeColor = System.Drawing.Color.White;
-            this.buttonSubmit1.Location = new System.Drawing.Point(908, 235);
-            this.buttonSubmit1.Name = "buttonSubmit1";
-            this.buttonSubmit1.Size = new System.Drawing.Size(117, 36);
-            this.buttonSubmit1.TabIndex = 8;
-            this.buttonSubmit1.Text = "Check";
-            this.buttonSubmit1.UseVisualStyleBackColor = false;
+            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(12, 76);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(380, 88);
+            this.materialLabel1.TabIndex = 34;
+            this.materialLabel1.Text = "Instructions:\r\nCount the animals that appear in the picture and answer the questi" +
+    "ons correctly.\r\nEach correct answer earns you $2 in the digital wallet\r\n\r\n";
             // 
-            // buttonSubmit2
+            // timerLabel
             // 
-            this.buttonSubmit2.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSubmit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSubmit2.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonSubmit2.ForeColor = System.Drawing.Color.White;
-            this.buttonSubmit2.Location = new System.Drawing.Point(912, 625);
-            this.buttonSubmit2.Name = "buttonSubmit2";
-            this.buttonSubmit2.Size = new System.Drawing.Size(117, 36);
-            this.buttonSubmit2.TabIndex = 9;
-            this.buttonSubmit2.Text = "Check";
-            this.buttonSubmit2.UseVisualStyleBackColor = false;
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Depth = 0;
+            this.timerLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.timerLabel.Location = new System.Drawing.Point(412, 76);
+            this.timerLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(45, 19);
+            this.timerLabel.TabIndex = 35;
+            this.timerLabel.Text = "Time: ";
             // 
-            // buttonSubmit3
+            // userDetailsLabel
             // 
-            this.buttonSubmit3.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSubmit3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSubmit3.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonSubmit3.ForeColor = System.Drawing.Color.White;
-            this.buttonSubmit3.Location = new System.Drawing.Point(1153, 450);
-            this.buttonSubmit3.Name = "buttonSubmit3";
-            this.buttonSubmit3.Size = new System.Drawing.Size(117, 36);
-            this.buttonSubmit3.TabIndex = 10;
-            this.buttonSubmit3.Text = "Check";
-            this.buttonSubmit3.UseVisualStyleBackColor = false;
-            // 
-            // textBoxAnswer1
-            // 
-            this.textBoxAnswer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxAnswer1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBoxAnswer1.Location = new System.Drawing.Point(908, 192);
-            this.textBoxAnswer1.Name = "textBoxAnswer1";
-            this.textBoxAnswer1.Size = new System.Drawing.Size(117, 23);
-            this.textBoxAnswer1.TabIndex = 5;
-            // 
-            // textBoxAnswer2
-            // 
-            this.textBoxAnswer2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxAnswer2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBoxAnswer2.Location = new System.Drawing.Point(912, 582);
-            this.textBoxAnswer2.Name = "textBoxAnswer2";
-            this.textBoxAnswer2.Size = new System.Drawing.Size(117, 23);
-            this.textBoxAnswer2.TabIndex = 20;
-            // 
-            // textBoxAnswer3
-            // 
-            this.textBoxAnswer3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxAnswer3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBoxAnswer3.Location = new System.Drawing.Point(1153, 407);
-            this.textBoxAnswer3.Name = "textBoxAnswer3";
-            this.textBoxAnswer3.Size = new System.Drawing.Size(117, 23);
-            this.textBoxAnswer3.TabIndex = 21;
+            this.userDetailsLabel.Depth = 0;
+            this.userDetailsLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.userDetailsLabel.Location = new System.Drawing.Point(1058, 67);
+            this.userDetailsLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.userDetailsLabel.Name = "userDetailsLabel";
+            this.userDetailsLabel.Size = new System.Drawing.Size(200, 149);
+            this.userDetailsLabel.TabIndex = 36;
             // 
             // GameScreen
             // 
@@ -209,21 +252,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(217)))), ((int)(((byte)(183)))));
             this.ClientSize = new System.Drawing.Size(1280, 716);
+            this.Controls.Add(this.userDetailsLabel);
+            this.Controls.Add(this.timerLabel);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.pictureBoxAnswer3);
+            this.Controls.Add(this.pictureBoxAnswer1);
             this.Controls.Add(this.textBoxAnswer3);
             this.Controls.Add(this.textBoxAnswer2);
             this.Controls.Add(this.textBoxAnswer1);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonSubmit3);
             this.Controls.Add(this.buttonSubmit2);
             this.Controls.Add(this.buttonSubmit1);
-            this.Controls.Add(this.pictureBoxAnswer3);
-            this.Controls.Add(this.pictureBoxAnswer1);
             this.Controls.Add(this.pictureBoxQuestion);
             this.Controls.Add(this.pictureBoxAnswer2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
             this.Name = "GameScreen";
-            this.Text = "GameScreen";
-            this.panel1.ResumeLayout(false);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Count the Animals";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer1)).EndInit();
@@ -234,20 +279,19 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Label instrLabel;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBoxAnswer2;
         private System.Windows.Forms.PictureBox pictureBoxQuestion;
+        private MaterialSkin.Controls.MaterialButton buttonSubmit1;
+        private MaterialSkin.Controls.MaterialButton buttonSubmit2;
+        private MaterialSkin.Controls.MaterialButton buttonSubmit3;
+        private MaterialSkin.Controls.MaterialButton buttonExit;
+        private MaterialSkin.Controls.MaterialTextBox textBoxAnswer1;
+        private MaterialSkin.Controls.MaterialTextBox textBoxAnswer2;
+        private MaterialSkin.Controls.MaterialTextBox textBoxAnswer3;
         private System.Windows.Forms.PictureBox pictureBoxAnswer1;
         private System.Windows.Forms.PictureBox pictureBoxAnswer3;
-        private System.Windows.Forms.Button buttonSubmit1;
-        private System.Windows.Forms.Button buttonSubmit2;
-        private System.Windows.Forms.Button buttonSubmit3;
-        private System.Windows.Forms.TextBox textBoxAnswer1;
-        private System.Windows.Forms.TextBox textBoxAnswer2;
-        private System.Windows.Forms.TextBox textBoxAnswer3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel timerLabel;
+        private MaterialSkin.Controls.MaterialLabel userDetailsLabel;
     }
 }

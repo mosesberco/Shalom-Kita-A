@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClosedXML.Excel;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 
 namespace final_project
 {
-    public partial class EnglishBuildWordsGame : Form
+    public partial class EnglishBuildWordsGame : MaterialForm
     {
         private Label lettersLabel;
         private Random random;
@@ -30,6 +32,10 @@ namespace final_project
         {
             this.user = user;
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Red800, Primary.Red700, Primary.Blue500, Accent.LightBlue400, TextShade.WHITE);
             InitializeGameComponents();
             LoadRandomGroupFromExcel();
             checkedWords = new List<string>(); // Initialize the list
@@ -224,14 +230,8 @@ namespace final_project
             CheckWord(input);
         }
 
-        private void GameForm_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void TitleWord_Click(object sender, EventArgs e)
-        {
-        }
-
+        
+      
         private void TxtFD1_TextChanged(object sender, EventArgs e)
         {
 
