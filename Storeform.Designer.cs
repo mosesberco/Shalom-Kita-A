@@ -32,132 +32,131 @@ namespace final_project
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            walletlabel2 = new Label();
-            label1 = new Label();
-            walletLabel1 = new Label();
-            pictureBox2 = new PictureBox();
-            button1 = new Button();
-            pictureBox1 = new PictureBox();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.walletlabel2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.walletLabel1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(0, 129, 167);
-            panel1.Controls.Add(walletlabel2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(walletLabel1);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(276, 561);
-            panel1.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(167)))));
+            this.panel1.Controls.Add(this.walletlabel2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.walletLabel1);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(237, 645);
+            this.panel1.TabIndex = 0;
             // 
             // walletlabel2
             // 
-            walletlabel2.AutoSize = true;
-            walletlabel2.Font = new Font("Gill Sans MT", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            walletlabel2.ForeColor = Color.White;
-            walletlabel2.Location = new Point(186, 76);
-            walletlabel2.Margin = new Padding(3);
-            walletlabel2.Name = "walletlabel2";
-            walletlabel2.Size = new Size(0, 34);
-            walletlabel2.TabIndex = 7;
+            this.walletlabel2.AutoSize = true;
+            this.walletlabel2.Font = new System.Drawing.Font("Gill Sans MT", 18F);
+            this.walletlabel2.ForeColor = System.Drawing.Color.White;
+            this.walletlabel2.Location = new System.Drawing.Point(159, 66);
+            this.walletlabel2.Margin = new System.Windows.Forms.Padding(3);
+            this.walletlabel2.Name = "walletlabel2";
+            this.walletlabel2.Size = new System.Drawing.Size(0, 34);
+            this.walletlabel2.TabIndex = 7;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Gill Sans MT", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(11, 1);
-            label1.Name = "label1";
-            label1.Size = new Size(241, 67);
-            label1.TabIndex = 0;
-            label1.Text = "Gift Shop";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(241, 67);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Gift Shop";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // walletLabel1
             // 
-            walletLabel1.AutoSize = true;
-            walletLabel1.FlatStyle = FlatStyle.Flat;
-            walletLabel1.Font = new Font("Gill Sans MT", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            walletLabel1.ForeColor = Color.White;
-            walletLabel1.Location = new Point(57, 68);
-            walletLabel1.Name = "walletLabel1";
-            walletLabel1.Size = new Size(123, 45);
-            walletLabel1.TabIndex = 1;
-            walletLabel1.Text = "Wallet";
+            this.walletLabel1.AutoSize = true;
+            this.walletLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.walletLabel1.Font = new System.Drawing.Font("Gill Sans MT", 24F, System.Drawing.FontStyle.Bold);
+            this.walletLabel1.ForeColor = System.Drawing.Color.White;
+            this.walletLabel1.Location = new System.Drawing.Point(49, 59);
+            this.walletLabel1.Name = "walletLabel1";
+            this.walletLabel1.Size = new System.Drawing.Size(123, 45);
+            this.walletLabel1.TabIndex = 1;
+            this.walletLabel1.Text = "Wallet";
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImageLayout = ImageLayout.None;
-            pictureBox2.ErrorImage = null;
-            //pictureBox2.Image = Properties.Resources.Walletwhite;
-            pictureBox2.InitialImage = null;
-            pictureBox2.Location = new Point(11, 68);
-            pictureBox2.Margin = new Padding(0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(37, 41);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 59);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // button1
             // 
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.White;
-            button1.FlatAppearance.MouseOverBackColor = Color.White;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Gill Sans MT", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(62, 506);
-            button1.Name = "button1";
-            button1.Size = new Size(118, 52);
-            button1.TabIndex = 6;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = true;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 24F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(46, 597);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 45);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImageLayout = ImageLayout.None;
-            pictureBox1.ErrorImage = null;
-            //pictureBox1.Image = Properties.Resources.cartwithgiftswhite;
-            pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(11, 124);
-            pictureBox1.Margin = new Padding(0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(243, 401);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 107);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 522);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // StoreForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            AutoValidate = AutoValidate.EnablePreventFocusChange;
-            BackColor = Color.FromArgb(253, 252, 220);
-            ClientSize = new Size(889, 561);
-            Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            Name = "StoreForm";
-            SizeGripStyle = SizeGripStyle.Show;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Store";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(252)))), ((int)(((byte)(220)))));
+            this.ClientSize = new System.Drawing.Size(1121, 657);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "StoreForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Store";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

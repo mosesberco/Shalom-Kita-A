@@ -36,10 +36,13 @@ namespace final_project
             nextQuestion();
             setButtons();
             progressBar1.Maximum = totalQuestions;
+            userData.Text = $"Username : {user.Username}\nBalance : {user.Balance}";
         }
         public void nextQuestion()
         {
             lblQuestion.Text = $"#{this.index + 1}.  " + this.questions[this.index].toString();
+            lblQuestion.Text = $"#{this.index+1}.  "+this.questions[this.index].toString();
+            scoreLabel.Text = $"Score : {this.score}/{this.totalQuestions}";
         }
         private async void checkAnswerEvent(object sender, EventArgs e)
         {
@@ -48,17 +51,19 @@ namespace final_project
 
             if (checkAnswer(btnAnswer))
             {
-                this.score += 10;
+                score += 1;
                 clickedButton.BackColor = Color.Green;
             }
             else
             {
-                this.wrong_answers.Add(this.questions[index]);
+                wrong_answers.Add(this.questions[index]);
                 clickedButton.BackColor = Color.Red;
             }
 
             SetButtonsEnabled(false);
-            await Task.Delay(1000);
+            // Wait for 1 second
+            await Task.Delay(1100);
+            // Reset button colors and re-enable them
             ResetButtonColors();
             SetButtonsEnabled(true);
             progressBar1.Value = this.index + 1;
@@ -69,6 +74,9 @@ namespace final_project
                 var DB = new Database();
                 var balance = DB.GetBalance(int.Parse(user.ID));
                 DB.SetBalance(int.Parse(user.ID), (score / 10) + balance);
+                DB.SetBalance(int.Parse(user.ID), score + balance);
+                //MessageBox.Show($"You earned {score / 10} points this game!","Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 this.Close();
             }
             else
@@ -112,7 +120,7 @@ namespace final_project
                     message += "Congratulations! You got all questions right!";
                 }
                 MessageBox.Show(message, "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show($"You earned {score / 10} points this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"You earned {score} points this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return true;
             }

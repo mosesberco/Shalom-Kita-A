@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -8,10 +9,14 @@ namespace final_project
     public partial class UserInterface : MaterialForm
     {
         private User userActive;
+        private Dictionary<string, string> items = new Dictionary<string, string>();
+
         private Database database;
 
         public UserInterface(Database db, int userIndex)
         {
+            
+
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -22,6 +27,13 @@ namespace final_project
             UpdateForm();
         }
 
+        private void loadItems()
+        {
+            var storeDB = new Database(@"../../../storeitems.xlsx");
+
+            items.Clear();
+            items = storeDB.GetItemsByUserId(userActive);
+        }
         private void LoadUser(int userIndex)
         {
             this.userActive = database.LoadUserData(userIndex);

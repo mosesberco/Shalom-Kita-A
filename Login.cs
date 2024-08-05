@@ -16,6 +16,7 @@ namespace final_project
     public partial class Login : MaterialForm
     {
         private Database DB;
+        
         public Login()
         {
             InitializeComponent();
@@ -69,6 +70,7 @@ namespace final_project
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            //Close();
         }
 
 
@@ -81,9 +83,12 @@ namespace final_project
             if (index!=-1)
             {
                 MessageBox.Show("Login successful!");
+                User user = DB.getUser(username, password);
+                Menu mainMenu = new Menu(user);
+                mainMenu.Show();
                 this.Hide();
-                UserInterface userInterface = new UserInterface(DB, index);
-                userInterface.Show();
+                //UserInterface userInterface = new UserInterface(DB, index);
+                //userInterface.Show();
             }
             else
             {

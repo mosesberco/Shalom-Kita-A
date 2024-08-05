@@ -175,6 +175,17 @@ namespace final_project
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Aharoni", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(596, 38);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 96);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "משחק זיכרון";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button2
             // 
             this.button2.AutoSize = false;
@@ -276,6 +287,7 @@ namespace final_project
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

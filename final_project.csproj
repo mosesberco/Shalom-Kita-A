@@ -62,17 +62,23 @@
     <Compile Include="EnglishMemoryGameMenu.Designer.cs">
       <DependentUpon>EnglishMemoryGameMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="EnsglishBuildWordsGameMenu.cs">
+    <Compile Include="EnglishBuildWordsGameMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EnsglishBuildWordsGameMenu.Designer.cs">
-      <DependentUpon>EnsglishBuildWordsGameMenu.cs</DependentUpon>
+    <Compile Include="EnglishBuildWordsGameMenu.Designer.cs">
+      <DependentUpon>EnglishBuildWordsGameMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="ChangeUserName.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChangeUserName.Designer.cs">
       <DependentUpon>ChangeUserName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserInterface.cs">
@@ -258,8 +264,8 @@
     <EmbeddedResource Include="EnglishMemoryGameMenu.resx">
       <DependentUpon>EnglishMemoryGameMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EnsglishBuildWordsGameMenu.resx">
-      <DependentUpon>EnsglishBuildWordsGameMenu.cs</DependentUpon>
+    <EmbeddedResource Include="EnglishBuildWordsGameMenu.resx">
+      <DependentUpon>EnglishBuildWordsGameMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameScreen.resx">
       <DependentUpon>GameScreen.cs</DependentUpon>
@@ -276,6 +282,9 @@
     <EmbeddedResource Include="Math_udi.resx">
       <DependentUpon>Math_udi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -283,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Storeform.resx">
+      <DependentUpon>Storeform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface.resx">
       <DependentUpon>UserInterface.cs</DependentUpon>
