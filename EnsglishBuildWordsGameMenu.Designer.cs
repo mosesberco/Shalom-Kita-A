@@ -1,7 +1,7 @@
 ﻿
 namespace final_project
 {
-    partial class EnsglishBuildWordsGameMenu
+    partial class EnglishBuildWordsGameMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -97,9 +97,10 @@ namespace final_project
 
         }
 
-        #endregion
+        
         private System.Windows.Forms.RichTextBox richTextBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialButton StartingGameButton;
+        #endregion
     }
 }

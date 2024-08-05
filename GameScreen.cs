@@ -18,7 +18,6 @@ namespace final_project
         private User user;
         private Timer gameTimer;
         private int remainingTime = 60;
-        private Menu mainMenu;
         private class QuestionData
         {
             public string ImageName { get; set; }
@@ -221,7 +220,6 @@ namespace final_project
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
             DB.SetBalance(int.Parse(user.ID), (score / 10) + balance);
-            mainMenu.Show();
         }
     }
 }

@@ -12,10 +12,11 @@ using System.Windows.Forms;
 
 namespace final_project
 {
+
     public partial class EnglishBuildWordsGameMenu : MaterialForm
     {
         private User user;
-        public EnsglishBuildWordsGameMenu(User user)
+        public EnglishBuildWordsGameMenu(User user)
         {
             InitializeComponent();
             this.user = user;
