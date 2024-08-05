@@ -16,7 +16,6 @@ namespace final_project
         public UserInterface(Database db, int userIndex)
         {
             
-
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
