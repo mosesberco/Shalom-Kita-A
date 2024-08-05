@@ -54,7 +54,7 @@ namespace final_project
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            var math1 = new Game_Udi(user);
+            var math1 = new Math_udi(user);
             math1.Show();
             this.Show();
         }

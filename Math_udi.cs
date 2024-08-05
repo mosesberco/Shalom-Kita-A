@@ -1,5 +1,4 @@
-﻿using MaterialSkin;
-using MaterialSkin.Controls;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MaterialSkin;
+using MaterialSkin.Controls;
 namespace final_project
 {
-    public partial class Game_Udi : MaterialForm
+    public partial class Math_udi : MaterialForm
     {
         Question_udi[] questions;
         List<Question_udi> wrong_answers = new List<Question_udi>();
@@ -20,7 +20,7 @@ namespace final_project
         Random random = new Random();
         private User user;
         private MaterialButton[] buttons;
-        public Game_Udi(User user)
+        public Math_udi(User user)
         {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -36,13 +36,13 @@ namespace final_project
             nextQuestion();
             setButtons();
             progressBar1.Maximum = totalQuestions;
-            userData.Text = $"Username : {user.Username}\nBalance : {user.Balance}";
+            //userData.Text = $"Username : {user.Username}\nBalance : {user.Balance}";
         }
         public void nextQuestion()
         {
             lblQuestion.Text = $"#{this.index + 1}.  " + this.questions[this.index].toString();
             lblQuestion.Text = $"#{this.index+1}.  "+this.questions[this.index].toString();
-            scoreLabel.Text = $"Score : {this.score}/{this.totalQuestions}";
+            //scoreLabel.Text = $"Score : {this.score}/{this.totalQuestions}";
         }
         private async void checkAnswerEvent(object sender, EventArgs e)
         {

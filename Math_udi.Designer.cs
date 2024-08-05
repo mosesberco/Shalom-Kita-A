@@ -1,10 +1,10 @@
-﻿
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace final_project
 {
-    partial class Game_Udi
+    partial class Math_udi
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace final_project
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_Udi));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Math_udi));
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -181,7 +181,7 @@ namespace final_project
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.checkAnswerEvent);
             // 
-            // Game_Udi
+            // Math_udi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,7 +196,7 @@ namespace final_project
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.progressBar1);
-            this.Name = "Game_Udi";
+            this.Name = "Math_udi";
             this.Text = "Simple Math Game";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -206,11 +206,8 @@ namespace final_project
         }
 
         #endregion
+
         private System.Windows.Forms.ProgressBar progressBar1;
-        #region Windows Form Designer generated code
-
-        #endregion
-
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
