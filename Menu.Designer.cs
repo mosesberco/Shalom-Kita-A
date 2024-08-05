@@ -73,7 +73,7 @@ namespace final_project
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(136, 96);
             this.button6.TabIndex = 6;
-            this.button6.Text = "עברית 2";
+            this.button6.Text = "משחק ספיר";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -83,7 +83,7 @@ namespace final_project
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(136, 96);
             this.button5.TabIndex = 5;
-            this.button5.Text = "math 2";
+            this.button5.Text = "ספור את החיות";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -93,7 +93,7 @@ namespace final_project
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(136, 96);
             this.button4.TabIndex = 4;
-            this.button4.Text = "english 2";
+            this.button4.Text = "english memory game";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -104,7 +104,7 @@ namespace final_project
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 96);
             this.button3.TabIndex = 3;
-            this.button3.Text = "עברית 1";
+            this.button3.Text = "משחק זיכרון";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -114,7 +114,7 @@ namespace final_project
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 96);
             this.button2.TabIndex = 2;
-            this.button2.Text = "math 1";
+            this.button2.Text = "חיבור וחיסור";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -124,7 +124,7 @@ namespace final_project
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 96);
             this.button1.TabIndex = 0;
-            this.button1.Text = "english 1";
+            this.button1.Text = "build words";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

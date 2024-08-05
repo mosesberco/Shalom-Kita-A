@@ -13,7 +13,10 @@ namespace final_project
 
         public UserInterface(Database db, int userIndex)
         {
+            
+
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.Sizable;
             database = db;
             LoadUser(userIndex);
             UpdateForm();

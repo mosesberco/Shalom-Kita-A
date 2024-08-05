@@ -101,6 +101,8 @@ namespace final_project
             this.showPasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showPasswordCheckBox.Location = new System.Drawing.Point(431, 155);
+            this.passwordTextBox.PasswordChar = '*';
+
             this.showPasswordCheckBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
             this.showPasswordCheckBox.Size = new System.Drawing.Size(96, 17);
