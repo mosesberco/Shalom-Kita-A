@@ -54,7 +54,7 @@ namespace final_project
             this.genderTextBox.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.genderTextBox.Location = new System.Drawing.Point(207, 262);
+            this.genderTextBox.Location = new System.Drawing.Point(260, 332);
             this.genderTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.genderTextBox.Name = "genderTextBox";
             this.genderTextBox.Size = new System.Drawing.Size(164, 21);
@@ -64,7 +64,7 @@ namespace final_project
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Info;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.Location = new System.Drawing.Point(26, 316);
+            this.button3.Location = new System.Drawing.Point(22, 415);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 31);
@@ -76,11 +76,11 @@ namespace final_project
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label8.BackColor = System.Drawing.SystemColors.Info;
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(250, 365);
+            this.label8.Location = new System.Drawing.Point(280, 440);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 20);
@@ -94,7 +94,7 @@ namespace final_project
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label7.Location = new System.Drawing.Point(173, 327);
+            this.label7.Location = new System.Drawing.Point(203, 402);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(221, 20);
@@ -106,7 +106,7 @@ namespace final_project
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(496, 316);
+            this.button1.Location = new System.Drawing.Point(569, 415);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 29);
@@ -120,7 +120,7 @@ namespace final_project
             this.showPasswordCheckBox.AutoSize = true;
             this.showPasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordCheckBox.Location = new System.Drawing.Point(414, 112);
+            this.showPasswordCheckBox.Location = new System.Drawing.Point(467, 135);
             this.showPasswordCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
             this.showPasswordCheckBox.Size = new System.Drawing.Size(96, 17);
@@ -134,7 +134,7 @@ namespace final_project
             this.txtGen.AutoSize = true;
             this.txtGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtGen.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtGen.Location = new System.Drawing.Point(98, 258);
+            this.txtGen.Location = new System.Drawing.Point(151, 328);
             this.txtGen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtGen.Name = "txtGen";
             this.txtGen.Size = new System.Drawing.Size(74, 20);
@@ -146,7 +146,7 @@ namespace final_project
             this.txtEmail.AutoSize = true;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtEmail.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtEmail.Location = new System.Drawing.Point(98, 208);
+            this.txtEmail.Location = new System.Drawing.Point(151, 278);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(58, 20);
@@ -158,7 +158,7 @@ namespace final_project
             this.txtID.AutoSize = true;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtID.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtID.Location = new System.Drawing.Point(98, 158);
+            this.txtID.Location = new System.Drawing.Point(151, 228);
             this.txtID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(33, 20);
@@ -169,7 +169,7 @@ namespace final_project
             // 
             this.emailTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.emailTextBox.Location = new System.Drawing.Point(207, 208);
+            this.emailTextBox.Location = new System.Drawing.Point(260, 278);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(164, 26);
@@ -179,7 +179,7 @@ namespace final_project
             // 
             this.idTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.idTextBox.Location = new System.Drawing.Point(207, 158);
+            this.idTextBox.Location = new System.Drawing.Point(260, 228);
             this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(164, 26);
@@ -189,7 +189,7 @@ namespace final_project
             // 
             this.passwordTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.passwordTextBox.Location = new System.Drawing.Point(207, 105);
+            this.passwordTextBox.Location = new System.Drawing.Point(260, 128);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
@@ -201,7 +201,7 @@ namespace final_project
             this.usernameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.usernameTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.usernameTextBox.Location = new System.Drawing.Point(207, 56);
+            this.usernameTextBox.Location = new System.Drawing.Point(260, 79);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(164, 26);
@@ -212,7 +212,7 @@ namespace final_project
             this.txtPass.AutoSize = true;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtPass.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtPass.Location = new System.Drawing.Point(98, 105);
+            this.txtPass.Location = new System.Drawing.Point(151, 128);
             this.txtPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(90, 20);
@@ -224,7 +224,7 @@ namespace final_project
             this.txtusername.AutoSize = true;
             this.txtusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtusername.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtusername.Location = new System.Drawing.Point(98, 56);
+            this.txtusername.Location = new System.Drawing.Point(151, 79);
             this.txtusername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(101, 20);
@@ -236,7 +236,7 @@ namespace final_project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(250, 9);
+            this.label1.Location = new System.Drawing.Point(294, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 24);
@@ -247,8 +247,10 @@ namespace final_project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(607, 404);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackgroundImage = global::final_project.Properties.Resources.shalom_kita_a;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(711, 492);
             this.Controls.Add(this.genderTextBox);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label8);

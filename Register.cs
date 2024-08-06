@@ -67,9 +67,9 @@ namespace final_project
             //}
 
             // Validate ID Number
-            if (string.IsNullOrWhiteSpace(id) || !id.All(char.IsDigit))
+            if (string.IsNullOrWhiteSpace(id) || !id.All(char.IsDigit) || id.Count() != 9)
             {
-                MessageBox.Show("ID must be a valid number.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ID must be a valid 9 digits number.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
