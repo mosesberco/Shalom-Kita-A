@@ -17,11 +17,11 @@ namespace final_project
         private int correctanswer;
         private int questionNumber;
         private int totalQuestions = 5;
-        private List<string> correctImagePaths;
-        private List<string> incorrectImagePaths;
+        private List<Image> correctImagePaths;
+        private List<Image> incorrectImagePaths;
         private Random random;
         private int correctImageDisplayedIndex;
-        private string correctImagePath;
+        private Image correctImagePath;
         private Timer timer;
         private int delayInSeconds = 1;
         private Image im;
@@ -49,6 +49,15 @@ namespace final_project
             {
                 button.Enabled = false;
             }
+            this.BackgroundImage= (Image)Properties.Resources.ResourceManager.GetObject("רקע");
+            buttonRandomize.BackgroundImage= (Image)Properties.Resources.ResourceManager.GetObject("start");
+            playerinfo.Text = user.Username.ToString() + ":שלום" + "\n" + "כסף: " + user.Balance.ToString();
+            playerinfo.BackColor = Color.Transparent;
+            guidelines.Text = "ברוכים הבאים למשחק אות פותחת! עליכם לבחור את התמונה הנכונה אשר מתחילה באות המופיעה";
+            guidelines.BackColor = Color.Transparent;
+            backtomenu.Text = "חזרה לתפריט";
+
+
 
         }
 
@@ -84,12 +93,13 @@ namespace final_project
             if (!isDelayActive)
             {
                 randomQuestion = random.Next(1, 23);
+                //randomQuestion = 1;
                 askQuestion(randomQuestion);
                 buttonRandomize.Enabled = false;
                 int correctImageIndex = random.Next(correctImagePaths.Count);
                 correctImagePath = correctImagePaths[correctImageIndex];
                 HashSet<int> selectedIndexes = new HashSet<int>();
-                string[] displayedImagePaths = new string[3];
+                Image[] displayedImagePaths = new Image[3];
                 correctImageDisplayedIndex = random.Next(3);
                 displayedImagePaths[correctImageDisplayedIndex] = correctImagePath;
                 for (int i = 0; i < 3; i++)
@@ -107,9 +117,9 @@ namespace final_project
                     displayedImagePaths[i] = incorrectImagePaths[index];
                 }
                 letterPic.BackgroundImage = im;
-                answer1.BackgroundImage = Image.FromFile(displayedImagePaths[0]);
-                answer2.BackgroundImage = Image.FromFile(displayedImagePaths[1]);
-                answer3.BackgroundImage = Image.FromFile(displayedImagePaths[2]);
+                answer1.BackgroundImage = displayedImagePaths[0];
+                answer2.BackgroundImage = displayedImagePaths[1];
+                answer3.BackgroundImage = displayedImagePaths[2];
                 questionNumber++;
 
                 foreach (var button in answerButtons)
@@ -185,14 +195,14 @@ namespace final_project
         // Ends the game, displays the final score, and shows the start over button.
         private void EndGame()
         {
-            MessageBox.Show("         !סוף המשחק" + Environment.NewLine + "צדקת ב " + correctanswer + " מתוך " + totalQuestions + " שאלות" + Environment.NewLine + " הרווחת " + correctanswer * 100 + " מטבעות!");
-            coins = correctanswer * 100;
+            MessageBox.Show("         !סוף המשחק" + Environment.NewLine + "צדקת ב " + correctanswer + " מתוך " + totalQuestions + " שאלות" + Environment.NewLine + "        הרווחת $ " + correctanswer * 3 );
+            coins = correctanswer * 3;
             startOver.Visible = true;
             isDelayActive = false;
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
-            DB.SetBalance(int.Parse(user.ID), (correctanswer) + balance);
-            Close();
+            DB.SetBalance(int.Parse(user.ID), (coins) + balance);
+            //Close();
 
         }
 
@@ -201,6 +211,10 @@ namespace final_project
         {
             startOver.Visible = false;
             startGame(null, EventArgs.Empty);
+        }
+        private void backtomenu_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
 
@@ -212,446 +226,424 @@ namespace final_project
                 case 1:
                     //א
                     //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("א");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\אגס.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\אגרטל.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ארון.png"
+                        (Image)Properties.Resources.ResourceManager.GetObject("אגס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("אגרטל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("ארון")
 
                     };
-                    incorrectImagePaths = new List<string>
+                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ברווז.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כתר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זמר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רכבת.png"
+                        (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("זמר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("רכבת")
                     };
                     break;
                 case 2:
                     //ב
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ב.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ב");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\בייגלה.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\בית.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\בננה.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ברווז.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\בלון.png"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("בייגלה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("בית"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("בננה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("בלון")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\יין.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כתר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זמר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\לטאה.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("יין"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("זמר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("לטאה")
                     };
                     break;
+
                 case 3:
                     //ג
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ג.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ג");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\גזר.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\גלגל.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\גמל.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\גרזן.png"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("גזר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("גלגל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("גמל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("גרזן")
                     };
-                    incorrectImagePaths = new List<string>
+                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\לב.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\מכונית.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\נר.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רכבת.png"
+                        (Image)Properties.Resources.ResourceManager.GetObject("לב"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("מכונית"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("נר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("רכבת")
                     };
                     break;
                 case 4:
                     //ד
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ד.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ד");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\דג.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\דולפין.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\דחליל.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\דרדס.png"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("דג"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("דולפין"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("דחליל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("דרדס")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זבוב.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\מטוס.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\לגו.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רמזור.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("זבוב"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("מטוס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("לגו"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("רמזור")
                     };
                     break;
+
                 case 5:
                     //ה
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ה.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ה");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\הגה.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\היפופוטם.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\הר.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("הגה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("היפופוטם"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("הר")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\אגרטל.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כלב.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\סוס.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ספר.png"
+                        (Image)Properties.Resources.ResourceManager.GetObject("אגרטל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כלב"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("סוס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("ספר")
                     };
                     break;
+
                 case 6:
                     //ו
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ו.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ו");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\וופל.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\וורד.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\וילון.png"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("וופל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("וורד"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("וילון")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ברווז.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\טווס.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זמר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\יונה.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("טווס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("זמר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("יונה")
                     };
                     break;
                 case 7:
                     //ז
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ז.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ז");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זבוב.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זמר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זאב.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זברה.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("זבוב"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("זמר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("זאב"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("זברה")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\היפופוטם.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כתר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\טניס.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\חזיר.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("היפופוטם"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("טניס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("חזיר")
                     };
                     break;
+
                 case 8:
                     //ח
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ח.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ח");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\חבל.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\חזיר.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\חציל.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\חתול.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("חבל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("חזיר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("חציל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("חתול")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ברווז.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כתר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\עטלף.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\עיןן.png"
+                        (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("עטלף"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("עיןן")
                     };
                     break;
+
                 case 9:
                     //ט
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ט.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ט");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\טבח.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\טווס.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\טניס.png"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("טבח"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("טווס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("טניס")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\תמנון.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\תרנגול.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זמר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\שימלה.png"
+                        (Image)Properties.Resources.ResourceManager.GetObject("תמנון"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("תרנגול"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("זמר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("שימלה")
                     };
                     break;
                 case 10:
                     //י
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\י.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("י");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\יד.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\יונה.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\יין.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ינשוף.png"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("יד"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("יונה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("יין"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("ינשוף")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\חציל.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כריש.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זבוב.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רכבת.png"
+                        (Image)Properties.Resources.ResourceManager.GetObject("חציל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כריש"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("זבוב"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("רכבת")
                     };
                     break;
+
                 case 11:
                     //כ
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כ.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("כ");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כלב.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כריש.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כתר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כדור.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("כלב"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כריש"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כדור")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\קרנף.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\צוללת.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\קנגרו.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רכבת.png"
+                        (Image)Properties.Resources.ResourceManager.GetObject("קרנף"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("צוללת"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("קנגרו"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("רכבת")
                     };
                     break;
+
                 case 12:
                     //ל
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ל.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ל");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\לב.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\לגו.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\לוח.jpeg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\לטאה.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("לב"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("לגו"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("לוח"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("לטאה")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ברווז.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\נקניקיהה.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\מטוס.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\חתול.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("נקניקיהה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("מטוס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("חתול")
                     };
                     break;
+
                 case 13:
                     //מ
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\מ.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("מ");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\מטוס.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\מכונית.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\מסוק.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\משאית.JPG"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("מטוס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("מכונית"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("מסוק"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("משאית")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ספיידרמן.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\סרטן.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\עטלף.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\פטריה.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("ספיידרמן"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("סרטן"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("עטלף"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("פטריה")
                     };
                     break;
+
                 case 14:
                     //נ
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\נ.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("נ");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\נחש.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\נקניקיהה.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\נר.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\נמר.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("נחש"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("נקניקיה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("נר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("נמר")
                     };
-                    incorrectImagePaths = new List<string>
+                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\דחליל.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\בלון.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\גלגל.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רכבת.png"
+                        (Image)Properties.Resources.ResourceManager.GetObject("דחליל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("בלון"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("גלגל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("רכבת")
                     };
                     break;
+
                 case 15:
                     //ס
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ס.png");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ס");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ספיידרמן.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\סוס.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ספר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\סרטן.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("ספיידרמן"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("סוס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("ספר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("סרטן")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\שימלה.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\קקטוס.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\פרפר.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\מסוק.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("שימלה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("קקטוס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("פרפר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("מסוק")
                     };
                     break;
+
                 case 16:
                     //ע
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ע.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ע");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\עטלף.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\עיןן.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ענן.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\עקרב.png"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("עטלף"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("עיןן"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("ענן"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("עקרב")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\הר.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\אגס.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\אגרטל.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רכבת.png"
+                        (Image)Properties.Resources.ResourceManager.GetObject("הר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("אגס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("אגרטל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("רכבת")
                     };
                     break;
+
                 case 17:
                     //פ
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\פ.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("פ");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\פטריה.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\פיל.JPG",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\פרה.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\פרפר.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("פטריה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("פיל"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("פרה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("פרפר")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\צדפים.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\נמר.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זמר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\צלם.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("צדפים"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("נמר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("זמר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("צלם")
                     };
                     break;
+
                 case 18:
                     //צ
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\צ.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("צ");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\צב.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\צדפים.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\צוללת.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\צלם.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("צב"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("צדפים"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("צוללת"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("צלם")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\תפוח.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\משאית.JPG",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\לטאה.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\סוס.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("תפוח"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("משאית"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("לטאה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("סוס")
                     };
                     break;
+
                 case 19:
                     //ק
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ק.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ק");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\קוף.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\קנגרו.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\קקטוס.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\קרנף.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("קוף"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("קנגרו"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("קקטוס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("קרנף")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כריש.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כתר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כלב.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\סרטן.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("כריש"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כלב"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("סרטן")
                     };
                     break;
+
                 case 20:
                     //ר
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ר.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ר");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רכבת.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רמזור.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רשת.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\רגל.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("רכבת"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("רמזור"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("רשת"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("רגל")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ברווז.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\צוללת.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\עיןן.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\נחש.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("צוללת"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("עיןן"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("נחש")
                     };
                     break;
+
                 case 21:
                     //ש
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ש.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ש");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\שזיף.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\שימלה.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\שמש.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\שן.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("שזיף"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("שימלה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("שמש"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("שן")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ספר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\צדפים.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\זמר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\פטריה.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("ספר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("צדפים"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("זמר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("פטריה")
                     };
                     break;
+
                 case 22:
                     //ת
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
-                    im = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\ת.jpg");
-                    correctImagePaths = new List<string>
+                    im = (Image)Properties.Resources.ResourceManager.GetObject("ת");
+                    correctImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\תמנון.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\תמרורר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\תפוח.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\תרנגול.jpg"
-
+                        (Image)Properties.Resources.ResourceManager.GetObject("תמנון"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("תמרורר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("תפוח"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("תרנגול")
                     };
-                    incorrectImagePaths = new List<string>
+                                    incorrectImagePaths = new List<Image>
                     {
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\טווס.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\כתר.png",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\טבח.jpg",
-                        @"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\יונה.jpg"
+                        (Image)Properties.Resources.ResourceManager.GetObject("טווס"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("טבח"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("יונה")
                     };
                     break;
+
 
 
             }
 
 
         }
+
+       
     }
 }
 
