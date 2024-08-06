@@ -55,7 +55,7 @@ namespace final_project
             "Male",
             "Female"});
             this.genderTextBox.Location = new System.Drawing.Point(260, 332);
-            this.genderTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.genderTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.genderTextBox.Name = "genderTextBox";
             this.genderTextBox.Size = new System.Drawing.Size(164, 21);
             this.genderTextBox.TabIndex = 33;
@@ -65,7 +65,7 @@ namespace final_project
             this.button3.BackColor = System.Drawing.SystemColors.Info;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button3.Location = new System.Drawing.Point(22, 415);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 31);
             this.button3.TabIndex = 32;
@@ -107,7 +107,7 @@ namespace final_project
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button1.Location = new System.Drawing.Point(569, 415);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 29);
             this.button1.TabIndex = 29;
@@ -121,7 +121,7 @@ namespace final_project
             this.showPasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showPasswordCheckBox.Location = new System.Drawing.Point(467, 135);
-            this.showPasswordCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.showPasswordCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
             this.showPasswordCheckBox.Size = new System.Drawing.Size(96, 17);
             this.showPasswordCheckBox.TabIndex = 28;
@@ -170,7 +170,7 @@ namespace final_project
             this.emailTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.emailTextBox.Location = new System.Drawing.Point(260, 278);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(164, 26);
             this.emailTextBox.TabIndex = 24;
@@ -180,7 +180,7 @@ namespace final_project
             this.idTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.idTextBox.Location = new System.Drawing.Point(260, 228);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(164, 26);
             this.idTextBox.TabIndex = 23;
@@ -189,8 +189,8 @@ namespace final_project
             // 
             this.passwordTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.passwordTextBox.Location = new System.Drawing.Point(260, 128);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passwordTextBox.Location = new System.Drawing.Point(526, 228);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(164, 26);
@@ -202,7 +202,7 @@ namespace final_project
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.usernameTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.usernameTextBox.Location = new System.Drawing.Point(260, 79);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(164, 26);
             this.usernameTextBox.TabIndex = 21;
@@ -267,7 +267,7 @@ namespace final_project
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Register";
             this.Text = "Sign Up";
             this.ResumeLayout(false);
