@@ -51,7 +51,7 @@ namespace final_project
         private void TimerEvent(object sender, EventArgs e)
         {
             countDownTime--;
-            lblTimeLeft.Text = countDownTime + " :זמן נותר"; // Update the countdown label
+            lblTimeLeft.Text =$"זמן נותר: {countDownTime}"; // Update the countdown label
             if (countDownTime < 1)
             {
                 GameOver("הזמן נגמר, לא נורא תצליח פעם הבאה");
@@ -90,8 +90,8 @@ namespace final_project
             }
 
             tries = 0;
-            lblStatus.Text = tries + " :מספר נסיונות לא מוצלחים"; // Reset tries count
-            lblTimeLeft.Text = totalTime + " :זמן נותר"; // Reset countdown label
+            lblStatus.Text = $"מספר נסיונות: {tries} "; // Reset tries count
+            lblTimeLeft.Text = $"זמן נותר: {totalTime} "; // Reset countdown label
             gameOver = false;
             GameTimer.Start(); // Start the timer
             countDownTime = totalTime; // Reset countdown time
@@ -109,7 +109,7 @@ namespace final_project
             this.Controls.Add(this.gamePanel);
             this.gamePanel.SendToBack();
 
-            int pictureSize = 120; // Size of each picture box
+            int pictureSize =110; // Size of each picture box
             int padding = 20; // Padding between picture boxes
             int columns = 4; // Number of columns
             int rows = 3; // Number of rows
@@ -120,7 +120,7 @@ namespace final_project
 
             // Calculate starting positions to center the board
             int startX = (this.ClientSize.Width - totalWidth) / 2;
-            int startY = (this.ClientSize.Height - totalHeight) / 2 - 50; // Add some top margin
+            int startY = (this.ClientSize.Height - totalHeight) / 2 -30; // Add some top margin
 
             // Create and position picture boxes
             for (int i = 0; i < 12; i++)
@@ -200,7 +200,7 @@ namespace final_project
             else
             {
                 tries++;
-                lblStatus.Text = tries + " :מספר נסיונות לא מוצלחים"; // Update tries count
+                lblStatus.Text = $" מספר נסיונות: {tries}" ; // Update tries count
             }
 
             firstChoice = null;
@@ -234,11 +234,6 @@ namespace final_project
             MessageBox.Show(msg); // Show game over message
             return score;
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            // Placeholder for text changed event handler (if needed)
         }
     }
 }

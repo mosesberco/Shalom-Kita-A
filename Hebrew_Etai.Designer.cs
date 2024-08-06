@@ -54,48 +54,42 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hebrew_Etai));
-            this.gamePanel = new final_project.CustomPanel();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblTimeLeft = new System.Windows.Forms.Label();
             this.btnRestart = new System.Windows.Forms.Button();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
+            this.gamePanel = new final_project.CustomPanel();
             this.SuspendLayout();
-            // 
-            // gamePanel
-            // 
-            this.gamePanel.BackColor = System.Drawing.Color.Transparent;
-            this.gamePanel.Location = new System.Drawing.Point(50, 50);
-            this.gamePanel.Name = "gamePanel";
-            this.gamePanel.Size = new System.Drawing.Size(926, 680);
-            this.gamePanel.TabIndex = 0;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblStatus.Location = new System.Drawing.Point(177, 633);
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.Location = new System.Drawing.Point(20, 576);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(84, 28);
+            this.lblStatus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblStatus.Size = new System.Drawing.Size(284, 28);
             this.lblStatus.TabIndex = 0;
-            this.lblStatus.Text = "התאמה";
+            this.lblStatus.Text = "מספר ניסיונות לא מוצלחים: 0";
             // 
             // lblTimeLeft
             // 
             this.lblTimeLeft.AutoSize = true;
-            this.lblTimeLeft.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTimeLeft.Location = new System.Drawing.Point(685, 633);
+            this.lblTimeLeft.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTimeLeft.Location = new System.Drawing.Point(900, 576);
             this.lblTimeLeft.Name = "lblTimeLeft";
-            this.lblTimeLeft.Size = new System.Drawing.Size(102, 28);
+            this.lblTimeLeft.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTimeLeft.Size = new System.Drawing.Size(122, 28);
             this.lblTimeLeft.TabIndex = 1;
-            this.lblTimeLeft.Text = ":זמן נשאר";
+            this.lblTimeLeft.Text = "זמן נותר: 93";
             // 
             // btnRestart
             // 
-            this.btnRestart.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRestart.Location = new System.Drawing.Point(426, 568);
+            this.btnRestart.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnRestart.Location = new System.Drawing.Point(412, 576);
+            this.btnRestart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(200, 60);
+            this.btnRestart.Size = new System.Drawing.Size(200, 48);
             this.btnRestart.TabIndex = 2;
             this.btnRestart.Text = "התחל מחדש";
             this.btnRestart.UseVisualStyleBackColor = true;
@@ -106,26 +100,33 @@
             this.GameTimer.Interval = 1000;
             this.GameTimer.Tick += new System.EventHandler(this.TimerEvent);
             // 
-            // Form1
+            // gamePanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.gamePanel.BackColor = System.Drawing.Color.Transparent;
+            this.gamePanel.Location = new System.Drawing.Point(12, 10);
+            this.gamePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gamePanel.Name = "gamePanel";
+            this.gamePanel.Size = new System.Drawing.Size(1000, 560);
+            this.gamePanel.TabIndex = 0;
+            // 
+            // Hebrew_Etai
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1026, 771);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1024, 640);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblTimeLeft);
             this.Controls.Add(this.lblStatus);
-            this.Name = "Form1";
+            this.Controls.Add(this.gamePanel);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Hebrew_Etai";
             this.Text = "Hebrew Memory Matching Game";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("bg_Etai");
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        { }
 
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblTimeLeft;
