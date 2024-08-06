@@ -42,7 +42,6 @@ namespace final_project
             int btnAnswer = int.Parse(clickedButton.Text);
 
             if (checkAnswer(btnAnswer))
-
             {
                 score += 1;
                 clickedButton.BackColor = Color.Green;
@@ -61,16 +60,13 @@ namespace final_project
             SetButtonsEnabled(true);
             progressBar1.Value = this.index + 1;
             this.index++;
-            if (gameOver())
+            if (gameOver())             //fix updating user balance after a game !!!
             {
                 var DB = new Database();
                 var balance = DB.GetBalance(int.Parse(user.ID));
                 DB.SetBalance(int.Parse(user.ID), score + balance);
                 //MessageBox.Show($"You earned {score / 10} points this game!","Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                this.Close();
-
-                //Application.Exit();
+                Close();
             }
             else
             {
