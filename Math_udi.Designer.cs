@@ -54,9 +54,9 @@ namespace final_project
             // lblQuestion
             // 
             this.lblQuestion.BackColor = System.Drawing.Color.Transparent;
-            this.lblQuestion.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold);
+            this.lblQuestion.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion.ForeColor = System.Drawing.Color.White;
-            this.lblQuestion.Location = new System.Drawing.Point(240, 140);
+            this.lblQuestion.Location = new System.Drawing.Point(303, 141);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(454, 154);
             this.lblQuestion.TabIndex = 0;
@@ -71,9 +71,9 @@ namespace final_project
             this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Gill Sans MT", 21.75F);
+            this.button2.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(561, 303);
+            this.button2.Location = new System.Drawing.Point(624, 303);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 96);
             this.button2.TabIndex = 2;
@@ -91,9 +91,9 @@ namespace final_project
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 21.75F);
+            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(254, 303);
+            this.button1.Location = new System.Drawing.Point(285, 303);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 96);
             this.button1.TabIndex = 3;
@@ -111,9 +111,9 @@ namespace final_project
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Gill Sans MT", 21.75F);
+            this.button3.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(254, 437);
+            this.button3.Location = new System.Drawing.Point(285, 480);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(146, 96);
             this.button3.TabIndex = 4;
@@ -131,9 +131,9 @@ namespace final_project
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Gill Sans MT", 21.75F);
+            this.button4.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(561, 437);
+            this.button4.Location = new System.Drawing.Point(624, 480);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(146, 96);
             this.button4.TabIndex = 5;
@@ -144,9 +144,9 @@ namespace final_project
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(30, 195);
+            this.progressBar1.Location = new System.Drawing.Point(18, 195);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(237, 20);
+            this.progressBar1.Size = new System.Drawing.Size(258, 20);
             this.progressBar1.TabIndex = 6;
             // 
             // panel1
@@ -166,7 +166,7 @@ namespace final_project
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(310, 71);
+            this.label1.Location = new System.Drawing.Point(375, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 67);
             this.label1.TabIndex = 9;
@@ -176,9 +176,9 @@ namespace final_project
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(699, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(793, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(238, 138);
+            this.pictureBox1.Size = new System.Drawing.Size(238, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -210,9 +210,9 @@ namespace final_project
             this.userData.BackColor = System.Drawing.Color.Transparent;
             this.userData.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userData.ForeColor = System.Drawing.Color.White;
-            this.userData.Location = new System.Drawing.Point(12, 303);
+            this.userData.Location = new System.Drawing.Point(12, 424);
             this.userData.Name = "userData";
-            this.userData.Size = new System.Drawing.Size(208, 79);
+            this.userData.Size = new System.Drawing.Size(219, 152);
             this.userData.TabIndex = 11;
             this.userData.Text = "user data";
             // 
@@ -231,10 +231,10 @@ namespace final_project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::final_project.Properties.Resources.udi_game_background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(949, 550);
+            this.ClientSize = new System.Drawing.Size(1043, 611);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.userData);
             this.Controls.Add(this.label2);

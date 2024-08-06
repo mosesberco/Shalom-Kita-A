@@ -111,6 +111,19 @@ namespace final_project.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap udi_game_background2
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("udi_game_background2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
 
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.

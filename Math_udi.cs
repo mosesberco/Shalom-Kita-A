@@ -76,10 +76,10 @@ namespace final_project
         }
         private void ResetButtonColors()
         {
-            button1.BackColor = Color.DarkSeaGreen;
-            button2.BackColor = Color.DarkSeaGreen;
-            button3.BackColor = Color.DarkSeaGreen;
-            button4.BackColor = Color.DarkSeaGreen;
+            button1.BackColor = Color.Transparent;
+            button2.BackColor = Color.Transparent;
+            button3.BackColor = Color.Transparent;
+            button4.BackColor = Color.Transparent;
         }
         private void SetButtonsEnabled(bool enabled)
         {
