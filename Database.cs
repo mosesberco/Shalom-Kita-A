@@ -314,7 +314,7 @@ namespace final_project
                 {
                     if (row.RowNumber() == 1) continue; // Skip header row
 
-                    if (row.Cell(4).GetValue<string>() == int.Parse(user.ID).ToString())
+                    if (row.Cell(4).GetValue<string>() == user.Email)
                     {
                         var itemName = row.Cell(1).GetValue<string>();
                         var itemPath = row.Cell(5).GetValue<string>();

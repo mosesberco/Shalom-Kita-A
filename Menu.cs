@@ -95,9 +95,8 @@ namespace final_project
 
         private void userInterface_Click(object sender, EventArgs e)    //fix userInterface logic - index?! ,, db?!,, where top X button????????!!!!!!!!
         {
-            var userInterface = new UserInterface(new Database(), 3);
+            var userInterface = new UserInterface(new Database(), user);
             userInterface.Show();
-
         }
     }
 }

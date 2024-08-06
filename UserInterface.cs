@@ -11,14 +11,15 @@ namespace final_project
 
         private Database database;
 
-        public UserInterface(Database db, int userIndex)
+        public UserInterface(Database db, User user)
         {
             
-
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.Sizable;
             database = db;
-            LoadUser(userIndex);
+            this.userActive = user;
+            this.items = database.GetItemsByUserId(user);
+            UpdateRecentPurchases(this.items);
             UpdateForm();
         }
 
@@ -28,10 +29,6 @@ namespace final_project
 
             items.Clear();
             items = storeDB.GetItemsByUserId(userActive);
-        }
-        private void LoadUser(int userIndex)
-        {
-            this.userActive = database.LoadUserData(userIndex);
         }
         private void UpdateForm()
         {
@@ -60,5 +57,41 @@ namespace final_project
                 UpdateForm();
             }
         }
+
+         private void UpdateRecentPurchases(Dictionary<string, string> recentPurchases)
+        {
+            // Clear existing images and labels
+            pictureBox1.ImageLocation = null;
+            pictureBox2.ImageLocation = null;
+            pictureBox3.ImageLocation = null;
+            labelProduct1.Text = string.Empty;
+            labelProduct2.Text = string.Empty;
+            labelProduct3.Text = string.Empty;
+
+            // Update controls based on recent purchases
+            int index = 0;
+            foreach (var purchase in recentPurchases)
+            {
+                
+                if (index == 0)
+                {
+                    pictureBox1.ImageLocation = purchase.Value;
+                    labelProduct1.Text = purchase.Key;
+                }
+                else if (index == 1)
+                {
+                    pictureBox2.ImageLocation = purchase.Value;
+                    labelProduct2.Text = purchase.Key;
+                }
+                else if (index == 2)
+                {
+                    pictureBox3.ImageLocation = purchase.Value;
+                    labelProduct3.Text = purchase.Key;
+                }
+                else { break; }
+                index++;
+            }
+        }
+
     }
 }

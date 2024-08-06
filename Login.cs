@@ -110,6 +110,5 @@ namespace final_project
             passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
         }
 
-        
     }
 }
