@@ -56,7 +56,7 @@ namespace final_project
             this.lblQuestion.BackColor = System.Drawing.Color.Transparent;
             this.lblQuestion.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion.ForeColor = System.Drawing.Color.White;
-            this.lblQuestion.Location = new System.Drawing.Point(303, 141);
+            this.lblQuestion.Location = new System.Drawing.Point(314, 141);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(454, 154);
             this.lblQuestion.TabIndex = 0;
@@ -73,7 +73,7 @@ namespace final_project
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(624, 303);
+            this.button2.Location = new System.Drawing.Point(657, 303);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 96);
             this.button2.TabIndex = 2;
@@ -133,7 +133,7 @@ namespace final_project
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(624, 480);
+            this.button4.Location = new System.Drawing.Point(657, 480);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(146, 96);
             this.button4.TabIndex = 5;
@@ -176,7 +176,7 @@ namespace final_project
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(793, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(800, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(238, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,7 +212,7 @@ namespace final_project
             this.userData.ForeColor = System.Drawing.Color.White;
             this.userData.Location = new System.Drawing.Point(12, 424);
             this.userData.Name = "userData";
-            this.userData.Size = new System.Drawing.Size(219, 152);
+            this.userData.Size = new System.Drawing.Size(267, 152);
             this.userData.TabIndex = 11;
             this.userData.Text = "user data";
             // 
