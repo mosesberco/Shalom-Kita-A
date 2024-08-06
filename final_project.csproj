@@ -314,7 +314,31 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\shalom_kita_a.jpg" />
+    <None Include="Resources\balloonPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ballPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cowPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dogPic %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\housePic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memoryGameMenuBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
