@@ -346,5 +346,8 @@
   <ItemGroup>
     <None Include="Resources\udi_game_background2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toy-story-wallpaper.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

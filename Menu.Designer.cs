@@ -47,34 +47,34 @@ namespace final_project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(699, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(456, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 20);
+            this.label1.Size = new System.Drawing.Size(137, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "שלום כיתה א ";
+            this.label1.Text = "שלום כיתה א";
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(394, 389);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(250, 249);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1120, 546);
+            this.panel1.Size = new System.Drawing.Size(760, 355);
             this.panel1.TabIndex = 1;
             // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Aharoni", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(894, 329);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button6.Location = new System.Drawing.Point(596, 214);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(204, 148);
+            this.button6.Size = new System.Drawing.Size(136, 96);
             this.button6.TabIndex = 6;
             this.button6.Text = "משחק ספיר";
             this.button6.UseVisualStyleBackColor = true;
@@ -82,10 +82,9 @@ namespace final_project
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(494, 329);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button5.Location = new System.Drawing.Point(329, 214);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(204, 148);
+            this.button5.Size = new System.Drawing.Size(136, 96);
             this.button5.TabIndex = 5;
             this.button5.Text = "ספור את החיות";
             this.button5.UseVisualStyleBackColor = true;
@@ -93,10 +92,9 @@ namespace final_project
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(88, 329);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button4.Location = new System.Drawing.Point(59, 214);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(204, 148);
+            this.button4.Size = new System.Drawing.Size(136, 96);
             this.button4.TabIndex = 4;
             this.button4.Text = "english memory game";
             this.button4.UseVisualStyleBackColor = true;
@@ -105,10 +103,9 @@ namespace final_project
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Aharoni", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(894, 58);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Location = new System.Drawing.Point(596, 38);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(204, 148);
+            this.button3.Size = new System.Drawing.Size(136, 96);
             this.button3.TabIndex = 3;
             this.button3.Text = "משחק זיכרון";
             this.button3.UseVisualStyleBackColor = true;
@@ -116,10 +113,9 @@ namespace final_project
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(494, 58);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(329, 38);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(204, 148);
+            this.button2.Size = new System.Drawing.Size(136, 96);
             this.button2.TabIndex = 2;
             this.button2.Text = "חיבור וחיסור";
             this.button2.UseVisualStyleBackColor = true;
@@ -127,10 +123,9 @@ namespace final_project
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(88, 58);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(59, 38);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 148);
+            this.button1.Size = new System.Drawing.Size(136, 96);
             this.button1.TabIndex = 0;
             this.button1.Text = "build words";
             this.button1.UseVisualStyleBackColor = true;
@@ -138,19 +133,19 @@ namespace final_project
             // 
             // userData
             // 
-            this.userData.Location = new System.Drawing.Point(1142, 89);
-            this.userData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.userData.BackColor = System.Drawing.Color.Transparent;
+            this.userData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userData.Location = new System.Drawing.Point(761, 46);
             this.userData.Name = "userData";
-            this.userData.Size = new System.Drawing.Size(374, 80);
+            this.userData.Size = new System.Drawing.Size(265, 107);
             this.userData.TabIndex = 2;
             this.userData.Text = "user data";
             // 
             // Store
             // 
-            this.Store.Location = new System.Drawing.Point(44, 555);
-            this.Store.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Store.Location = new System.Drawing.Point(29, 438);
             this.Store.Name = "Store";
-            this.Store.Size = new System.Drawing.Size(256, 80);
+            this.Store.Size = new System.Drawing.Size(171, 52);
             this.Store.TabIndex = 4;
             this.Store.Text = "Store";
             this.Store.UseVisualStyleBackColor = true;
@@ -158,10 +153,9 @@ namespace final_project
             // 
             // LogOut
             // 
-            this.LogOut.Location = new System.Drawing.Point(44, 58);
-            this.LogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LogOut.Location = new System.Drawing.Point(29, 26);
             this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(256, 80);
+            this.LogOut.Size = new System.Drawing.Size(171, 52);
             this.LogOut.TabIndex = 5;
             this.LogOut.Text = "Log Out";
             this.LogOut.UseVisualStyleBackColor = true;
@@ -169,10 +163,9 @@ namespace final_project
             // 
             // userInterface
             // 
-            this.userInterface.Location = new System.Drawing.Point(1146, 200);
-            this.userInterface.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userInterface.Location = new System.Drawing.Point(764, 168);
             this.userInterface.Name = "userInterface";
-            this.userInterface.Size = new System.Drawing.Size(256, 80);
+            this.userInterface.Size = new System.Drawing.Size(171, 52);
             this.userInterface.TabIndex = 6;
             this.userInterface.Text = "הצגת משתמש";
             this.userInterface.UseVisualStyleBackColor = true;
@@ -180,16 +173,18 @@ namespace final_project
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1582, 980);
+            this.BackgroundImage = global::final_project.Properties.Resources.toy_story_wallpaper;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1055, 637);
             this.Controls.Add(this.userInterface);
             this.Controls.Add(this.LogOut);
             this.Controls.Add(this.Store);
             this.Controls.Add(this.userData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DoubleBuffered = true;
             this.Name = "Menu";
             this.Text = "Menu";
             this.panel1.ResumeLayout(false);

@@ -17,8 +17,8 @@ namespace final_project
             DB.SetBalance(1234, 1000);
             User user = new User("moses", "bro", "1234" , "m@g.c", "Male", 10_000);
             var store = new StoreForm(user);
-            var new_form = new Game_Udi(user);
-            //var new_form = new Login();
+            //var new_form = new Game_Udi(user);
+            var new_form = new Login();
             //Application.Run(store);
             //new_form.ShowDialog();
             //var hebrew_form = new Hebrew_Memory_Matching_Game.
