@@ -216,8 +216,6 @@ namespace final_project
         {
             Close();
         }
-
-
         private void askQuestion(int qnum)
         {
 
