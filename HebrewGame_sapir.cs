@@ -223,7 +223,6 @@ namespace final_project
             {
                 case 1:
                     //א
-                    //letterPic.BackgroundImage = Image.FromFile(@"C:\Users\Sapir Shenkor\source\repos\project-game\project-game\Resources\א.jpg");
                     im = (Image)Properties.Resources.ResourceManager.GetObject("א");
                     correctImagePaths = new List<Image>
                     {
