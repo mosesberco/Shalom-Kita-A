@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace final_project
 {
-    public partial class Game_Udi : Form
+    public partial class Game_Udi: Form
     {
         Question_udi[] questions;
         List<Question_udi> wrong_answers = new List<Question_udi>();
