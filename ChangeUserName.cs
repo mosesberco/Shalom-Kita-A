@@ -40,5 +40,19 @@ namespace final_project
             else MessageBox.Show("error");
         }
 
+        private void ChangeUserName_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
