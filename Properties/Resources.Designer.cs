@@ -99,7 +99,43 @@ namespace final_project.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap udi_game_background
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("udi_game_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
         
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap udi_game_background2
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("udi_game_background2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toy_story_wallpaper
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("toy_story_wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -109,7 +145,19 @@ namespace final_project.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shalom_kita_a
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("shalom_kita_a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>

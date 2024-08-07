@@ -1,4 +1,5 @@
-﻿
+﻿using System.Drawing;
+
 namespace final_project
 {
     partial class Login
@@ -38,14 +39,14 @@ namespace final_project
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.Label();
             this.txtusername = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(40, 295);
+            this.button1.Location = new System.Drawing.Point(22, 422);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(58, 36);
@@ -57,11 +58,11 @@ namespace final_project
             // signupButton
             // 
             this.signupButton.AutoSize = true;
-            this.signupButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.signupButton.BackColor = System.Drawing.SystemColors.Info;
             this.signupButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signupButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.signupButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.signupButton.Location = new System.Drawing.Point(244, 295);
+            this.signupButton.Location = new System.Drawing.Point(290, 438);
             this.signupButton.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.signupButton.Name = "signupButton";
             this.signupButton.Size = new System.Drawing.Size(66, 20);
@@ -74,7 +75,7 @@ namespace final_project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(189, 251);
+            this.label2.Location = new System.Drawing.Point(227, 402);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 20);
@@ -85,7 +86,7 @@ namespace final_project
             // 
             this.loginButton.BackColor = System.Drawing.SystemColors.Info;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.loginButton.Location = new System.Drawing.Point(489, 295);
+            this.loginButton.Location = new System.Drawing.Point(601, 422);
             this.loginButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(68, 36);
@@ -99,7 +100,7 @@ namespace final_project
             this.showPasswordCheckBox.AutoSize = true;
             this.showPasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordCheckBox.Location = new System.Drawing.Point(431, 155);
+            this.showPasswordCheckBox.Location = new System.Drawing.Point(429, 315);
             this.showPasswordCheckBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
             this.showPasswordCheckBox.Size = new System.Drawing.Size(96, 17);
@@ -112,7 +113,7 @@ namespace final_project
             // 
             this.passwordTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.passwordTextBox.Location = new System.Drawing.Point(221, 150);
+            this.passwordTextBox.Location = new System.Drawing.Point(221, 309);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
@@ -124,7 +125,7 @@ namespace final_project
             this.usernameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.usernameTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.usernameTextBox.Location = new System.Drawing.Point(221, 94);
+            this.usernameTextBox.Location = new System.Drawing.Point(221, 264);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(165, 26);
@@ -135,7 +136,7 @@ namespace final_project
             this.txtPass.AutoSize = true;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtPass.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtPass.Location = new System.Drawing.Point(101, 155);
+            this.txtPass.Location = new System.Drawing.Point(101, 315);
             this.txtPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(90, 20);
@@ -147,31 +148,33 @@ namespace final_project
             this.txtusername.AutoSize = true;
             this.txtusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtusername.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtusername.Location = new System.Drawing.Point(101, 97);
+            this.txtusername.Location = new System.Drawing.Point(101, 264);
             this.txtusername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(101, 20);
             this.txtusername.TabIndex = 23;
             this.txtusername.Text = "User name:";
             // 
-            // label1
+            // loginLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(263, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 24);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Login";
+            this.loginLabel.AutoSize = true;
+            this.loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.loginLabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.loginLabel.Location = new System.Drawing.Point(303, 41);
+            this.loginLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(62, 24);
+            this.loginLabel.TabIndex = 22;
+            this.loginLabel.Text = "Login";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(600, 365);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackgroundImage = global::final_project.Properties.Resources.shalom_kita_a;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(711, 492);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.signupButton);
             this.Controls.Add(this.label2);
@@ -181,7 +184,7 @@ namespace final_project
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtusername);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.loginLabel);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Login";
             this.Text = "Login";
@@ -201,6 +204,6 @@ namespace final_project
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label txtPass;
         private System.Windows.Forms.Label txtusername;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label loginLabel;
     }
 }

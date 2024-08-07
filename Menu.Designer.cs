@@ -47,23 +47,26 @@ namespace final_project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(466, 26);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(456, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(137, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "שלום כיתה א ";
+            this.label1.Text = "שלום כיתה א";
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(263, 253);
+            this.panel1.Location = new System.Drawing.Point(250, 249);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 355);
+            this.panel1.Size = new System.Drawing.Size(760, 355);
             this.panel1.TabIndex = 1;
             // 
             // button6
@@ -130,15 +133,17 @@ namespace final_project
             // 
             // userData
             // 
-            this.userData.Location = new System.Drawing.Point(761, 58);
+            this.userData.BackColor = System.Drawing.Color.Transparent;
+            this.userData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userData.Location = new System.Drawing.Point(761, 46);
             this.userData.Name = "userData";
-            this.userData.Size = new System.Drawing.Size(249, 52);
+            this.userData.Size = new System.Drawing.Size(265, 107);
             this.userData.TabIndex = 2;
             this.userData.Text = "user data";
             // 
             // Store
             // 
-            this.Store.Location = new System.Drawing.Point(29, 361);
+            this.Store.Location = new System.Drawing.Point(29, 438);
             this.Store.Name = "Store";
             this.Store.Size = new System.Drawing.Size(171, 52);
             this.Store.TabIndex = 4;
@@ -148,7 +153,7 @@ namespace final_project
             // 
             // LogOut
             // 
-            this.LogOut.Location = new System.Drawing.Point(29, 38);
+            this.LogOut.Location = new System.Drawing.Point(29, 26);
             this.LogOut.Name = "LogOut";
             this.LogOut.Size = new System.Drawing.Size(171, 52);
             this.LogOut.TabIndex = 5;
@@ -158,7 +163,7 @@ namespace final_project
             // 
             // userInterface
             // 
-            this.userInterface.Location = new System.Drawing.Point(764, 130);
+            this.userInterface.Location = new System.Drawing.Point(764, 168);
             this.userInterface.Name = "userInterface";
             this.userInterface.Size = new System.Drawing.Size(171, 52);
             this.userInterface.TabIndex = 6;
@@ -170,6 +175,8 @@ namespace final_project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::final_project.Properties.Resources.toy_story_wallpaper;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1055, 637);
             this.Controls.Add(this.userInterface);
             this.Controls.Add(this.LogOut);
@@ -177,6 +184,7 @@ namespace final_project
             this.Controls.Add(this.userData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "Menu";
             this.Text = "Menu";
             this.panel1.ResumeLayout(false);

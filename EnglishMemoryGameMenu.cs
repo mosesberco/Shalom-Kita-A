@@ -17,8 +17,7 @@ namespace final_project
         {
             this.user = user;   
             InitializeComponent();
-            LabelInsrtuctions.Text = "ברוך הבא למשחק הזכרון!\nלפניך דקה וחצי להתאים 8 תמונות למשמעות שלהם באנגלית\nכל התאמה " +
-                "תזכה אותך בנקודה, וכל נקודה שווה 100 מטבעות לחשבונך\nבהצלחה";
+            initializeLabels();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,8 +27,40 @@ namespace final_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EnglishMemoryGame gameForm = new EnglishMemoryGame(user);
+            EnglishMemoryGame gameForm = new EnglishMemoryGame(user, this);
             gameForm.Show();
+        }
+
+        public void initializeLabels()
+        {
+            nameLabel.Text = "Hello, " + user.Username.ToString();
+            moneyLabel.Text = "Balance: " + user.Balance.ToString();
+            this.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("memoryGameMenuBackground");
+
+            startButton.FlatStyle = FlatStyle.Flat;
+            startButton.FlatAppearance.BorderSize = 0;
+            startButton.BackColor = ColorTranslator.FromHtml("#F0DDA6");
+            startButton.ForeColor = Color.White;
+            startButton.Font = new Font("Maiandra GD", 30, FontStyle.Bold);
+            startButton.Text = "Start Game";
+            startButton.UseVisualStyleBackColor = false;
+            startButton.MouseEnter += new EventHandler(Button_MouseEnter);
+            startButton.MouseLeave += new EventHandler(Button_MouseLeave);
+        }
+
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            startButton.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            startButton.BackColor = ColorTranslator.FromHtml("#F0DDA6");
+        }
+
+        public void updateBalance()
+        {
+            moneyLabel.Text = "Balance: " + user.Balance.ToString();
         }
     }
 }

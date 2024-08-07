@@ -13,64 +13,37 @@ namespace final_project
 {
     public partial class EnglishMemoryGame : Form
     {
-        int moneyPerPoint = 100;
-
         private User user;
-
+        private EnglishMemoryGameMenu menuForm;
+        int moneyPerPoint = 4;
         int score = 0;
-
         int Timer = 90;
-
+        int moneyEarned = 0;
         bool gameOver = false;
-
         Random random = new Random();
-
-        /*List<string> icons = new List<string>() { 
-            "dog", "cat", "house", "bus", "cow", "bird", "ball", "balloon",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\dogPic (1).png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\cowPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\catPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\busPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\birdPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\ballPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\balloonPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\housePic.png"
-        };*/
-
-        /*List<string> imgsList = new List<string>()
-        {
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\dogPic (1).png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\cowPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\catPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\busPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\birdPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\ballPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\balloonPic.png",
-            "C:\\Users\\mpota\\source\\repos\\C#\\EnglishGame2\\EnglishGame2\\Resources\\housePic.png"
-        };*/
 
         List<string> icons = new List<string>() {
             "dog", "cat", "house", "bus", "cow", "bird", "ball", "balloon",
-            "Resources\\dogPic (1).png",
-            "Resources\\cowPic.png",
-            "Resources\\catPic.png",
-            "Resources\\busPic.png",
-            "Resources\\birdPic.png",
-            "Resources\\ballPic.png",
-            "Resources\\balloonPic.png",
-            "Resources\\housePic.png"
+            "dogPic__1_",
+            "cowPic",
+            "catPic",
+            "busPic",
+            "birdPic",
+            "ballPic",
+            "balloonPic",
+            "housePic"
         };
 
         List<string> imgsList = new List<string>()
         {
-            "Resources\\dogPic (1).png",
-            "Resources\\cowPic.png",
-            "Resources\\catPic.png",
-            "Resources\\busPic.png",
-            "Resources\\birdPic.png",
-            "Resources\\ballPic.png",
-            "Resources\\balloonPic.png",
-            "Resources\\housePic.png"
+            "dogPic__1_",
+            "cowPic",
+            "catPic",
+            "busPic",
+            "birdPic",
+            "ballPic",
+            "balloonPic",
+            "housePic"
         };
 
 
@@ -78,9 +51,10 @@ namespace final_project
         Label firstClicked, secondClicked;
 
 
-        public EnglishMemoryGame(User user)
+        public EnglishMemoryGame(User user, EnglishMemoryGameMenu menuForm)
         {
             this.user = user;
+            this.menuForm = menuForm;
             InitializeComponent();
             AssignIconsToSquares();
         }
@@ -89,7 +63,6 @@ namespace final_project
         {
             Label label;
             int randomNumber;
-            string projectDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
             for (int i = 0; i < tableLayoutPanel1.Controls.Count; i++)
             {
@@ -102,21 +75,18 @@ namespace final_project
                 bool isPresent = imgsList.Contains(icons[randomNumber]);
                 if (isPresent)
                 {
-                    /*label.Text = icons[randomNumber];
-                    label.Image = Image.FromFile(icons[randomNumber]);*/
-                    string imagePath = Path.Combine(projectDirectory, icons[randomNumber]);
                     label.Text = icons[randomNumber];
-                    label.Image = Image.FromFile(imagePath);
-                    label.Tag = "image";//
+                    label.Image = (Image)Properties.Resources.ResourceManager.GetObject(icons[randomNumber]);
+                    label.Tag = "image";
                 }
                 else
                 {
                     label.Text = icons[randomNumber];
                     label.Font = new Font("Arial", 40);
-                    label.Tag = "text";//
+                    label.Tag = "text";
                 }
 
-                label.Image = null;//
+                label.Image = null;
 
                 icons.RemoveAt(randomNumber);
 
@@ -140,7 +110,7 @@ namespace final_project
 
             if (clickedLabel.Tag.ToString() == "image")
             {
-                clickedLabel.Image = Image.FromFile(clickedLabel.Text);
+                clickedLabel.Image = (Image)Properties.Resources.ResourceManager.GetObject(clickedLabel.Text);
                 clickedLabel.Font = new Font("Arial", 1);
                 clickedLabel.TextAlign = ContentAlignment.BottomCenter;
             }
@@ -237,13 +207,12 @@ namespace final_project
                 
                 else if (score > 0 && score < 8)
                 {
-                    MessageBox.Show("Well done!\nYour score is " + score + "/8\n" + "You've earned " + score * moneyPerPoint + " coins.");
+                    moneyEarned = score * moneyPerPoint;
+                    MessageBox.Show("Well done!\nYour score is " + score + "/8\n" + "You've earned " + moneyEarned + " coins.");
                 }
-                var DB = new Database();
-                var balance = DB.GetBalance(int.Parse(user.ID));
-                DB.SetBalance(int.Parse(user.ID), (score) + balance);
                 
-                Close();
+
+                updateData();
             }
         }
 
@@ -255,14 +224,26 @@ namespace final_project
             {
                 gameOver = true;
                 timer2.Stop();
-                MessageBox.Show("You matched all the icons!\n" + "You've earned 800 coins.\n" + "Congrats!");
-                Close();
+                MessageBox.Show("You matched all the icons!\n" + "You've earned 32 coins.\n" + "Congrats!");
+                moneyEarned = 32;
+                updateData();
             }
         }
 
         private void GameForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void updateData()
+        {
+            user.Balance += moneyEarned;
+            var DB = new Database();
+            var balance = DB.GetBalance(int.Parse(user.ID));
+            DB.SetBalance(int.Parse(user.ID), (moneyEarned) + balance);
+
+            menuForm.updateBalance();
+            Close();
         }
     }
 }

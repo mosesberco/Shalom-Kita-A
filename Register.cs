@@ -60,16 +60,16 @@ namespace final_project
                 return false;
             }
 
-            //if (!password.Any(char.IsLetter) || !password.Any(char.IsDigit) || !password.Any(c => "!$#@%^&*()".Contains(c)))
-            //{
-            //    MessageBox.Show("Password must contain at least one letter, one digit, and one special character (!$#@%^&*).");
-            //    return false;
-            //}
+            if (!password.Any(char.IsLetter) || !password.Any(char.IsDigit) || !password.Any(c => "!$#@%^&*".Contains(c)))
+            {
+                MessageBox.Show("Password must contain at least one letter, one digit, and one special character (!$#@%^&*).", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
 
             // Validate ID Number
-            if (string.IsNullOrWhiteSpace(id) || !id.All(char.IsDigit))
+            if (string.IsNullOrWhiteSpace(id) || !id.All(char.IsDigit) || id.Count() != 9)
             {
-                MessageBox.Show("ID must be a valid number.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ID must be a valid 9 digits number.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -111,7 +111,6 @@ namespace final_project
             idTextBox.Clear();
             emailTextBox.Clear();
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {

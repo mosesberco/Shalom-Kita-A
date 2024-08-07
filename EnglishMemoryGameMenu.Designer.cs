@@ -29,70 +29,56 @@ namespace final_project
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnglishMemoryGameMenu));
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LabelInsrtuctions = new System.Windows.Forms.Label();
+            this.startButton = new System.Windows.Forms.Button();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.moneyLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // startButton
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(582, 463);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(470, 95);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Start Game";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.startButton.Font = new System.Drawing.Font("Maiandra GD", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.startButton.Location = new System.Drawing.Point(582, 496);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(470, 95);
+            this.startButton.TabIndex = 0;
+            this.startButton.Text = "Start Game";
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
+            // nameLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(571, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(468, 59);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hello Guest(name from DB)!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nameLabel.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.nameLabel.Location = new System.Drawing.Point(453, 144);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(293, 59);
+            this.nameLabel.TabIndex = 1;
+            this.nameLabel.Text = "hello user text";
+            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // moneyLabel
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.Location = new System.Drawing.Point(3, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 45);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Money: (from DB)";
+            this.moneyLabel.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyLabel.Location = new System.Drawing.Point(819, 144);
+            this.moneyLabel.Name = "moneyLabel";
+            this.moneyLabel.Size = new System.Drawing.Size(291, 59);
+            this.moneyLabel.TabIndex = 2;
+            this.moneyLabel.Text = "money text";
+            this.moneyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LabelInsrtuctions
-            // 
-            this.LabelInsrtuctions.BackColor = System.Drawing.Color.Transparent;
-            this.LabelInsrtuctions.Font = new System.Drawing.Font("Arial", 20F);
-            this.LabelInsrtuctions.Location = new System.Drawing.Point(405, 184);
-            this.LabelInsrtuctions.Name = "LabelInsrtuctions";
-            this.LabelInsrtuctions.Size = new System.Drawing.Size(824, 246);
-            this.LabelInsrtuctions.TabIndex = 3;
-            this.LabelInsrtuctions.Text = "label3";
-            this.LabelInsrtuctions.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // GameMenu
+            // EnglishMemoryGameMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1601, 746);
-            this.Controls.Add(this.LabelInsrtuctions);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.moneyLabel);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.startButton);
             this.DoubleBuffered = true;
-            this.Name = "GameMenu";
+            this.Name = "EnglishMemoryGameMenu";
             this.Text = "GameMenu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -101,10 +87,9 @@ namespace final_project
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label LabelInsrtuctions;
+        private System.Windows.Forms.Button startButton;
+        public System.Windows.Forms.Label nameLabel;
+        public System.Windows.Forms.Label moneyLabel;
     }
 
 }

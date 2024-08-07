@@ -18,22 +18,14 @@ namespace final_project
             InitializeComponent();
             this.user = user;
             updateUserData(user);
+            this.FormClosing += Menu_FormClosing;
             //checkUser();
         }
 
-        //private void checkUser()
-        //{
-        //    if (user != null)
-        //    {
-        //        this.login.Enabled = false;
-        //        this.LogOut.Enabled = true;
-        //    }
-        //    else
-        //    {
-        //        this.login.Enabled = true;
-        //        this.LogOut.Enabled = false;
-        //    }
-        //}
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -95,9 +87,10 @@ namespace final_project
 
         private void userInterface_Click(object sender, EventArgs e)    //fix userInterface logic - index?! ,, db?!,, where top X button????????!!!!!!!!
         {
-            var userInterface = new UserInterface(new Database(), 3);
+            var userInterface = new UserInterface(new Database(), user);
             userInterface.Show();
-
         }
+
+
     }
 }

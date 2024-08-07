@@ -314,7 +314,40 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bg_Etai.jpeg" />
+    <None Include="Resources\balloonPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ballPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cowPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dogPic %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\housePic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memoryGameMenuBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\udi-game-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\udi_game_background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toy-story-wallpaper.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
