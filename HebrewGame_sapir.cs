@@ -314,6 +314,10 @@ namespace final_project
                     };
                     break;
 
+
+
+
+
                 case 6:
                     //ו
                     im = (Image)Properties.Resources.ResourceManager.GetObject("ו");
