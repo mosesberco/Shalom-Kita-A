@@ -21,67 +21,17 @@ namespace final_project
             this.DB = new Database();
         }
 
-        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        private void signupButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void passwordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-            this.Hide(); // Hide the login form
+            Hide(); // Hide the login form
             Register registerForm = new Register(); // Create an instance of the register form
             registerForm.Show(); // Show the register form
         }
 
-        //private bool ValidateLogin(string username, string password)
-        //{
-
-        //    var DB = new Database();
-        //    return DB.ValidateUser(username, password);
-
-        //    string filePath = @"C://Users//liora//source//repos//LoginRegister//LoginRegister//Users.txt";
-
-        //    if (!File.Exists(filePath))
-        //    {
-        //        MessageBox.Show("User file not found.");
-        //        return false;
-        //    }
-
-        //    var lines = File.ReadAllLines(filePath);
-        //    foreach (var line in lines)
-        //    {
-        //        var parts = line.Split(',');
-        //        if (parts.Length == 2)
-        //        {
-        //            string storedUsername = parts[0];
-        //            string storedPassword = parts[1];
-
-        //            if (username == storedUsername && password == storedPassword)
-        //            {
-        //                return true;
-        //            }
-        //        }
-        //    }
-
-        //    return false;
-        //}
-
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            //Close();
         }
-
 
         private void loginButton_Click(object sender, EventArgs e)
         {
@@ -91,17 +41,17 @@ namespace final_project
 
             if (index!=-1)
             {
-                MessageBox.Show("Login successful!");
+                MessageBox.Show("Login successful!","", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 User user = DB.getUser(username, password);
                 Menu mainMenu = new Menu(user);
                 mainMenu.Show();
-                this.Hide();
+                Hide();
                 //UserInterface userInterface = new UserInterface(DB, index);
                 //userInterface.Show();
             }
             else
             {
-                MessageBox.Show("Invalid username or password.");
+                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -110,6 +60,5 @@ namespace final_project
             passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
         }
 
-        
     }
 }

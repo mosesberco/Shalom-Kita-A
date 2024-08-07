@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace final_project
 {
-    public partial class Game_Udi : Form
+    public partial class Game_Udi: Form
     {
         Question_udi[] questions;
         List<Question_udi> wrong_answers = new List<Question_udi>();
@@ -29,7 +29,7 @@ namespace final_project
             nextQuestion();
             setButtons();
             progressBar1.Maximum = totalQuestions;
-            userData.Text = $"Username : {user.Username}\nBalance : {user.Balance}";
+            userData.Text = $"שם משתמש : {user.Username}\nיתרה : {user.Balance}";
         }
         public void nextQuestion()
         {
@@ -42,7 +42,6 @@ namespace final_project
             int btnAnswer = int.Parse(clickedButton.Text);
 
             if (checkAnswer(btnAnswer))
-
             {
                 score += 1;
                 clickedButton.BackColor = Color.Green;
@@ -61,16 +60,13 @@ namespace final_project
             SetButtonsEnabled(true);
             progressBar1.Value = this.index + 1;
             this.index++;
-            if (gameOver())
+            if (gameOver())             //fix updating user balance after a game !!!
             {
                 var DB = new Database();
                 var balance = DB.GetBalance(int.Parse(user.ID));
                 DB.SetBalance(int.Parse(user.ID), score + balance);
                 //MessageBox.Show($"You earned {score / 10} points this game!","Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                this.Close();
-
-                //Application.Exit();
+                Close();
             }
             else
             {
@@ -80,10 +76,10 @@ namespace final_project
         }
         private void ResetButtonColors()
         {
-            button1.BackColor = Color.DarkSeaGreen;
-            button2.BackColor = Color.DarkSeaGreen;
-            button3.BackColor = Color.DarkSeaGreen;
-            button4.BackColor = Color.DarkSeaGreen;
+            button1.BackColor = Color.Transparent;
+            button2.BackColor = Color.Transparent;
+            button3.BackColor = Color.Transparent;
+            button4.BackColor = Color.Transparent;
         }
         private void SetButtonsEnabled(bool enabled)
         {

@@ -54,19 +54,20 @@ namespace final_project
             this.genderTextBox.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.genderTextBox.Location = new System.Drawing.Point(276, 322);
+            this.genderTextBox.Location = new System.Drawing.Point(260, 332);
+            this.genderTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.genderTextBox.Name = "genderTextBox";
-            this.genderTextBox.Size = new System.Drawing.Size(218, 24);
+            this.genderTextBox.Size = new System.Drawing.Size(164, 21);
             this.genderTextBox.TabIndex = 33;
-            this.genderTextBox.SelectedIndexChanged += new System.EventHandler(this.genderTextBox_SelectedIndexChanged);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Info;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button3.Location = new System.Drawing.Point(568, 390);
+            this.button3.Location = new System.Drawing.Point(22, 415);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 38);
+            this.button3.Size = new System.Drawing.Size(56, 31);
             this.button3.TabIndex = 32;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = false;
@@ -75,15 +76,16 @@ namespace final_project
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label8.BackColor = System.Drawing.SystemColors.Info;
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(309, 416);
+            this.label8.Location = new System.Drawing.Point(280, 440);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 25);
+            this.label8.Size = new System.Drawing.Size(48, 20);
             this.label8.TabIndex = 31;
-            this.label8.Text = "Back to login";
+            this.label8.Text = "Login";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
@@ -92,21 +94,22 @@ namespace final_project
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label7.Location = new System.Drawing.Point(248, 372);
+            this.label7.Location = new System.Drawing.Point(203, 402);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(269, 25);
+            this.label7.Size = new System.Drawing.Size(221, 20);
             this.label7.TabIndex = 30;
             this.label7.Text = "Already have an account ?";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(672, 392);
+            this.button1.Location = new System.Drawing.Point(569, 415);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 36);
+            this.button1.Size = new System.Drawing.Size(87, 29);
             this.button1.TabIndex = 29;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = false;
@@ -117,9 +120,10 @@ namespace final_project
             this.showPasswordCheckBox.AutoSize = true;
             this.showPasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordCheckBox.Location = new System.Drawing.Point(552, 138);
+            this.showPasswordCheckBox.Location = new System.Drawing.Point(467, 135);
+            this.showPasswordCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
-            this.showPasswordCheckBox.Size = new System.Drawing.Size(122, 21);
+            this.showPasswordCheckBox.Size = new System.Drawing.Size(96, 17);
             this.showPasswordCheckBox.TabIndex = 28;
             this.showPasswordCheckBox.Text = "show password";
             this.showPasswordCheckBox.UseVisualStyleBackColor = true;
@@ -130,120 +134,123 @@ namespace final_project
             this.txtGen.AutoSize = true;
             this.txtGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtGen.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtGen.Location = new System.Drawing.Point(130, 318);
+            this.txtGen.Location = new System.Drawing.Point(151, 328);
+            this.txtGen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtGen.Name = "txtGen";
-            this.txtGen.Size = new System.Drawing.Size(90, 25);
+            this.txtGen.Size = new System.Drawing.Size(74, 20);
             this.txtGen.TabIndex = 27;
             this.txtGen.Text = "Gender:";
-            this.txtGen.Click += new System.EventHandler(this.txtGen_Click);
             // 
             // txtEmail
             // 
             this.txtEmail.AutoSize = true;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtEmail.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtEmail.Location = new System.Drawing.Point(130, 256);
+            this.txtEmail.Location = new System.Drawing.Point(151, 278);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(72, 25);
+            this.txtEmail.Size = new System.Drawing.Size(58, 20);
             this.txtEmail.TabIndex = 26;
             this.txtEmail.Text = "Email:";
-            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             // 
             // txtID
             // 
             this.txtID.AutoSize = true;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtID.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtID.Location = new System.Drawing.Point(130, 195);
+            this.txtID.Location = new System.Drawing.Point(151, 228);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(40, 25);
+            this.txtID.Size = new System.Drawing.Size(33, 20);
             this.txtID.TabIndex = 25;
             this.txtID.Text = "ID:";
-            this.txtID.Click += new System.EventHandler(this.txtID_Click);
             // 
             // emailTextBox
             // 
             this.emailTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.emailTextBox.Location = new System.Drawing.Point(276, 256);
+            this.emailTextBox.Location = new System.Drawing.Point(260, 278);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(218, 30);
+            this.emailTextBox.Size = new System.Drawing.Size(164, 26);
             this.emailTextBox.TabIndex = 24;
-            this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             // 
             // idTextBox
             // 
             this.idTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.idTextBox.Location = new System.Drawing.Point(276, 195);
+            this.idTextBox.Location = new System.Drawing.Point(260, 228);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(218, 30);
+            this.idTextBox.Size = new System.Drawing.Size(164, 26);
             this.idTextBox.TabIndex = 23;
-            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.passwordTextBox.Location = new System.Drawing.Point(276, 129);
+            this.passwordTextBox.Location = new System.Drawing.Point(526, 228);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(218, 30);
+            this.passwordTextBox.Size = new System.Drawing.Size(164, 26);
             this.passwordTextBox.TabIndex = 22;
-            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // usernameTextBox
             // 
             this.usernameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.usernameTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.usernameTextBox.Location = new System.Drawing.Point(276, 69);
+            this.usernameTextBox.Location = new System.Drawing.Point(260, 79);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(218, 30);
+            this.usernameTextBox.Size = new System.Drawing.Size(164, 26);
             this.usernameTextBox.TabIndex = 21;
-            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
             // txtPass
             // 
             this.txtPass.AutoSize = true;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtPass.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtPass.Location = new System.Drawing.Point(130, 129);
+            this.txtPass.Location = new System.Drawing.Point(151, 128);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(111, 25);
+            this.txtPass.Size = new System.Drawing.Size(90, 20);
             this.txtPass.TabIndex = 20;
             this.txtPass.Text = "password:";
-            this.txtPass.Click += new System.EventHandler(this.txtPass_Click);
             // 
             // txtusername
             // 
             this.txtusername.AutoSize = true;
             this.txtusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtusername.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtusername.Location = new System.Drawing.Point(130, 69);
+            this.txtusername.Location = new System.Drawing.Point(151, 79);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(123, 25);
+            this.txtusername.Size = new System.Drawing.Size(101, 20);
             this.txtusername.TabIndex = 19;
             this.txtusername.Text = "User name:";
-            this.txtusername.Click += new System.EventHandler(this.txtusername_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(334, 9);
+            this.label1.Location = new System.Drawing.Point(294, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 29);
+            this.label1.Size = new System.Drawing.Size(84, 24);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Register";
+            this.label1.Text = "Sign Up";
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackgroundImage = global::final_project.Properties.Resources.shalom_kita_a;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(711, 492);
             this.Controls.Add(this.genderTextBox);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label8);
@@ -260,8 +267,9 @@ namespace final_project
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Register";
-            this.Text = "Register";
+            this.Text = "Sign Up";
             this.ResumeLayout(false);
             this.PerformLayout();
 

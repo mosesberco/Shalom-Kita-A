@@ -124,8 +124,20 @@
   <data name="back2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="balloonPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balloonPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ballPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ballPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="birdPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\birdPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="blueman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blueman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="busPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\busPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cartwithgiftswhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cartwithgiftswhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,11 +145,26 @@
   <data name="cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="catPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\catPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cowPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cowPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dogPic__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dogPic (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="elephant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elephant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="housePic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\housePic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="memoryGameMenuBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\memoryGameMenuBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="monkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\monkey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +190,9 @@
   <data name="q6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\q6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shalom_kita_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shalom_kita_a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="shopcartwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shopcartwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -171,6 +201,15 @@
   </data>
   <data name="tiger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tiger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toy_story_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toy-story-wallpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="udi_game_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\udi-game-background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="udi_game_background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\udi_game_background2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Walletwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Walletwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

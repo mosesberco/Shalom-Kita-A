@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.instrLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.pictureBoxAnswer2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxQuestion = new System.Windows.Forms.PictureBox();
             this.pictureBoxAnswer1 = new System.Windows.Forms.PictureBox();
@@ -42,6 +42,8 @@
             this.textBoxAnswer1 = new System.Windows.Forms.TextBox();
             this.textBoxAnswer2 = new System.Windows.Forms.TextBox();
             this.textBoxAnswer3 = new System.Windows.Forms.TextBox();
+            this.userInfoLabel = new System.Windows.Forms.Label();
+            this.timerLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestion)).BeginInit();
@@ -52,12 +54,27 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(113)))), ((int)(((byte)(103)))));
+            this.panel1.Controls.Add(this.timerLabel);
+            this.panel1.Controls.Add(this.userInfoLabel);
             this.panel1.Controls.Add(this.buttonExit);
             this.panel1.Controls.Add(this.instrLabel);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 126);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
+            this.buttonExit.Location = new System.Drawing.Point(930, 85);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(122, 38);
+            this.buttonExit.TabIndex = 11;
+            this.buttonExit.Text = "EXIT GAME";
+            this.buttonExit.UseVisualStyleBackColor = false;
             // 
             // instrLabel
             // 
@@ -81,20 +98,7 @@
             this.label2.Size = new System.Drawing.Size(312, 126);
             this.label2.TabIndex = 13;
             this.label2.Text = "Instructions:\r\nCount the animals that appear in the picture and answer the questi" +
-    "ons correctly.\r\nEach correct answer earns you $2 in the digital wallet\r\n\r\n";
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(1037, 85);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(122, 38);
-            this.buttonExit.TabIndex = 11;
-            this.buttonExit.Text = "EXIT GAME";
-            this.buttonExit.UseVisualStyleBackColor = false;
+    "ons correctly.\r\nEach correct round earns you 10 coins in the digital wallet\r\n\r\n";
             // 
             // pictureBoxAnswer2
             // 
@@ -203,6 +207,22 @@
             this.textBoxAnswer3.Size = new System.Drawing.Size(117, 23);
             this.textBoxAnswer3.TabIndex = 21;
             // 
+            // userInfoLabel
+            // 
+            this.userInfoLabel.AutoSize = true;
+            this.userInfoLabel.Location = new System.Drawing.Point(1242, 0);
+            this.userInfoLabel.Name = "userInfoLabel";
+            this.userInfoLabel.Size = new System.Drawing.Size(0, 13);
+            this.userInfoLabel.TabIndex = 22;
+            // 
+            // timerLabel
+            // 
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Location = new System.Drawing.Point(898, 4);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(0, 13);
+            this.timerLabel.TabIndex = 23;
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,6 +244,7 @@
             this.Name = "GameScreen";
             this.Text = "GameScreen";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer1)).EndInit();
@@ -249,5 +270,7 @@
         private System.Windows.Forms.TextBox textBoxAnswer1;
         private System.Windows.Forms.TextBox textBoxAnswer2;
         private System.Windows.Forms.TextBox textBoxAnswer3;
+        private System.Windows.Forms.Label userInfoLabel;
+        private System.Windows.Forms.Label timerLabel;
     }
 }
