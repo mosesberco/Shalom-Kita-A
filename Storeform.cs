@@ -1,14 +1,8 @@
 ﻿using ClosedXML.Excel;
-using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace final_project
@@ -20,70 +14,66 @@ namespace final_project
         private User user;
         private List<Itemstore> items;
         private FlowLayoutPanel flowLayoutPanel;
-        //private Label walletLabel;
-        private TextBox nameTextBox;
-        private TextBox priceTextBox;
-        private TextBox imagePathTextBox;
-        private Button addButton;
+        private Panel westPanel;
+        private Panel centerPanel;
+        private const int ItemWidth = 200;
+        private const int ItemHeight = 250;
 
         public StoreForm(User user)
         {
-            //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             InitializeComponent();
-            InitializeCustomComponents();
-            this.Resize += new EventHandler(StoreForm_Resize);
+            SetupLayout();
             this.user = user;
             this.DB = new Database();
-            wallet = DB.GetBalance(int.Parse(user.ID)); // Initialize wallet with a default value
+            wallet = DB.GetBalance(int.Parse(user.ID));
             items = new List<Itemstore>();
             LoadItems();
-            UpdateWalletLabel();
+            //UpdateWalletLabel(0);
+            
+            userData.Text = $"שם משתמש: {user.Username}";
+            user_balance.Text = $"יתרה: {user.Balance}";
 
-            // Set the background image for the form
-            //var fileInfo = new FileInfo(@"..\..\..\pics\background.jpg");
-            //MessageBox.Show($"File path: {fileInfo.FullName}");
-            //string imagePath = Path.Combine(fileInfo.ToString()); // Adjust path
+            this.Resize += new EventHandler(StoreForm_Resize);
+        }
+        private void updateData(int dis)
+        {
 
-            // Set up the scrollable panel for items
-            var scrollablePanel = new Panel
-            {
-                Dock = DockStyle.Fill,
-                AutoScroll = true
-            };
-
-            // Set up the FlowLayoutPanel properties
-            flowLayoutPanel.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel.WrapContents = true;
-            flowLayoutPanel.AutoScroll = true;
-
-            // Add the FlowLayoutPanel to the scrollablePanel
-            scrollablePanel.Controls.Add(flowLayoutPanel);
-
-            // Add the scrollablePanel to the form
-            this.Controls.Add(scrollablePanel);
-
-            // Optionally, adjust item size on form resize
-            this.Resize += (s, e) => AdjustItemSize();
+            user_balance.Text = $"יתרה: {wallet - dis}";
+            wallet = wallet - dis;
+            DB.SetBalance(int.Parse(user.ID), wallet);
         }
 
-        private void AdjustItemSize()
+        private void SetupLayout()
         {
-            int panelWidth = flowLayoutPanel.ClientSize.Width;
-            int minItemWidth = 200; // Minimum width for an item
-            int itemMargin = 10; // Adjust this value to control the spacing between items
-            int maxItemsPerRow = Math.Max(1, (panelWidth + itemMargin) / (minItemWidth + itemMargin));
-            int itemWidth = (panelWidth - (maxItemsPerRow - 1) * itemMargin) / maxItemsPerRow;
-
-            foreach (Control control in flowLayoutPanel.Controls)
+            // West Panel
+            westPanel = new Panel
             {
-                if (control is Panel itemPanel)
-                {
-                    itemPanel.Width = itemWidth;
-                    itemPanel.Height = 180; // Set a fixed height for each item panel, or calculate dynamically if needed
-                }
-            }
+                Dock = DockStyle.Left,
+                Width = 200 // Adjust as needed
+            };
+            this.Controls.Add(westPanel);
 
-            flowLayoutPanel.PerformLayout(); // Force the FlowLayoutPanel to re-arrange its contents
+            // Center Panel
+            centerPanel = new Panel
+            {
+                Dock = DockStyle.Fill
+            };
+            this.Controls.Add(centerPanel);
+
+            // FlowLayoutPanel (inside centerPanel)
+            this.flowLayoutPanel = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+                FlowDirection = FlowDirection.LeftToRight,
+                WrapContents = true
+            };
+            centerPanel.Controls.Add(this.flowLayoutPanel);
+
+            // Move the scroll to the right side
+            flowLayoutPanel.VerticalScroll.Visible = true;
+            flowLayoutPanel.HorizontalScroll.Visible = false;
+            flowLayoutPanel.WrapContents = true;
         }
 
         private void StoreForm_Resize(object sender, EventArgs e)
@@ -91,60 +81,51 @@ namespace final_project
             AdjustItemSize();
         }
 
-        private void InitializeCustomComponents()
+        private void AdjustItemSize()
         {
-            this.flowLayoutPanel = new FlowLayoutPanel
-            {
-                Location = new System.Drawing.Point(12, 12),
-                Name = "flowLayoutPanel1",
-                Size = new System.Drawing.Size(900, 550),
-                AutoScroll = true // Enable scrolling if needed
-            };
-            this.Controls.Add(this.flowLayoutPanel);
-            ////
-            ///
-        }
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-            string name = nameTextBox.Text;
-            if (!int.TryParse(priceTextBox.Text, out int price))
-            {
-                MessageBox.Show("Invalid price");
-                return;
-            }
-            string imagePath = imagePathTextBox.Text;
+            int availableWidth = flowLayoutPanel.ClientSize.Width - flowLayoutPanel.Padding.Horizontal;
+            int itemsPerRow = Math.Max(1, availableWidth / ItemWidth);
+            int itemWidth = (availableWidth - (itemsPerRow - 1) * 10) / itemsPerRow; // 10 is the horizontal margin
 
-            var newItem = new Itemstore(name, price, imagePath);
-            items.Add(newItem);
-            AddItemToUI(newItem);
+            foreach (Control control in flowLayoutPanel.Controls)
+            {
+                if (control is Panel itemPanel)
+                {
+                    itemPanel.Width = itemWidth;
+                    itemPanel.Height = ItemHeight;
+                }
+            }
+
+            flowLayoutPanel.PerformLayout();
         }
+
         private void AddItemToUI(Itemstore item)
         {
             var panel = new Panel
             {
-                Width = 200,
-                Height = 280, // Increased height to accommodate all elements
-                Margin = new Padding(10)
+                Width = ItemWidth,
+                Height = ItemHeight,
+                Margin = new Padding(5)
             };
 
             var pictureBox = new PictureBox
             {
                 ImageLocation = item.ImagePath,
-                SizeMode = PictureBoxSizeMode.StretchImage,
-                Width = 85,
-                Height = 100,
-                Top = 5,
-                Left = (panel.Width - 80) / 2
+                SizeMode = PictureBoxSizeMode.Zoom,
+                Width = ItemWidth - 20,
+                Height = 120,
+                Top = 10,
+                Left = 10
             };
 
             var nameLabel = new Label
             {
                 Text = item.Name,
                 TextAlign = ContentAlignment.MiddleCenter,
-                Width = panel.Width,
-                Height = 25,
+                Width = ItemWidth - 20,
+                Height = 30,
                 Top = pictureBox.Bottom + 5,
-                Left = 0,
+                Left = 10,
                 Font = new Font("Gill Sans MT", 12, FontStyle.Regular)
             };
 
@@ -152,37 +133,32 @@ namespace final_project
             {
                 Text = $"${item.Price}",
                 TextAlign = ContentAlignment.MiddleCenter,
-                Width = panel.Width,
+                Width = ItemWidth - 20,
                 Height = 30,
                 Top = nameLabel.Bottom + 5,
-                Left = 0,
+                Left = 10,
                 Font = new Font("Gill Sans MT", 12, FontStyle.Regular)
             };
 
             var buyButton = new Button
             {
                 Text = "Buy",
-                Width = 70,
+                Width = ItemWidth - 40,
                 Height = 30,
                 Top = priceLabel.Bottom + 10,
-                Left = (panel.Width - 80) / 2,
+                Left = 20,
                 Font = new Font("Gill Sans MT", 10, FontStyle.Regular),
                 FlatStyle = FlatStyle.Flat
-
-
             };
 
-            // Configure the FlatAppearance properties
             buyButton.FlatAppearance.BorderSize = 2;
             buyButton.FlatAppearance.BorderColor = Color.Black;
-            buyButton.TextAlign = ContentAlignment.TopCenter;
             buyButton.Click += (sender, e) => BuyItem(item);
 
             panel.Controls.Add(pictureBox);
             panel.Controls.Add(nameLabel);
             panel.Controls.Add(priceLabel);
             panel.Controls.Add(buyButton);
-            Console.WriteLine($"adding an item");
 
             flowLayoutPanel.Controls.Add(panel);
         }
@@ -193,21 +169,21 @@ namespace final_project
             {
                 var filePath = @"../../storeitems.xlsx";
                 string fullPath = Path.GetFullPath(filePath);
-                Console.WriteLine($"Attempting to load file from: {fullPath}");
-
+                //Console.WriteLine(fullPath);
 
                 using (var workbook = new XLWorkbook(filePath))
                 {
-                    var worksheet = workbook.Worksheet("items"); // Name of the worksheet
+                    var worksheet = workbook.Worksheet("items");
                     var rows = worksheet.RangeUsed().RowsUsed();
 
-                    foreach (var row in rows)
+                    foreach (var row in rows) // Skip header row
                     {
+                        
                         var name = row.Cell(1).GetValue<string>();
                         var price = row.Cell(2).GetValue<int>();
                         var imagePath = row.Cell(3).GetValue<string>();
 
-                        string fullImagePath = Path.Combine(Application.StartupPath, @"..\..\..\" + imagePath);
+                        string fullImagePath = Path.Combine(Application.StartupPath, @"..\..\" + imagePath);
                         Itemstore item = new Itemstore(name, price, fullImagePath);
                         items.Add(item);
                     }
@@ -224,17 +200,58 @@ namespace final_project
             }
         }
 
+        private void BuyItem(Itemstore item)
+        {
+            if (wallet >= item.Price)
+            {
+                //wallet -= item.Price;
+                //UpdateWalletLabel();
+                Add_To_excel(item);
+                DB.SetBalance(int.Parse(user.ID), wallet);
+                MessageBox.Show($"You bought {item.Name}!");
+                updateData(item.Price);
+            }
+            else
+            {
+                MessageBox.Show("You don't have enough money!");
+            }
+        }
+
         private void Add_To_excel(Itemstore item)
         {
             try
             {
-                var filePath = @"../../../storeitems.xlsx";
+                var filePath = @"../../storeitems.xlsx";
                 bool fileExists = File.Exists(filePath);
-
-                using (var workbook = fileExists ? new XLWorkbook(filePath) : new XLWorkbook())
+                string fullPath = Path.GetFullPath(filePath);
+                Console.WriteLine(fullPath);
+                string itempath = item.ImagePath;
+                int lastIndex = itempath.LastIndexOf(@"pics");
+                string secondPart = "";
+                if (lastIndex >= 0)
                 {
-                    var worksheet = fileExists ? workbook.Worksheet("store") : workbook.Worksheets.Add("store");
+                    // Extract the second part
+                    secondPart = itempath.Substring(lastIndex);
+                }
 
+                    using (var workbook = fileExists ? new XLWorkbook(filePath) : new XLWorkbook())
+                {
+                    
+                    IXLWorksheet worksheet = null;
+                    //Console.WriteLine(workbook.Worksheets);
+                    if (fileExists)
+                    {
+                        // Check if "store" worksheet exists
+                        if (workbook.Worksheets.TryGetWorksheet("store", out worksheet))
+                        {
+                            Console.WriteLine("Found 'store' worksheet.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("'store' worksheet not found. Creating new 'store' worksheet.");
+                            worksheet = workbook.Worksheets.Add("store");
+                        }
+                    }
                     var lastRow = worksheet.LastRowUsed()?.RowNumber() ?? 0;
                     var newRow = worksheet.Row(lastRow + 1);
 
@@ -242,11 +259,9 @@ namespace final_project
                     newRow.Cell(2).Value = item.Price;
                     newRow.Cell(3).Value = DateTime.Now.ToString();
                     newRow.Cell(4).Value = user.ID;
-                    newRow.Cell(5).Value = item.ImagePath;
-
+                    newRow.Cell(5).Value = secondPart;
 
                     workbook.Save();
-                    //workbook.SaveAs(filePath);
                 }
             }
             catch (Exception ex)
@@ -254,28 +269,10 @@ namespace final_project
                 MessageBox.Show($"Error: {ex.Message}\n{ex.StackTrace}");
             }
         }
-    private void BuyItem(Itemstore item)
-        {
-            if (wallet >= item.Price)
-            {
-                wallet -= item.Price;
-                UpdateWalletLabel();
-                Add_To_excel(item);
-                DB.SetBalance(int.Parse(user.ID), wallet);
-                MessageBox.Show($"You bought {item.Name}!");
-            }
-            else
-            {
-                //user doesn't have enough money
-                MessageBox.Show("You dont enough money!!");
-            }
-        }
-        private void UpdateWalletLabel()
-        {
-            //walletlabel2.Text = $"${wallet:F2}";
-            
-        }
-        
 
+        private void BackBTN_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
