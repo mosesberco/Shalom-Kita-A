@@ -46,6 +46,8 @@ namespace final_project
             this.backtomenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.letterPic)).BeginInit();
             this.SuspendLayout();
+
+
             // 
             // guidelines
             // 
