@@ -46,16 +46,14 @@ namespace final_project
             this.backtomenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.letterPic)).BeginInit();
             this.SuspendLayout();
-
-
             // 
             // guidelines
             // 
             this.guidelines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.guidelines.Font = new System.Drawing.Font("Showcard Gothic", 13.875F, System.Drawing.FontStyle.Bold);
-            this.guidelines.Location = new System.Drawing.Point(438, 118);
+            this.guidelines.Location = new System.Drawing.Point(222, 115);
             this.guidelines.Name = "guidelines";
-            this.guidelines.Size = new System.Drawing.Size(898, 109);
+            this.guidelines.Size = new System.Drawing.Size(898, 105);
             this.guidelines.TabIndex = 4;
             this.guidelines.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.guidelines.Click += new System.EventHandler(this.guidelines_Click);
@@ -64,7 +62,7 @@ namespace final_project
             // 
             this.answer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.answer1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.answer1.Location = new System.Drawing.Point(463, 500);
+            this.answer1.Location = new System.Drawing.Point(214, 471);
             this.answer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.answer1.Name = "answer1";
             this.answer1.Size = new System.Drawing.Size(253, 244);
@@ -79,7 +77,7 @@ namespace final_project
             this.answer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.answer2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.answer2.FlatAppearance.BorderSize = 20;
-            this.answer2.Location = new System.Drawing.Point(759, 498);
+            this.answer2.Location = new System.Drawing.Point(510, 469);
             this.answer2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.answer2.Name = "answer2";
             this.answer2.Size = new System.Drawing.Size(253, 246);
@@ -93,7 +91,7 @@ namespace final_project
             this.answer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.answer3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.answer3.FlatAppearance.BorderSize = 20;
-            this.answer3.Location = new System.Drawing.Point(1069, 500);
+            this.answer3.Location = new System.Drawing.Point(820, 471);
             this.answer3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.answer3.Name = "answer3";
             this.answer3.Size = new System.Drawing.Size(253, 245);
@@ -115,7 +113,7 @@ namespace final_project
             // option3
             // 
             this.option3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.option3.Location = new System.Drawing.Point(547, 441);
+            this.option3.Location = new System.Drawing.Point(298, 412);
             this.option3.Name = "option3";
             this.option3.Size = new System.Drawing.Size(94, 50);
             this.option3.TabIndex = 10;
@@ -125,7 +123,7 @@ namespace final_project
             // option2
             // 
             this.option2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.option2.Location = new System.Drawing.Point(833, 441);
+            this.option2.Location = new System.Drawing.Point(584, 412);
             this.option2.Name = "option2";
             this.option2.Size = new System.Drawing.Size(90, 50);
             this.option2.TabIndex = 11;
@@ -136,7 +134,7 @@ namespace final_project
             // 
             this.option1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.option1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.option1.Location = new System.Drawing.Point(1147, 448);
+            this.option1.Location = new System.Drawing.Point(898, 419);
             this.option1.Name = "option1";
             this.option1.Size = new System.Drawing.Size(85, 50);
             this.option1.TabIndex = 12;
@@ -147,10 +145,10 @@ namespace final_project
             // 
             this.startOver.BackColor = System.Drawing.Color.Gold;
             this.startOver.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.startOver.Location = new System.Drawing.Point(463, 330);
+            this.startOver.Location = new System.Drawing.Point(197, 317);
             this.startOver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startOver.Name = "startOver";
-            this.startOver.Size = new System.Drawing.Size(239, 62);
+            this.startOver.Size = new System.Drawing.Size(256, 81);
             this.startOver.TabIndex = 13;
             this.startOver.Text = "שחק שוב";
             this.startOver.UseVisualStyleBackColor = false;
@@ -160,7 +158,7 @@ namespace final_project
             // 
             this.buttonRandomize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonRandomize.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.buttonRandomize.Location = new System.Drawing.Point(479, 242);
+            this.buttonRandomize.Location = new System.Drawing.Point(230, 239);
             this.buttonRandomize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRandomize.Name = "buttonRandomize";
             this.buttonRandomize.Size = new System.Drawing.Size(223, 74);
@@ -171,7 +169,7 @@ namespace final_project
             // letterPic
             // 
             this.letterPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.letterPic.Location = new System.Drawing.Point(780, 250);
+            this.letterPic.Location = new System.Drawing.Point(531, 221);
             this.letterPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.letterPic.Name = "letterPic";
             this.letterPic.Size = new System.Drawing.Size(193, 177);
@@ -183,16 +181,16 @@ namespace final_project
             // 
             this.playerinfo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.playerinfo.Font = new System.Drawing.Font("Showcard Gothic", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.playerinfo.Location = new System.Drawing.Point(1446, 9);
+            this.playerinfo.Location = new System.Drawing.Point(1078, 4);
             this.playerinfo.Name = "playerinfo";
-            this.playerinfo.Size = new System.Drawing.Size(308, 109);
+            this.playerinfo.Size = new System.Drawing.Size(202, 109);
             this.playerinfo.TabIndex = 14;
             this.playerinfo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // backtomenu
             // 
             this.backtomenu.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.backtomenu.Location = new System.Drawing.Point(23, 25);
+            this.backtomenu.Location = new System.Drawing.Point(2, 4);
             this.backtomenu.Name = "backtomenu";
             this.backtomenu.Size = new System.Drawing.Size(251, 66);
             this.backtomenu.TabIndex = 15;
@@ -205,7 +203,7 @@ namespace final_project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1766, 922);
+            this.ClientSize = new System.Drawing.Size(1380, 922);
             this.Controls.Add(this.backtomenu);
             this.Controls.Add(this.playerinfo);
             this.Controls.Add(this.startOver);

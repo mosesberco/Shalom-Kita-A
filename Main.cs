@@ -22,7 +22,8 @@ namespace final_project
             //Application.Run(store);
             //new_form.ShowDialog();
             //var hebrew_form = new Hebrew_Memory_Matching_Game.
-            //Application.Run(hebrew_game);
+            Application.Run(new_form);
+           
             DB.Dispose();
             //var game = new EnsglishBuildWordsGameMenu();
             //var form = new Register();

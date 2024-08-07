@@ -39,7 +39,9 @@ namespace final_project
         public HebrewGame_sapir(User user)
         {
             this.user = user;
+
             InitializeComponent();
+            //this.WindowState = FormWindowState.Maximized;
             InitializeTimer();
             random = new Random();
             questionNumber = 0;
