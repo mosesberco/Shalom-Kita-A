@@ -37,29 +37,32 @@ namespace final_project
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Teal;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(118, 14);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(24, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(237, 30);
+            this.label4.Size = new System.Drawing.Size(321, 40);
             this.label4.TabIndex = 6;
             this.label4.Text = "הכנס שם משתמש חדש";
             // 
             // newUserName
             // 
-            this.newUserName.Location = new System.Drawing.Point(282, 82);
-            this.newUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.newUserName.Location = new System.Drawing.Point(113, 66);
             this.newUserName.Name = "newUserName";
-            this.newUserName.Size = new System.Drawing.Size(190, 26);
+            this.newUserName.Size = new System.Drawing.Size(150, 20);
             this.newUserName.TabIndex = 7;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(126, 82);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(133, 92);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.Size = new System.Drawing.Size(99, 40);
             this.button1.TabIndex = 8;
             this.button1.Text = "שמור";
             this.button1.UseVisualStyleBackColor = true;
@@ -67,14 +70,15 @@ namespace final_project
             // 
             // ChangeUserName
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 137);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(374, 146);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.newUserName);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ChangeUserName";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangeUserName";
             this.ResumeLayout(false);
             this.PerformLayout();
