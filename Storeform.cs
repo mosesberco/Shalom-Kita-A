@@ -14,7 +14,7 @@ namespace final_project
         private User user;
         private List<Itemstore> items;
         private FlowLayoutPanel flowLayoutPanel;
-        private Panel westPanel;
+        //private Panel westPanel;
         private Panel centerPanel;
         private const int ItemWidth = 200;
         private const int ItemHeight = 250;
@@ -43,15 +43,55 @@ namespace final_project
             DB.SetBalance(int.Parse(user.ID), wallet);
         }
 
+        //private void SetupLayout()
+        //{
+        //    // West Panel
+        //    westPanel = new Panel
+        //    {
+        //        Dock = DockStyle.Left,
+        //        Width = 200 // Adjust as needed
+        //    };
+        //    this.Controls.Add(westPanel);
+
+        //    // Center Panel
+        //    centerPanel = new Panel
+        //    {
+        //        //Dock = DockStyle.Fill
+        //        Dock = DockStyle.Fill
+        //    };
+        //    this.Controls.Add(centerPanel);
+
+        //    // FlowLayoutPanel (inside centerPanel)
+        //    this.flowLayoutPanel = new FlowLayoutPanel
+        //    {
+        //        Dock = DockStyle.Fill,
+        //        AutoScroll = true,
+        //        FlowDirection = FlowDirection.LeftToRight,
+        //        WrapContents = true,
+        //        ////
+        //        //AutoSize = false,
+        //        //Location = new Point(100, 0)
+        //        ////
+        //    };
+        //    centerPanel.Controls.Add(this.flowLayoutPanel);
+        //    //
+        //    Point p = flowLayoutPanel.Location;
+        //    Console.WriteLine(p.ToString());
+        //    //
+        //    // Move the scroll to the right side
+        //    flowLayoutPanel.VerticalScroll.Visible = true;
+        //    flowLayoutPanel.HorizontalScroll.Visible = false;
+        //    flowLayoutPanel.WrapContents = true;
+        //}
         private void SetupLayout()
         {
-            // West Panel
-            westPanel = new Panel
-            {
-                Dock = DockStyle.Left,
-                Width = 200 // Adjust as needed
-            };
-            this.Controls.Add(westPanel);
+            // West Panel                           useless
+            //westPanel = new Panel
+            //{
+            //    Dock = DockStyle.Left,
+            //    Width = 100 // Adjust as needed
+            //};
+            //this.Controls.Add(westPanel);
 
             // Center Panel
             centerPanel = new Panel
@@ -66,15 +106,16 @@ namespace final_project
                 Dock = DockStyle.Fill,
                 AutoScroll = true,
                 FlowDirection = FlowDirection.LeftToRight,
-                WrapContents = true
+                WrapContents = true,
+                BackgroundImage = Properties.Resources.udi_game_background,
+                
             };
             centerPanel.Controls.Add(this.flowLayoutPanel);
 
-            // Move the scroll to the right side
-            flowLayoutPanel.VerticalScroll.Visible = true;
-            flowLayoutPanel.HorizontalScroll.Visible = false;
-            flowLayoutPanel.WrapContents = true;
+            // Adjust the flowLayoutPanel size and position
+            AdjustItemSize();
         }
+
 
         private void StoreForm_Resize(object sender, EventArgs e)
         {
