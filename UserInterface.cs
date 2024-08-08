@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
+
 
 namespace final_project
 {
     public partial class UserInterface : Form
     {
         private User userActive;
-        private Panel items_panel;
-        private const int ItemWidth = 200;
-        private const int ItemHeight = 250;
+        private Panel items_panel= new Panel();
+        private const int ItemWidth = 120;
+        private const int ItemHeight = 160;
         private Dictionary<string, (string, int)> items ;
 
         private Database database;
@@ -35,7 +37,8 @@ namespace final_project
         {
             var storeDB = new Database(@"../../storeitems.xlsx");
 
-            items.Clear();                                      //exception in runtime -> user {udi,udi}
+            
+            ///items.Clear();                                      //exception in runtime -> user {udi,udi}
             items = storeDB.GetItemsByUserId(userActive);
         }
         private void UpdateForm()
@@ -101,24 +104,29 @@ namespace final_project
         //        index++;
         //    }
         //}
+        // Assuming flowLayoutPanel1 is your FlowLayoutPanel
         private void AddItemToUI(Dictionary<string, (string, int)> items)
         {
+            // Clear existing controls
+            flowLayoutPanel1.Controls.Clear();
+
             foreach (var item in items)
             {
-
                 var panel = new Panel
                 {
-                    Width = ItemWidth,
-                    Height = ItemHeight,
+                    Width = ItemWidth + 20,
+                    Height = ItemHeight +100,
                     Margin = new Padding(5)
                 };
+                string fullImagePath = Path.Combine(Application.StartupPath, @"..\..\" + item.Value.Item1);
 
                 var pictureBox = new PictureBox
                 {
-                    ImageLocation = item.Value.Item1,
+
+                    ImageLocation = fullImagePath,
                     SizeMode = PictureBoxSizeMode.Zoom,
-                    Width = ItemWidth - 20,
-                    Height = 120,
+                    Width = ItemWidth ,
+                    Height = ItemHeight, // Adjust height to leave space for the text
                     Top = 10,
                     Left = 10
                 };
@@ -127,18 +135,18 @@ namespace final_project
                 {
                     Text = item.Key + $"\nכמות: {item.Value.Item2}",
                     TextAlign = ContentAlignment.MiddleCenter,
-                    Width = ItemWidth - 20,
-                    Height = 30,
+                    Width = ItemWidth ,
+                    Height = 50,
                     Top = pictureBox.Bottom + 5,
                     Left = 10,
-                    Font = new Font("Gill Sans MT", 12, FontStyle.Regular)
+                    Font = new Font("Gill Sans MT", 11, FontStyle.Regular)
                 };
 
                 panel.Controls.Add(pictureBox);
                 panel.Controls.Add(nameLabel);
-                items_panel.Controls.Add(panel);
-            }
 
+                flowLayoutPanel1.Controls.Add(panel);
+            }
         }
 
 

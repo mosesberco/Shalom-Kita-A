@@ -332,11 +332,10 @@ namespace final_project
                         var itemPath = row.Cell(5).GetValue<string>();
                         if (items.ContainsKey(itemName))
                         {
-                            items[itemName] = (items[itemName].Item1, items[itemName].Item2);
+                            items[itemName] = (items[itemName].Item1, items[itemName].Item2+1);
                         }
-
-
-                        items.Add(itemName, (itemPath ,1));
+                        else
+                            items.Add(itemName, (itemPath ,1));
                     }
                 }
             }
