@@ -296,9 +296,10 @@ namespace final_project
             this.LabelTime.Font = new System.Drawing.Font("Arial", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.LabelTime.Location = new System.Drawing.Point(361, 38);
             this.LabelTime.Name = "LabelTime";
-            this.LabelTime.Size = new System.Drawing.Size(405, 78);
+            this.LabelTime.Size = new System.Drawing.Size(327, 63);
             this.LabelTime.TabIndex = 1;
             this.LabelTime.Text = "00 Seconds";
+            this.LabelTime.Click += new System.EventHandler(this.LabelTime_Click);
             // 
             // EnglishMemoryGame
             // 

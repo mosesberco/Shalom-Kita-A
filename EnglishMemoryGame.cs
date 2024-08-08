@@ -235,6 +235,11 @@ namespace final_project
 
         }
 
+        private void LabelTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void updateData()
         {
             user.Balance += moneyEarned;

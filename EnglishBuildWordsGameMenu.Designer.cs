@@ -1,7 +1,7 @@
 ﻿
 namespace final_project
 {
-    partial class EnglishBuildWordsGameMenu
+    partial class EnglishMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,64 +29,24 @@ namespace final_project
         /// </summary>
         private void InitializeComponent()
         {
-            this.TitleGame = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.StartingGameButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // TitleGame
+            // EnglishMenu
             // 
-            this.TitleGame.AutoSize = true;
-            this.TitleGame.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleGame.Location = new System.Drawing.Point(25, 9);
-            this.TitleGame.Name = "TitleGame";
-            this.TitleGame.Size = new System.Drawing.Size(1150, 97);
-            this.TitleGame.TabIndex = 2;
-            this.TitleGame.Text = "Wellcome To \"Create the Words\" ";
-            this.TitleGame.Click += new System.EventHandler(this.TitleGame_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(147, 109);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(716, 207);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
-            // 
-            // StartingGameButton
-            // 
-            this.StartingGameButton.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartingGameButton.Location = new System.Drawing.Point(337, 348);
-            this.StartingGameButton.Name = "StartingGameButton";
-            this.StartingGameButton.Size = new System.Drawing.Size(283, 51);
-            this.StartingGameButton.TabIndex = 4;
-            this.StartingGameButton.Text = "Lets Start The Game";
-            this.StartingGameButton.UseVisualStyleBackColor = true;
-            this.StartingGameButton.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // EnsglishBuildWordsGameMenu
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1147, 644);
-            this.Controls.Add(this.StartingGameButton);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.TitleGame);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.Name = "EnsglishBuildWordsGameMenu";
+            this.Name = "EnglishMenu";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.EnglishBuildWordsGameMenu_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label TitleGame;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button StartingGameButton;
     }
 }

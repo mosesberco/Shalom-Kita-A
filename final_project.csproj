@@ -43,6 +43,9 @@
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="EnglishBuildWordsGame.cs">
       <SubType>Form</SubType>
@@ -79,6 +82,11 @@
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserInterface.cs">
@@ -119,7 +127,6 @@
       <DependentUpon>Math_udi.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
-    <Compile Include="Properties\Resources.Designer.cs" />
     <Compile Include="Question_udi.cs" />
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
@@ -247,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeUserName.resx">
       <DependentUpon>ChangeUserName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnglishBuildWordsGame.resx">
+      <DependentUpon>EnglishBuildWordsGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnglishMemoryGame.resx">
       <DependentUpon>EnglishMemoryGame.cs</DependentUpon>
@@ -642,6 +652,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\תרנגול.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ilan_game.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ilan_menu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
