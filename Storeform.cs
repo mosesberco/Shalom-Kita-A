@@ -30,15 +30,15 @@ namespace final_project
             LoadItems();
             //UpdateWalletLabel(0);
             
-            userData.Text = $"שם משתמש: {user.Username}";
-            user_balance.Text = $"יתרה: {user.Balance}";
+            userData.Text = $"Username {user.Username}";
+            user_balance.Text = $"Balance {user.Balance}";
 
             this.Resize += new EventHandler(StoreForm_Resize);
         }
         private void updateData(int dis)
         {
 
-            user_balance.Text = $"יתרה: {wallet - dis}";
+            user_balance.Text = $"Balance {wallet - dis}";
             wallet = wallet - dis;
             DB.SetBalance(int.Parse(user.ID), wallet);
         }
@@ -93,24 +93,29 @@ namespace final_project
             //};
             //this.Controls.Add(westPanel);
 
-            // Center Panel
+            ///// Center Panel
             centerPanel = new Panel
             {
                 Dock = DockStyle.Fill
             };
             this.Controls.Add(centerPanel);
 
-            // FlowLayoutPanel (inside centerPanel)
-            this.flowLayoutPanel = new FlowLayoutPanel
-            {
-                Dock = DockStyle.Fill,
-                AutoScroll = true,
-                FlowDirection = FlowDirection.LeftToRight,
-                WrapContents = true,
-                BackgroundImage = Properties.Resources.udi_game_background,
-                
-            };
-            centerPanel.Controls.Add(this.flowLayoutPanel);
+            //// FlowLayoutPanel (inside centerPanel)
+            //this.flowLayoutPanel = new FlowLayoutPanel
+            //{
+            //    Dock = DockStyle.Fill,
+            //    AutoScroll = true,
+            //    FlowDirection = FlowDirection.LeftToRight,
+            //    WrapContents = true,
+            //    BackgroundImage = Properties.Resources.udi_game_background
+            //};
+            //centerPanel.Controls.Add(this.flowLayoutPanel);
+            this.flowLayoutPanel1 = flowLayoutPanel1;
+            this.flowLayoutPanel1.Dock = DockStyle.Fill;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.FlowDirection = FlowDirection.LeftToRight;
+            this.flowLayoutPanel1.WrapContents = true;
+            this.flowLayoutPanel1.BackgroundImage = Properties.Resources.udi_game_background;
 
             // Adjust the flowLayoutPanel size and position
             AdjustItemSize();
@@ -124,20 +129,23 @@ namespace final_project
 
         private void AdjustItemSize()
         {
-            int availableWidth = flowLayoutPanel.ClientSize.Width - flowLayoutPanel.Padding.Horizontal;
-            int itemsPerRow = Math.Max(1, availableWidth / ItemWidth);
-            int itemWidth = (availableWidth - (itemsPerRow - 1) * 10) / itemsPerRow; // 10 is the horizontal margin
-
-            foreach (Control control in flowLayoutPanel.Controls)
+            if (this.flowLayoutPanel1 != null)
             {
-                if (control is Panel itemPanel)
-                {
-                    itemPanel.Width = itemWidth;
-                    itemPanel.Height = ItemHeight;
-                }
-            }
+                int availableWidth = this.flowLayoutPanel1.ClientSize.Width - this.flowLayoutPanel1.Padding.Horizontal;
+                int itemsPerRow = Math.Max(1, availableWidth / ItemWidth);
+                int itemWidth = (availableWidth - (itemsPerRow - 1) * 10) / itemsPerRow; // 10 is the horizontal margin
 
-            flowLayoutPanel.PerformLayout();
+                foreach (Control control in this.flowLayoutPanel1.Controls)
+                {
+                    if (control is Panel itemPanel)
+                    {
+                        itemPanel.Width = itemWidth;
+                        itemPanel.Height = ItemHeight;
+                    }
+                }
+
+                this.flowLayoutPanel1.PerformLayout();
+            }
         }
 
         private void AddItemToUI(Itemstore item)
@@ -201,7 +209,7 @@ namespace final_project
             panel.Controls.Add(priceLabel);
             panel.Controls.Add(buyButton);
 
-            flowLayoutPanel.Controls.Add(panel);
+            this.flowLayoutPanel1.Controls.Add(panel);
         }
 
         private void LoadItems()
@@ -250,7 +258,7 @@ namespace final_project
                 Add_To_excel(item);
                 DB.SetBalance(int.Parse(user.ID), wallet);
                 MessageBox.Show($"You bought {item.Name}!");
-                updateData(item.Price);
+                this.updateData(item.Price);
             }
             else
             {
