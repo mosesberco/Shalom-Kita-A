@@ -84,6 +84,7 @@ namespace final_project
             this.Controls.Add(this.newUserName);
             this.Controls.Add(this.label4);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ChangeUserName";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangeUserName";

@@ -40,7 +40,9 @@ namespace final_project
             this.ClientSize = new System.Drawing.Size(1147, 644);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EnglishMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.EnglishBuildWordsGameMenu_Load);
             this.ResumeLayout(false);

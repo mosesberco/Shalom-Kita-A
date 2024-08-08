@@ -16,7 +16,7 @@ namespace final_project
             DB.RegisterUser("moses", "bro", "1234", "m@g.c", "Male");
             DB.SetBalance(1234, 1000);
             User user = new User("moses", "bro", "1234" , "m@g.c", "Male", 10_000);
-            var store = new StoreForm(user);
+            //var store = new StoreForm(user);
             //var new_form = new Game_Udi(user);
             var new_form = new Login();
             //Application.Run(store);
@@ -30,7 +30,7 @@ namespace final_project
             //Application.Run(new_form);
             //var game_Diana = new GameScreen();
             //Application.Run(new GameScreen(user));
-            //Application.Run(new Menu(user));
+            Application.Run(new Menu(user));
 
         }
     }

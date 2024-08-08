@@ -33,14 +33,15 @@ namespace final_project
             // 
             // EnglishBuildWordsGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::final_project.Properties.Resources.ilan_game1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1356, 724);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.ClientSize = new System.Drawing.Size(1017, 588);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EnglishBuildWordsGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameForm";
             this.Load += new System.EventHandler(this.GameForm_Load);
             this.ResumeLayout(false);

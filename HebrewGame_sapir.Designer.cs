@@ -51,9 +51,10 @@ namespace final_project
             // 
             this.guidelines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.guidelines.Font = new System.Drawing.Font("Showcard Gothic", 13.875F, System.Drawing.FontStyle.Bold);
-            this.guidelines.Location = new System.Drawing.Point(222, 115);
+            this.guidelines.Location = new System.Drawing.Point(111, 60);
+            this.guidelines.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.guidelines.Name = "guidelines";
-            this.guidelines.Size = new System.Drawing.Size(898, 105);
+            this.guidelines.Size = new System.Drawing.Size(449, 55);
             this.guidelines.TabIndex = 4;
             this.guidelines.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.guidelines.Click += new System.EventHandler(this.guidelines_Click);
@@ -62,10 +63,10 @@ namespace final_project
             // 
             this.answer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.answer1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.answer1.Location = new System.Drawing.Point(214, 471);
-            this.answer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.answer1.Location = new System.Drawing.Point(107, 245);
+            this.answer1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.answer1.Name = "answer1";
-            this.answer1.Size = new System.Drawing.Size(253, 244);
+            this.answer1.Size = new System.Drawing.Size(126, 127);
             this.answer1.TabIndex = 5;
             this.answer1.Tag = "1";
             this.answer1.UseVisualStyleBackColor = true;
@@ -77,10 +78,10 @@ namespace final_project
             this.answer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.answer2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.answer2.FlatAppearance.BorderSize = 20;
-            this.answer2.Location = new System.Drawing.Point(510, 469);
-            this.answer2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.answer2.Location = new System.Drawing.Point(255, 244);
+            this.answer2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.answer2.Name = "answer2";
-            this.answer2.Size = new System.Drawing.Size(253, 246);
+            this.answer2.Size = new System.Drawing.Size(126, 128);
             this.answer2.TabIndex = 6;
             this.answer2.Tag = "2";
             this.answer2.UseVisualStyleBackColor = false;
@@ -91,10 +92,10 @@ namespace final_project
             this.answer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.answer3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.answer3.FlatAppearance.BorderSize = 20;
-            this.answer3.Location = new System.Drawing.Point(820, 471);
-            this.answer3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.answer3.Location = new System.Drawing.Point(410, 245);
+            this.answer3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.answer3.Name = "answer3";
-            this.answer3.Size = new System.Drawing.Size(253, 245);
+            this.answer3.Size = new System.Drawing.Size(126, 127);
             this.answer3.TabIndex = 7;
             this.answer3.Tag = "3";
             this.answer3.UseVisualStyleBackColor = true;
@@ -102,10 +103,10 @@ namespace final_project
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(608, 320);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(304, 166);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(7, 6);
+            this.button1.Size = new System.Drawing.Size(4, 3);
             this.button1.TabIndex = 8;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -113,9 +114,10 @@ namespace final_project
             // option3
             // 
             this.option3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.option3.Location = new System.Drawing.Point(298, 412);
+            this.option3.Location = new System.Drawing.Point(149, 214);
+            this.option3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option3.Name = "option3";
-            this.option3.Size = new System.Drawing.Size(94, 50);
+            this.option3.Size = new System.Drawing.Size(47, 26);
             this.option3.TabIndex = 10;
             this.option3.Text = ".ג";
             this.option3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,9 +125,10 @@ namespace final_project
             // option2
             // 
             this.option2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.option2.Location = new System.Drawing.Point(584, 412);
+            this.option2.Location = new System.Drawing.Point(292, 214);
+            this.option2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option2.Name = "option2";
-            this.option2.Size = new System.Drawing.Size(90, 50);
+            this.option2.Size = new System.Drawing.Size(45, 26);
             this.option2.TabIndex = 11;
             this.option2.Text = ".ב";
             this.option2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,9 +137,10 @@ namespace final_project
             // 
             this.option1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.option1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.option1.Location = new System.Drawing.Point(898, 419);
+            this.option1.Location = new System.Drawing.Point(449, 218);
+            this.option1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option1.Name = "option1";
-            this.option1.Size = new System.Drawing.Size(85, 50);
+            this.option1.Size = new System.Drawing.Size(42, 26);
             this.option1.TabIndex = 12;
             this.option1.Text = ".א";
             this.option1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -145,10 +149,10 @@ namespace final_project
             // 
             this.startOver.BackColor = System.Drawing.Color.Gold;
             this.startOver.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.startOver.Location = new System.Drawing.Point(197, 317);
-            this.startOver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.startOver.Location = new System.Drawing.Point(98, 165);
+            this.startOver.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.startOver.Name = "startOver";
-            this.startOver.Size = new System.Drawing.Size(256, 81);
+            this.startOver.Size = new System.Drawing.Size(128, 42);
             this.startOver.TabIndex = 13;
             this.startOver.Text = "שחק שוב";
             this.startOver.UseVisualStyleBackColor = false;
@@ -158,10 +162,10 @@ namespace final_project
             // 
             this.buttonRandomize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonRandomize.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.buttonRandomize.Location = new System.Drawing.Point(230, 239);
-            this.buttonRandomize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonRandomize.Location = new System.Drawing.Point(115, 124);
+            this.buttonRandomize.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.buttonRandomize.Name = "buttonRandomize";
-            this.buttonRandomize.Size = new System.Drawing.Size(223, 74);
+            this.buttonRandomize.Size = new System.Drawing.Size(112, 38);
             this.buttonRandomize.TabIndex = 9;
             this.buttonRandomize.UseVisualStyleBackColor = true;
             this.buttonRandomize.Click += new System.EventHandler(this.startGame);
@@ -169,10 +173,10 @@ namespace final_project
             // letterPic
             // 
             this.letterPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.letterPic.Location = new System.Drawing.Point(531, 221);
-            this.letterPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.letterPic.Location = new System.Drawing.Point(266, 115);
+            this.letterPic.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.letterPic.Name = "letterPic";
-            this.letterPic.Size = new System.Drawing.Size(193, 177);
+            this.letterPic.Size = new System.Drawing.Size(96, 92);
             this.letterPic.TabIndex = 3;
             this.letterPic.TabStop = false;
             this.letterPic.Tag = "4";
@@ -181,29 +185,31 @@ namespace final_project
             // 
             this.playerinfo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.playerinfo.Font = new System.Drawing.Font("Showcard Gothic", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.playerinfo.Location = new System.Drawing.Point(1078, 4);
+            this.playerinfo.Location = new System.Drawing.Point(539, 2);
+            this.playerinfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerinfo.Name = "playerinfo";
-            this.playerinfo.Size = new System.Drawing.Size(202, 109);
+            this.playerinfo.Size = new System.Drawing.Size(101, 57);
             this.playerinfo.TabIndex = 14;
             this.playerinfo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // backtomenu
             // 
             this.backtomenu.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.backtomenu.Location = new System.Drawing.Point(2, 4);
+            this.backtomenu.Location = new System.Drawing.Point(1, 2);
+            this.backtomenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backtomenu.Name = "backtomenu";
-            this.backtomenu.Size = new System.Drawing.Size(251, 66);
+            this.backtomenu.Size = new System.Drawing.Size(126, 34);
             this.backtomenu.TabIndex = 15;
             this.backtomenu.UseVisualStyleBackColor = true;
             this.backtomenu.Click += new System.EventHandler(this.backtomenu_Click);
             // 
             // HebrewGame_sapir
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1380, 922);
+            this.ClientSize = new System.Drawing.Size(690, 479);
             this.Controls.Add(this.backtomenu);
             this.Controls.Add(this.playerinfo);
             this.Controls.Add(this.startOver);
@@ -217,8 +223,10 @@ namespace final_project
             this.Controls.Add(this.answer1);
             this.Controls.Add(this.guidelines);
             this.Controls.Add(this.letterPic);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "HebrewGame_sapir";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.letterPic)).EndInit();
             this.ResumeLayout(false);

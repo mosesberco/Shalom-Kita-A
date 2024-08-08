@@ -245,7 +245,9 @@ namespace final_project
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lblQuestion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Game_Udi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

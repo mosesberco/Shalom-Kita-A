@@ -54,7 +54,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hebrew_Etai));
             this.gamePanel = new final_project.CustomPanel();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblTimeLeft = new System.Windows.Forms.Label();
@@ -73,29 +72,32 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblStatus.Location = new System.Drawing.Point(177, 633);
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.Location = new System.Drawing.Point(133, 411);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(84, 28);
+            this.lblStatus.Size = new System.Drawing.Size(67, 21);
             this.lblStatus.TabIndex = 0;
             this.lblStatus.Text = "התאמה";
             // 
             // lblTimeLeft
             // 
             this.lblTimeLeft.AutoSize = true;
-            this.lblTimeLeft.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTimeLeft.Location = new System.Drawing.Point(685, 633);
+            this.lblTimeLeft.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTimeLeft.Location = new System.Drawing.Point(514, 411);
+            this.lblTimeLeft.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTimeLeft.Name = "lblTimeLeft";
-            this.lblTimeLeft.Size = new System.Drawing.Size(102, 28);
+            this.lblTimeLeft.Size = new System.Drawing.Size(81, 21);
             this.lblTimeLeft.TabIndex = 1;
             this.lblTimeLeft.Text = ":זמן נשאר";
             // 
             // btnRestart
             // 
-            this.btnRestart.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRestart.Location = new System.Drawing.Point(426, 568);
+            this.btnRestart.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnRestart.Location = new System.Drawing.Point(320, 369);
+            this.btnRestart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(200, 60);
+            this.btnRestart.Size = new System.Drawing.Size(150, 39);
             this.btnRestart.TabIndex = 2;
             this.btnRestart.Text = "התחל מחדש";
             this.btnRestart.UseVisualStyleBackColor = true;
@@ -106,17 +108,19 @@
             this.GameTimer.Interval = 1000;
             this.GameTimer.Tick += new System.EventHandler(this.TimerEvent);
             // 
-            // Form1
+            // Hebrew_Etai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1026, 771);
+            this.ClientSize = new System.Drawing.Size(770, 501);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblTimeLeft);
             this.Controls.Add(this.lblStatus);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Hebrew_Etai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hebrew Memory Matching Game";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

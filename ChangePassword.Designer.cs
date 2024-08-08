@@ -105,6 +105,7 @@ namespace final_project
             this.Controls.Add(this.confirmPassword);
             this.Controls.Add(this.newPassword);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePassword";

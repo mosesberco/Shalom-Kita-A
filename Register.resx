@@ -117,4 +117,508 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="genderTextBox.Items" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="genderTextBox.Items1" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="genderTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 339</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="genderTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="genderTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 21</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="genderTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;genderTextBox.Name" xml:space="preserve">
+    <value>genderTextBox</value>
+  </data>
+  <data name="&gt;&gt;genderTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genderTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;genderTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gill Sans MT, 12pt, style=Bold</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 444</value>
+  </data>
+  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 23</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gill Sans MT, 12pt</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 444</value>
+  </data>
+  <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 23</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Already have an account ?</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gill Sans MT, 20.25pt, style=Bold</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 383</value>
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 50</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="showPasswordCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="showPasswordCheckBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="showPasswordCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gill Sans MT, 9.75pt</value>
+  </data>
+  <data name="showPasswordCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 206</value>
+  </data>
+  <data name="showPasswordCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="showPasswordCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 22</value>
+  </data>
+  <data name="showPasswordCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="showPasswordCheckBox.Text" xml:space="preserve">
+    <value>show password</value>
+  </data>
+  <data name="&gt;&gt;showPasswordCheckBox.Name" xml:space="preserve">
+    <value>showPasswordCheckBox</value>
+  </data>
+  <data name="&gt;&gt;showPasswordCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showPasswordCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;showPasswordCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtGen.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtGen.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gill Sans MT, 24pt</value>
+  </data>
+  <data name="txtGen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 322</value>
+  </data>
+  <data name="txtGen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="txtGen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 45</value>
+  </data>
+  <data name="txtGen.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="txtGen.Text" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="&gt;&gt;txtGen.Name" xml:space="preserve">
+    <value>txtGen</value>
+  </data>
+  <data name="&gt;&gt;txtGen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtGen.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtGen.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtEmail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gill Sans MT, 24pt</value>
+  </data>
+  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 277</value>
+  </data>
+  <data name="txtEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 45</value>
+  </data>
+  <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="txtEmail.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Name" xml:space="preserve">
+    <value>txtEmail</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gill Sans MT, 24pt</value>
+  </data>
+  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 234</value>
+  </data>
+  <data name="txtID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 45</value>
+  </data>
+  <data name="txtID.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="txtID.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
+    <value>txtID</value>
+  </data>
+  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtID.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="emailTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="emailTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 292</value>
+  </data>
+  <data name="emailTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="emailTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="emailTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.Name" xml:space="preserve">
+    <value>emailTextBox</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="idTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="idTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 249</value>
+  </data>
+  <data name="idTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="idTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="idTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;idTextBox.Name" xml:space="preserve">
+    <value>idTextBox</value>
+  </data>
+  <data name="&gt;&gt;idTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;idTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;idTextBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="passwordTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="passwordTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 206</value>
+  </data>
+  <data name="passwordTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="passwordTextBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="passwordTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="passwordTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;passwordTextBox.Name" xml:space="preserve">
+    <value>passwordTextBox</value>
+  </data>
+  <data name="&gt;&gt;passwordTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwordTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;passwordTextBox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="usernameTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="usernameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 159</value>
+  </data>
+  <data name="usernameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="usernameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="usernameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;usernameTextBox.Name" xml:space="preserve">
+    <value>usernameTextBox</value>
+  </data>
+  <data name="&gt;&gt;usernameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;usernameTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;usernameTextBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtPass.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtPass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gill Sans MT, 24pt</value>
+  </data>
+  <data name="txtPass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 191</value>
+  </data>
+  <data name="txtPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="txtPass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 45</value>
+  </data>
+  <data name="txtPass.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="txtPass.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="&gt;&gt;txtPass.Name" xml:space="preserve">
+    <value>txtPass</value>
+  </data>
+  <data name="&gt;&gt;txtPass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPass.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPass.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txtusername.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtusername.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gill Sans MT, 24pt</value>
+  </data>
+  <data name="txtusername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 144</value>
+  </data>
+  <data name="txtusername.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="txtusername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 45</value>
+  </data>
+  <data name="txtusername.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="txtusername.Text" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="&gt;&gt;txtusername.Name" xml:space="preserve">
+    <value>txtusername</value>
+  </data>
+  <data name="&gt;&gt;txtusername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtusername.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtusername.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gill Sans MT, 48pt, style=Bold</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 21</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 96</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>550, 507</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

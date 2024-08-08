@@ -37,9 +37,10 @@ namespace final_project
             // startButton
             // 
             this.startButton.Font = new System.Drawing.Font("Maiandra GD", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.startButton.Location = new System.Drawing.Point(582, 496);
+            this.startButton.Location = new System.Drawing.Point(436, 403);
+            this.startButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(470, 95);
+            this.startButton.Size = new System.Drawing.Size(352, 77);
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start Game";
             this.startButton.UseVisualStyleBackColor = true;
@@ -50,9 +51,10 @@ namespace final_project
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
             this.nameLabel.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.nameLabel.Location = new System.Drawing.Point(453, 144);
+            this.nameLabel.Location = new System.Drawing.Point(340, 117);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(293, 59);
+            this.nameLabel.Size = new System.Drawing.Size(220, 48);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "hello user text";
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,24 +63,28 @@ namespace final_project
             // 
             this.moneyLabel.BackColor = System.Drawing.Color.Transparent;
             this.moneyLabel.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moneyLabel.Location = new System.Drawing.Point(819, 144);
+            this.moneyLabel.Location = new System.Drawing.Point(614, 117);
+            this.moneyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.moneyLabel.Name = "moneyLabel";
-            this.moneyLabel.Size = new System.Drawing.Size(291, 59);
+            this.moneyLabel.Size = new System.Drawing.Size(218, 48);
             this.moneyLabel.TabIndex = 2;
             this.moneyLabel.Text = "money text";
             this.moneyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EnglishMemoryGameMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1601, 746);
+            this.ClientSize = new System.Drawing.Size(1201, 606);
             this.Controls.Add(this.moneyLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.startButton);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EnglishMemoryGameMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameMenu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
