@@ -26,7 +26,7 @@ namespace final_project
             DB.Dispose();
             //var game = new EnsglishBuildWordsGameMenu();
             //var form = new Register();
-            Application.Run(store);
+            Application.Run(new_form);
             //Application.Run(new_form);
             //var game_Diana = new GameScreen();
             //Application.Run(new GameScreen());

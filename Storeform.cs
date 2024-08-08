@@ -107,7 +107,8 @@ namespace final_project
                 AutoScroll = true,
                 FlowDirection = FlowDirection.LeftToRight,
                 WrapContents = true,
-                BackgroundImage = Properties.Resources.udi_game_background
+                BackgroundImage = Properties.Resources.udi_game_background,
+                
             };
             centerPanel.Controls.Add(this.flowLayoutPanel);
 
