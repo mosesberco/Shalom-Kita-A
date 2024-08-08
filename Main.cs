@@ -13,8 +13,8 @@ namespace final_project
             var DB =new Database();
             //var store_form = new StoreForm(206872871, DB);
             //var hebrew_game = new Register();
-            DB.RegisterUser("moses", "bro", "1234", "m@g.c", "Male");
-            DB.SetBalance(1234, 1000);
+            //DB.RegisterUser("moses", "bro", "1234", "m@g.c", "Male");
+           // DB.SetBalance(1234, 1000);
             User user = new User("moses", "bro", "1234" , "m@g.c", "Male", 10_000);
             //var store = new StoreForm(user);
             //var new_form = new Game_Udi(user);

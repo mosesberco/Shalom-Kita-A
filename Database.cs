@@ -27,8 +27,17 @@ namespace final_project
 
         private void OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet)
         {
-            xlWorkbook = new XLWorkbook(Path.GetFullPath(pathToExcel));
-            xlWorksheet = xlWorkbook.Worksheet("Users");
+            if (pathToExcel == @"..\..\Users.xlsx")
+            {
+                xlWorkbook = new XLWorkbook(Path.GetFullPath(pathToExcel));
+                xlWorksheet = xlWorkbook.Worksheet("Users");
+            }
+            else
+            {
+                xlWorkbook = new XLWorkbook(Path.GetFullPath(pathToExcel));
+                xlWorksheet = xlWorkbook.Worksheet("store");
+
+            }
         }
 
         private void CreateExcelFile()
@@ -300,10 +309,13 @@ namespace final_project
                 xlWorkbook.Dispose();
             }
         }
-        public Dictionary<string, string> GetItemsByUserId(User user)
+
+
+        
+        public Dictionary<string, (string, int)> GetItemsByUserId(User user)        // Returns <item_name, (path, number_of_items)>
         {
             //pathToExcel = @"../../../storeitems.xlsx";
-            var items = new Dictionary<string, string>();
+            var items = new Dictionary<string, (string, int)>();
 
             OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
@@ -314,11 +326,16 @@ namespace final_project
                 {
                     if (row.RowNumber() == 1) continue; // Skip header row
 
-                    if (row.Cell(4).GetValue<string>() == user.Email)
+                    if (row.Cell(4).GetValue<string>() == user.ID)
                     {
                         var itemName = row.Cell(1).GetValue<string>();
                         var itemPath = row.Cell(5).GetValue<string>();
-                        items.Add(itemName, itemPath);
+                        if (items.ContainsKey(itemName))
+                        {
+                            items[itemName] = (items[itemName].Item1, items[itemName].Item2+1);
+                        }
+                        else
+                            items.Add(itemName, (itemPath ,1));
                     }
                 }
             }
