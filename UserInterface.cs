@@ -9,7 +9,7 @@ namespace final_project
 {
     public partial class UserInterface : Form
     {
-        private User userActive;
+        private User user;
         private Panel items_panel= new Panel();
         private const int ItemWidth = 120;
         private const int ItemHeight = 160;
@@ -23,7 +23,7 @@ namespace final_project
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.Sizable;
             database = db;
-            this.userActive = user;
+            this.user = user;
             loadItems();
             //this.items = database.GetItemsByUserId(user);
             AddItemToUI(this.items);
@@ -39,21 +39,22 @@ namespace final_project
 
             
             ///items.Clear();                                      //exception in runtime -> user {udi,udi}
-            items = storeDB.GetItemsByUserId(userActive);
+            items = storeDB.GetItemsByUserId(user);
         }
         private void UpdateForm()
         {
-            textBoxUserName.Text = this.userActive.Username;
-            textBoxPassword.Text = this.userActive.Password;
-            textBoxID.Text = this.userActive.ID;
-            textBoxEmail.Text = this.userActive.Email;
-            textBoxGender.Text = this.userActive.Gender;
-            textBoxCoins.Text = this.userActive.Balance.ToString();
+            textBoxUserName.Text = this.user.Username;
+            textBoxPassword.Text = this.user.Password;
+            textBoxID.Text = this.user.ID;
+            textBoxEmail.Text = this.user.Email;
+            textBoxGender.Text = this.user.Gender;
+            textBoxCoins.Text = database.GetBalance(int.Parse(user.ID)).ToString();
+            //textBoxCoins.Text = this.user.Balance.ToString();
         }
 
         private void buttonChangeUserName_Click(object sender, EventArgs e)
         {
-            ChangeUserName changeUserForm = new ChangeUserName(database, userActive);
+            ChangeUserName changeUserForm = new ChangeUserName(database, user);
             if (changeUserForm.ShowDialog() == DialogResult.OK)
             {
                 UpdateForm();
@@ -62,7 +63,7 @@ namespace final_project
 
         private void buttonCHangePassword_Click_1(object sender, EventArgs e)
         {
-            ChangePassword changePasswordForm = new ChangePassword(database, userActive);
+            ChangePassword changePasswordForm = new ChangePassword(database, user);
             if (changePasswordForm.ShowDialog() == DialogResult.OK)
             {
                 UpdateForm();
