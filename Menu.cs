@@ -87,7 +87,7 @@ namespace final_project
             //checkUser();
             Login login = new Login();
             login.Show();
-            Close();
+            Hide();
             
         }
 
