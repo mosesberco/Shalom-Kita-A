@@ -29,7 +29,7 @@ namespace final_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var eng1 = new EnglishBuildWordsGameMenu(user);
+            var eng1 = new EnglishMenu(user);
             eng1.Show();
         }
         private void button4_Click(object sender, EventArgs e)      //exception locating file img !!!!!
