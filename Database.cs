@@ -24,7 +24,30 @@ namespace final_project
                 CreateExcelFile();
             }
         }
+        public bool has_ID(string id)
+        {
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
+            try
+            {
+                var rows = xlWorksheet.RangeUsed().RowsUsed();
+                foreach (var row in rows)
+                {
+                    if (row.RowNumber() == 1) continue; // Skip header row
+
+                    if (row.Cell(3).GetValue<string>() == id)
+                    {
+                        return true;
+                        
+                    }
+                }
+            }
+            finally
+            {
+                xlWorkbook.Dispose();
+            }
+            return false;
+        }
         private void OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet)
         {
             if (pathToExcel == @"..\..\Users.xlsx")
