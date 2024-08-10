@@ -79,7 +79,7 @@ namespace final_project
             this.tableLayoutPanel1.Controls.Add(this.label16, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.label10, 3, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-3, 136);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -310,14 +310,13 @@ namespace final_project
             // LabelTime
             // 
             this.LabelTime.AutoSize = true;
-            this.LabelTime.Font = new System.Drawing.Font("Arial", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.LabelTime.Font = new System.Drawing.Font("Gill Sans MT", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelTime.Location = new System.Drawing.Point(271, 31);
             this.LabelTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelTime.Name = "LabelTime";
-            this.LabelTime.Size = new System.Drawing.Size(327, 63);
+            this.LabelTime.Size = new System.Drawing.Size(309, 74);
             this.LabelTime.TabIndex = 1;
             this.LabelTime.Text = "00 Seconds";
-            this.LabelTime.Click += new System.EventHandler(this.LabelTime_Click);
             // 
             // EnglishMemoryGame
             // 
@@ -328,11 +327,10 @@ namespace final_project
             this.Controls.Add(this.LabelTime);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EnglishMemoryGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GameForm";
-            this.Load += new System.EventHandler(this.GameForm_Load);
+            this.Text = "English Memory Game";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -230,24 +230,16 @@ namespace final_project
             }
         }
 
-        private void GameForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LabelTime_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void updateData()
         {
-            user.Balance += moneyEarned;
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
-            DB.SetBalance(int.Parse(user.ID), (moneyEarned) + balance);
 
-            menuForm.updateBalance();
+            balance += moneyEarned;
+            
+            DB.SetBalance(int.Parse(user.ID), balance);
+
+            menuForm.updateBalance(balance);
             Close();
         }
     }

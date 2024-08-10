@@ -50,20 +50,19 @@ namespace final_project
             // guidelines
             // 
             this.guidelines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.guidelines.Font = new System.Drawing.Font("Showcard Gothic", 13.875F, System.Drawing.FontStyle.Bold);
-            this.guidelines.Location = new System.Drawing.Point(111, 60);
+            this.guidelines.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guidelines.Location = new System.Drawing.Point(139, 72);
             this.guidelines.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.guidelines.Name = "guidelines";
-            this.guidelines.Size = new System.Drawing.Size(449, 55);
+            this.guidelines.Size = new System.Drawing.Size(522, 68);
             this.guidelines.TabIndex = 4;
             this.guidelines.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.guidelines.Click += new System.EventHandler(this.guidelines_Click);
             // 
             // answer1
             // 
             this.answer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.answer1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.answer1.Location = new System.Drawing.Point(107, 245);
+            this.answer1.Location = new System.Drawing.Point(197, 254);
             this.answer1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.answer1.Name = "answer1";
             this.answer1.Size = new System.Drawing.Size(126, 127);
@@ -78,7 +77,7 @@ namespace final_project
             this.answer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.answer2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.answer2.FlatAppearance.BorderSize = 20;
-            this.answer2.Location = new System.Drawing.Point(255, 244);
+            this.answer2.Location = new System.Drawing.Point(368, 253);
             this.answer2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.answer2.Name = "answer2";
             this.answer2.Size = new System.Drawing.Size(126, 128);
@@ -92,7 +91,7 @@ namespace final_project
             this.answer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.answer3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.answer3.FlatAppearance.BorderSize = 20;
-            this.answer3.Location = new System.Drawing.Point(410, 245);
+            this.answer3.Location = new System.Drawing.Point(535, 254);
             this.answer3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.answer3.Name = "answer3";
             this.answer3.Size = new System.Drawing.Size(126, 127);
@@ -113,8 +112,8 @@ namespace final_project
             // 
             // option3
             // 
-            this.option3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.option3.Location = new System.Drawing.Point(149, 214);
+            this.option3.Font = new System.Drawing.Font("Gill Sans MT", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.option3.Location = new System.Drawing.Point(239, 223);
             this.option3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option3.Name = "option3";
             this.option3.Size = new System.Drawing.Size(47, 26);
@@ -124,8 +123,8 @@ namespace final_project
             // 
             // option2
             // 
-            this.option2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.option2.Location = new System.Drawing.Point(292, 214);
+            this.option2.Font = new System.Drawing.Font("Gill Sans MT", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.option2.Location = new System.Drawing.Point(400, 223);
             this.option2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option2.Name = "option2";
             this.option2.Size = new System.Drawing.Size(45, 26);
@@ -136,8 +135,8 @@ namespace final_project
             // option1
             // 
             this.option1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.option1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.option1.Location = new System.Drawing.Point(449, 218);
+            this.option1.Font = new System.Drawing.Font("Gill Sans MT", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.option1.Location = new System.Drawing.Point(573, 223);
             this.option1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.option1.Name = "option1";
             this.option1.Size = new System.Drawing.Size(42, 26);
@@ -148,8 +147,8 @@ namespace final_project
             // startOver
             // 
             this.startOver.BackColor = System.Drawing.Color.Gold;
-            this.startOver.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.startOver.Location = new System.Drawing.Point(98, 165);
+            this.startOver.Font = new System.Drawing.Font("Gill Sans MT", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startOver.Location = new System.Drawing.Point(98, 196);
             this.startOver.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.startOver.Name = "startOver";
             this.startOver.Size = new System.Drawing.Size(128, 42);
@@ -161,11 +160,11 @@ namespace final_project
             // buttonRandomize
             // 
             this.buttonRandomize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonRandomize.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.buttonRandomize.Location = new System.Drawing.Point(115, 124);
+            this.buttonRandomize.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRandomize.Location = new System.Drawing.Point(98, 147);
             this.buttonRandomize.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.buttonRandomize.Name = "buttonRandomize";
-            this.buttonRandomize.Size = new System.Drawing.Size(112, 38);
+            this.buttonRandomize.Size = new System.Drawing.Size(127, 38);
             this.buttonRandomize.TabIndex = 9;
             this.buttonRandomize.UseVisualStyleBackColor = true;
             this.buttonRandomize.Click += new System.EventHandler(this.startGame);
@@ -173,7 +172,7 @@ namespace final_project
             // letterPic
             // 
             this.letterPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.letterPic.Location = new System.Drawing.Point(266, 115);
+            this.letterPic.Location = new System.Drawing.Point(380, 130);
             this.letterPic.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.letterPic.Name = "letterPic";
             this.letterPic.Size = new System.Drawing.Size(96, 92);
@@ -184,19 +183,19 @@ namespace final_project
             // playerinfo
             // 
             this.playerinfo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.playerinfo.Font = new System.Drawing.Font("Showcard Gothic", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.playerinfo.Location = new System.Drawing.Point(539, 2);
+            this.playerinfo.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerinfo.Location = new System.Drawing.Point(656, 9);
             this.playerinfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerinfo.Name = "playerinfo";
-            this.playerinfo.Size = new System.Drawing.Size(101, 57);
+            this.playerinfo.Size = new System.Drawing.Size(160, 131);
             this.playerinfo.TabIndex = 14;
             this.playerinfo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // backtomenu
             // 
-            this.backtomenu.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.backtomenu.Font = new System.Drawing.Font("Gill Sans MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backtomenu.Location = new System.Drawing.Point(1, 2);
-            this.backtomenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backtomenu.Margin = new System.Windows.Forms.Padding(2);
             this.backtomenu.Name = "backtomenu";
             this.backtomenu.Size = new System.Drawing.Size(126, 34);
             this.backtomenu.TabIndex = 15;
@@ -209,7 +208,7 @@ namespace final_project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(690, 479);
+            this.ClientSize = new System.Drawing.Size(827, 564);
             this.Controls.Add(this.backtomenu);
             this.Controls.Add(this.playerinfo);
             this.Controls.Add(this.startOver);
@@ -227,7 +226,7 @@ namespace final_project
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "HebrewGame_sapir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "התאם אות ראשונה לתמונה";
             ((System.ComponentModel.ISupportInitialize)(this.letterPic)).EndInit();
             this.ResumeLayout(false);
 

@@ -51,7 +51,7 @@ namespace final_project
             Label titleLabel = new Label
             {
                 Text = "Welcome To \"Create the Words\"",
-                Font = new Font("Maiandra GD", 24, FontStyle.Bold),
+                Font = new Font("Gill Sans MT", 24, FontStyle.Bold),
                 AutoSize = true,
                 Dock = DockStyle.Fill,
                 TextAlign = ContentAlignment.MiddleCenter
@@ -70,7 +70,7 @@ namespace final_project
                        "   * כל מילה צריכה להיות בתוקף (לפי מילון או רשימת מילים תקנית).\n" +
                        "   * יש להשתמש אך ורק באותיות הנתונות.\n" +
                        "בהצלחה!",
-                Font = new Font("Maiandra GD", 16,FontStyle.Bold),
+                Font = new Font("Gill Sans MT", 16,FontStyle.Bold),
                 AutoSize = true,
                 Dock = DockStyle.Fill,
                 TextAlign = ContentAlignment.TopCenter,
@@ -88,11 +88,14 @@ namespace final_project
             };
             startGameButton.Click += StartGameButton_Click;
 
+            var DB = new Database();
+            var balance = DB.GetBalance(int.Parse(user.ID));
+
             // User Info Label
             Label userInfoLabel = new Label
             {
-                Text = $"Player: {user.Username} | Balance: {user.Balance}",
-                Font = new Font("Maiandra GD", 14),
+                Text = $"Player: {user.Username} | Balance: {balance}",
+                Font = new Font("Gill Sans MT", 14),
                 AutoSize = true,
                 Dock = DockStyle.Fill,
                 TextAlign = ContentAlignment.MiddleLeft

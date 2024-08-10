@@ -30,7 +30,7 @@ namespace final_project
             //Application.Run(new_form);
             //var game_Diana = new GameScreen();
             //Application.Run(new GameScreen(user));
-            Application.Run(new Menu(user));
+            //Application.Run(new Menu(user));
 
         }
     }

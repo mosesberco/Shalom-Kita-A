@@ -62,7 +62,7 @@ namespace final_project
             var DB = new Database();
             if (DB.has_ID(id))
             {
-                MessageBox.Show("This ID exist ","Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("This ID already exists.","Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }    
 

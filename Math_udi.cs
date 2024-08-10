@@ -29,11 +29,13 @@ namespace final_project
             nextQuestion();
             setButtons();
             progressBar1.Maximum = totalQuestions;
-            userData.Text = $"שם משתמש : {user.Username}\nיתרה : {user.Balance}";
+            var DB = new Database();
+            var balance = DB.GetBalance(int.Parse(user.ID));
+            userData.Text = $"שם משתמש : {user.Username}\nיתרה : {balance}";
         }
         public void nextQuestion()
         {
-            lblQuestion.Text = $"#{this.index+1}.  "+this.questions[this.index].toString();
+            lblQuestion.Text = $"{this.index+1}.  "+this.questions[this.index].toString();
             scoreLabel.Text = $"Score : {this.score}/{this.totalQuestions}";
         }
         private async void checkAnswerEvent(object sender, EventArgs e)
@@ -92,7 +94,7 @@ namespace final_project
         {
             if (this.index == 10)
             {
-                string message = $"Your score is {this.score}/{this.totalQuestions}\nYour Grade is {this.score}!!!\n\n";
+                string message = $"Your score is {this.score}/{this.totalQuestions}\n";
                 if (wrong_answers.Count > 0)
                 {
                     message += "Questions you got wrong:\n\n";
@@ -113,6 +115,7 @@ namespace final_project
             }
             return false;
         }
+
         private bool checkAnswer(int btnANswer)
         {
             return btnANswer == this.questions[this.index].getCorrectAnswer();

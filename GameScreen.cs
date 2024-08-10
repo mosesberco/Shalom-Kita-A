@@ -107,7 +107,7 @@ namespace final_project
         private string[] animalImages = { "cat", "dog", "elephant", "tiger", "monkey" }; // Add all animal image names without .png
         private QuestionData currentQuestion;
         private int score = 0;
-        private int roundsCompleted = 0;
+        private int roundsCompleted = 0;                                                // exit games after 5 rounds
         private Timer gameTimer;
         private int timeLeft = 60;
         private bool roundCompleted = false;
@@ -175,11 +175,16 @@ namespace final_project
 
         private void UpdateUserInfo()
         {
-            userInfoLabel.Text = $"User: {user.Username}\nID: {user.ID}\nBalance: ${user.Balance}";
+            userInfoLabel.Text = $"User: {user.Username}\nScore: ${score}";
         }
 
         private void NewRound()
         {
+            if (roundsCompleted == 2)
+            {
+                EndGame();
+            }
+
             currentQuestion = questions[random.Next(questions.Count)];
             largePictureBox.Image = (Image)Resources.ResourceManager.GetObject(currentQuestion.ImageName);
 
@@ -208,12 +213,12 @@ namespace final_project
                 int correctCount = currentQuestion.AnimalCounts[animal];
                 if (count == correctCount)
                 {
-                    MessageBox.Show("Good Job!");
+                    MessageBox.Show("Good Job!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     submitButtons[index].Enabled = false;
                 }
                 else
                 {
-                    MessageBox.Show("Try again :)");
+                    MessageBox.Show("Try again :)", "Wrong Answer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
@@ -227,7 +232,15 @@ namespace final_project
                 EndRound();
             }
         }
+        private void EndGame()
+        {
+            var DB = new Database();
+            var balance = DB.GetBalance(int.Parse(user.ID));
+            DB.SetBalance(int.Parse(user.ID), score + balance);
+            MessageBox.Show($"Great job! youv'e earned {score} coins.", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
 
+        }
         private void EndRound()
         {
             gameTimer.Stop();
@@ -235,13 +248,14 @@ namespace final_project
 
             if (roundCompleted)
             {
-                user.UpdateBalance(new Database(), user.Balance + 10);
+                //user.UpdateBalance(new Database(), user.Balance + 10);
+                score += 10;
                 UpdateUserInfo();
-                MessageBox.Show($"Round completed! You earned 10 coins. New balance: ${user.Balance}");
+                MessageBox.Show($"Round completed! You earned 10 coins.", "Round Finished", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show($"Time's up! Round not completed, Your balance remains: ${user.Balance}");
+                MessageBox.Show($"Round not completed.", "Times Up!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             roundCompleted = false;
@@ -258,8 +272,8 @@ namespace final_project
             base.OnFormClosing(e);
 
             gameTimer.Stop();
-            var DB = new Database();
-            DB.SetBalance(int.Parse(user.ID), user.Balance);
+            //var DB = new Database();
+            //DB.SetBalance(int.Parse(user.ID), user.Balance);
         }
     }
 }

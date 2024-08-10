@@ -87,9 +87,8 @@ namespace final_project
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -107,9 +106,8 @@ namespace final_project
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
@@ -127,9 +125,8 @@ namespace final_project
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
@@ -248,7 +245,7 @@ namespace final_project
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Game_Udi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Game";
+            this.Text = "חיבור וחיסור";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

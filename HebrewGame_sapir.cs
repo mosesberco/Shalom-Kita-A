@@ -30,18 +30,14 @@ namespace final_project
         private int randomQuestion;
         private int coins;
 
-
-
-
-
         // Initializes a new instance of the "Form1" class.
         // Sets up the timer, random generator, and answer buttons.
         public HebrewGame_sapir(User user)
         {
+            var DB = new Database();
+            var balance = DB.GetBalance(int.Parse(user.ID));
             this.user = user;
-
             InitializeComponent();
-            //this.WindowState = FormWindowState.Maximized;
             InitializeTimer();
             random = new Random();
             questionNumber = 0;
@@ -53,14 +49,11 @@ namespace final_project
             }
             this.BackgroundImage= (Image)Properties.Resources.ResourceManager.GetObject("רקע");
             buttonRandomize.BackgroundImage= (Image)Properties.Resources.ResourceManager.GetObject("start");
-            playerinfo.Text = user.Username.ToString() + ":שלום" + "\n" + "כסף: " + user.Balance.ToString();
+            playerinfo.Text = user.Username.ToString() + ":שלום" + "\n" + "מטבעות: " + balance;
             playerinfo.BackColor = Color.Transparent;
             guidelines.Text = "ברוכים הבאים למשחק אות פותחת! עליכם לבחור את התמונה הנכונה אשר מתחילה באות המופיעה";
             guidelines.BackColor = Color.Transparent;
             backtomenu.Text = "חזרה לתפריט";
-
-
-
         }
 
         // Initializes the answer buttons.
@@ -83,8 +76,7 @@ namespace final_project
             timer.Stop();
             isDelayActive = false;
             if (questionNumber < totalQuestions)
-            {
-
+            { 
                 picsRandomize(); // Trigger randomization after timer elapses
             }
         }
@@ -129,8 +121,6 @@ namespace final_project
                     button.Enabled = true;
                 }
             }
-
-
         }
 
         // Checks the user's answer and updates the game state accordingly.
@@ -197,15 +187,15 @@ namespace final_project
         // Ends the game, displays the final score, and shows the start over button.
         private void EndGame()
         {
-            MessageBox.Show("         !סוף המשחק" + Environment.NewLine + "צדקת ב " + correctanswer + " מתוך " + totalQuestions + " שאלות" + Environment.NewLine + "        הרווחת $ " + correctanswer * 3 );
+            MessageBox.Show("!סוף המשחק" + Environment.NewLine + "צדקת ב " + correctanswer + " מתוך " + totalQuestions + " שאלות" + Environment.NewLine + "        הרווחת $ " + correctanswer * 3,
+                "כל הכבוד", MessageBoxButtons.OK, MessageBoxIcon.Information);
             coins = correctanswer * 3;
             startOver.Visible = true;
             isDelayActive = false;
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
             DB.SetBalance(int.Parse(user.ID), (coins) + balance);
-            //Close();
-
+            Close();
         }
 
         // Restarts the game by hiding the start over button and calling startGame.
@@ -646,7 +636,6 @@ namespace final_project
 
         }
 
-       
     }
 }
 

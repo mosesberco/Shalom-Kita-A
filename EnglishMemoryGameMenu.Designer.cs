@@ -36,9 +36,9 @@ namespace final_project
             // 
             // startButton
             // 
-            this.startButton.Font = new System.Drawing.Font("Maiandra GD", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.startButton.Font = new System.Drawing.Font("Gill Sans MT", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startButton.Location = new System.Drawing.Point(436, 403);
-            this.startButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startButton.Margin = new System.Windows.Forms.Padding(2);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(352, 77);
             this.startButton.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace final_project
             // nameLabel
             // 
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nameLabel.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.nameLabel.Location = new System.Drawing.Point(340, 117);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -62,7 +62,7 @@ namespace final_project
             // moneyLabel
             // 
             this.moneyLabel.BackColor = System.Drawing.Color.Transparent;
-            this.moneyLabel.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyLabel.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyLabel.Location = new System.Drawing.Point(614, 117);
             this.moneyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.moneyLabel.Name = "moneyLabel";
@@ -82,11 +82,10 @@ namespace final_project
             this.Controls.Add(this.startButton);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EnglishMemoryGameMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameMenu";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
