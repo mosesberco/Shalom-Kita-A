@@ -12,18 +12,24 @@ namespace final_project
 {
     public partial class ChangeUserName : Form
     {
-        private User userActive;
+        private User user;
         private Database database;
-        public ChangeUserName(Database db, User userActive)
+        public ChangeUserName(User userActive)
         {
             InitializeComponent();
-            this.userActive = userActive;
-            this.database = db;
+            this.user = userActive;
+            this.database = new Database();
         }
 
         private bool IsInputValid(string input)
         {
-            return input.Length > 1;
+            // Validate Username
+            if (input.Length < 6 || input.Length > 8)
+            {
+                MessageBox.Show("Username must be between 6 and 8 characters long.", "Invalid Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,27 +38,11 @@ namespace final_project
 
             if (IsInputValid(userInput))
             {
-                database.SetUsername(int.Parse(userActive.ID), userInput);
-                this.userActive.Username = userInput;
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                database.SetUsername(int.Parse(user.ID), userInput);
+                Close();
             }
-            else MessageBox.Show("error");
+            else MessageBox.Show("Error Changing User Name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void ChangeUserName_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void newUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

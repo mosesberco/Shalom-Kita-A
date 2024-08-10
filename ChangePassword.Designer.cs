@@ -108,7 +108,7 @@ namespace final_project
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ChangePassword";
+            this.Text = "Change Password";
             this.ResumeLayout(false);
             this.PerformLayout();
 

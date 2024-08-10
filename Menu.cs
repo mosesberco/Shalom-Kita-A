@@ -80,15 +80,14 @@ namespace final_project
         private void LogOut_Click(object sender, EventArgs e)
         {
             Login login = new Login();
-            login.Show();
-            Close();
+            run(login);
             
         }
 
         private void userInterface_Click(object sender, EventArgs e)
         {
             var userInterface = new UserInterface(new Database(), user);
-            userInterface.Show();
+            run(userInterface);
         }
         private void run(Form form)
         {
@@ -97,7 +96,6 @@ namespace final_project
             form.FormClosed += (s, args) =>
             {
                 // This code runs when the form is closed
-
                 updateUserData(user);
                 this.Show();
 

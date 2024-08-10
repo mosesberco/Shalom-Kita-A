@@ -43,31 +43,36 @@ namespace final_project
         }
         private void UpdateForm()
         {
-            textBoxUserName.Text = this.user.Username;
-            textBoxPassword.Text = this.user.Password;
-            textBoxID.Text = this.user.ID;
-            textBoxEmail.Text = this.user.Email;
-            textBoxGender.Text = this.user.Gender;
+            var db = new Database();
+            user = db.getUser(user.ID);
+            textBoxUserName.Text = user.Username;
+            textBoxPassword.Text = user.Password;
+            textBoxID.Text = user.ID;
+            textBoxEmail.Text = user.Email;
+            textBoxGender.Text = user.Gender;
             textBoxCoins.Text = database.GetBalance(int.Parse(user.ID)).ToString();
-            //textBoxCoins.Text = this.user.Balance.ToString();
         }
 
         private void buttonChangeUserName_Click(object sender, EventArgs e)
         {
-            ChangeUserName changeUserForm = new ChangeUserName(database, user);
-            if (changeUserForm.ShowDialog() == DialogResult.OK)
+            ChangeUserName changeUserForm = new ChangeUserName(user);
+            changeUserForm.Show();
+            changeUserForm.FormClosed += (s, args) =>
             {
+                // This code runs when the form is closed
                 UpdateForm();
-            }
+            };
         }
 
-        private void buttonCHangePassword_Click_1(object sender, EventArgs e)
+        private void buttonChangePassword_Click(object sender, EventArgs e)
         {
             ChangePassword changePasswordForm = new ChangePassword(database, user);
-            if (changePasswordForm.ShowDialog() == DialogResult.OK)
+            changePasswordForm.Show();
+            changePasswordForm.FormClosed += (s, args) =>
             {
+                // This code runs when the form is closed
                 UpdateForm();
-            }
+            };
         }
 
         // private void UpdateRecentPurchases(Dictionary<string, (string, int)> recentPurchases)
@@ -149,7 +154,5 @@ namespace final_project
                 flowLayoutPanel1.Controls.Add(panel);
             }
         }
-
-
     }
 }

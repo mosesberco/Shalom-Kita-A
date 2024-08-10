@@ -45,7 +45,6 @@ namespace final_project
             this.label4.Size = new System.Drawing.Size(321, 40);
             this.label4.TabIndex = 6;
             this.label4.Text = "הכנס שם משתמש חדש";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // newUserName
             // 
@@ -55,7 +54,6 @@ namespace final_project
             this.newUserName.Name = "newUserName";
             this.newUserName.Size = new System.Drawing.Size(150, 20);
             this.newUserName.TabIndex = 7;
-            this.newUserName.TextChanged += new System.EventHandler(this.newUserName_TextChanged);
             // 
             // button1
             // 
@@ -87,8 +85,7 @@ namespace final_project
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ChangeUserName";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ChangeUserName";
-            this.Load += new System.EventHandler(this.ChangeUserName_Load);
+            this.Text = "Change User Name";
             this.ResumeLayout(false);
             this.PerformLayout();
 
