@@ -21,10 +21,6 @@ namespace final_project
             this.user = user;
             updateUserData(user);
             this.FormClosing += Menu_FormClosing;
-            //
-
-            //
-            //checkUser();
         }
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
@@ -57,7 +53,7 @@ namespace final_project
             var heb1 = new Hebrew_Etai(user);
             run(heb1);
         }
-        private void heb_MatchLetterPhoto_Click(object sender, EventArgs e)      //exception - fix game logic
+        private void heb_MatchLetterPhoto_Click(object sender, EventArgs e)
         {
             var heb2 = new HebrewGame_sapir(user);
             run(heb2);
@@ -75,7 +71,7 @@ namespace final_project
             }
 
         }
-        private void Store_Click(object sender, EventArgs e)    //fix sizing, img loading, buying errors
+        private void Store_Click(object sender, EventArgs e)
         {
             var storeForm = new StoreForm(user);
             run(storeForm);
@@ -89,7 +85,7 @@ namespace final_project
             
         }
 
-        private void userInterface_Click(object sender, EventArgs e)    //fix userInterface logic - index?! ,, db?!,, where top X button????????!!!!!!!!
+        private void userInterface_Click(object sender, EventArgs e)
         {
             var userInterface = new UserInterface(new Database(), user);
             userInterface.Show();
