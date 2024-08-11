@@ -31,7 +31,7 @@ namespace final_project
             //UpdateWalletLabel(0);
             
             userData.Text = $"Username {user.Username}";
-            user_balance.Text = $"Balance {user.Balance}";
+            user_balance.Text = $"Balance {wallet}";
 
             this.Resize += new EventHandler(StoreForm_Resize);
         }
