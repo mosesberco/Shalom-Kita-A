@@ -665,5 +665,167 @@
   <ItemGroup>
     <None Include="Resources\bg_Etai.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\{.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\j.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\k.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\v.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pics\z.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
