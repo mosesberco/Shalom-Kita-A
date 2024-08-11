@@ -180,7 +180,6 @@ namespace final_project
                 CheckPictures(picA, picB); // Check if the selected pictures match
             }
         }
-
         // Method to check if two selected pictures match
         private void CheckPictures(PictureBox A, PictureBox B)
         {
