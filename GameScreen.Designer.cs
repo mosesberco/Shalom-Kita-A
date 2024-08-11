@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.timerLabel = new System.Windows.Forms.Label();
+            this.userInfoLabel = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.instrLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@
             this.textBoxAnswer1 = new System.Windows.Forms.TextBox();
             this.textBoxAnswer2 = new System.Windows.Forms.TextBox();
             this.textBoxAnswer3 = new System.Windows.Forms.TextBox();
-            this.userInfoLabel = new System.Windows.Forms.Label();
-            this.timerLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestion)).BeginInit();
@@ -62,6 +62,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 126);
             this.panel1.TabIndex = 0;
+            // 
+            // timerLabel
+            // 
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Location = new System.Drawing.Point(898, 4);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(0, 13);
+            this.timerLabel.TabIndex = 23;
+            // 
+            // userInfoLabel
+            // 
+            this.userInfoLabel.AutoSize = true;
+            this.userInfoLabel.Location = new System.Drawing.Point(1242, 0);
+            this.userInfoLabel.Name = "userInfoLabel";
+            this.userInfoLabel.Size = new System.Drawing.Size(0, 13);
+            this.userInfoLabel.TabIndex = 22;
             // 
             // buttonExit
             // 
@@ -207,22 +223,6 @@
             this.textBoxAnswer3.Size = new System.Drawing.Size(117, 23);
             this.textBoxAnswer3.TabIndex = 21;
             // 
-            // userInfoLabel
-            // 
-            this.userInfoLabel.AutoSize = true;
-            this.userInfoLabel.Location = new System.Drawing.Point(1242, 0);
-            this.userInfoLabel.Name = "userInfoLabel";
-            this.userInfoLabel.Size = new System.Drawing.Size(0, 13);
-            this.userInfoLabel.TabIndex = 22;
-            // 
-            // timerLabel
-            // 
-            this.timerLabel.AutoSize = true;
-            this.timerLabel.Location = new System.Drawing.Point(898, 4);
-            this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(0, 13);
-            this.timerLabel.TabIndex = 23;
-            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,7 +241,9 @@
             this.Controls.Add(this.pictureBoxAnswer2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GameScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameScreen";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

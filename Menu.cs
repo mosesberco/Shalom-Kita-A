@@ -12,14 +12,18 @@ namespace final_project
 {
     public partial class Menu : Form
     {
+        public Database DB;
         private User user;
         public Menu(User user)
         {
+            DB = new Database();
             InitializeComponent();
             this.user = user;
             updateUserData(user);
             this.FormClosing += Menu_FormClosing;
-            //checkUser();
+            //disable maximize 
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
@@ -27,36 +31,35 @@ namespace final_project
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void eng_BuildWords_Click(object sender, EventArgs e)
         {
-            var eng1 = new EnglishBuildWordsGameMenu(user);
-            eng1.Show();
+            var eng1 = new EnglishMenu(user);
+            run(eng1);
         }
-        private void button4_Click(object sender, EventArgs e)      //exception locating file img !!!!!
+        private void eng_MemoryGame_Click(object sender, EventArgs e)
         {
             var eng2 = new EnglishMemoryGameMenu(user);
-            eng2.Show();
+            run(eng2);
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void heb_AddSub_Click(object sender, EventArgs e)
         {
             var math1 = new Game_Udi(user);
-            math1.Show();
-            this.Show();
+            run(math1);
         }
-        private void button5_Click(object sender, EventArgs e)
+        private void heb_CountAnimals_Click(object sender, EventArgs e)
         {
             var math2 = new GameScreen(user);
-            math2.Show();
+            run(math2);
         }
-        private void button3_Click(object sender, EventArgs e)      //exception locating file img !!!!!
+        private void heb_MemoryGame_Click(object sender, EventArgs e)      //exception locating file img !!!!!
         {
             var heb1 = new Hebrew_Etai(user);
-            heb1.Show();
+            run(heb1);
         }
-        private void button6_Click(object sender, EventArgs e)      //exception - fix game logic
+        private void heb_MatchLetterPhoto_Click(object sender, EventArgs e)
         {
             var heb2 = new HebrewGame_sapir(user);
-            heb2.Show();
+            run(heb2);
         }
         private void updateUserData(User user)
         {
@@ -65,32 +68,41 @@ namespace final_project
                 userData.Text = $"Please login to display your data.";
             }
             else
-                userData.Text = $"Username : {user.Username}\nBalance : {user.Balance}";
-        }
+            {
+                var balance = DB.GetBalance(int.Parse(user.ID));
+                userData.Text = $"Username : {user.Username}\nBalance : {balance}";
+            }
 
-        private void Store_Click(object sender, EventArgs e)    //fix sizing, img loading, buying errors
+        }
+        private void Store_Click(object sender, EventArgs e)
         {
             var storeForm = new StoreForm(user);
-            storeForm.Show();
+            run(storeForm);
         }
 
         private void LogOut_Click(object sender, EventArgs e)
         {
-            //this.user = null;
-            //updateUserData(user);
-            //checkUser();
             Login login = new Login();
-            login.Show();
-            Close();
-            
+            run(login);
         }
 
-        private void userInterface_Click(object sender, EventArgs e)    //fix userInterface logic - index?! ,, db?!,, where top X button????????!!!!!!!!
+        private void userInterface_Click(object sender, EventArgs e)
         {
             var userInterface = new UserInterface(new Database(), user);
-            userInterface.Show();
+            run(userInterface);
         }
+        private void run(Form form)
+        {
+            form.Show();
+            this.Hide();
+            form.FormClosed += (s, args) =>
+            {
+                // This code runs when the form is closed
+                updateUserData(user);
+                this.Show();
 
+            };
+        }
 
     }
 }

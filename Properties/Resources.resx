@@ -118,100 +118,441 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="back1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="busPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\busPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="back2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plusminus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plusminus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="balloonPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\balloonPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="q5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\q5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ballPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ballPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="memoryGameMenuBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\memoryGameMenuBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bg_Etai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg_Etai.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="birdPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\birdPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blueman" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blueman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="busPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\busPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cartwithgiftswhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cartwithgiftswhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="catPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\catPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cowPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cowPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dog" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dogPic__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dogPic (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="elephant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\elephant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="housePic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\housePic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="memoryGameMenuBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\memoryGameMenuBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="monkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\monkey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plusminus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plusminus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="q1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\q1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="q2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\q2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="q3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\q3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="q4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\q4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="q5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\q5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="q6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\q6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shalom_kita_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shalom_kita_a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shopcartwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shopcartwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tiger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tiger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="udi_game_background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\udi_game_background2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toy_story_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toy-story-wallpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="udi_game_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\udi-game-background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ballPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ballPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="udi_game_background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\udi_game_background2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="housePic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\housePic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monkey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dogPic__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dogPic (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="elephant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\elephant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shopcartwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shopcartwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="q4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\q4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ilan_game" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ilan_game.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ilan_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ilan_menu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="q1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\q1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="q3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\q3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tiger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tiger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="catPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\catPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cartwithgiftswhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cartwithgiftswhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shalom_kita_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shalom_kita_a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="birdPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\birdPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="balloonPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balloonPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blueman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blueman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Walletwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Walletwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-</root>
+  <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\start.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tiger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tiger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="udi_game_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\udi-game-background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="q6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\q6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cowPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cowPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="q2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\q2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ilan_game1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ilan_game.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="א" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\א.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="אגס" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\אגס.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="אגרטל" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\אגרטל.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ארון" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ארון.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ב" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ב.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="בייגלה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\בייגלה.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="בית" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\בית.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="בלון" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\בלון.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="בננה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\בננה.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ברווז" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ברווז.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ג" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ג.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="גזר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\גזר.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="גלגל" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\גלגל.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="גמל" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\גמל.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="גרזן" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\גרזן.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ד" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ד.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="דג" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\דג.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="דולפין" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\דולפין.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="דחליל" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\דחליל.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="דרדס" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\דרדס.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ה.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="הגה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\הגה.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="היפופוטם" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\היפופוטם.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="הר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\הר.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ו" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ו.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="וופל" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\וופל.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="וורד" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\וורד.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="וילון" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\וילון.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ז" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ז.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="זאב" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\זאב.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="זבוב" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\זבוב.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="זברה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\זברה.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="זמר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\זמר.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ח" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ח.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="חבל" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\חבל.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="חזיר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\חזיר.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="חציל" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\חציל.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="חתול" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\חתול.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ט" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ט.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="טבח" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\טבח.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="טווס" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\טווס.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="טניס" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\טניס.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="י" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\י.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="יד" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\יד.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="יונה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\יונה.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="יין" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\יין.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ינשוף" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ינשוף.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="כ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\כ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="כדור" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\כדור.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="כלב" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\כלב.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="כריש" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\כריש.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="כתר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\כתר.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ל" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ל.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="לב" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\לב.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="לגו" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\לגו.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="לוח" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\לוח.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="לטאה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\לטאה.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="מ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\מ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="מטוס" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\מטוס.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="מכונית" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\מכונית.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="מסוק" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\מסוק.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="משאית" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\משאית.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="נ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\נ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="נחש" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\נחש.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="נמר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\נמר.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="נקניקיהה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\נקניקיהה.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="נר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\נר.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ס" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ס.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="סוס" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\סוס.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ספיידרמן" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ספיידרמן.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ספר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ספר.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="סרטן" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\סרטן.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ע" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ע.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="עטלף" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\עטלף.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="עיןן" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\עיןן.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ענן" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ענן.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="עקרב" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\עקרב.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="פ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\פ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="פטריה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\פטריה.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="פיל" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\פיל.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="פרה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\פרה.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="פרפר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\פרפר.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="צ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\צ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="צב" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\צב.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="צדפים" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\צדפים.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="צוללת" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\צוללת.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="צלם" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\צלם.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ק" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ק.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="קוף" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\קוף.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="קנגרו" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\קנגרו.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="קקטוס" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\קקטוס.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="קרנף" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\קרנף.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ר.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="רגל" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\רגל.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="רכבת" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\רכבת.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="רמזור" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\רמזור.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="רקע" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\רקע.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="רשת" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\רשת.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ש" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ש.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="שזיף" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\שזיף.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="שימלה" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\שימלה.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="שמש" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\שמש.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="שן" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\שן.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ת" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ת.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="תמנון" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\תמנון.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="תמרורר" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\תמרורר.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="תפוח" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\תפוח.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="תרנגול" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\תרנגול.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    </data>
+  </root>

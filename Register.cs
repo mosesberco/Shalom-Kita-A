@@ -16,6 +16,8 @@ namespace final_project
         public Register()
         {
             InitializeComponent();
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -59,6 +61,12 @@ namespace final_project
                 MessageBox.Show("Password must be between 8 to 10 characters long.", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            var DB = new Database();
+            if (DB.has_ID(id))
+            {
+                MessageBox.Show("This ID already exists.","Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }    
 
             if (!password.Any(char.IsLetter) || !password.Any(char.IsDigit) || !password.Any(c => "!$#@%^&*".Contains(c)))
             {

@@ -24,11 +24,43 @@ namespace final_project
                 CreateExcelFile();
             }
         }
+        public bool has_ID(string id)
+        {
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
+            try
+            {
+                var rows = xlWorksheet.RangeUsed().RowsUsed();
+                foreach (var row in rows)
+                {
+                    if (row.RowNumber() == 1) continue; // Skip header row
+
+                    if (row.Cell(3).GetValue<string>() == id)
+                    {
+                        return true;
+                        
+                    }
+                }
+            }
+            finally
+            {
+                xlWorkbook.Dispose();
+            }
+            return false;
+        }
         private void OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet)
         {
-            xlWorkbook = new XLWorkbook(Path.GetFullPath(pathToExcel));
-            xlWorksheet = xlWorkbook.Worksheet("Users");
+            if (pathToExcel == @"..\..\Users.xlsx")
+            {
+                xlWorkbook = new XLWorkbook(Path.GetFullPath(pathToExcel));
+                xlWorksheet = xlWorkbook.Worksheet("Users");
+            }
+            else
+            {
+                xlWorkbook = new XLWorkbook(Path.GetFullPath(pathToExcel));
+                xlWorksheet = xlWorkbook.Worksheet("store");
+
+            }
         }
 
         private void CreateExcelFile()
@@ -99,6 +131,39 @@ namespace final_project
                         row.Cell(2).GetValue<string>() == password)
                     {
                         var id = row.Cell(3).GetValue<string>();
+                        var email = row.Cell(4).GetValue<string>();
+                        var gender = row.Cell(5).GetValue<string>();
+                        var balance = row.Cell(6).GetValue<int>();
+                        user = new User(username, password, id, email, gender, balance);
+                        break;
+                    }
+                }
+            }
+            finally
+            {
+                xlWorkbook.Dispose();
+            }
+
+            return user;
+        }
+
+        public User getUser(string id)
+        {
+            User user = null;
+
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
+
+            try
+            {
+                var rows = xlWorksheet.RangeUsed().RowsUsed();
+                foreach (var row in rows)
+                {
+                    if (row.RowNumber() == 1) continue; // Skip header row
+
+                    if (row.Cell(3).GetValue<string>() == id)
+                    {
+                        var username = row.Cell(1).GetValue<string>();
+                        var password = row.Cell(2).GetValue<string>();
                         var email = row.Cell(4).GetValue<string>();
                         var gender = row.Cell(5).GetValue<string>();
                         var balance = row.Cell(6).GetValue<int>();
@@ -300,10 +365,11 @@ namespace final_project
                 xlWorkbook.Dispose();
             }
         }
-        public Dictionary<string, string> GetItemsByUserId(User user)
+
+        public Dictionary<string, (string, int)> GetItemsByUserId(User user)        // Returns <item_name, (path, number_of_items)>
         {
             //pathToExcel = @"../../../storeitems.xlsx";
-            var items = new Dictionary<string, string>();
+            var items = new Dictionary<string, (string, int)>();
 
             OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
@@ -314,11 +380,16 @@ namespace final_project
                 {
                     if (row.RowNumber() == 1) continue; // Skip header row
 
-                    if (row.Cell(4).GetValue<string>() == user.Email)
+                    if (row.Cell(4).GetValue<string>() == user.ID)
                     {
                         var itemName = row.Cell(1).GetValue<string>();
                         var itemPath = row.Cell(5).GetValue<string>();
-                        items.Add(itemName, itemPath);
+                        if (items.ContainsKey(itemName))
+                        {
+                            items[itemName] = (items[itemName].Item1, items[itemName].Item2+1);
+                        }
+                        else
+                            items.Add(itemName, (itemPath ,1));
                     }
                 }
             }

@@ -43,6 +43,9 @@
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="EnglishBuildWordsGame.cs">
       <SubType>Form</SubType>
@@ -79,6 +82,11 @@
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserInterface.cs">
@@ -119,7 +127,6 @@
       <DependentUpon>Math_udi.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
-    <Compile Include="Properties\Resources.Designer.cs" />
     <Compile Include="Question_udi.cs" />
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
@@ -248,6 +255,9 @@
     <EmbeddedResource Include="ChangeUserName.resx">
       <DependentUpon>ChangeUserName.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EnglishBuildWordsGame.resx">
+      <DependentUpon>EnglishBuildWordsGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnglishMemoryGame.resx">
       <DependentUpon>EnglishMemoryGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +269,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GameScreen.resx">
       <DependentUpon>GameScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HebrewGame_sapir.resx">
+      <DependentUpon>HebrewGame_sapir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hebrew_Etai.resx">
+      <DependentUpon>Hebrew_Etai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -314,40 +330,337 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\balloonPic.png" />
+    <None Include="Resources\start.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ballPic.png" />
+    <None Include="Resources\א.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\birdPic.png" />
+    <None Include="Resources\אגס.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\busPic.png" />
+    <None Include="Resources\אגרטל.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\catPic.png" />
+    <None Include="Resources\ארון.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cowPic.png" />
+    <None Include="Resources\ב.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dogPic %281%29.png" />
+    <None Include="Resources\בייגלה.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\housePic.png" />
+    <None Include="Resources\בית.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\memoryGameMenuBackground.png" />
+    <None Include="Resources\בלון.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\udi-game-background.png" />
+    <None Include="Resources\בננה.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\udi_game_background2.png" />
+    <None Include="Resources\ברווז.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toy-story-wallpaper.png" />
+    <None Include="Resources\ג.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\גזר.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\גלגל.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\גמל.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\גרזן.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ד.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\דג.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\דולפין.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\דחליל.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\דרדס.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ה.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\הגה.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\היפופוטם.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\הר.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ו.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\וופל.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\וורד.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\וילון.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ז.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\זאב.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\זבוב.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\זברה.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\זמר.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ח.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\חבל.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\חזיר.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\חציל.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\חתול.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ט.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\טבח.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\טווס.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\טניס.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\י.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\יד.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\יונה.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\יין.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ינשוף.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\כ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\כדור.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\כלב.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\כריש.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\כתר.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ל.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\לב.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\לגו.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\לוח.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\לטאה.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\מ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\מטוס.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\מכונית.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\מסוק.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\משאית.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\נ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\נחש.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\נמר.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\נקניקיהה.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\נר.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ס.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\סוס.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ספיידרמן.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ספר.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\סרטן.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ע.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\עטלף.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\עיןן.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ענן.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\עקרב.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\פ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\פטריה.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\פיל.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\פרה.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\פרפר.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\צ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\צב.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\צדפים.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\צוללת.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\צלם.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ק.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\קוף.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\קנגרו.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\קקטוס.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\קרנף.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ר.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\רגל.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\רכבת.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\רמזור.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\רקע.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\רשת.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ש.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\שזיף.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\שימלה.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\שמש.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\שן.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ת.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\תמנון.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\תמרורר.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\תפוח.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\תרנגול.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ilan_game.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ilan_menu.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bg_Etai.jpeg" />

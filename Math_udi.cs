@@ -21,19 +21,23 @@ namespace final_project
         public Game_Udi(User user)
         {
             InitializeComponent();
-            this.questions = Question_udi.generateQuestions(10);
-            this.totalQuestions = 10;
-            this.index = 0;
-            this.score = 0;
+            questions = Question_udi.generateQuestions(10);
+            totalQuestions = 10;
+            index = 0;
+            score = 0;
             this.user = user;
             nextQuestion();
             setButtons();
             progressBar1.Maximum = totalQuestions;
-            userData.Text = $"שם משתמש : {user.Username}\nיתרה : {user.Balance}";
+            var DB = new Database();
+            var balance = DB.GetBalance(int.Parse(user.ID));
+            userData.Text = $"שם משתמש : {user.Username}\nיתרה : {balance}";
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
         public void nextQuestion()
         {
-            lblQuestion.Text = $"#{this.index+1}.  "+this.questions[this.index].toString();
+            lblQuestion.Text = $"{this.index+1}.  "+this.questions[this.index].toString();
             scoreLabel.Text = $"Score : {this.score}/{this.totalQuestions}";
         }
         private async void checkAnswerEvent(object sender, EventArgs e)
@@ -60,12 +64,11 @@ namespace final_project
             SetButtonsEnabled(true);
             progressBar1.Value = this.index + 1;
             this.index++;
-            if (gameOver())             //fix updating user balance after a game !!!
+            if (gameOver()) 
             {
                 var DB = new Database();
                 var balance = DB.GetBalance(int.Parse(user.ID));
                 DB.SetBalance(int.Parse(user.ID), score + balance);
-                //MessageBox.Show($"You earned {score / 10} points this game!","Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             else
@@ -92,7 +95,7 @@ namespace final_project
         {
             if (this.index == 10)
             {
-                string message = $"Your score is {this.score}/{this.totalQuestions}\nYour Grade is {this.score}!!!\n\n";
+                string message = $"Your score is {this.score}/{this.totalQuestions}\n";
                 if (wrong_answers.Count > 0)
                 {
                     message += "Questions you got wrong:\n\n";
@@ -107,7 +110,7 @@ namespace final_project
                     message += "Congratulations! You got all questions right!";
                 }
                 MessageBox.Show(message, "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show($"You earned {score} points this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"You earned {score} coins this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return true;
             }
