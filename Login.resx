@@ -229,7 +229,7 @@
     <value>Gill Sans MT, 9.75pt</value>
   </data>
   <data name="showPasswordCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 202</value>
+    <value>386, 202</value>
   </data>
   <data name="showPasswordCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -259,7 +259,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="passwordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 198</value>
+    <value>199, 198</value>
   </data>
   <data name="passwordTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -289,7 +289,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="usernameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 147</value>
+    <value>197, 147</value>
   </data>
   <data name="usernameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -316,16 +316,16 @@
     <value>True</value>
   </data>
   <data name="txtPass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gill Sans MT, 24pt</value>
+    <value>Gill Sans MT, 20.25pt</value>
   </data>
   <data name="txtPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 184</value>
+    <value>73, 189</value>
   </data>
   <data name="txtPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="txtPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 45</value>
+    <value>122, 38</value>
   </data>
   <data name="txtPass.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -349,16 +349,16 @@
     <value>True</value>
   </data>
   <data name="txtusername.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gill Sans MT, 24pt</value>
+    <value>Gill Sans MT, 20.25pt</value>
   </data>
   <data name="txtusername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 132</value>
+    <value>55, 137</value>
   </data>
   <data name="txtusername.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="txtusername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 45</value>
+    <value>138, 38</value>
   </data>
   <data name="txtusername.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -385,7 +385,7 @@
     <value>Gill Sans MT, 48pt, style=Bold</value>
   </data>
   <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 27</value>
+    <value>182, 27</value>
   </data>
   <data name="loginLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>

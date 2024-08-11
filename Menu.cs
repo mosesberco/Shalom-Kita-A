@@ -21,6 +21,9 @@ namespace final_project
             this.user = user;
             updateUserData(user);
             this.FormClosing += Menu_FormClosing;
+            //disable maximize 
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
@@ -81,7 +84,6 @@ namespace final_project
         {
             Login login = new Login();
             run(login);
-            
         }
 
         private void userInterface_Click(object sender, EventArgs e)

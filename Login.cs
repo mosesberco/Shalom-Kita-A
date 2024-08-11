@@ -18,14 +18,16 @@ namespace final_project
         public Login()
         {
             InitializeComponent();
-            this.DB = new Database();
+            DB = new Database();
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void signupButton_Click(object sender, EventArgs e)
         {
-            Hide(); // Hide the login form
+            Hide();                                 // Hide the login form
             Register registerForm = new Register(); // Create an instance of the register form
-            registerForm.Show(); // Show the register form
+            registerForm.Show();                    // Show the register form
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,8 +48,6 @@ namespace final_project
                 Menu mainMenu = new Menu(user);
                 mainMenu.Show();
                 Hide();
-                //UserInterface userInterface = new UserInterface(DB, index);
-                //userInterface.Show();
             }
             else
             {

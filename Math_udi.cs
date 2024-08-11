@@ -21,10 +21,10 @@ namespace final_project
         public Game_Udi(User user)
         {
             InitializeComponent();
-            this.questions = Question_udi.generateQuestions(10);
-            this.totalQuestions = 10;
-            this.index = 0;
-            this.score = 0;
+            questions = Question_udi.generateQuestions(10);
+            totalQuestions = 10;
+            index = 0;
+            score = 0;
             this.user = user;
             nextQuestion();
             setButtons();
@@ -32,6 +32,8 @@ namespace final_project
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
             userData.Text = $"שם משתמש : {user.Username}\nיתרה : {balance}";
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
         public void nextQuestion()
         {
@@ -62,12 +64,11 @@ namespace final_project
             SetButtonsEnabled(true);
             progressBar1.Value = this.index + 1;
             this.index++;
-            if (gameOver())             //fix updating user balance after a game !!!
+            if (gameOver()) 
             {
                 var DB = new Database();
                 var balance = DB.GetBalance(int.Parse(user.ID));
                 DB.SetBalance(int.Parse(user.ID), score + balance);
-                //MessageBox.Show($"You earned {score / 10} points this game!","Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             else
@@ -109,13 +110,12 @@ namespace final_project
                     message += "Congratulations! You got all questions right!";
                 }
                 MessageBox.Show(message, "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show($"You earned {score} points this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"You earned {score} coins this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return true;
             }
             return false;
         }
-
         private bool checkAnswer(int btnANswer)
         {
             return btnANswer == this.questions[this.index].getCorrectAnswer();

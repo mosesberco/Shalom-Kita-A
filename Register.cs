@@ -16,6 +16,8 @@ namespace final_project
         public Register()
         {
             InitializeComponent();
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
