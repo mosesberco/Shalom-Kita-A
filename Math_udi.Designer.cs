@@ -163,7 +163,7 @@ namespace final_project
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(375, 33);
+            this.label1.Location = new System.Drawing.Point(389, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 67);
             this.label1.TabIndex = 9;

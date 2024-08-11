@@ -30,7 +30,7 @@ namespace final_project
             UpdateForm();
             items_panel = new Panel();                          //set itemspanel location
 
-            items_panel.Location = new Point(200, 200);
+            //items_panel.Location = new Point(200, 200);
         }
 
         private void loadItems()
