@@ -227,17 +227,25 @@ namespace final_project
             MessageBox.Show(msg); // Show game over message
             return score;
         }
-        private void IfAllOver()
+         private void IfAllOver()
         {
             if (pictures.All(o => o.Tag == null))
             {
                 score = 50 - tries + this.countDownTime;
-                var DB = new Database();
-                var balance = DB.GetBalance(int.Parse(user.ID));
-                DB.SetBalance(int.Parse(user.ID), balance + score);
-                GameOver(" כל הכבוד ניצחת! זכית ב" + score + " מטבעות ");
+                if (score <= 0)
+                {
+                    GameOver("יותר מדי נסיונות לא הרווחת מטבעות הפעם");
+                }
+                else
+                {
+                    var DB = new Database();
+                    var balance = DB.GetBalance(int.Parse(user.ID));
+                    DB.SetBalance(int.Parse(user.ID), balance + score);
+                    GameOver(" כל הכבוד ניצחת! זכית ב" + score + " מטבעות ");
+                }
+                
             }
-        }       
+        }
     }
 }
 
