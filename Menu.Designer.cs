@@ -179,7 +179,7 @@ namespace final_project
             this.Store.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Store.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Store.ForeColor = System.Drawing.Color.White;
-            this.Store.Location = new System.Drawing.Point(444, 557);
+            this.Store.Location = new System.Drawing.Point(454, 538);
             this.Store.Name = "Store";
             this.Store.Size = new System.Drawing.Size(170, 50);
             this.Store.TabIndex = 4;
@@ -194,7 +194,7 @@ namespace final_project
             this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOut.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOut.ForeColor = System.Drawing.Color.White;
-            this.LogOut.Location = new System.Drawing.Point(174, 557);
+            this.LogOut.Location = new System.Drawing.Point(184, 538);
             this.LogOut.Name = "LogOut";
             this.LogOut.Size = new System.Drawing.Size(170, 50);
             this.LogOut.TabIndex = 5;
@@ -209,7 +209,7 @@ namespace final_project
             this.userInterface.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userInterface.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userInterface.ForeColor = System.Drawing.Color.White;
-            this.userInterface.Location = new System.Drawing.Point(711, 557);
+            this.userInterface.Location = new System.Drawing.Point(721, 538);
             this.userInterface.Name = "userInterface";
             this.userInterface.Size = new System.Drawing.Size(170, 50);
             this.userInterface.TabIndex = 6;
