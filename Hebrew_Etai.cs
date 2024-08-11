@@ -57,7 +57,9 @@ namespace final_project
                 {
                     if (pic.Tag != null)
                     {
-                        pic.Image = Image.FromFile("pics/" + pic.Tag + ".png"); // Show all images when time is up
+                        var picPath = pic.Tag.ToString();
+                        Image img = (Image)Properties.Resources.ResourceManager.GetObject(picPath);
+                        pic.Image = img;
                     }
                 }
             }
@@ -156,7 +158,9 @@ namespace final_project
                 picA = sender as PictureBox;
                 if (picA.Tag != null && picA.Image == null)
                 {
-                    picA.Image = Image.FromFile($"pics/{picA.Tag}.png"); // Show image for the first choice
+                    var picPath = picA.Tag.ToString();
+                    Image img = (Image)Properties.Resources.ResourceManager.GetObject(picPath);
+                    picA.Image = img;
                     firstChoice = picA.Tag.ToString();
                 }
             }
@@ -165,7 +169,9 @@ namespace final_project
                 picB = sender as PictureBox;
                 if (picB.Tag != null && picB.Image == null)
                 {
-                    picB.Image = Image.FromFile($"pics/{picB.Tag}.png"); // Show image for the second choice
+                    var picPath = picB.Tag.ToString();
+                    Image img = (Image)Properties.Resources.ResourceManager.GetObject(picPath);
+                    picB.Image = img;
                     secondChoice = picB.Tag.ToString();
                 }
             }
