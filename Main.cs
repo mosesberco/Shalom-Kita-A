@@ -9,7 +9,6 @@ namespace final_project
         public static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //var new_form = new Game_Udi();
             var DB =new Database();
             //var store_form = new StoreForm(206872871, DB);
             //var hebrew_game = new Register();
