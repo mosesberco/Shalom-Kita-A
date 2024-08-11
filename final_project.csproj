@@ -349,5 +349,8 @@
   <ItemGroup>
     <None Include="Resources\toy-story-wallpaper.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_Etai.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

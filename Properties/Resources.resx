@@ -130,6 +130,9 @@
   <data name="ballPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ballPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg_Etai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg_Etai.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="birdPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\birdPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

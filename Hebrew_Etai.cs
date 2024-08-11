@@ -27,14 +27,11 @@ namespace final_project
         int score = 0;
         public Hebrew_Etai(User user)
         {
-            this.user = user;
+            this.user = user;           
             InitializeComponent();
             InitializeImagePairs(); // Initialize image pairs
             LoadPictures(); // Load picture boxes onto the form
         }
-
-
-
 
         // Method to initialize image pairs
         private void InitializeImagePairs()
@@ -93,7 +90,7 @@ namespace final_project
             lblStatus.Text = $"מספר נסיונות: {tries} "; // Reset tries count
             lblTimeLeft.Text = $"זמן נותר: {totalTime} "; // Reset countdown label
             gameOver = false;
-            GameTimer.Start(); // Start the timer
+            GameTimer.Start(); // Start the timer           
             countDownTime = totalTime; // Reset countdown time
         }
 
@@ -193,10 +190,10 @@ namespace final_project
             }
 
             if (isMatch)
-            {
+            {             
                 A.Tag = null; // Clear tag for matched pictures
                 B.Tag = null;
-            }
+            }         
             else
             {
                 tries++;
@@ -214,16 +211,7 @@ namespace final_project
                     pics.Image = null;
                 }
             }
-
-            // Check if all pictures are matched
-            if (pictures.All(o => o.Tag == null))
-            {
-                score = 50 - tries + this.countDownTime;
-                var DB = new Database();
-                var balance = DB.GetBalance(int.Parse(user.ID));
-                DB.SetBalance(int.Parse(user.ID), balance+score);
-                GameOver(" כל הכבוד ניצחת! זכית ב" + score + " מטבעות ");
-            }
+            IfAllOver();
         }
 
         // Method to handle game over
@@ -233,8 +221,18 @@ namespace final_project
             gameOver = true;
             MessageBox.Show(msg); // Show game over message
             return score;
-
         }
+        private void IfAllOver()
+        {
+            if (pictures.All(o => o.Tag == null))
+            {
+                score = 50 - tries + this.countDownTime;
+                var DB = new Database();
+                var balance = DB.GetBalance(int.Parse(user.ID));
+                DB.SetBalance(int.Parse(user.ID), balance + score);
+                GameOver(" כל הכבוד ניצחת! זכית ב" + score + " מטבעות ");
+            }
+        }       
     }
 }
 
