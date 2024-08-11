@@ -103,6 +103,16 @@ namespace final_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg_Etai {
+            get {
+                object obj = ResourceManager.GetObject("bg_Etai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap birdPic {
             get {
                 object obj = ResourceManager.GetObject("birdPic", resourceCulture);
