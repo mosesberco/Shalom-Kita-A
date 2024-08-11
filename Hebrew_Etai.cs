@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace final_project
 {
     public partial class Hebrew_Etai : Form
@@ -27,10 +28,14 @@ namespace final_project
         int score = 0;
         public Hebrew_Etai(User user)
         {
-            this.user = user;           
+            this.user = user;
+            var db = new Database();
+            var balance = db.GetBalance(int.Parse(user.ID));
+
             InitializeComponent();
             InitializeImagePairs(); // Initialize image pairs
             LoadPictures(); // Load picture boxes onto the form
+            user_data_lbl.Text = $" שם משתמש : {user.Username}  מטבעות : {balance}";
         }
 
         // Method to initialize image pairs
@@ -147,7 +152,7 @@ namespace final_project
         }
 
         // Event handler for picture box click
-        private void NewPic_Click(object sender, EventArgs e)
+        private async void NewPic_Click(object sender, EventArgs e)
         {
             if (gameOver) // If the game is over, ignore clicks
             {
@@ -173,12 +178,14 @@ namespace final_project
                     Image img = (Image)Properties.Resources.ResourceManager.GetObject(picPath);
                     picB.Image = img;
                     secondChoice = picB.Tag.ToString();
+                    await Task.Delay(1100);
+                    CheckPictures(picA, picB);
                 }
             }
-            else
-            {
-                CheckPictures(picA, picB); // Check if the selected pictures match
-            }
+            //else
+            //{
+            //    CheckPictures(picA, picB); // Check if the selected pictures match
+            //}
         }
         // Method to check if two selected pictures match
         private void CheckPictures(PictureBox A, PictureBox B)
@@ -189,7 +196,7 @@ namespace final_project
                 if ((A.Tag.ToString() == pair.Item1 && B.Tag.ToString() == pair.Item2) ||
                     (A.Tag.ToString() == pair.Item2 && B.Tag.ToString() == pair.Item1))
                 {
-                    isMatch = true; // Found a match
+                    isMatch = true;// Found a match
                     break;
                 }
             }
@@ -242,10 +249,12 @@ namespace final_project
                     var balance = DB.GetBalance(int.Parse(user.ID));
                     DB.SetBalance(int.Parse(user.ID), balance + score);
                     GameOver(" כל הכבוד ניצחת! זכית ב" + score + " מטבעות ");
+                    Close();
                 }
                 
             }
         }
+
     }
 }
 
