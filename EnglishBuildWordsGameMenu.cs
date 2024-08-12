@@ -16,7 +16,7 @@ namespace final_project
             this.user = user;
 
             this.Text = "Create the Words - Menu";
-            this.Size = new Size(800, 600);
+            this.Size = new Size(1024, 768);
             this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponents();
             SetupBackgroundImage();
@@ -51,7 +51,7 @@ namespace final_project
             Label titleLabel = new Label
             {
                 Text = "Welcome To \"Create the Words\"",
-                Font = new Font("Maiandra GD", 24, FontStyle.Bold),
+                Font = new Font("Gill Sans MT", 24, FontStyle.Bold),
                 AutoSize = true,
                 Dock = DockStyle.Fill,
                 TextAlign = ContentAlignment.MiddleCenter
@@ -65,17 +65,18 @@ namespace final_project
                        "2. זמן משחק: למשחק יש זמן קצוב של 90 שניות.\n" +
                        "3. צבירת נקודות:\n" +
                        "   * כל מילה תקינה שנוצרת מעניקה 10 נקודות.\n" +
-                       "   * נסה ליצור כמה שיותר מילים בזמן המוקצב.\n" +
+                       "   * נסה ליצור לפחות 5 מילים בזמן המוקצב.\n" +
                        "4. חוקי מילים:\n" +
                        "   * כל מילה צריכה להיות בתוקף (לפי מילון או רשימת מילים תקנית).\n" +
                        "   * יש להשתמש אך ורק באותיות הנתונות.\n" +
                        "בהצלחה!",
-                Font = new Font("Maiandra GD", 16,FontStyle.Bold),
+                Font = new Font("Gill Sans MT", 12,FontStyle.Bold),
                 AutoSize = true,
                 Dock = DockStyle.Fill,
                 TextAlign = ContentAlignment.TopCenter,
-                RightToLeft = RightToLeft.Yes
-            };
+                RightToLeft = RightToLeft.Yes,
+                BackColor = Color.FromArgb(200, 255, 255, 255)
+        };
 
             // Start Game Button
             ModernButton startGameButton = new ModernButton
@@ -92,7 +93,7 @@ namespace final_project
             Label userInfoLabel = new Label
             {
                 Text = $"Player: {user.Username} | Balance: {user.Balance}",
-                Font = new Font("Maiandra GD", 14),
+                Font = new Font("Gill Sans MT", 14),
                 AutoSize = true,
                 Dock = DockStyle.Fill,
                 TextAlign = ContentAlignment.MiddleLeft
@@ -120,10 +121,6 @@ namespace final_project
             mainLayout.Controls.Add(startGameButton, 0, 3);
             mainLayout.Controls.Add(EXITGameButton, 1, 3);
             mainLayout.Controls.Add(userInfoLabel, 0, 4);
-
-            //titleLabel.BackColor = Color.FromArgb(200, Color.White);
-            //rulesLabel.BackColor = Color.FromArgb(200, Color.White);
-            //userInfoLabel.BackColor = Color.FromArgb(200, Color.White);
 
             this.Controls.Add(mainLayout);
         }

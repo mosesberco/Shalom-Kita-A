@@ -67,7 +67,7 @@ namespace final_project
 
             lettersLabel = new Label
             {
-                Font = new Font("Maiandra GD", 20, FontStyle.Bold),
+                Font = new Font("Gill Sans MT", 20, FontStyle.Bold),
                 AutoSize = true,
                 Anchor = AnchorStyles.Top | AnchorStyles.Left,
                 Location = new Point(20, 20)
@@ -76,7 +76,7 @@ namespace final_project
 
             scoreLabel = new Label
             {
-                Font = new Font("Maiandra GD", 16, FontStyle.Bold),
+                Font = new Font("Gill Sans MT", 16, FontStyle.Bold),
                 AutoSize = true,
                 Anchor = AnchorStyles.Top | AnchorStyles.Right,
                 Location = new Point(mainPanel.Width - 150, 20)
@@ -85,7 +85,7 @@ namespace final_project
 
             timerLabel = new Label
             {
-                Font = new Font("Maiandra GD", 16, FontStyle.Bold),
+                Font = new Font("Gill Sans MT", 16, FontStyle.Bold),
                 AutoSize = true,
                 Anchor = AnchorStyles.Top | AnchorStyles.Right,
                 Location = new Point(mainPanel.Width - 150, 60)
@@ -101,7 +101,7 @@ namespace final_project
 
             progressLabel = new Label
             {
-                Font = new Font("Maiandra GD", 14, FontStyle.Bold),
+                Font = new Font("Gill Sans MT", 14, FontStyle.Bold),
                 AutoSize = true,
                 Anchor = AnchorStyles.Top | AnchorStyles.Left,
                 Location = new Point(20, 60),
@@ -139,7 +139,7 @@ namespace final_project
             Label wordsFoundLabel = new Label
             {
                 Text = "Words Found:",
-                Font = new Font("Maiandra GD", 14, FontStyle.Bold),
+                Font = new Font("Gill Sans MT", 14, FontStyle.Bold),
                 AutoSize = true,
                 Location = new Point(20, 160)
             };
@@ -173,7 +173,7 @@ namespace final_project
             Label userInfoLabel = new Label
             {
                 Text = $"Player: {user.Username} | Balance: {user.Balance}",
-                Font = new Font("Maiandra GD", 12),
+                Font = new Font("Gill Sans MT", 12),
                 AutoSize = true,
                 Anchor = AnchorStyles.Bottom | AnchorStyles.Left,
                 Location = new Point(20, mainPanel.Height - 40),
@@ -345,7 +345,7 @@ namespace final_project
                 messageLabel.AutoSize = true;
                 messageLabel.Location = new Point(10, 10);
                 messageLabel.MaximumSize = new Size(280, 0);
-                messageLabel.Font = new Font("Maiandra GD", 12, FontStyle.Regular);
+                messageLabel.Font = new Font("Gill Sans MT", 12, FontStyle.Regular);
                 customBox.Controls.Add(messageLabel);
 
                 Button okButton = new Button();
@@ -355,7 +355,7 @@ namespace final_project
                 okButton.Location = new Point(110, 130);
                 okButton.BackColor = Color.FromArgb(255, 255, 255);
                 okButton.ForeColor = Color.Black;
-                okButton.Font = new Font("Maiandra GD", 10, FontStyle.Bold);
+                okButton.Font = new Font("Gill Sans MT", 10, FontStyle.Bold);
                 customBox.Controls.Add(okButton);
 
                 customBox.AcceptButton = okButton;
@@ -421,7 +421,7 @@ namespace final_project
                 Text = word,
                 AutoSize = true,
                 Margin = new Padding(5),
-                Font = new Font("Maiandra GD", 12)
+                Font = new Font("Gill Sans MT", 12)
             };
             wordsFoundPanel.Controls.Add(wordLabel);
         }
