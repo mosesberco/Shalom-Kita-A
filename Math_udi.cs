@@ -93,7 +93,7 @@ namespace final_project
         }
         private bool gameOver()         //CFG
         {
-            if (this.index == 10)
+            if (this.index == totalQuestions)
             {
                 string message = $"Your score is {this.score}/{this.totalQuestions}\n";
                 if (wrong_answers.Count > 0)

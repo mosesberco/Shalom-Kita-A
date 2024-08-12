@@ -223,7 +223,7 @@ namespace final_project
             }
             else
             {
-                MessageBox.Show("Not valid number, please try again");
+                MessageBox.Show("Please enter only numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             if (submitButtons.All(b => !b.Enabled))
@@ -239,7 +239,6 @@ namespace final_project
             DB.SetBalance(int.Parse(user.ID), score + balance);
             MessageBox.Show($"Great job! youv'e earned {score} coins.", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
-
         }
         private void EndRound()
         {

@@ -183,7 +183,7 @@ namespace final_project
             this.Store.Name = "Store";
             this.Store.Size = new System.Drawing.Size(170, 50);
             this.Store.TabIndex = 4;
-            this.Store.Text = "Store";
+            this.Store.Text = "חנות";
             this.Store.UseVisualStyleBackColor = false;
             this.Store.Click += new System.EventHandler(this.Store_Click);
             // 
