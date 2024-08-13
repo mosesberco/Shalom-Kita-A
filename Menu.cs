@@ -96,6 +96,7 @@ namespace final_project
                 updateUserData(user);
                 this.Show();
             };
+            updateUserData(user);
         }
     }
 }

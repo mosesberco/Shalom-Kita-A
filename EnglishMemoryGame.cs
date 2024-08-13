@@ -15,7 +15,7 @@ namespace final_project
     {
         private User user;
         private EnglishMemoryGameMenu menuForm;
-        int moneyPerPoint = 4;
+        int moneyPerPoint = 1;
         int score = 0;
         int Timer = 90;
         int moneyEarned = 0;
@@ -204,8 +204,8 @@ namespace final_project
             {
                 gameOver = true;
                 timer2.Stop();
-                MessageBox.Show("You matched all the icons!\n" + "You've earned 32 coins.\n" + "Congrats!");
-                moneyEarned = 32;
+                moneyEarned = score * moneyPerPoint;
+                MessageBox.Show("You matched all the icons!\n" + $"You've earned {moneyEarned} coins.\n" + "Congrats!");
                 updateData();
             }
         }

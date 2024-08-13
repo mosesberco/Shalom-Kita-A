@@ -173,11 +173,11 @@ namespace final_project
         {
             var db = new Database();
             int balance = db.GetBalance(int.Parse(user.ID));
-            userInfoLabel.Text = $"משתמש: {user.Username}\nמטבעות : {balance}\nScore: ${score}";
+            userInfoLabel.Text = $"משתמש: {user.Username}\nמטבעות : {balance}\nניקוד: ${score}";
         }
         private void NewRound()
         {
-            if (roundsCompleted == 2)
+            if (roundsCompleted == 4)
             {
                 EndGame();
             }
@@ -209,17 +209,17 @@ namespace final_project
                 int correctCount = currentQuestion.AnimalCounts[animal];
                 if (count == correctCount)
                 {
-                    MessageBox.Show("Good Job!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("\u200F" + "עבודה טובה!", "הצלחת", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     submitButtons[index].Enabled = false;
                 }
                 else
                 {
-                    MessageBox.Show("Try again :)", "Wrong Answer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("\u200F" + "נסה שוב", "תשובה שגויה", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Please enter only numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("\u200F" + "בבקשה הכנס מספרים בלבד", "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if (submitButtons.All(b => !b.Enabled))
             {
@@ -232,7 +232,8 @@ namespace final_project
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
             DB.SetBalance(int.Parse(user.ID), score + balance);
-            MessageBox.Show($"Great job! youv'e earned {score} coins.", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show($"Great job! youv'e earned {score} coins.", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("\u200F" + $"כל הכבוד! זכית ב {score} מטבעות", "נגמר המשחק", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
         private void EndRound()
@@ -242,14 +243,15 @@ namespace final_project
 
             if (roundCompleted)
             {
-                //user.UpdateBalance(new Database(), user.Balance + 10);
-                score += 10;
+                score += 3;
                 UpdateUserInfo();
-                MessageBox.Show($"Round completed! You earned 10 coins.", "Round Finished", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show($"Round completed! You earned 10 coins.", "Round Finished", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("\u200F" + $"השלב הסתיים! צברת 3 מטבעות", "השלב הסתיים", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show($"Round not completed.", "Times Up!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //MessageBox.Show($"Round not completed.", "Times Up!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show($"השלב לא הסתיים", "נגמר הזמן", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             roundCompleted = false;
