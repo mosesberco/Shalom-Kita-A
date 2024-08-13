@@ -33,13 +33,15 @@ namespace final_project
         private Label progressLabel;
         private int wordsFound;
         private const int WordsToWin = 5;
+        int user_balance;
 
         public EnglishBuildWordsGame(User user)
         {
             InitializeComponent();
 
             this.user = user;
-
+            var db = new Database();
+            user_balance = db.GetBalance(int.Parse(user.ID));
             this.Text = "Create the Words";
             this.MinimumSize = new Size(800, 600);
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -119,7 +121,7 @@ namespace final_project
                 BackColor = Color.FromArgb(135, 60, 214),
                 ForeColor = Color.White,
                 Anchor = AnchorStyles.Top | AnchorStyles.Right,
-                Location = new Point(mainPanel.Width - 220, 100)
+                Location = new Point(mainPanel.Width - 220, 100),
             };
             checkWordButton.Click += CheckWordButton_Click;
             mainPanel.Controls.Add(checkWordButton);
@@ -172,7 +174,7 @@ namespace final_project
 
             Label userInfoLabel = new Label
             {
-                Text = $"Player: {user.Username} | Balance: {user.Balance}",
+                Text = $"Player: {user.Username} | Balance: {user_balance}",
                 Font = new Font("Gill Sans MT", 12),
                 AutoSize = true,
                 Anchor = AnchorStyles.Bottom | AnchorStyles.Left,
@@ -233,7 +235,6 @@ namespace final_project
             }
         }
 
-
         private void LoadRandomGroupFromExcel()
         {
             // Load all groups from Excel into a list
@@ -283,7 +284,6 @@ namespace final_project
                 currentGroupWords = groupWordsDict[randomGroup];
 
                 string spacedGroup = string.Join(" ", randomGroup.ToCharArray());
-
 
                 // Display the letters label with the random group
                 lettersLabel.Text = "Letters: " + spacedGroup;
@@ -444,10 +444,6 @@ namespace final_project
             {
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
-        }
-
-        private void GameForm_Load(object sender, EventArgs e)
-        {
         }
 
         private void SetupBackgroundImage()

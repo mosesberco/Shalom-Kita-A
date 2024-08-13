@@ -43,7 +43,6 @@ namespace final_project
             this.Name = "EnglishBuildWordsGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameForm";
-            this.Load += new System.EventHandler(this.GameForm_Load);
             this.ResumeLayout(false);
 
         }
