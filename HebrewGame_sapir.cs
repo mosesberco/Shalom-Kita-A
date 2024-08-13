@@ -15,7 +15,7 @@ namespace final_project
         private User user;
         private int correctanswer;
         private int questionNumber;
-        private int totalQuestions = 5;
+        private int totalQuestions = 10;
         private List<Image> correctImagePaths;
         private List<Image> incorrectImagePaths;
         private Random random;
@@ -439,7 +439,7 @@ namespace final_project
                     correctImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("נחש"),
-                        (Image)Properties.Resources.ResourceManager.GetObject("נקניקיה"),
+                        (Image)Properties.Resources.ResourceManager.GetObject("נקניקיהה"),
                         (Image)Properties.Resources.ResourceManager.GetObject("נר"),
                         (Image)Properties.Resources.ResourceManager.GetObject("נמר")
                     };
