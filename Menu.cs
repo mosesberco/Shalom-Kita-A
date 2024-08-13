@@ -91,18 +91,16 @@ namespace final_project
             var userInterface = new UserInterface(new Database(), user);
             run(userInterface);
         }
-        private void run(Form form)
+        private void run(Form form, Form game = null)
         {
             form.Show();
             this.Hide();
             form.FormClosed += (s, args) =>
             {
-                // This code runs when the form is closed
+            // This code runs when the form is closed
                 updateUserData(user);
                 this.Show();
-
             };
         }
-
     }
 }

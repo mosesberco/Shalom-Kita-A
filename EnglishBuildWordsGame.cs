@@ -59,9 +59,7 @@ namespace final_project
             InitializeGameComponents(mainPanel);
             LoadRandomGroupFromExcel();
             checkedWords = new List<string>();
-
         }
-
 
         private void InitializeGameComponents(Panel mainPanel)
         {
@@ -432,19 +430,16 @@ namespace final_project
             UpdateScoreLabel();
         }
 
-        private void TitleGame_TextChanged(object sender, EventArgs e)
-        {
-        }
-        protected override void OnPaintBackground(PaintEventArgs e)
-        {
-            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
-                                                                       Color.FromArgb(219, 234, 254),
-                                                                       Color.FromArgb(191, 219, 254),
-                                                                       LinearGradientMode.Vertical))
-            {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
-            }
-        }
+        //protected override void OnPaintBackground(PaintEventArgs e)
+        //{
+        //    using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+        //                                                               Color.FromArgb(219, 234, 254),
+        //                                                               Color.FromArgb(191, 219, 254),
+        //                                                               LinearGradientMode.Vertical))
+        //    {
+        //        e.Graphics.FillRectangle(brush, this.ClientRectangle);
+        //    }
+        //}
 
         private void SetupBackgroundImage()
         {

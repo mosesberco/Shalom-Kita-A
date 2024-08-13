@@ -129,6 +129,13 @@ namespace final_project
         {
             this.Hide();
             EnglishBuildWordsGame gameForm = new EnglishBuildWordsGame(user);
+            //
+            Menu menu = new Menu(user);
+            gameForm.FormClosed += (s, args) =>
+            {
+                menu.Show();
+            };
+            //
             gameForm.Show();
         }
 
@@ -147,10 +154,6 @@ namespace final_project
             {
                 base.OnPaintBackground(e);
             }
-        }
-
-        private void EnglishBuildWordsGameMenu_Load(object sender, EventArgs e)
-        {
         }
 
         private void SetupBackgroundImage()

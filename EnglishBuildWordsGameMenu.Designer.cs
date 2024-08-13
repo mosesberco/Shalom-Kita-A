@@ -44,7 +44,6 @@ namespace final_project
             this.Name = "EnglishMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.EnglishBuildWordsGameMenu_Load);
             this.ResumeLayout(false);
 
         }
