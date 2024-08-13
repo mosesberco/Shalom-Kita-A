@@ -46,10 +46,7 @@ namespace final_project
             "housePic"
         };
 
-
-
         Label firstClicked, secondClicked;
-
 
         public EnglishMemoryGame(User user, EnglishMemoryGameMenu menuForm)
         {
@@ -57,8 +54,9 @@ namespace final_project
             this.menuForm = menuForm;
             InitializeComponent();
             AssignIconsToSquares();
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-
         private void AssignIconsToSquares()
         {
             Label label;
@@ -87,27 +85,20 @@ namespace final_project
                 }
 
                 label.Image = null;
-
                 icons.RemoveAt(randomNumber);
-
             }
             LabelTime.Text = Timer + " Seconds";
             timer2.Start();
         }
-
         private void labelClick(object sender, EventArgs e)
         {
             if (firstClicked != null && secondClicked != null)
                 return;
-
             Label clickedLabel = sender as Label;
-
             if (clickedLabel == null)
                 return;
-
             if (clickedLabel.ForeColor == Color.Black || clickedLabel.Image != null)
                 return;
-
             if (clickedLabel.Tag.ToString() == "image")
             {
                 clickedLabel.Image = (Image)Properties.Resources.ResourceManager.GetObject(clickedLabel.Text);
@@ -118,7 +109,6 @@ namespace final_project
             {
                 clickedLabel.ForeColor = Color.Black;
             }
-
             if (firstClicked == null)
             {
                 firstClicked = clickedLabel;
@@ -128,7 +118,6 @@ namespace final_project
             {
                 secondClicked = clickedLabel;
             }
-
             if (firstClicked.Tag.ToString() == secondClicked.Tag.ToString())
                 timer1.Start();
             else if (firstClicked.Tag.ToString() == "text" && secondClicked.Tag.ToString() == "image")
@@ -158,7 +147,6 @@ namespace final_project
             else
                 timer1.Start();
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -178,12 +166,10 @@ namespace final_project
             firstClicked = null;
             secondClicked = null;
         }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (gameOver)
                 return;
-
             if (Timer > 0)
             {
                 Timer -= 1;
@@ -203,21 +189,15 @@ namespace final_project
                 if (score == 0)
                 {
                     MessageBox.Show("Time's Up!\nYour score is 0/8 :(\nTry again don't give up!");
-                }
-                
+                }                
                 else if (score > 0 && score < 8)
                 {
                     moneyEarned = score * moneyPerPoint;
                     MessageBox.Show("Well done!\nYour score is " + score + "/8\n" + "You've earned " + moneyEarned + " coins.");
-                }
-                
-
+                }              
                 updateData();
             }
-        }
-
-        
-
+        }      
         private void CheckForWinner()
         {
             if (score == 8)
@@ -229,16 +209,12 @@ namespace final_project
                 updateData();
             }
         }
-
         private void updateData()
         {
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
-
             balance += moneyEarned;
-            
             DB.SetBalance(int.Parse(user.ID), balance);
-
             menuForm.updateBalance(balance);
             Close();
         }

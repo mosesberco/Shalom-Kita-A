@@ -9,19 +9,21 @@ namespace final_project
     public partial class EnglishMenu : Form
     {
         private User user;
-
+        int balance;
         public EnglishMenu(User user)
         {
             InitializeComponent();
             this.user = user;
-
-            this.Text = "Create the Words - Menu";
-            this.Size = new Size(1024, 768);
-            this.StartPosition = FormStartPosition.CenterScreen;
+            Text = "Create the Words - Menu";
+            Size = new Size(1024, 768);
+            StartPosition = FormStartPosition.CenterScreen;
             InitializeComponents();
             SetupBackgroundImage();
+            var db = new Database();
+            balance = db.GetBalance(int.Parse(user.ID));
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-
         private void InitializeComponents()
         {
             TableLayoutPanel mainLayout = new TableLayoutPanel
@@ -92,17 +94,18 @@ namespace final_project
             // User Info Label
             Label userInfoLabel = new Label
             {
-                Text = $"Player: {user.Username} | Balance: {user.Balance}",
+                Text = $"שם משתמש: {user.Username} | מטבעות: {balance}",
                 Font = new Font("Gill Sans MT", 14),
                 AutoSize = true,
                 Dock = DockStyle.Fill,
-                TextAlign = ContentAlignment.MiddleLeft
+                TextAlign = ContentAlignment.MiddleLeft,
+                RightToLeft = RightToLeft.Yes
             };
 
             // Exit Button
             ModernButton EXITGameButton = new ModernButton
             {
-                Text = "Exit",
+                Text = "חזרה לתפריט",
                 Size = new Size(70, 50),
                 Anchor = AnchorStyles.Top | AnchorStyles.Right,
                 Dock = DockStyle.None,
@@ -122,40 +125,23 @@ namespace final_project
             mainLayout.Controls.Add(EXITGameButton, 1, 3);
             mainLayout.Controls.Add(userInfoLabel, 0, 4);
 
-            this.Controls.Add(mainLayout);
+            Controls.Add(mainLayout);
         }
-
         private void StartGameButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             EnglishBuildWordsGame gameForm = new EnglishBuildWordsGame(user);
-            //
             Menu menu = new Menu(user);
             gameForm.FormClosed += (s, args) =>
             {
                 menu.Show();
             };
-            //
             gameForm.Show();
         }
-
         private void EXITGameButton_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-        protected override void OnPaintBackground(PaintEventArgs e)
-        {
-            if (this.BackgroundImage != null)
-            {
-                e.Graphics.DrawImage(this.BackgroundImage, ClientRectangle);
-            }
-            else
-            {
-                base.OnPaintBackground(e);
-            }
-        }
-
         private void SetupBackgroundImage()
         {
             try

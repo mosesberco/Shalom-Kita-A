@@ -226,7 +226,7 @@ namespace final_project
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "HebrewGame_sapir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "התאם אות ראשונה לתמונה";
+            this.Text = "אות פותחת";
             ((System.ComponentModel.ISupportInitialize)(this.letterPic)).EndInit();
             this.ResumeLayout(false);
 

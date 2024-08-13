@@ -17,10 +17,11 @@ namespace final_project
         public ChangeUserName(User userActive)
         {
             InitializeComponent();
-            this.user = userActive;
-            this.database = new Database();
+            user = userActive;
+            database = new Database();
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-
         private bool IsInputValid(string input)
         {
             // Validate Username
@@ -31,7 +32,6 @@ namespace final_project
             }
             return true;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string userInput = newUserName.Text;
@@ -43,6 +43,5 @@ namespace final_project
             }
             else MessageBox.Show("Error Changing User Name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
     }
 }

@@ -9,8 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClosedXML.Excel;
-
-
 namespace final_project
 {
     public partial class EnglishBuildWordsGame : Form
@@ -34,33 +32,30 @@ namespace final_project
         private int wordsFound;
         private const int WordsToWin = 5;
         int user_balance;
-
         public EnglishBuildWordsGame(User user)
         {
             InitializeComponent();
-
             this.user = user;
             var db = new Database();
             user_balance = db.GetBalance(int.Parse(user.ID));
-            this.Text = "Create the Words";
-            this.MinimumSize = new Size(800, 600);
-            this.StartPosition = FormStartPosition.CenterScreen;
+            Text = "Create the Words";
+            MinimumSize = new Size(800, 600);
+            StartPosition = FormStartPosition.CenterScreen;
             SetupBackgroundImage();
-            this.Paint += EnglishBuildWordsGame_Paint;
-
+            Paint += EnglishBuildWordsGame_Paint;
             Panel mainPanel = new Panel
             {
                 Dock = DockStyle.Fill,
                 Padding = new Padding(20),
                 BackColor = Color.Transparent
             };
-            this.Controls.Add(mainPanel);
-
+            Controls.Add(mainPanel);
             InitializeGameComponents(mainPanel);
             LoadRandomGroupFromExcel();
             checkedWords = new List<string>();
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-
         private void InitializeGameComponents(Panel mainPanel)
         {
             random = new Random();
@@ -108,8 +103,6 @@ namespace final_project
                 Text = $"Progress: 0/{WordsToWin}"
             };
             mainPanel.Controls.Add(progressLabel);
-
-
             mainPanel.Controls.Add(wordInputBox);
 
             checkWordButton = new ModernButton
@@ -193,14 +186,12 @@ namespace final_project
             gameTimer.Tick += GameTimer_Tick;
             gameTimer.Start();
         }
-
         private void CheckWordButton_Click(object sender, EventArgs e)
         {
             string word = wordInputBox.Text.Trim().ToLower();
             CheckWord(word);
             wordInputBox.Clear();
         }
-
         private void HintButton_Click(object sender, EventArgs e)
         {
             if (currentGroupWords != null && currentGroupWords.Count > 0)
@@ -232,7 +223,6 @@ namespace final_project
                 MessageBox.Show("No words available for hint.", "Hint Error");
             }
         }
-
         private void LoadRandomGroupFromExcel()
         {
             // Load all groups from Excel into a list
@@ -240,7 +230,6 @@ namespace final_project
             groupWordsDict = new Dictionary<string, List<string>>();
             // Specify your Excel file path
             string filePath = @"..\..\EnglishBuildWordsGameData.xlsx";
-
             try
             {
                 using (var workbook = new XLWorkbook(filePath))
@@ -287,7 +276,6 @@ namespace final_project
                 lettersLabel.Text = "Letters: " + spacedGroup;
             }
         }
-
         private void GameTimer_Tick(object sender, EventArgs e)
         {
             if (timeRemaining > 0)
@@ -300,7 +288,6 @@ namespace final_project
                 EndGame(false);
             }
         }
-
         private void EndGame(bool won)
         {
             gameTimer.Stop();
@@ -313,9 +300,7 @@ namespace final_project
             {
                 message += $"\n- {word}";
             }
-
             ShowCustomMessageBox(message, "Game Over", MessageBoxIcon.Information, true);
-
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
             DB.SetBalance(int.Parse(user.ID), (currentScore / 10) + balance);
@@ -324,7 +309,6 @@ namespace final_project
             ShowCustomMessageBox(woncoin, "Total Coins", MessageBoxIcon.Information, false);
             this.Close();
         }
-
         private void ShowCustomMessageBox(string message, string title, MessageBoxIcon icon, bool gameover)
         {
             using (Form customBox = new Form())
@@ -361,17 +345,14 @@ namespace final_project
                 customBox.ShowDialog(this);
             }
         }
-
         private void UpdateScoreLabel()
         {
             scoreLabel.Text = $"Score: {currentScore}";
         }
-
         private void UpdateTimerLabel()
         {
             timerLabel.Text = $"Time: {timeRemaining}s";
         }
-
         private void CheckWord(string word)
         {
             if (word.All(char.IsLetter) && word.Length >= 2 && word.Length <= 5)
@@ -406,12 +387,10 @@ namespace final_project
                 ShowCustomMessageBox("Please enter a valid word consisting of 2 to 5 letters only.", "Invalid Input", MessageBoxIcon.Warning, false);
             }
         }
-
         private void UpdateProgressLabel()
         {
             progressLabel.Text = $"Progress: {wordsFound}/{WordsToWin}";
         }
-
         private void AddWordToFoundPanel(string word)
         {
             Label wordLabel = new Label
@@ -423,24 +402,11 @@ namespace final_project
             };
             wordsFoundPanel.Controls.Add(wordLabel);
         }
-
         private void UpdateScore(int points)
         {
             currentScore += points;
             UpdateScoreLabel();
         }
-
-        //protected override void OnPaintBackground(PaintEventArgs e)
-        //{
-        //    using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
-        //                                                               Color.FromArgb(219, 234, 254),
-        //                                                               Color.FromArgb(191, 219, 254),
-        //                                                               LinearGradientMode.Vertical))
-        //    {
-        //        e.Graphics.FillRectangle(brush, this.ClientRectangle);
-        //    }
-        //}
-
         private void SetupBackgroundImage()
         {
             try
@@ -453,7 +419,6 @@ namespace final_project
                 MessageBox.Show($"Error loading background image: {ex.Message}", "Image Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void EnglishBuildWordsGame_Paint(object sender, PaintEventArgs e)
         {
             if (this.BackgroundImage != null)
@@ -461,12 +426,9 @@ namespace final_project
                 e.Graphics.DrawImage(this.BackgroundImage, ClientRectangle);
             }
         }
-
         private void ExitGameButton_Click(object sender, EventArgs e)
         {
             Close();
         }
-
     }
-
 }

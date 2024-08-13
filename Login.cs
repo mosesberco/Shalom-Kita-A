@@ -13,8 +13,7 @@ namespace final_project
 {
     public partial class Login : Form
     {
-        private Database DB;
-        
+        private Database DB; 
         public Login()
         {
             InitializeComponent();
@@ -22,19 +21,12 @@ namespace final_project
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-
         private void signupButton_Click(object sender, EventArgs e)
         {
             Hide();                                 // Hide the login form
             Register registerForm = new Register(); // Create an instance of the register form
             registerForm.Show();                    // Show the register form
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void loginButton_Click(object sender, EventArgs e)
         {
             string username = usernameTextBox.Text;
@@ -54,11 +46,9 @@ namespace final_project
                 MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
         }
-
     }
 }

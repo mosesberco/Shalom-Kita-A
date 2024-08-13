@@ -29,11 +29,9 @@ namespace final_project
             items = new List<Itemstore>();
             LoadItems();
             //UpdateWalletLabel(0);
-            
-            userData.Text = $"Username {user.Username}";
-            user_balance.Text = $"Balance {wallet}";
-
-            this.Resize += new EventHandler(StoreForm_Resize);
+            userData.Text = $"שם משתמש : {user.Username}";
+            user_balance.Text = $"מטבעות : {wallet}";
+            Resize += new EventHandler(StoreForm_Resize);
         }
         private void updateData(int dis)
         {

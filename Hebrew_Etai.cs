@@ -13,8 +13,7 @@ namespace final_project
 {
     public partial class Hebrew_Etai : Form
     {
-        // List to hold the pairs of images
-        List<Tuple<string, string>> imagePairs = new List<Tuple<string, string>>();
+        List<Tuple<string, string>> imagePairs = new List<Tuple<string, string>>();     // List to hold the pairs of images
         private User user;
         string firstChoice;
         string secondChoice;
@@ -28,18 +27,17 @@ namespace final_project
         int score = 0;
         public Hebrew_Etai(User user)
         {
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             this.user = user;
             var db = new Database();
             var balance = db.GetBalance(int.Parse(user.ID));
-
             InitializeComponent();
-            InitializeImagePairs(); // Initialize image pairs
-            LoadPictures(); // Load picture boxes onto the form
+            InitializeImagePairs();         // Initialize image pairs
+            LoadPictures();                 // Load picture boxes onto the form
             user_data_lbl.Text = $" שם משתמש : {user.Username}  מטבעות : {balance}";
-        }
-
-        // Method to initialize image pairs
-        private void InitializeImagePairs()
+        }        
+        private void InitializeImagePairs()             // Method to initialize image pairs
         {
             for (int i = 0; i < 27; i++)
             {
@@ -47,10 +45,8 @@ namespace final_project
                 string number = (i + 1).ToString();  // Generate the number part (1, 2, 3, ...)
                 imagePairs.Add(new Tuple<string, string>(letter.ToString(), number));
             }
-        }
-
-        // Timer event handler to handle countdown and game over logic
-        private void TimerEvent(object sender, EventArgs e)
+        }  
+        private void TimerEvent(object sender, EventArgs e)             // Timer event handler to handle countdown and game over logic
         {
             countDownTime--;
             lblTimeLeft.Text =$"זמן נותר: {countDownTime}"; // Update the countdown label
@@ -69,9 +65,7 @@ namespace final_project
                 }
             }
         }
-
-        // Method to restart the game
-        private void RestartGame()
+        private void RestartGame()                  // Method to restart the game
         {
             // Randomly select 6 pairs from the 27 pairs
             var selectedPairs = imagePairs.OrderBy(x => Guid.NewGuid()).Take(6).ToList();
@@ -86,7 +80,6 @@ namespace final_project
 
             allItems = allItems.OrderBy(x => Guid.NewGuid()).ToList(); // Shuffle the selected pairs
 
-
             for (int i = 0; i < pictures.Count; i++)
             {
                 pictures[i].Image = null; // Clear the images from previous game
@@ -99,16 +92,12 @@ namespace final_project
             gameOver = false;
             GameTimer.Start(); // Start the timer           
             countDownTime = totalTime; // Reset countdown time
-        }
-
-        // Event handler for the restart game button click
-        private void RestartGameEvent(object sender, EventArgs e)
+        }       
+        private void RestartGameEvent(object sender, EventArgs e)           // Event handler for the restart game button click
         {
             RestartGame();
-        }
-
-        // Method to load picture boxes onto the form
-        private void LoadPictures()
+        }       
+        private void LoadPictures()             // Method to load picture boxes onto the form
         {
             this.Controls.Add(this.gamePanel);
             this.gamePanel.SendToBack();
@@ -149,10 +138,8 @@ namespace final_project
                 newPic.BringToFront();
             }
             RestartGame(); // Start a new game
-        }
-
-        // Event handler for picture box click
-        private async void NewPic_Click(object sender, EventArgs e)
+        }        
+        private async void NewPic_Click(object sender, EventArgs e)         // Event handler for picture box click
         {
             if (gameOver) // If the game is over, ignore clicks
             {
@@ -182,13 +169,8 @@ namespace final_project
                     CheckPictures(picA, picB);
                 }
             }
-            //else
-            //{
-            //    CheckPictures(picA, picB); // Check if the selected pictures match
-            //}
-        }
-        // Method to check if two selected pictures match
-        private void CheckPictures(PictureBox A, PictureBox B)
+        }       
+        private void CheckPictures(PictureBox A, PictureBox B)          // Method to check if two selected pictures match
         {
             bool isMatch = false;
             foreach (var pair in imagePairs)
@@ -200,7 +182,6 @@ namespace final_project
                     break;
                 }
             }
-
             if (isMatch)
             {             
                 A.Tag = null; // Clear tag for matched pictures
@@ -214,9 +195,8 @@ namespace final_project
 
             firstChoice = null;
             secondChoice = null;
-
-            // Hide images for unmatched pairs
-            foreach (PictureBox pics in pictures.ToList())
+        
+            foreach (PictureBox pics in pictures.ToList())          // Hide images for unmatched pairs
             {
                 if (pics.Tag != null)
                 {
@@ -224,18 +204,16 @@ namespace final_project
                 }
             }
             IfAllOver();
-        }
-
-        // Method to handle game over
-        private int GameOver(string msg)
+        }       
+        private int GameOver(string msg)            // Method to handle game over
         {
             GameTimer.Stop();
             gameOver = true;
-            MessageBox.Show(msg); // Show game over message
+            MessageBox.Show(msg);           // Show game over message
             return score;
         }
          private void IfAllOver()
-        {
+         {
             if (pictures.All(o => o.Tag == null))
             {
                 score = 50 - tries + this.countDownTime;
@@ -250,11 +228,9 @@ namespace final_project
                     DB.SetBalance(int.Parse(user.ID), balance + score);
                     GameOver(" כל הכבוד ניצחת! זכית ב" + score + " מטבעות ");
                     Close();
-                }
-                
+                }                
             }
-        }
-
+         }
     }
 }
 

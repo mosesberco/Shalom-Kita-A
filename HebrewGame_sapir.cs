@@ -12,7 +12,6 @@ namespace final_project
 {
     public partial class HebrewGame_sapir : Form
     {
-        //משחק אות פותחת
         private User user;
         private int correctanswer;
         private int questionNumber;
@@ -30,10 +29,10 @@ namespace final_project
         private int randomQuestion;
         private int coins;
 
-        // Initializes a new instance of the "Form1" class.
-        // Sets up the timer, random generator, and answer buttons.
         public HebrewGame_sapir(User user)
         {
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
             this.user = user;
@@ -47,7 +46,7 @@ namespace final_project
             {
                 button.Enabled = false;
             }
-            this.BackgroundImage= (Image)Properties.Resources.ResourceManager.GetObject("רקע");
+            BackgroundImage= (Image)Properties.Resources.ResourceManager.GetObject("רקע");
             buttonRandomize.BackgroundImage= (Image)Properties.Resources.ResourceManager.GetObject("start");
             playerinfo.Text = user.Username.ToString() + ":שלום" + "\n" + "מטבעות: " + balance;
             playerinfo.BackColor = Color.Transparent;
@@ -55,23 +54,17 @@ namespace final_project
             guidelines.BackColor = Color.Transparent;
             backtomenu.Text = "חזרה לתפריט";
         }
-
-        // Initializes the answer buttons.
-        private void InitializeAnswerButtons()
+        private void InitializeAnswerButtons()          // Initializes the answer buttons
         {
-            answerButtons = new Button[] { answer1, answer2, answer3 }; // Initialize with your actual buttons
-        }
-
-        // Initializes the timer with a specified interval and event handler.
-        private void InitializeTimer()
+            answerButtons = new Button[] { answer1, answer2, answer3 };             // Initialize with your actual buttons
+        }     
+        private void InitializeTimer()          // Initializes the timer with a specified interval and event handler
         {
             timer = new Timer();
             timer.Interval = delayInSeconds * 1000; // Convert seconds to milliseconds
             timer.Tick += Timer_Tick;
         }
-
-        // Handles the timer tick event. Stops the timer and randomizes the next question if the game is still active.
-        private void Timer_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)     // Handles the timer tick event. Stops the timer and randomizes the next question if the game is still active
         {
             timer.Stop();
             isDelayActive = false;
@@ -80,14 +73,11 @@ namespace final_project
                 picsRandomize(); // Trigger randomization after timer elapses
             }
         }
-
-        // Randomizes the pictures for the current question.
-        private void picsRandomize()
+        private void picsRandomize()            // Randomizes the pictures for the current question
         {
             if (!isDelayActive)
             {
                 randomQuestion = random.Next(1, 23);
-                //randomQuestion = 1;
                 askQuestion(randomQuestion);
                 buttonRandomize.Enabled = false;
                 int correctImageIndex = random.Next(correctImagePaths.Count);
@@ -100,7 +90,6 @@ namespace final_project
                 {
                     if (i == correctImageDisplayedIndex)
                         continue;
-
                     int index;
                     do
                     {
@@ -115,16 +104,13 @@ namespace final_project
                 answer2.BackgroundImage = displayedImagePaths[1];
                 answer3.BackgroundImage = displayedImagePaths[2];
                 questionNumber++;
-
                 foreach (var button in answerButtons)
                 {
                     button.Enabled = true;
                 }
             }
-        }
-
-        // Checks the user's answer and updates the game state accordingly.
-        private void CheckAnswerEventer(object sender, EventArgs e)
+        }      
+        private void CheckAnswerEventer(object sender, EventArgs e)     // Checks the user's answer and updates the game state accordingly
         {
             Label[] labels = { option3, option2, option1 };
             Button clickedPictureButton = sender as Button;
@@ -162,30 +148,22 @@ namespace final_project
             {
                 button.Enabled = false;
             }
-
-        }
-
-        // Handles the form load event by adding event handlers for the answer buttons.
-        private void Form1_Load(object sender, EventArgs e)
+        } 
+        private void Form1_Load(object sender, EventArgs e)     // Handles the form load event by adding event handlers for the answer buttons
         {
             answer1.Click += new EventHandler(CheckAnswerEventer);
             answer2.Click += new EventHandler(CheckAnswerEventer);
             answer3.Click += new EventHandler(CheckAnswerEventer);
-        }
-
-        // Starts the game by initializing game state and randomizing the first question.
-        private void startGame(object sender, EventArgs e)
+        }        
+        private void startGame(object sender, EventArgs e)      // Starts the game by initializing game state and randomizing the first question
         {
             buttonRandomize.Visible = false;
             correctanswer = 0;
             questionNumber = 0;
             coins = 0;
             picsRandomize();
-
-        }
-
-        // Ends the game, displays the final score, and shows the start over button.
-        private void EndGame()
+        }     
+        private void EndGame()      // Ends the game, displays the final score, and shows the start over button
         {
             MessageBox.Show("!סוף המשחק" + Environment.NewLine + "צדקת ב " + correctanswer + " מתוך " + totalQuestions + " שאלות" + Environment.NewLine + "        הרווחת $ " + correctanswer * 3,
                 "כל הכבוד", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -196,10 +174,8 @@ namespace final_project
             var balance = DB.GetBalance(int.Parse(user.ID));
             DB.SetBalance(int.Parse(user.ID), (coins) + balance);
             Close();
-        }
-
-        // Restarts the game by hiding the start over button and calling startGame.
-        private void StartOverTheGame(object sender, EventArgs e)
+        }   
+        private void StartOverTheGame(object sender, EventArgs e)       // Restarts the game by hiding the start over button and calling startGame
         {
             startOver.Visible = false;
             startGame(null, EventArgs.Empty);
@@ -209,8 +185,7 @@ namespace final_project
             Close();
         }
         private void askQuestion(int qnum)
-        {
-
+        { 
             switch (qnum)
             {
                 case 1:
@@ -231,6 +206,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("רכבת")
                     };
                     break;
+                
                 case 2:
                     //ב
                     im = (Image)Properties.Resources.ResourceManager.GetObject("ב");
@@ -242,7 +218,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
                         (Image)Properties.Resources.ResourceManager.GetObject("בלון")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("יין"),
                         (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
@@ -269,6 +245,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("רכבת")
                     };
                     break;
+                
                 case 4:
                     //ד
                     im = (Image)Properties.Resources.ResourceManager.GetObject("ד");
@@ -279,7 +256,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("דחליל"),
                         (Image)Properties.Resources.ResourceManager.GetObject("דרדס")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("זבוב"),
                         (Image)Properties.Resources.ResourceManager.GetObject("מטוס"),
@@ -297,7 +274,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("היפופוטם"),
                         (Image)Properties.Resources.ResourceManager.GetObject("הר")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("אגרטל"),
                         (Image)Properties.Resources.ResourceManager.GetObject("כלב"),
@@ -305,10 +282,6 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("ספר")
                     };
                     break;
-
-
-
-
 
                 case 6:
                     //ו
@@ -319,7 +292,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("וורד"),
                         (Image)Properties.Resources.ResourceManager.GetObject("וילון")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
                         (Image)Properties.Resources.ResourceManager.GetObject("טווס"),
@@ -327,6 +300,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("יונה")
                     };
                     break;
+                
                 case 7:
                     //ז
                     im = (Image)Properties.Resources.ResourceManager.GetObject("ז");
@@ -337,7 +311,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("זאב"),
                         (Image)Properties.Resources.ResourceManager.GetObject("זברה")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("היפופוטם"),
                         (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
@@ -356,7 +330,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("חציל"),
                         (Image)Properties.Resources.ResourceManager.GetObject("חתול")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
                         (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
@@ -374,7 +348,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("טווס"),
                         (Image)Properties.Resources.ResourceManager.GetObject("טניס")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("תמנון"),
                         (Image)Properties.Resources.ResourceManager.GetObject("תרנגול"),
@@ -382,6 +356,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("שימלה")
                     };
                     break;
+                
                 case 10:
                     //י
                     im = (Image)Properties.Resources.ResourceManager.GetObject("י");
@@ -392,7 +367,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("יין"),
                         (Image)Properties.Resources.ResourceManager.GetObject("ינשוף")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("חציל"),
                         (Image)Properties.Resources.ResourceManager.GetObject("כריש"),
@@ -411,7 +386,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
                         (Image)Properties.Resources.ResourceManager.GetObject("כדור")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("קרנף"),
                         (Image)Properties.Resources.ResourceManager.GetObject("צוללת"),
@@ -430,7 +405,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("לוח"),
                         (Image)Properties.Resources.ResourceManager.GetObject("לטאה")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
                         (Image)Properties.Resources.ResourceManager.GetObject("נקניקיהה"),
@@ -449,7 +424,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("מסוק"),
                         (Image)Properties.Resources.ResourceManager.GetObject("משאית")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("ספיידרמן"),
                         (Image)Properties.Resources.ResourceManager.GetObject("סרטן"),
@@ -487,7 +462,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("ספר"),
                         (Image)Properties.Resources.ResourceManager.GetObject("סרטן")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("שימלה"),
                         (Image)Properties.Resources.ResourceManager.GetObject("קקטוס"),
@@ -506,7 +481,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("ענן"),
                         (Image)Properties.Resources.ResourceManager.GetObject("עקרב")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("הר"),
                         (Image)Properties.Resources.ResourceManager.GetObject("אגס"),
@@ -525,7 +500,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("פרה"),
                         (Image)Properties.Resources.ResourceManager.GetObject("פרפר")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("צדפים"),
                         (Image)Properties.Resources.ResourceManager.GetObject("נמר"),
@@ -544,7 +519,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("צוללת"),
                         (Image)Properties.Resources.ResourceManager.GetObject("צלם")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("תפוח"),
                         (Image)Properties.Resources.ResourceManager.GetObject("משאית"),
@@ -563,7 +538,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("קקטוס"),
                         (Image)Properties.Resources.ResourceManager.GetObject("קרנף")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("כריש"),
                         (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
@@ -582,7 +557,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("רשת"),
                         (Image)Properties.Resources.ResourceManager.GetObject("רגל")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("ברווז"),
                         (Image)Properties.Resources.ResourceManager.GetObject("צוללת"),
@@ -601,7 +576,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("שמש"),
                         (Image)Properties.Resources.ResourceManager.GetObject("שן")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("ספר"),
                         (Image)Properties.Resources.ResourceManager.GetObject("צדפים"),
@@ -620,7 +595,7 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("תפוח"),
                         (Image)Properties.Resources.ResourceManager.GetObject("תרנגול")
                     };
-                                    incorrectImagePaths = new List<Image>
+                    incorrectImagePaths = new List<Image>
                     {
                         (Image)Properties.Resources.ResourceManager.GetObject("טווס"),
                         (Image)Properties.Resources.ResourceManager.GetObject("כתר"),
@@ -628,14 +603,8 @@ namespace final_project
                         (Image)Properties.Resources.ResourceManager.GetObject("יונה")
                     };
                     break;
-
-
-
             }
-
-
         }
-
     }
 }
 

@@ -23,7 +23,7 @@ namespace final_project
             //var hebrew_form = new Hebrew_Memory_Matching_Game.
             Application.Run(new_form);
            
-            DB.Dispose();
+            //DB.Dispose();
             //var game = new EnsglishBuildWordsGameMenu();
             //var form = new Register();
             //Application.Run(new_form);

@@ -51,7 +51,7 @@ namespace final_project
             // newPassword
             // 
             this.newPassword.BackColor = System.Drawing.Color.Lavender;
-            this.newPassword.Location = new System.Drawing.Point(134, 52);
+            this.newPassword.Location = new System.Drawing.Point(101, 64);
             this.newPassword.Name = "newPassword";
             this.newPassword.PasswordChar = '*';
             this.newPassword.Size = new System.Drawing.Size(128, 20);
@@ -60,7 +60,7 @@ namespace final_project
             // confirmPassword
             // 
             this.confirmPassword.BackColor = System.Drawing.Color.Lavender;
-            this.confirmPassword.Location = new System.Drawing.Point(134, 78);
+            this.confirmPassword.Location = new System.Drawing.Point(101, 105);
             this.confirmPassword.Name = "confirmPassword";
             this.confirmPassword.PasswordChar = '*';
             this.confirmPassword.Size = new System.Drawing.Size(128, 20);
@@ -75,7 +75,7 @@ namespace final_project
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(148, 104);
+            this.button1.Location = new System.Drawing.Point(130, 141);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 31);
             this.button1.TabIndex = 9;
@@ -88,7 +88,7 @@ namespace final_project
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(14, 80);
+            this.label5.Location = new System.Drawing.Point(240, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 18);
             this.label5.TabIndex = 10;
@@ -99,7 +99,7 @@ namespace final_project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(330, 148);
+            this.ClientSize = new System.Drawing.Size(366, 193);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.confirmPassword);

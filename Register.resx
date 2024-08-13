@@ -125,7 +125,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="genderTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 339</value>
+    <value>175, 339</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="genderTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -150,26 +150,23 @@
   <data name="&gt;&gt;genderTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gill Sans MT, 12pt, style=Bold</value>
+    <value>Gill Sans MT, 15.75pt, style=Bold</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 444</value>
+    <value>113, 447</value>
   </data>
   <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>98, 38</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>Login</value>
+    <value>התחבר/י</value>
   </data>
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
@@ -183,26 +180,26 @@
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gill Sans MT, 12pt</value>
+    <value>Gill Sans MT, 14.25pt</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 444</value>
+    <value>215, 450</value>
   </data>
   <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
+  <data name="label7.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 23</value>
+    <value>187, 38</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Already have an account ?</value>
+    <value>יש לך כבר משתמש ?</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
@@ -223,7 +220,7 @@
     <value>Gill Sans MT, 20.25pt, style=Bold</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 383</value>
+    <value>175, 383</value>
   </data>
   <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -235,7 +232,7 @@
     <value>29</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
-    <value>Register</value>
+    <value>הירשמ/י</value>
   </data>
   <data name="&gt;&gt;button1.Name" xml:space="preserve">
     <value>button1</value>
@@ -259,19 +256,22 @@
     <value>Gill Sans MT, 9.75pt</value>
   </data>
   <data name="showPasswordCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 206</value>
+    <value>50, 209</value>
   </data>
   <data name="showPasswordCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
+  <data name="showPasswordCheckBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
   <data name="showPasswordCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 22</value>
+    <value>89, 22</value>
   </data>
   <data name="showPasswordCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
   <data name="showPasswordCheckBox.Text" xml:space="preserve">
-    <value>show password</value>
+    <value>הצג סיסמא</value>
   </data>
   <data name="&gt;&gt;showPasswordCheckBox.Name" xml:space="preserve">
     <value>showPasswordCheckBox</value>
@@ -292,19 +292,19 @@
     <value>Gill Sans MT, 20.25pt</value>
   </data>
   <data name="txtGen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 327</value>
+    <value>388, 324</value>
   </data>
   <data name="txtGen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="txtGen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 38</value>
+    <value>49, 38</value>
   </data>
   <data name="txtGen.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
   <data name="txtGen.Text" xml:space="preserve">
-    <value>Gender</value>
+    <value>מין</value>
   </data>
   <data name="&gt;&gt;txtGen.Name" xml:space="preserve">
     <value>txtGen</value>
@@ -325,19 +325,19 @@
     <value>Gill Sans MT, 20.25pt</value>
   </data>
   <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 282</value>
+    <value>353, 280</value>
   </data>
   <data name="txtEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 38</value>
+    <value>184, 38</value>
   </data>
   <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
   <data name="txtEmail.Text" xml:space="preserve">
-    <value>Email</value>
+    <value>דואר אלקטרוני</value>
   </data>
   <data name="&gt;&gt;txtEmail.Name" xml:space="preserve">
     <value>txtEmail</value>
@@ -358,19 +358,19 @@
     <value>Gill Sans MT, 20.25pt</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 239</value>
+    <value>353, 237</value>
   </data>
   <data name="txtID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 38</value>
+    <value>153, 38</value>
   </data>
   <data name="txtID.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
   <data name="txtID.Text" xml:space="preserve">
-    <value>ID</value>
+    <value>תעודת זהות</value>
   </data>
   <data name="&gt;&gt;txtID.Name" xml:space="preserve">
     <value>txtID</value>
@@ -388,7 +388,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="emailTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 292</value>
+    <value>175, 292</value>
   </data>
   <data name="emailTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -415,7 +415,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="idTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 249</value>
+    <value>175, 249</value>
   </data>
   <data name="idTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -442,7 +442,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="passwordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 206</value>
+    <value>175, 206</value>
   </data>
   <data name="passwordTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -472,7 +472,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="usernameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 159</value>
+    <value>175, 159</value>
   </data>
   <data name="usernameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -502,19 +502,19 @@
     <value>Gill Sans MT, 20.25pt</value>
   </data>
   <data name="txtPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 196</value>
+    <value>371, 196</value>
   </data>
   <data name="txtPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="txtPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 38</value>
+    <value>95, 38</value>
   </data>
   <data name="txtPass.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
   <data name="txtPass.Text" xml:space="preserve">
-    <value>Password</value>
+    <value>סיסמא</value>
   </data>
   <data name="&gt;&gt;txtPass.Name" xml:space="preserve">
     <value>txtPass</value>
@@ -535,19 +535,19 @@
     <value>Gill Sans MT, 20.25pt</value>
   </data>
   <data name="txtusername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 149</value>
+    <value>353, 149</value>
   </data>
   <data name="txtusername.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="txtusername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 38</value>
+    <value>162, 38</value>
   </data>
   <data name="txtusername.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
   <data name="txtusername.Text" xml:space="preserve">
-    <value>User name</value>
+    <value>שם משתמש</value>
   </data>
   <data name="&gt;&gt;txtusername.Name" xml:space="preserve">
     <value>txtusername</value>
@@ -577,7 +577,7 @@
     <value>18</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Sign Up</value>
+    <value>הרשמה</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>

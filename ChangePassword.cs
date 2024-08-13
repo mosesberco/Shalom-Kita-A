@@ -8,19 +8,18 @@ namespace final_project
     {
         private User userActive;
         private Database database;
-
         public ChangePassword(Database db, User userActive)
         {
             InitializeComponent();
             this.userActive = userActive;
             this.database = db;
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-
         private bool IsPasswordValid(string password)
         {
-            return password.Length >= 6 && password.Any(c => "!@#$".Contains(c));
+            return password.Length >= 6 && password.Length <= 8 && password.Any(c => "!@#$".Contains(c));
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string newPass = newPassword.Text;

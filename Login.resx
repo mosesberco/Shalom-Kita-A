@@ -126,20 +126,20 @@
     <value>Gill Sans MT, 12pt, style=Bold</value>
   </data>
   <data name="signupButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 317</value>
+    <value>169, 317</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="signupButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="signupButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 23</value>
+    <value>65, 23</value>
   </data>
   <data name="signupButton.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
   <data name="signupButton.Text" xml:space="preserve">
-    <value>Sign Up</value>
+    <value>הרשמה</value>
   </data>
   <data name="&gt;&gt;signupButton.Name" xml:space="preserve">
     <value>signupButton</value>
@@ -153,26 +153,26 @@
   <data name="&gt;&gt;signupButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gill Sans MT, 12pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 317</value>
+    <value>241, 317</value>
   </data>
   <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
+  <data name="label2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 23</value>
+    <value>141, 23</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Don't have an account ?</value>
+    <value>אין לך משתמש ?</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -193,7 +193,7 @@
     <value>Gill Sans MT, 20.25pt, style=Bold</value>
   </data>
   <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 242</value>
+    <value>187, 249</value>
   </data>
   <data name="loginButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -205,7 +205,7 @@
     <value>28</value>
   </data>
   <data name="loginButton.Text" xml:space="preserve">
-    <value>Login</value>
+    <value>התחבר/י</value>
   </data>
   <data name="&gt;&gt;loginButton.Name" xml:space="preserve">
     <value>loginButton</value>
@@ -229,19 +229,22 @@
     <value>Gill Sans MT, 9.75pt</value>
   </data>
   <data name="showPasswordCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>386, 202</value>
+    <value>55, 206</value>
   </data>
   <data name="showPasswordCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
   </data>
+  <data name="showPasswordCheckBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
   <data name="showPasswordCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 22</value>
+    <value>89, 22</value>
   </data>
   <data name="showPasswordCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
   <data name="showPasswordCheckBox.Text" xml:space="preserve">
-    <value>show password</value>
+    <value>הצג סיסמא</value>
   </data>
   <data name="&gt;&gt;showPasswordCheckBox.Name" xml:space="preserve">
     <value>showPasswordCheckBox</value>
@@ -259,7 +262,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="passwordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 198</value>
+    <value>177, 203</value>
   </data>
   <data name="passwordTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -289,7 +292,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="usernameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 147</value>
+    <value>175, 152</value>
   </data>
   <data name="usernameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -319,19 +322,19 @@
     <value>Gill Sans MT, 20.25pt</value>
   </data>
   <data name="txtPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 189</value>
+    <value>362, 194</value>
   </data>
   <data name="txtPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="txtPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 38</value>
+    <value>95, 38</value>
   </data>
   <data name="txtPass.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
   <data name="txtPass.Text" xml:space="preserve">
-    <value>Password</value>
+    <value>סיסמא</value>
   </data>
   <data name="&gt;&gt;txtPass.Name" xml:space="preserve">
     <value>txtPass</value>
@@ -352,19 +355,19 @@
     <value>Gill Sans MT, 20.25pt</value>
   </data>
   <data name="txtusername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 137</value>
+    <value>344, 142</value>
   </data>
   <data name="txtusername.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="txtusername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 38</value>
+    <value>162, 38</value>
   </data>
   <data name="txtusername.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
   <data name="txtusername.Text" xml:space="preserve">
-    <value>User name</value>
+    <value>שם משתמש</value>
   </data>
   <data name="&gt;&gt;txtusername.Name" xml:space="preserve">
     <value>txtusername</value>
@@ -385,19 +388,19 @@
     <value>Gill Sans MT, 48pt, style=Bold</value>
   </data>
   <data name="loginLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 27</value>
+    <value>105, 29</value>
   </data>
   <data name="loginLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="loginLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 87</value>
+    <value>316, 87</value>
   </data>
   <data name="loginLabel.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
   <data name="loginLabel.Text" xml:space="preserve">
-    <value>Login</value>
+    <value>התחברות</value>
   </data>
   <data name="&gt;&gt;loginLabel.Name" xml:space="preserve">
     <value>loginLabel</value>

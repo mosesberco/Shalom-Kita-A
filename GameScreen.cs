@@ -97,8 +97,6 @@ namespace final_project
         },
         // Add more questions here
         };
-
-
         private Random random = new Random();
         private PictureBox largePictureBox;
         private PictureBox[] smallPictureBoxes;
@@ -112,17 +110,17 @@ namespace final_project
         private int timeLeft = 60;
         private bool roundCompleted = false;
 
-
         public GameScreen(User user)
         {
             this.user = user;
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             InitializeComponent();
             SetupControls();
             SetupTimer();
             UpdateUserInfo();
             NewRound();
         }
-
         private void SetupControls()
         {
             largePictureBox = pictureBoxQuestion;
@@ -140,22 +138,22 @@ namespace final_project
             timerLabel.Font = new Font("Gill Sans MT", 12, FontStyle.Bold);
             timerLabel.ForeColor = Color.White;
             timerLabel.AutoSize = true;
-            timerLabel.Location = new Point(950, 20);
+            timerLabel.Location = new Point(910, 20);
+            timerLabel.RightToLeft = RightToLeft.Yes;
 
             // Set up userInfoLabel
             userInfoLabel.Font = new Font("Gill Sans MT", 12);
             userInfoLabel.ForeColor = Color.White;
             userInfoLabel.AutoSize = true;
             userInfoLabel.Location = new Point(1160,0);
+            userInfoLabel.RightToLeft = RightToLeft.Yes;
         }
-
         private void SetupTimer()
         {
             gameTimer = new Timer();
             gameTimer.Interval = 1000; // 1 second
             gameTimer.Tick += GameTimer_Tick;
         }
-
         private void GameTimer_Tick(object sender, EventArgs e)
         {
             timeLeft--;
@@ -167,17 +165,16 @@ namespace final_project
                 EndRound();
             }
         }
-
         private void UpdateTimerDisplay()
         {
-            timerLabel.Text = $"Time: {timeLeft}s";
+            timerLabel.Text = $"זמן שנותר: {timeLeft} שניות";
         }
-
         private void UpdateUserInfo()
         {
-            userInfoLabel.Text = $"User: {user.Username}\nScore: ${score}";
+            var db = new Database();
+            int balance = db.GetBalance(int.Parse(user.ID));
+            userInfoLabel.Text = $"משתמש: {user.Username}\nמטבעות : {balance}\nScore: ${score}";
         }
-
         private void NewRound()
         {
             if (roundsCompleted == 2)
@@ -204,7 +201,6 @@ namespace final_project
             UpdateTimerDisplay();
             gameTimer.Start();
         }
-
         private void CheckAnswer(int index)
         {
             string animal = (string)smallPictureBoxes[index].Tag;
@@ -225,7 +221,6 @@ namespace final_project
             {
                 MessageBox.Show("Please enter only numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             if (submitButtons.All(b => !b.Enabled))
             {
                 roundCompleted = true;
@@ -260,19 +255,14 @@ namespace final_project
             roundCompleted = false;
             NewRound();
         }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
-
             gameTimer.Stop();
-            //var DB = new Database();
-            //DB.SetBalance(int.Parse(user.ID), user.Balance);
         }
     }
 }

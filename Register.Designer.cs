@@ -59,18 +59,18 @@ namespace final_project
             // 
             // label8
             // 
-            resources.ApplyResources(this.label8, "label8");
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.label8, "label8");
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Name = "label8";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
-            resources.ApplyResources(this.label7, "label7");
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.label7, "label7");
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Name = "label7";
             // 

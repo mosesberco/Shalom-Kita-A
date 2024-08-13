@@ -89,7 +89,7 @@
             // btnRestart
             // 
             this.btnRestart.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnRestart.Location = new System.Drawing.Point(302, 527);
+            this.btnRestart.Location = new System.Drawing.Point(301, 518);
             this.btnRestart.Margin = new System.Windows.Forms.Padding(2);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(150, 39);

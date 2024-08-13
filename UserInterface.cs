@@ -19,7 +19,6 @@ namespace final_project
 
         public UserInterface(Database db, User user)
         {
-            
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.Sizable;
             database = db;
@@ -29,16 +28,12 @@ namespace final_project
             AddItemToUI(this.items);
             UpdateForm();
             items_panel = new Panel();                          //set itemspanel location
-
             //items_panel.Location = new Point(200, 200);
         }
 
         private void loadItems()
         {
             var storeDB = new Database(@"../../storeitems.xlsx");
-
-            
-            ///items.Clear();                                      //exception in runtime -> user {udi,udi}
             items = storeDB.GetItemsByUserId(user);
         }
         private void UpdateForm()

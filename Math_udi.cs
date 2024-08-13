@@ -31,14 +31,15 @@ namespace final_project
             progressBar1.Maximum = totalQuestions;
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
-            userData.Text = $"שם משתמש : {user.Username}\nיתרה : {balance}";
+            userData.Text = $"שם משתמש : {user.Username}\nמטבעות : {balance}";
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedSingle;
         }
         public void nextQuestion()
         {
             lblQuestion.Text = $"{this.index+1}.  "+this.questions[this.index].toString();
-            scoreLabel.Text = $"Score : {this.score}/{this.totalQuestions}";
+            scoreLabel.Text = $"נקודות : {this.score}/{this.totalQuestions}";
+            scoreLabel.RightToLeft = RightToLeft.Yes;
         }
         private async void checkAnswerEvent(object sender, EventArgs e)
         {
@@ -93,7 +94,7 @@ namespace final_project
         }
         private bool gameOver()         //CFG
         {
-            if (this.index == totalQuestions)
+            if (index == totalQuestions)
             {
                 string message = $"Your score is {this.score}/{this.totalQuestions}\n";
                 if (wrong_answers.Count > 0)
@@ -118,13 +119,13 @@ namespace final_project
         }
         private bool checkAnswer(int btnANswer)
         {
-            return btnANswer == this.questions[this.index].getCorrectAnswer();
+            return btnANswer == questions[index].getCorrectAnswer();
         }
         internal void setButtons()
         {
             Button[] buttons = { button1, button2, button3, button4 };
             int correctIndex = random.Next(0, 4);
-            int correctAnswer = this.questions[index].getCorrectAnswer();
+            int correctAnswer = questions[index].getCorrectAnswer();
             HashSet<int> usedNumbers = new HashSet<int> { correctAnswer };
 
             for (int i = 0; i < 4; i++)

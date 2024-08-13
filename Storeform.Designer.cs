@@ -76,6 +76,7 @@ namespace final_project
             this.user_balance.ForeColor = System.Drawing.Color.White;
             this.user_balance.Location = new System.Drawing.Point(58, 174);
             this.user_balance.Name = "user_balance";
+            this.user_balance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.user_balance.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.user_balance.Size = new System.Drawing.Size(175, 26);
             this.user_balance.TabIndex = 9;
@@ -89,6 +90,7 @@ namespace final_project
             this.userData.ForeColor = System.Drawing.Color.White;
             this.userData.Location = new System.Drawing.Point(58, 119);
             this.userData.Name = "userData";
+            this.userData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.userData.Size = new System.Drawing.Size(175, 26);
             this.userData.TabIndex = 8;
             this.userData.Text = "userData";
@@ -111,11 +113,11 @@ namespace final_project
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(32, 33);
+            this.label1.Location = new System.Drawing.Point(8, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 67);
+            this.label1.Size = new System.Drawing.Size(286, 67);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Gift Shop";
+            this.label1.Text = "חנות מתנות";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BackBTN
@@ -130,7 +132,7 @@ namespace final_project
             this.BackBTN.Name = "BackBTN";
             this.BackBTN.Size = new System.Drawing.Size(101, 45);
             this.BackBTN.TabIndex = 6;
-            this.BackBTN.Text = "Back";
+            this.BackBTN.Text = "חזרה לתפריט";
             this.BackBTN.UseVisualStyleBackColor = true;
             this.BackBTN.Click += new System.EventHandler(this.BackBTN_Click);
             // 

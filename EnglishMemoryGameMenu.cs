@@ -18,14 +18,14 @@ namespace final_project
             this.user = user;   
             InitializeComponent();
             initializeLabels();
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             EnglishMemoryGame gameForm = new EnglishMemoryGame(user, this);
             gameForm.Show();
         }
-
         public void initializeLabels()
         {
             var DB = new Database();
@@ -45,17 +45,14 @@ namespace final_project
             startButton.MouseEnter += new EventHandler(Button_MouseEnter);
             startButton.MouseLeave += new EventHandler(Button_MouseLeave);
         }
-
         private void Button_MouseEnter(object sender, EventArgs e)
         {
             startButton.BackColor = Color.DeepSkyBlue;
         }
-
         private void Button_MouseLeave(object sender, EventArgs e)
         {
             startButton.BackColor = ColorTranslator.FromHtml("#F0DDA6");
         }
-
         public void updateBalance(int balance)
         {
             moneyLabel.Text = "Balance: " + balance;

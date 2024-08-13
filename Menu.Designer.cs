@@ -50,7 +50,7 @@ namespace final_project
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(330, 14);
+            this.label1.Location = new System.Drawing.Point(328, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(422, 87);
             this.label1.TabIndex = 0;
@@ -66,9 +66,9 @@ namespace final_project
             this.panel1.Controls.Add(this.heb_MemoryGame);
             this.panel1.Controls.Add(this.heb_AddSub);
             this.panel1.Controls.Add(this.eng_BuildWords);
-            this.panel1.Location = new System.Drawing.Point(140, 121);
+            this.panel1.Location = new System.Drawing.Point(131, 122);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(760, 355);
+            this.panel1.Size = new System.Drawing.Size(764, 355);
             this.panel1.TabIndex = 1;
             // 
             // heb_MatchLetterPhoto
@@ -80,9 +80,9 @@ namespace final_project
             this.heb_MatchLetterPhoto.ForeColor = System.Drawing.Color.White;
             this.heb_MatchLetterPhoto.Location = new System.Drawing.Point(596, 214);
             this.heb_MatchLetterPhoto.Name = "heb_MatchLetterPhoto";
-            this.heb_MatchLetterPhoto.Size = new System.Drawing.Size(145, 96);
+            this.heb_MatchLetterPhoto.Size = new System.Drawing.Size(165, 96);
             this.heb_MatchLetterPhoto.TabIndex = 6;
-            this.heb_MatchLetterPhoto.Text = "משחק ספיר";
+            this.heb_MatchLetterPhoto.Text = "אות פותחת";
             this.heb_MatchLetterPhoto.UseVisualStyleBackColor = false;
             this.heb_MatchLetterPhoto.Click += new System.EventHandler(this.heb_MatchLetterPhoto_Click);
             // 
@@ -95,7 +95,7 @@ namespace final_project
             this.heb_CountAnimals.ForeColor = System.Drawing.Color.White;
             this.heb_CountAnimals.Location = new System.Drawing.Point(329, 214);
             this.heb_CountAnimals.Name = "heb_CountAnimals";
-            this.heb_CountAnimals.Size = new System.Drawing.Size(145, 96);
+            this.heb_CountAnimals.Size = new System.Drawing.Size(165, 96);
             this.heb_CountAnimals.TabIndex = 5;
             this.heb_CountAnimals.Text = "ספור את החיות";
             this.heb_CountAnimals.UseVisualStyleBackColor = false;
@@ -110,9 +110,9 @@ namespace final_project
             this.eng_MemoryGame.ForeColor = System.Drawing.Color.White;
             this.eng_MemoryGame.Location = new System.Drawing.Point(59, 214);
             this.eng_MemoryGame.Name = "eng_MemoryGame";
-            this.eng_MemoryGame.Size = new System.Drawing.Size(145, 96);
+            this.eng_MemoryGame.Size = new System.Drawing.Size(165, 96);
             this.eng_MemoryGame.TabIndex = 4;
-            this.eng_MemoryGame.Text = "english memory \r\ngame";
+            this.eng_MemoryGame.Text = "Memory Game";
             this.eng_MemoryGame.UseVisualStyleBackColor = false;
             this.eng_MemoryGame.Click += new System.EventHandler(this.eng_MemoryGame_Click);
             // 
@@ -125,7 +125,7 @@ namespace final_project
             this.heb_MemoryGame.ForeColor = System.Drawing.Color.White;
             this.heb_MemoryGame.Location = new System.Drawing.Point(596, 38);
             this.heb_MemoryGame.Name = "heb_MemoryGame";
-            this.heb_MemoryGame.Size = new System.Drawing.Size(145, 96);
+            this.heb_MemoryGame.Size = new System.Drawing.Size(165, 96);
             this.heb_MemoryGame.TabIndex = 3;
             this.heb_MemoryGame.Text = "משחק זיכרון";
             this.heb_MemoryGame.UseVisualStyleBackColor = false;
@@ -140,7 +140,7 @@ namespace final_project
             this.heb_AddSub.ForeColor = System.Drawing.Color.White;
             this.heb_AddSub.Location = new System.Drawing.Point(329, 38);
             this.heb_AddSub.Name = "heb_AddSub";
-            this.heb_AddSub.Size = new System.Drawing.Size(145, 96);
+            this.heb_AddSub.Size = new System.Drawing.Size(165, 96);
             this.heb_AddSub.TabIndex = 2;
             this.heb_AddSub.Text = "חיבור וחיסור";
             this.heb_AddSub.UseVisualStyleBackColor = false;
@@ -155,9 +155,9 @@ namespace final_project
             this.eng_BuildWords.ForeColor = System.Drawing.Color.White;
             this.eng_BuildWords.Location = new System.Drawing.Point(59, 38);
             this.eng_BuildWords.Name = "eng_BuildWords";
-            this.eng_BuildWords.Size = new System.Drawing.Size(145, 96);
+            this.eng_BuildWords.Size = new System.Drawing.Size(165, 96);
             this.eng_BuildWords.TabIndex = 0;
-            this.eng_BuildWords.Text = "build words";
+            this.eng_BuildWords.Text = "Create The Words";
             this.eng_BuildWords.UseVisualStyleBackColor = false;
             this.eng_BuildWords.Click += new System.EventHandler(this.eng_BuildWords_Click);
             // 
@@ -179,9 +179,9 @@ namespace final_project
             this.Store.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Store.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Store.ForeColor = System.Drawing.Color.White;
-            this.Store.Location = new System.Drawing.Point(454, 538);
+            this.Store.Location = new System.Drawing.Point(460, 538);
             this.Store.Name = "Store";
-            this.Store.Size = new System.Drawing.Size(170, 50);
+            this.Store.Size = new System.Drawing.Size(165, 50);
             this.Store.TabIndex = 4;
             this.Store.Text = "חנות";
             this.Store.UseVisualStyleBackColor = false;
@@ -194,11 +194,11 @@ namespace final_project
             this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOut.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOut.ForeColor = System.Drawing.Color.White;
-            this.LogOut.Location = new System.Drawing.Point(184, 538);
+            this.LogOut.Location = new System.Drawing.Point(190, 538);
             this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(170, 50);
+            this.LogOut.Size = new System.Drawing.Size(165, 50);
             this.LogOut.TabIndex = 5;
-            this.LogOut.Text = "Log Out";
+            this.LogOut.Text = "התנתקות";
             this.LogOut.UseVisualStyleBackColor = false;
             this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             // 
@@ -209,9 +209,9 @@ namespace final_project
             this.userInterface.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userInterface.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userInterface.ForeColor = System.Drawing.Color.White;
-            this.userInterface.Location = new System.Drawing.Point(721, 538);
+            this.userInterface.Location = new System.Drawing.Point(727, 538);
             this.userInterface.Name = "userInterface";
-            this.userInterface.Size = new System.Drawing.Size(170, 50);
+            this.userInterface.Size = new System.Drawing.Size(165, 50);
             this.userInterface.TabIndex = 6;
             this.userInterface.Text = "הצגת משתמש";
             this.userInterface.UseVisualStyleBackColor = false;
@@ -235,7 +235,7 @@ namespace final_project
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "שלום כיתה א";
+            this.Text = "Menu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

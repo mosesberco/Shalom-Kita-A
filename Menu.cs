@@ -20,8 +20,7 @@ namespace final_project
             InitializeComponent();
             this.user = user;
             updateUserData(user);
-            this.FormClosing += Menu_FormClosing;
-            //disable maximize 
+            FormClosing += Menu_FormClosing; 
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedSingle;
         }
@@ -30,7 +29,6 @@ namespace final_project
         {
             Application.Exit();
         }
-
         private void eng_BuildWords_Click(object sender, EventArgs e)
         {
             var eng1 = new EnglishMenu(user);
@@ -72,20 +70,17 @@ namespace final_project
                 var balance = DB.GetBalance(int.Parse(user.ID));
                 userData.Text = $"Username : {user.Username}\nBalance : {balance}";
             }
-
         }
         private void Store_Click(object sender, EventArgs e)
         {
             var storeForm = new StoreForm(user);
             run(storeForm);
         }
-
         private void LogOut_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             run(login);
         }
-
         private void userInterface_Click(object sender, EventArgs e)
         {
             var userInterface = new UserInterface(new Database(), user);

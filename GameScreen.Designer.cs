@@ -89,19 +89,21 @@
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(122, 38);
             this.buttonExit.TabIndex = 11;
-            this.buttonExit.Text = "EXIT GAME";
+            this.buttonExit.Text = "חזרה לתפריט";
             this.buttonExit.UseVisualStyleBackColor = false;
             // 
             // instrLabel
             // 
+            this.instrLabel.AutoSize = true;
             this.instrLabel.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold);
             this.instrLabel.ForeColor = System.Drawing.Color.White;
-            this.instrLabel.Location = new System.Drawing.Point(417, 0);
+            this.instrLabel.Location = new System.Drawing.Point(435, 9);
             this.instrLabel.Margin = new System.Windows.Forms.Padding(0);
             this.instrLabel.Name = "instrLabel";
-            this.instrLabel.Size = new System.Drawing.Size(517, 126);
+            this.instrLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.instrLabel.Size = new System.Drawing.Size(368, 67);
             this.instrLabel.TabIndex = 0;
-            this.instrLabel.Text = "Count the Animals";
+            this.instrLabel.Text = "ספור את החיות";
             // 
             // label2
             // 
@@ -111,10 +113,11 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(312, 126);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Instructions:\r\nCount the animals that appear in the picture and answer the questi" +
-    "ons correctly.\r\nEach correct round earns you 10 coins in the digital wallet\r\n\r\n";
+            this.label2.Text = "הוראות:\r\nספרו את החיות המופיעות בתמונה וענו נכון על השאלות.\r\nכל סיבוב נכון מזכה א" +
+    "ותך ב-10 מטבעות בארנק הדיגיטלי";
             // 
             // pictureBoxAnswer2
             // 
@@ -162,12 +165,12 @@
             this.buttonSubmit1.BackColor = System.Drawing.Color.Transparent;
             this.buttonSubmit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSubmit1.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonSubmit1.ForeColor = System.Drawing.Color.White;
+            this.buttonSubmit1.ForeColor = System.Drawing.Color.Black;
             this.buttonSubmit1.Location = new System.Drawing.Point(908, 235);
             this.buttonSubmit1.Name = "buttonSubmit1";
             this.buttonSubmit1.Size = new System.Drawing.Size(117, 36);
             this.buttonSubmit1.TabIndex = 8;
-            this.buttonSubmit1.Text = "Check";
+            this.buttonSubmit1.Text = "בדוק";
             this.buttonSubmit1.UseVisualStyleBackColor = false;
             // 
             // buttonSubmit2
@@ -175,12 +178,12 @@
             this.buttonSubmit2.BackColor = System.Drawing.Color.Transparent;
             this.buttonSubmit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSubmit2.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonSubmit2.ForeColor = System.Drawing.Color.White;
+            this.buttonSubmit2.ForeColor = System.Drawing.Color.Black;
             this.buttonSubmit2.Location = new System.Drawing.Point(912, 625);
             this.buttonSubmit2.Name = "buttonSubmit2";
             this.buttonSubmit2.Size = new System.Drawing.Size(117, 36);
             this.buttonSubmit2.TabIndex = 9;
-            this.buttonSubmit2.Text = "Check";
+            this.buttonSubmit2.Text = "בדוק";
             this.buttonSubmit2.UseVisualStyleBackColor = false;
             // 
             // buttonSubmit3
@@ -188,12 +191,12 @@
             this.buttonSubmit3.BackColor = System.Drawing.Color.Transparent;
             this.buttonSubmit3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSubmit3.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonSubmit3.ForeColor = System.Drawing.Color.White;
+            this.buttonSubmit3.ForeColor = System.Drawing.Color.Black;
             this.buttonSubmit3.Location = new System.Drawing.Point(1153, 450);
             this.buttonSubmit3.Name = "buttonSubmit3";
             this.buttonSubmit3.Size = new System.Drawing.Size(117, 36);
             this.buttonSubmit3.TabIndex = 10;
-            this.buttonSubmit3.Text = "Check";
+            this.buttonSubmit3.Text = "בדוק";
             this.buttonSubmit3.UseVisualStyleBackColor = false;
             // 
             // textBoxAnswer1
