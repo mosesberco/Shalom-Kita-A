@@ -168,6 +168,7 @@ namespace final_project
             this.userData.ForeColor = System.Drawing.Color.White;
             this.userData.Location = new System.Drawing.Point(-1, 9);
             this.userData.Name = "userData";
+            this.userData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.userData.Size = new System.Drawing.Size(198, 92);
             this.userData.TabIndex = 2;
             this.userData.Text = "user data";

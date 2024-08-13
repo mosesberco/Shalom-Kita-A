@@ -126,7 +126,7 @@
     <value>Gill Sans MT, 12pt, style=Bold</value>
   </data>
   <data name="signupButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 317</value>
+    <value>159, 317</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="signupButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -157,7 +157,7 @@
     <value>Gill Sans MT, 12pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 317</value>
+    <value>231, 317</value>
   </data>
   <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>

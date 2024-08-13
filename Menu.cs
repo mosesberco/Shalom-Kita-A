@@ -63,12 +63,12 @@ namespace final_project
         {
             if (this.user == null)
             {
-                userData.Text = $"Please login to display your data.";
+                userData.Text = "בבקשה התחבר/י כדי להציג את פרטי המשתמש.";
             }
             else
             {
                 var balance = DB.GetBalance(int.Parse(user.ID));
-                userData.Text = $"Username : {user.Username}\nBalance : {balance}";
+                userData.Text = $"שם משתמש : {user.Username}\nמטבעות : {balance}";
             }
         }
         private void Store_Click(object sender, EventArgs e)
