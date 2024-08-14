@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace final_project
 {
     public partial class Hebrew_Etai : Form
@@ -141,7 +140,7 @@ namespace final_project
         }        
         private async void NewPic_Click(object sender, EventArgs e)         // Event handler for picture box click
         {
-            if (gameOver)       // If the game is over, ignore clicks
+            if (gameOver)               // If the game is over, ignore clicks
             {
                 return;
             }
@@ -178,14 +177,13 @@ namespace final_project
                 if ((A.Tag.ToString() == pair.Item1 && B.Tag.ToString() == pair.Item2) ||
                     (A.Tag.ToString() == pair.Item2 && B.Tag.ToString() == pair.Item1))
                 {
-                    isMatch = true;     // Found a match
+                    isMatch = true;             // Found a match
                     break;
                 }
             }
             if (isMatch)
             {
-                score++;
-                A.Tag = null; // Clear tag for matched pictures
+                A.Tag = null;           // Clear tag for matched pictures
                 B.Tag = null;
             }         
             else
@@ -219,14 +217,15 @@ namespace final_project
          {
             if (pictures.All(o => o.Tag == null))
             {
-                //score = 50 - tries + this.countDownTime;
+                score = 50 - tries + this.countDownTime;
 
-                //if (score == 0)
-                //{
-                //    GameOver("יותר מדי נסיונות לא הרווחת מטבעות הפעם", false);
-                //}
-                //else
+                if (score <= 0)
                 {
+                    GameOver("יותר מדי נסיונות לא הרווחת מטבעות הפעם", false);
+                }
+                else
+                {
+                    score = score / 10;
                     var DB = new Database();
                     var balance = DB.GetBalance(int.Parse(user.ID));
                     DB.SetBalance(int.Parse(user.ID), balance + score);
