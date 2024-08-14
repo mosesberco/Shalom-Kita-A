@@ -108,7 +108,7 @@ namespace final_project
             //    BackgroundImage = Properties.Resources.udi_game_background
             //};
             //centerPanel.Controls.Add(this.flowLayoutPanel);
-            this.flowLayoutPanel1 = flowLayoutPanel1;
+            //this.flowLayoutPanel1 = flowLayoutPanel1;
             this.flowLayoutPanel1.Dock = DockStyle.Fill;
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.FlowDirection = FlowDirection.LeftToRight;
