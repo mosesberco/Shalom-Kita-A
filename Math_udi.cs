@@ -22,7 +22,7 @@ namespace final_project
         {
             InitializeComponent();
             questions = Question_udi.generateQuestions(10);
-            totalQuestions = 10;
+            totalQuestions = 2;
             index = 0;
             score = 0;
             this.user = user;
@@ -92,27 +92,22 @@ namespace final_project
             button3.Enabled = enabled;
             button4.Enabled = enabled;
         }
-        private bool gameOver()         //CFG
+        private bool gameOver()                 //CFG
         {
             if (index == totalQuestions)
             {
-                string message = $"Your score is {this.score}/{this.totalQuestions}\n";
+                string message = "\u200F" + $"כל הכבוד! צדקת ב {score}/{totalQuestions} שאלות.\n";
                 if (wrong_answers.Count > 0)
                 {
-                    message += "Questions you got wrong:\n\n";
+                    message += "\u200F" + "שאלות בהן טעית:\n\n";
                     for (int i = 0; i < wrong_answers.Count; i++)
                     {
                         Question_udi q = wrong_answers[i];
-                        message += $"{i + 1}. {q.toString()}\n   Correct answer: {q.getCorrectAnswer()}\n\n";
+                        message += "\u200F" + $"{i + 1}. {q.toString()}\n   התשובה הנכונה: {q.getCorrectAnswer()}\n\n";
                     }
                 }
-                else
-                {
-                    message += "Congratulations! You got all questions right!";
-                }
-                MessageBox.Show(message, "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show($"You earned {score} coins this game!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                message += "\u200F" + $"זכית ב {score} מטבעות !";          
+                MessageBox.Show(message, "נגמר המשחק", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             return false;

@@ -59,7 +59,7 @@ namespace final_project
             var heb2 = new HebrewGame_sapir(user);
             run(heb2);
         }
-        private void updateUserData(User user)
+        public void updateUserData(User user)
         {
             if (this.user == null)
             {
@@ -96,6 +96,7 @@ namespace final_project
                 updateUserData(user);
                 this.Show();
             };
+            //updateUserData(user);
         }
     }
 }

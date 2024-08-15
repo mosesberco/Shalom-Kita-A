@@ -303,11 +303,12 @@ namespace final_project
             ShowCustomMessageBox(message, "Game Over", MessageBoxIcon.Information, true);
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
-            DB.SetBalance(int.Parse(user.ID), (currentScore / 10) + balance);
             int coins = (currentScore / 10);
+            DB.SetBalance(int.Parse(user.ID), coins + balance);
+            
             string woncoin = "Good Job! You Earned" + " " + coins + " " + "Coins";
             ShowCustomMessageBox(woncoin, "Total Coins", MessageBoxIcon.Information, false);
-            this.Close();
+            Close();
         }
         private void ShowCustomMessageBox(string message, string title, MessageBoxIcon icon, bool gameover)
         {

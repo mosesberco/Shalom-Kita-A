@@ -12,15 +12,15 @@ namespace final_project
         int balance;
         public EnglishMenu(User user)
         {
+            var db = new Database();
+            balance = db.GetBalance(int.Parse(user.ID));
             InitializeComponent();
             this.user = user;
             Text = "Create the Words - Menu";
             Size = new Size(1024, 768);
             StartPosition = FormStartPosition.CenterScreen;
             InitializeComponents();
-            SetupBackgroundImage();
-            var db = new Database();
-            balance = db.GetBalance(int.Parse(user.ID));
+            SetupBackgroundImage();           
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedSingle;
         }
@@ -134,6 +134,7 @@ namespace final_project
             Menu menu = new Menu(user);
             gameForm.FormClosed += (s, args) =>
             {
+                menu.updateUserData(user);
                 menu.Show();
             };
             gameForm.Show();

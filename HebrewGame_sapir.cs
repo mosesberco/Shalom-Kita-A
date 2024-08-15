@@ -120,7 +120,7 @@ namespace final_project
             {
                 clickedPictureButton.BackColor = Color.Green;
                 labels[correctImageDisplayedIndex].BackColor = Color.Green;
-                MessageBox.Show("תשובה נכונה");
+                MessageBox.Show("תשובה נכונה", "כל הכבוד", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 correctanswer++;
                 isDelayActive = true;
                 timer.Start();
@@ -131,7 +131,7 @@ namespace final_project
                 clickedPictureButton.BackColor = Color.Red;
                 labels[correctImageDisplayedIndex].BackColor = Color.Green;
                 labels[clickedIndex].BackColor = Color.Red;
-                MessageBox.Show("תשובה לא נכונה");
+                MessageBox.Show("תשובה לא נכונה", "תשובה שגויה", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 isDelayActive = true;
                 timer.Start();
 
@@ -165,14 +165,14 @@ namespace final_project
         }     
         private void EndGame()      // Ends the game, displays the final score, and shows the start over button
         {
-            MessageBox.Show("!סוף המשחק" + Environment.NewLine + "צדקת ב " + correctanswer + " מתוך " + totalQuestions + " שאלות" + Environment.NewLine + "        הרווחת $ " + correctanswer * 3,
+            coins = (int)(correctanswer * 1.2);
+            MessageBox.Show("!סוף המשחק" + Environment.NewLine + "צדקת ב " + correctanswer + " מתוך " + totalQuestions + " שאלות" + Environment.NewLine + "הרווחת " + coins + " מטבעות",
                 "כל הכבוד", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            coins = correctanswer * 3;
             startOver.Visible = true;
             isDelayActive = false;
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
-            DB.SetBalance(int.Parse(user.ID), (coins) + balance);
+            DB.SetBalance(int.Parse(user.ID), coins + balance);
             Close();
         }   
         private void StartOverTheGame(object sender, EventArgs e)       // Restarts the game by hiding the start over button and calling startGame

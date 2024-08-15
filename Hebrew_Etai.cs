@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace final_project
 {
     public partial class Hebrew_Etai : Form
@@ -33,8 +32,8 @@ namespace final_project
             var db = new Database();
             var balance = db.GetBalance(int.Parse(user.ID));
             InitializeComponent();
-            InitializeImagePairs();         // Initialize image pairs
-            LoadPictures();                 // Load picture boxes onto the form
+            InitializeImagePairs();                     // Initialize image pairs
+            LoadPictures();                             // Load picture boxes onto the form
             user_data_lbl.Text = $" שם משתמש : {user.Username}  מטבעות : {balance}";
         }        
         private void InitializeImagePairs()             // Method to initialize image pairs
@@ -49,10 +48,10 @@ namespace final_project
         private void TimerEvent(object sender, EventArgs e)             // Timer event handler to handle countdown and game over logic
         {
             countDownTime--;
-            lblTimeLeft.Text =$"זמן נותר: {countDownTime}"; // Update the countdown label
+            lblTimeLeft.Text =$"זמן נותר: {countDownTime}";         // Update the countdown label
             if (countDownTime < 1)
             {
-                GameOver("הזמן נגמר, לא נורא תצליח פעם הבאה");
+                GameOver("הזמן נגמר, לא נורא תצליח/י פעם הבאה", false);
 
                 foreach (PictureBox pic in pictures)
                 {
@@ -87,11 +86,11 @@ namespace final_project
             }
 
             tries = 0;
-            lblStatus.Text = $"מספר נסיונות: {tries} "; // Reset tries count
-            lblTimeLeft.Text = $"זמן נותר: {totalTime} "; // Reset countdown label
+            lblStatus.Text = $"מספר נסיונות: {tries} ";         // Reset tries count
+            lblTimeLeft.Text = $"זמן נותר: {totalTime} ";       // Reset countdown label
             gameOver = false;
-            GameTimer.Start(); // Start the timer           
-            countDownTime = totalTime; // Reset countdown time
+            GameTimer.Start();                  // Start the timer           
+            countDownTime = totalTime;          // Reset countdown time
         }       
         private void RestartGameEvent(object sender, EventArgs e)           // Event handler for the restart game button click
         {
@@ -134,14 +133,14 @@ namespace final_project
                 };
                 newPic.Click += NewPic_Click; // Attach click event handler
                 pictures.Add(newPic);
-                this.Controls.Add(newPic);
+                Controls.Add(newPic);
                 newPic.BringToFront();
             }
             RestartGame(); // Start a new game
         }        
         private async void NewPic_Click(object sender, EventArgs e)         // Event handler for picture box click
         {
-            if (gameOver) // If the game is over, ignore clicks
+            if (gameOver)               // If the game is over, ignore clicks
             {
                 return;
             }
@@ -178,13 +177,13 @@ namespace final_project
                 if ((A.Tag.ToString() == pair.Item1 && B.Tag.ToString() == pair.Item2) ||
                     (A.Tag.ToString() == pair.Item2 && B.Tag.ToString() == pair.Item1))
                 {
-                    isMatch = true;// Found a match
+                    isMatch = true;             // Found a match
                     break;
                 }
             }
             if (isMatch)
-            {             
-                A.Tag = null; // Clear tag for matched pictures
+            {
+                A.Tag = null;           // Clear tag for matched pictures
                 B.Tag = null;
             }         
             else
@@ -205,28 +204,32 @@ namespace final_project
             }
             IfAllOver();
         }       
-        private int GameOver(string msg)            // Method to handle game over
+        private void GameOver(string msg, bool isWon)            // Method to handle game over
         {
             GameTimer.Stop();
             gameOver = true;
-            MessageBox.Show(msg);           // Show game over message
-            return score;
+            if (isWon)
+                MessageBox.Show(msg, "ניצחון", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show(msg, "המשחק נגמר", MessageBoxButtons.OK, MessageBoxIcon.Hand);
         }
          private void IfAllOver()
          {
             if (pictures.All(o => o.Tag == null))
             {
                 score = 50 - tries + this.countDownTime;
+
                 if (score <= 0)
                 {
-                    GameOver("יותר מדי נסיונות לא הרווחת מטבעות הפעם");
+                    GameOver("יותר מדי נסיונות לא הרווחת מטבעות הפעם", false);
                 }
                 else
                 {
+                    score = score / 10;
                     var DB = new Database();
                     var balance = DB.GetBalance(int.Parse(user.ID));
                     DB.SetBalance(int.Parse(user.ID), balance + score);
-                    GameOver(" כל הכבוד ניצחת! זכית ב" + score + " מטבעות ");
+                    GameOver(" כל הכבוד ניצחת! זכית ב" + score + " מטבעות ", true);
                     Close();
                 }                
             }

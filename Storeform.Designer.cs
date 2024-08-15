@@ -62,7 +62,7 @@ namespace final_project
             // pictureBox1
             // 
             this.pictureBox1.Image = global::final_project.Properties.Resources.cartwithgiftswhite;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 233);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 232);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 421);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -128,9 +128,9 @@ namespace final_project
             this.BackBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBTN.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackBTN.ForeColor = System.Drawing.Color.White;
-            this.BackBTN.Location = new System.Drawing.Point(88, 697);
+            this.BackBTN.Location = new System.Drawing.Point(67, 697);
             this.BackBTN.Name = "BackBTN";
-            this.BackBTN.Size = new System.Drawing.Size(101, 45);
+            this.BackBTN.Size = new System.Drawing.Size(153, 45);
             this.BackBTN.TabIndex = 6;
             this.BackBTN.Text = "חזרה לתפריט";
             this.BackBTN.UseVisualStyleBackColor = true;

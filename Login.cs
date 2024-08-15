@@ -23,9 +23,9 @@ namespace final_project
         }
         private void signupButton_Click(object sender, EventArgs e)
         {
-            Hide();                                 // Hide the login form
-            Register registerForm = new Register(); // Create an instance of the register form
-            registerForm.Show();                    // Show the register form
+            Hide();                                     // Hide the login form
+            Register registerForm = new Register();     // Create an instance of the register form
+            registerForm.Show();                        // Show the register form
         }
         private void loginButton_Click(object sender, EventArgs e)
         {
@@ -35,7 +35,7 @@ namespace final_project
 
             if (index!=-1)
             {
-                MessageBox.Show("Login successful!","", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("התחברת בהצלחה","התחברות", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 User user = DB.getUser(username, password);
                 Menu mainMenu = new Menu(user);
                 mainMenu.Show();
@@ -43,7 +43,7 @@ namespace final_project
             }
             else
             {
-                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("שם משתמש או סיסמא שגויים. נסה שוב", "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)

@@ -58,6 +58,7 @@
             this.panel1.Controls.Add(this.userInfoLabel);
             this.panel1.Controls.Add(this.buttonExit);
             this.panel1.Controls.Add(this.instrLabel);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 126);
@@ -114,10 +115,10 @@
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(312, 126);
+            this.label2.Size = new System.Drawing.Size(330, 126);
             this.label2.TabIndex = 13;
             this.label2.Text = "הוראות:\r\nספרו את החיות המופיעות בתמונה וענו נכון על השאלות.\r\nכל סיבוב נכון מזכה א" +
-    "ותך ב-10 מטבעות בארנק הדיגיטלי";
+    "ותך ב-3 מטבעות בארנק הדיגיטלי";
             // 
             // pictureBoxAnswer2
             // 
@@ -242,7 +243,6 @@
             this.Controls.Add(this.pictureBoxAnswer1);
             this.Controls.Add(this.pictureBoxQuestion);
             this.Controls.Add(this.pictureBoxAnswer2);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GameScreen";

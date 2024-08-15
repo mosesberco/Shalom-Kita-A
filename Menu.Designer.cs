@@ -166,7 +166,7 @@ namespace final_project
             this.userData.BackColor = System.Drawing.Color.Transparent;
             this.userData.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userData.ForeColor = System.Drawing.Color.White;
-            this.userData.Location = new System.Drawing.Point(-1, 9);
+            this.userData.Location = new System.Drawing.Point(12, 9);
             this.userData.Name = "userData";
             this.userData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.userData.Size = new System.Drawing.Size(198, 92);
