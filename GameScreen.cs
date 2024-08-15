@@ -207,7 +207,7 @@ namespace final_project
             if (int.TryParse(answerTextBoxes[index].Text, out int count))
             {
                 int correctCount = currentQuestion.AnimalCounts[animal];
-                if (count == correctCount)
+                if (count == correctCount && count >= 0 && count <= 10)
                 {
                     MessageBox.Show("\u200F" + "עבודה טובה!", "הצלחת", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     submitButtons[index].Enabled = false;

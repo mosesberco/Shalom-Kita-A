@@ -13,8 +13,6 @@ namespace final_project
         private Database DB;
         private User user;
         private List<Itemstore> items;
-        private FlowLayoutPanel flowLayoutPanel;
-        //private Panel westPanel;
         private Panel centerPanel;
         private const int ItemWidth = 200;
         private const int ItemHeight = 250;
@@ -28,103 +26,33 @@ namespace final_project
             wallet = DB.GetBalance(int.Parse(user.ID));
             items = new List<Itemstore>();
             LoadItems();
-            //UpdateWalletLabel(0);
             userData.Text = $"שם משתמש : {user.Username}";
             user_balance.Text = $"מטבעות : {wallet}";
-            Resize += new EventHandler(StoreForm_Resize);
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
         private void updateData(int dis)
         {
-
-            user_balance.Text = $"Balance {wallet - dis}";
-            wallet = wallet - dis;
+            wallet -= dis;
+            user_balance.Text = $"מטבעות {wallet}";
             DB.SetBalance(int.Parse(user.ID), wallet);
         }
-
-        //private void SetupLayout()
-        //{
-        //    // West Panel
-        //    westPanel = new Panel
-        //    {
-        //        Dock = DockStyle.Left,
-        //        Width = 200 // Adjust as needed
-        //    };
-        //    this.Controls.Add(westPanel);
-
-        //    // Center Panel
-        //    centerPanel = new Panel
-        //    {
-        //        //Dock = DockStyle.Fill
-        //        Dock = DockStyle.Fill
-        //    };
-        //    this.Controls.Add(centerPanel);
-
-        //    // FlowLayoutPanel (inside centerPanel)
-        //    this.flowLayoutPanel = new FlowLayoutPanel
-        //    {
-        //        Dock = DockStyle.Fill,
-        //        AutoScroll = true,
-        //        FlowDirection = FlowDirection.LeftToRight,
-        //        WrapContents = true,
-        //        ////
-        //        //AutoSize = false,
-        //        //Location = new Point(100, 0)
-        //        ////
-        //    };
-        //    centerPanel.Controls.Add(this.flowLayoutPanel);
-        //    //
-        //    Point p = flowLayoutPanel.Location;
-        //    Console.WriteLine(p.ToString());
-        //    //
-        //    // Move the scroll to the right side
-        //    flowLayoutPanel.VerticalScroll.Visible = true;
-        //    flowLayoutPanel.HorizontalScroll.Visible = false;
-        //    flowLayoutPanel.WrapContents = true;
-        //}
         private void SetupLayout()
-        {
-            // West Panel                           useless
-            //westPanel = new Panel
-            //{
-            //    Dock = DockStyle.Left,
-            //    Width = 100 // Adjust as needed
-            //};
-            //this.Controls.Add(westPanel);
-
-            ///// Center Panel
+        {           
             centerPanel = new Panel
             {
                 Dock = DockStyle.Fill
             };
-            this.Controls.Add(centerPanel);
-
-            //// FlowLayoutPanel (inside centerPanel)
-            //this.flowLayoutPanel = new FlowLayoutPanel
-            //{
-            //    Dock = DockStyle.Fill,
-            //    AutoScroll = true,
-            //    FlowDirection = FlowDirection.LeftToRight,
-            //    WrapContents = true,
-            //    BackgroundImage = Properties.Resources.udi_game_background
-            //};
-            //centerPanel.Controls.Add(this.flowLayoutPanel);
-            //this.flowLayoutPanel1 = flowLayoutPanel1;
-            this.flowLayoutPanel1.Dock = DockStyle.Fill;
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.FlowDirection = FlowDirection.LeftToRight;
-            this.flowLayoutPanel1.WrapContents = true;
-            this.flowLayoutPanel1.BackgroundImage = Properties.Resources.udi_game_background;
+            Controls.Add(centerPanel);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.FlowDirection = FlowDirection.LeftToRight;
+            flowLayoutPanel1.WrapContents = true;
+            flowLayoutPanel1.BackgroundImage = Properties.Resources.udi_game_background;
 
             // Adjust the flowLayoutPanel size and position
             AdjustItemSize();
         }
-
-
-        private void StoreForm_Resize(object sender, EventArgs e)
-        {
-            AdjustItemSize();
-        }
-
         private void AdjustItemSize()
         {
             if (this.flowLayoutPanel1 != null)
@@ -142,10 +70,9 @@ namespace final_project
                     }
                 }
 
-                this.flowLayoutPanel1.PerformLayout();
+                flowLayoutPanel1.PerformLayout();
             }
         }
-
         private void AddItemToUI(Itemstore item)
         {
             var panel = new Panel
@@ -178,7 +105,7 @@ namespace final_project
 
             var priceLabel = new Label
             {
-                Text = $"${item.Price}",
+                Text = $"מטבעות {item.Price}",
                 TextAlign = ContentAlignment.MiddleCenter,
                 Width = ItemWidth - 20,
                 Height = 30,
@@ -189,7 +116,7 @@ namespace final_project
 
             var buyButton = new Button
             {
-                Text = "Buy",
+                Text = "לרכישה",
                 Width = ItemWidth - 40,
                 Height = 30,
                 Top = priceLabel.Bottom + 10,
@@ -207,16 +134,14 @@ namespace final_project
             panel.Controls.Add(priceLabel);
             panel.Controls.Add(buyButton);
 
-            this.flowLayoutPanel1.Controls.Add(panel);
+            flowLayoutPanel1.Controls.Add(panel);
         }
-
         private void LoadItems()
         {
             try
             {
                 var filePath = @"../../storeitems.xlsx";
                 string fullPath = Path.GetFullPath(filePath);
-                //Console.WriteLine(fullPath);
 
                 using (var workbook = new XLWorkbook(filePath))
                 {
@@ -224,8 +149,7 @@ namespace final_project
                     var rows = worksheet.RangeUsed().RowsUsed();
 
                     foreach (var row in rows) // Skip header row
-                    {
-                        
+                    {                       
                         var name = row.Cell(1).GetValue<string>();
                         var price = row.Cell(2).GetValue<int>();
                         var imagePath = row.Cell(3).GetValue<string>();
@@ -246,24 +170,20 @@ namespace final_project
                 MessageBox.Show($"Error: {ex.Message}\n{ex.StackTrace}");
             }
         }
-
         private void BuyItem(Itemstore item)
         {
             if (wallet >= item.Price)
             {
-                //wallet -= item.Price;
-                //UpdateWalletLabel();
                 Add_To_excel(item);
                 DB.SetBalance(int.Parse(user.ID), wallet);
-                MessageBox.Show($"You bought {item.Name}!");
-                this.updateData(item.Price);
+                MessageBox.Show("\u200F" + $"רכשת את {item.Name}!","הרכישה בוצעה", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                updateData(item.Price);
             }
             else
             {
-                MessageBox.Show("You don't have enough money!");
+                MessageBox.Show("אין לך מספיק מטבעות", "הרכישה בוטלה", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void Add_To_excel(Itemstore item)
         {
             try
@@ -281,9 +201,8 @@ namespace final_project
                     secondPart = itempath.Substring(lastIndex);
                 }
 
-                    using (var workbook = fileExists ? new XLWorkbook(filePath) : new XLWorkbook())
-                {
-                    
+                using (var workbook = fileExists ? new XLWorkbook(filePath) : new XLWorkbook())
+                {                   
                     IXLWorksheet worksheet = null;
                     //Console.WriteLine(workbook.Worksheets);
                     if (fileExists)
@@ -316,10 +235,9 @@ namespace final_project
                 MessageBox.Show($"Error: {ex.Message}\n{ex.StackTrace}");
             }
         }
-
         private void BackBTN_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }
