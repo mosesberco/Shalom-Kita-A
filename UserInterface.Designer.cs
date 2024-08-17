@@ -37,28 +37,30 @@ namespace final_project
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonCHangePassword = new System.Windows.Forms.Button();
             this.buttonChangeUserName = new System.Windows.Forms.Button();
             this.textBoxCoins = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.textBoxGender = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(33, 9);
+            this.label1.Location = new System.Drawing.Point(86, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 67);
+            this.label1.Size = new System.Drawing.Size(214, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "פרטי משתמש";
             // 
@@ -67,7 +69,7 @@ namespace final_project
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(245, 193);
+            this.label4.Location = new System.Drawing.Point(189, 157);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 23);
@@ -80,12 +82,12 @@ namespace final_project
             this.textBoxUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxUserName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUserName.ForeColor = System.Drawing.Color.Black;
-            this.textBoxUserName.Location = new System.Drawing.Point(19, 193);
+            this.textBoxUserName.Location = new System.Drawing.Point(78, 183);
             this.textBoxUserName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUserName.Multiline = true;
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.ReadOnly = true;
-            this.textBoxUserName.Size = new System.Drawing.Size(206, 30);
+            this.textBoxUserName.Size = new System.Drawing.Size(207, 30);
             this.textBoxUserName.TabIndex = 6;
             // 
             // label5
@@ -93,7 +95,7 @@ namespace final_project
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(245, 363);
+            this.label5.Location = new System.Drawing.Point(197, 380);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 23);
@@ -106,7 +108,7 @@ namespace final_project
             this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxID.ForeColor = System.Drawing.Color.Black;
-            this.textBoxID.Location = new System.Drawing.Point(19, 362);
+            this.textBoxID.Location = new System.Drawing.Point(77, 405);
             this.textBoxID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxID.Multiline = true;
             this.textBoxID.Name = "textBoxID";
@@ -119,7 +121,7 @@ namespace final_project
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(245, 278);
+            this.label6.Location = new System.Drawing.Point(230, 268);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 23);
@@ -132,7 +134,7 @@ namespace final_project
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPassword.Location = new System.Drawing.Point(19, 277);
+            this.textBoxPassword.Location = new System.Drawing.Point(77, 293);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
@@ -144,10 +146,11 @@ namespace final_project
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.buttonCHangePassword);
             this.panel1.Controls.Add(this.buttonChangeUserName);
             this.panel1.Controls.Add(this.textBoxCoins);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBoxGender);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBoxEmail);
@@ -161,13 +164,24 @@ namespace final_project
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(783, 0);
+            this.panel1.Location = new System.Drawing.Point(821, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel1.Size = new System.Drawing.Size(375, 699);
+            this.panel1.Size = new System.Drawing.Size(337, 699);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::final_project.Properties.Resources.user_png_white;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 59);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // buttonCHangePassword
             // 
@@ -175,10 +189,10 @@ namespace final_project
             this.buttonCHangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCHangePassword.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCHangePassword.ForeColor = System.Drawing.Color.White;
-            this.buttonCHangePassword.Location = new System.Drawing.Point(19, 314);
+            this.buttonCHangePassword.Location = new System.Drawing.Point(78, 332);
             this.buttonCHangePassword.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCHangePassword.Name = "buttonCHangePassword";
-            this.buttonCHangePassword.Size = new System.Drawing.Size(206, 31);
+            this.buttonCHangePassword.Size = new System.Drawing.Size(207, 30);
             this.buttonCHangePassword.TabIndex = 18;
             this.buttonCHangePassword.Text = "שינוי סיסמא";
             this.buttonCHangePassword.UseVisualStyleBackColor = false;
@@ -190,10 +204,10 @@ namespace final_project
             this.buttonChangeUserName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeUserName.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChangeUserName.ForeColor = System.Drawing.Color.White;
-            this.buttonChangeUserName.Location = new System.Drawing.Point(19, 229);
+            this.buttonChangeUserName.Location = new System.Drawing.Point(78, 221);
             this.buttonChangeUserName.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChangeUserName.Name = "buttonChangeUserName";
-            this.buttonChangeUserName.Size = new System.Drawing.Size(206, 30);
+            this.buttonChangeUserName.Size = new System.Drawing.Size(207, 30);
             this.buttonChangeUserName.TabIndex = 17;
             this.buttonChangeUserName.Text = "שינוי שם משתמש";
             this.buttonChangeUserName.UseVisualStyleBackColor = false;
@@ -205,7 +219,7 @@ namespace final_project
             this.textBoxCoins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxCoins.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCoins.ForeColor = System.Drawing.Color.Black;
-            this.textBoxCoins.Location = new System.Drawing.Point(132, 516);
+            this.textBoxCoins.Location = new System.Drawing.Point(225, 611);
             this.textBoxCoins.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCoins.Multiline = true;
             this.textBoxCoins.Name = "textBoxCoins";
@@ -213,30 +227,18 @@ namespace final_project
             this.textBoxCoins.Size = new System.Drawing.Size(58, 30);
             this.textBoxCoins.TabIndex = 16;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(245, 516);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 46);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "\r\nמטבעות";
-            // 
             // textBoxGender
             // 
             this.textBoxGender.BackColor = System.Drawing.Color.White;
             this.textBoxGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxGender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGender.ForeColor = System.Drawing.Color.Black;
-            this.textBoxGender.Location = new System.Drawing.Point(19, 464);
+            this.textBoxGender.Location = new System.Drawing.Point(77, 545);
             this.textBoxGender.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxGender.Multiline = true;
             this.textBoxGender.Name = "textBoxGender";
             this.textBoxGender.ReadOnly = true;
-            this.textBoxGender.Size = new System.Drawing.Size(206, 30);
+            this.textBoxGender.Size = new System.Drawing.Size(207, 30);
             this.textBoxGender.TabIndex = 14;
             // 
             // label3
@@ -244,7 +246,7 @@ namespace final_project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(274, 464);
+            this.label3.Location = new System.Drawing.Point(260, 520);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 23);
@@ -257,12 +259,12 @@ namespace final_project
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.ForeColor = System.Drawing.Color.Black;
-            this.textBoxEmail.Location = new System.Drawing.Point(19, 412);
+            this.textBoxEmail.Location = new System.Drawing.Point(78, 477);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmail.Multiline = true;
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.ReadOnly = true;
-            this.textBoxEmail.Size = new System.Drawing.Size(206, 30);
+            this.textBoxEmail.Size = new System.Drawing.Size(207, 30);
             this.textBoxEmail.TabIndex = 12;
             // 
             // label2
@@ -270,7 +272,7 @@ namespace final_project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(245, 412);
+            this.label2.Location = new System.Drawing.Point(178, 452);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 23);
@@ -280,24 +282,36 @@ namespace final_project
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.SteelBlue;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Gill Sans MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(67, 10);
+            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label8.Location = new System.Drawing.Point(507, 20);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(677, 67);
+            this.label8.Size = new System.Drawing.Size(310, 67);
             this.label8.TabIndex = 17;
-            this.label8.Text = ":מוצרים אחרונים שנקנו בחנות";
+            this.label8.Text = "המתנות שלך";
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 113);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(32, 113);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(745, 575);
             this.flowLayoutPanel1.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(220, 586);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 23);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "מטבעות";
             // 
             // UserInterface
             // 
@@ -305,8 +319,8 @@ namespace final_project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1158, 699);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -314,6 +328,7 @@ namespace final_project
             this.Text = "פרטי משתמש";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,7 +345,6 @@ namespace final_project
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxCoins;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxGender;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxEmail;
@@ -339,5 +353,7 @@ namespace final_project
         private System.Windows.Forms.Button buttonChangeUserName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label9;
     }
 }
