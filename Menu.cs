@@ -24,7 +24,6 @@ namespace final_project
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -89,14 +88,13 @@ namespace final_project
         private void run(Form form, Form game = null)
         {
             form.Show();
-            this.Hide();
+            Hide();
             form.FormClosed += (s, args) =>
             {
             // This code runs when the form is closed
                 updateUserData(user);
-                this.Show();
+                Show();
             };
-            //updateUserData(user);
         }
     }
 }
