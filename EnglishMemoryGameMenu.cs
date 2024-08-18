@@ -28,6 +28,7 @@ namespace final_project
         }
         public void initializeLabels()
         {
+            //dynamiclly upload the form.
             var DB = new Database();
             var balance = DB.GetBalance(int.Parse(user.ID));
 
