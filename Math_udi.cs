@@ -22,7 +22,7 @@ namespace final_project
         {
             InitializeComponent();
             questions = Question_udi.generateQuestions(10);
-            totalQuestions = 2;
+            totalQuestions = 10;
             index = 0;
             score = 0;
             this.user = user;
