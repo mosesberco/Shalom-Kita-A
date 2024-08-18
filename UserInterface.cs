@@ -10,7 +10,7 @@ namespace final_project
     public partial class UserInterface : Form
     {
         private User user;
-        private Panel items_panel= new Panel();
+        private Panel items_panel;
         private const int ItemWidth = 120;
         private const int ItemHeight = 160;
         private Dictionary<string, (string, int)> items ;
@@ -24,11 +24,9 @@ namespace final_project
             database = db;
             this.user = user;
             loadItems();
-            //this.items = database.GetItemsByUserId(user);
             AddItemToUI(this.items);
             UpdateForm();
-            items_panel = new Panel();                          //set itemspanel location
-            //items_panel.Location = new Point(200, 200);
+            items_panel = new Panel();                 
         }
 
         private void loadItems()
@@ -116,14 +114,13 @@ namespace final_project
                 var panel = new Panel
                 {
                     Width = ItemWidth + 20,
-                    Height = ItemHeight +100,
+                    Height = ItemHeight + 100,
                     Margin = new Padding(5)
                 };
                 string fullImagePath = Path.Combine(Application.StartupPath, @"..\..\" + item.Value.Item1);
 
                 var pictureBox = new PictureBox
                 {
-
                     ImageLocation = fullImagePath,
                     SizeMode = PictureBoxSizeMode.Zoom,
                     Width = ItemWidth ,
@@ -137,7 +134,7 @@ namespace final_project
                     Text = item.Key + $"\nכמות: {item.Value.Item2}",
                     TextAlign = ContentAlignment.MiddleCenter,
                     Width = ItemWidth ,
-                    Height = 50,
+                    Height = 100,
                     Top = pictureBox.Bottom + 5,
                     Left = 10,
                     Font = new Font("Gill Sans MT", 11, FontStyle.Regular)
