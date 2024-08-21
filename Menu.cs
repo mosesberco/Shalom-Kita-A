@@ -66,8 +66,10 @@ namespace final_project
             }
             else
             {
-                var balance = DB.GetBalance(int.Parse(user.ID));
-                userData.Text = $"שם משתמש : {user.Username}\nמטבעות : {balance}";
+                this.user = DB.getUser(user.ID);
+                var balance = DB.GetBalance(int.Parse(user.ID));  
+                var username = DB.GetUserName(int.Parse(user.ID));
+                userData.Text = $"שם משתמש : {username}\nמטבעות : {balance}";
             }
         }
         private void Store_Click(object sender, EventArgs e)

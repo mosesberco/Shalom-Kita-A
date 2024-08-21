@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace final_project
@@ -12,6 +14,15 @@ namespace final_project
         int balance;
         public EnglishMenu(User user)
         {
+            string originalExcelFilePath = @"..\..\EnglishBuildWordsGameData.xlsx";
+            string textFilePath = @"..\..\GroupData.txt";
+            string newExcelFilePath = @"..\..\NewEnglishBuildWordsGameData.xlsx";
+
+            // Write Excel data to text file
+            WriteExcelDataToTextFile(originalExcelFilePath, textFilePath);
+
+            // Create a new Excel file from the text file
+            CreateExcelFromTextFile(textFilePath, newExcelFilePath);
             var db = new Database();
             balance = db.GetBalance(int.Parse(user.ID));
             InitializeComponent();
@@ -155,5 +166,75 @@ namespace final_project
                 MessageBox.Show($"Error loading background image: {ex.Message}", "Image Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void WriteExcelDataToTextFile(string excelFilePath, string textFilePath)
+        {
+            try
+            {
+                using (var workbook = new XLWorkbook(excelFilePath))
+                {
+                    var worksheet = workbook.Worksheet(1); // Assuming data is in the first sheet
+                    var rows = worksheet.RowsUsed().Skip(1); // Skip header row
+
+                    using (StreamWriter writer = new StreamWriter(textFilePath))
+                    {
+                        foreach (var row in rows)
+                        {
+                            string group = row.Cell(2).GetString(); // Assuming Groups is in the second column
+                            writer.Write(group);
+
+                            for (int colIndex = 3; colIndex <= row.LastCellUsed().Address.ColumnNumber; colIndex++)
+                            {
+                                string word = row.Cell(colIndex).GetString();
+                                if (!string.IsNullOrEmpty(word))
+                                {
+                                    writer.Write($"\t{word}"); // Tab-separated values
+                                }
+                            }
+                            writer.WriteLine(); // New line for the next group
+                        }
+                    }
+                }
+                Console.WriteLine("Data written to text file successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error writing to text file: {ex.Message}");
+            }
+        }
+        private void CreateExcelFromTextFile(string textFilePath, string newExcelFilePath)
+        {
+            try
+            {
+                using (var workbook = new XLWorkbook())
+                {
+                    var worksheet = workbook.Worksheets.Add("GroupData");
+
+                    using (StreamReader reader = new StreamReader(textFilePath))
+                    {
+                        int currentRow = 1;
+
+                        string line;
+                        while ((line = reader.ReadLine()) != null)
+                        {
+                            var cells = line.Split('\t');
+                            for (int colIndex = 0; colIndex < cells.Length; colIndex++)
+                            {
+                                worksheet.Cell(currentRow, colIndex + 1).Value = cells[colIndex];
+                            }
+                            currentRow++;
+                        }
+                    }
+
+                    workbook.SaveAs(newExcelFilePath);
+                    Console.WriteLine("Excel file created from text file successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error creating Excel file: {ex.Message}");
+            }
+        }
+
+
     }
 }

@@ -27,7 +27,7 @@ namespace final_project
             // Validate Username
             if (input.Length < 6 || input.Length > 8)
             {
-                MessageBox.Show("Username must be between 6 and 8 characters long.", "Invalid Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("שם משתמש חייב להכיל בין 6-8 תווים", "שם משתמש לא תקין", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -41,7 +41,7 @@ namespace final_project
                 database.SetUsername(int.Parse(user.ID), userInput);
                 Close();
             }
-            else MessageBox.Show("Error Changing User Name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show("תקלה בשינוי שם משתמש", "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

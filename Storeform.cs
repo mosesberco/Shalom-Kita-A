@@ -21,6 +21,8 @@ namespace final_project
         {
             InitializeComponent();
             SetupLayout();
+            //WriteItemsToTextFile(Path.Combine(Application.StartupPath, "ItemsData.txt"));
+            //CreateUserExcelFile(Path.Combine(Application.StartupPath, "../../storeitems.xlsx"));
             this.user = user;
             this.DB = new Database();
             wallet = DB.GetBalance(int.Parse(user.ID));
@@ -149,9 +151,13 @@ namespace final_project
                     var rows = worksheet.RangeUsed().RowsUsed();
 
                     foreach (var row in rows) // Skip header row
-                    {                       
+                    {
+                        if (row.RowNumber() == 1) continue; // Skip header row
+
                         var name = row.Cell(1).GetValue<string>();
+                        
                         var price = row.Cell(2).GetValue<int>();
+                        
                         var imagePath = row.Cell(3).GetValue<string>();
 
                         string fullImagePath = Path.Combine(Application.StartupPath, @"..\..\" + imagePath);
@@ -170,6 +176,8 @@ namespace final_project
                 MessageBox.Show($"Error: {ex.Message}\n{ex.StackTrace}");
             }
         }
+        
+        
         private void BuyItem(Itemstore item)
         {
             if (wallet >= item.Price)
@@ -202,22 +210,27 @@ namespace final_project
                 }
 
                 using (var workbook = fileExists ? new XLWorkbook(filePath) : new XLWorkbook())
-                {                   
-                    IXLWorksheet worksheet = null;
-                    //Console.WriteLine(workbook.Worksheets);
-                    if (fileExists)
+                {
+                    IXLWorksheet worksheet;
+
+                    // Check if "store" worksheet exists
+                    if (fileExists && workbook.Worksheets.TryGetWorksheet("store", out worksheet))
                     {
-                        // Check if "store" worksheet exists
-                        if (workbook.Worksheets.TryGetWorksheet("store", out worksheet))
-                        {
-                            Console.WriteLine("Found 'store' worksheet.");
-                        }
-                        else
-                        {
-                            Console.WriteLine("'store' worksheet not found. Creating new 'store' worksheet.");
-                            worksheet = workbook.Worksheets.Add("store");
-                        }
+                        Console.WriteLine("Found 'store' worksheet.");
                     }
+                    else
+                    {
+                        Console.WriteLine("'store' worksheet not found. Creating new 'store' worksheet.");
+                        worksheet = workbook.Worksheets.Add("store");
+
+                        // Adding headers if creating a new sheet
+                        worksheet.Cell(1, 1).Value = "Name";
+                        worksheet.Cell(1, 2).Value = "Price";
+                        worksheet.Cell(1, 3).Value = "Date";
+                        worksheet.Cell(1, 4).Value = "User ID";
+                        worksheet.Cell(1, 5).Value = "Image Path";
+                    }
+
                     var lastRow = worksheet.LastRowUsed()?.RowNumber() ?? 0;
                     var newRow = worksheet.Row(lastRow + 1);
 
@@ -227,7 +240,7 @@ namespace final_project
                     newRow.Cell(4).Value = user.ID;
                     newRow.Cell(5).Value = secondPart;
 
-                    workbook.Save();
+                    workbook.SaveAs(filePath);
                 }
             }
             catch (Exception ex)
@@ -235,6 +248,7 @@ namespace final_project
                 MessageBox.Show($"Error: {ex.Message}\n{ex.StackTrace}");
             }
         }
+
         private void BackBTN_Click(object sender, EventArgs e)
         {
             Close();

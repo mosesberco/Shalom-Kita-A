@@ -61,19 +61,21 @@ namespace final_project
                 MessageBox.Show("הסיסמא חייבת להכיל בין 8-10 תווים", "סיסמא לא תקינה", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
+            if (!password.Any(char.IsLetter) || !password.Any(char.IsDigit) || !password.Any(c => "!$#@%^&*".Contains(c)))
+            {
+                MessageBox.Show("\u200F" + "הסיסמא חייבת להכיל לפחות אות אחת, ספרה אחת, ותו אחד מיוחד (!$#@%^&*)", "סיסמא לא תקינה", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             var DB = new Database();
+
             if (DB.has_ID(id))
             {
                 MessageBox.Show("התעודת זהות שהכנסת כבר קיימת במערכת","תעודת זהות לא תקינה", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }    
-
-            if (!password.Any(char.IsLetter) || !password.Any(char.IsDigit) || !password.Any(c => "!$#@%^&*".Contains(c)))
-            {            
-                MessageBox.Show("\u200F" + "הסיסמא חייבת להכיל לפחות אות אחת, ספרה אחת, ותו אחד מיוחד (!$#@%^&*)", "סיסמא לא תקינה", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
+         
             // Validate ID Number
             if (string.IsNullOrWhiteSpace(id) || !id.All(char.IsDigit) || id.Count() != 9)
             {             

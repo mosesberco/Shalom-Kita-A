@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,13 +14,15 @@ namespace final_project
 {
     public partial class Login : Form
     {
-        private Database DB; 
+        private Database DB;
+
         public Login()
         {
             InitializeComponent();
             DB = new Database();
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormClosing += new FormClosingEventHandler(MainForm_FormClosing);
         }
         private void signupButton_Click(object sender, EventArgs e)
         {
@@ -27,6 +30,8 @@ namespace final_project
             Register registerForm = new Register();     // Create an instance of the register form
             registerForm.Show();                        // Show the register form
         }
+        
+        
         private void loginButton_Click(object sender, EventArgs e)
         {
             string username = usernameTextBox.Text;
@@ -49,6 +54,10 @@ namespace final_project
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
+        }
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

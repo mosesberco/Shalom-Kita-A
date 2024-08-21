@@ -1,0 +1,21 @@
+Username: moshe1
+Password: 123456!M
+ID: 206676850
+Email: m@m.c
+Gender: זכר
+Balance: 6915
+
+Username: udivak1
+Password: 123456!U
+ID: 206676854
+Email: m@m.c
+Gender: זכר
+Balance: 900
+
+Username: udivak69
+Password: 123456!U
+ID: 209478808
+Email: u@u.c
+Gender: נקבה
+Balance: 0
+

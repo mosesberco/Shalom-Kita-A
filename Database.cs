@@ -58,7 +58,15 @@ namespace final_project
             else
             {
                 xlWorkbook = new XLWorkbook(Path.GetFullPath(pathToExcel));
-                xlWorksheet = xlWorkbook.Worksheet("store");
+                try
+                {
+                    xlWorksheet = xlWorkbook.Worksheet("store");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    xlWorksheet = xlWorkbook.Worksheets.Add("Users");
+                }
 
             }
         }
@@ -77,7 +85,7 @@ namespace final_project
                 xlWorksheet.Cell(1, 5).Value = "Gender";
                 xlWorksheet.Cell(1, 6).Value = "Balance";
 
-                xlWorkbook.Save();
+                xlWorkbook.SaveAs(this.pathToExcel); // Save the workbook to the specified path
                 Console.WriteLine("Excel file created successfully.");
             }
             catch (Exception ex)
@@ -273,7 +281,37 @@ namespace final_project
 
             return balance;
         }
+        public string GetUserName(int id)
+        {
+            string username = "";
 
+            OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
+
+            try
+            {
+                var rows = xlWorksheet.RangeUsed().RowsUsed();
+                foreach (var row in rows)
+                {
+                    if (row.RowNumber() == 1) continue; // Skip header row
+
+                    if (row.Cell(3).GetValue<string>() == id.ToString())
+                    {
+                        username = row.Cell(1).GetValue<string>();
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting balance: {ex.Message}");
+            }
+            finally
+            {
+                xlWorkbook.Dispose();
+            }
+
+            return username;
+        }
         public void SetUsername(int id, string newUsername)
         {
             OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
@@ -368,13 +406,17 @@ namespace final_project
 
         public Dictionary<string, (string, int)> GetItemsByUserId(User user)        // Returns <item_name, (path, number_of_items)>
         {
-            //pathToExcel = @"../../../storeitems.xlsx";
+            //pathToExcel = @"../../storeitems.xlsx";
             var items = new Dictionary<string, (string, int)>();
 
             OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
             try
             {
+                if (xlWorksheet.RangeUsed()==null)
+                {
+                    return items; // Return an empty dictionary
+                }
                 var rows = xlWorksheet.RangeUsed().RowsUsed();
                 foreach (var row in rows)
                 {

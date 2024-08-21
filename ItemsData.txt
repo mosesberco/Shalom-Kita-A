@@ -1,0 +1,48 @@
+Name: מדבקת הלו קיטי גדולה
+Price: 40
+Image Path: pics/hellokittysticker.png
+
+Name: מדבקת איירון מן
+Price: 20
+Image Path: pics/ironmansticker.png
+
+Name: מדבקת ספיידרמן
+Price: 20
+Image Path: pics/spidermansticker.png
+
+Name: מדבקת מיקי מאוס
+Price: 20
+Image Path: pics/mickeymousesticker.png
+
+Name: בובת דוב פרוותי
+Price: 85
+Image Path: pics/bear_toy.png
+
+Name: בובת ברבי
+Price: 150
+Image Path: pics/barbie_doll.png
+
+Name: בובת באז שנות אור
+Price: 125
+Image Path: pics/buzz_toy.png
+
+Name: בובת שריף וודי
+Price: 125
+Image Path: pics/Woody_toy.png
+
+Name: בובת ג'סיקה
+Price: 125
+Image Path: pics/jessica_toy.png
+
+Name: בובת מר תפוח אדמה
+Price: 99
+Image Path: pics/potato_head.png
+
+Name: בובת משאית
+Price: 80
+Image Path: pics/truck_toy.png
+
+Name: צעצוע מנוף
+Price: 85
+Image Path: pics/car_crane_toy.png
+
