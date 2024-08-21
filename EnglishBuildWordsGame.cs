@@ -316,7 +316,7 @@ namespace final_project
             {
                 customBox.Text = title;
                 if (gameover)
-                    customBox.ClientSize = new Size(300, 300);
+                    customBox.ClientSize = new Size(300, 400);
                 else
                     customBox.ClientSize = new Size(300, 160);
                 customBox.FormBorderStyle = FormBorderStyle.FixedDialog;
