@@ -145,7 +145,7 @@ namespace final_project
             userInfoLabel.Font = new Font("Gill Sans MT", 12);
             userInfoLabel.ForeColor = Color.White;
             userInfoLabel.AutoSize = true;
-            userInfoLabel.Location = new Point(1160,0);
+            userInfoLabel.Location = new Point(1150,0);
             userInfoLabel.RightToLeft = RightToLeft.Yes;
         }
         private void SetupTimer()

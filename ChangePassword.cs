@@ -50,7 +50,6 @@ namespace final_project
                 }
                 database.SetPassword(int.Parse(userActive.ID), newPass);
                 userActive.Password = newPass;
-                DialogResult = DialogResult.OK;
                 Close();
             }
             catch (Exception ex)

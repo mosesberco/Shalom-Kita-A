@@ -205,7 +205,7 @@ namespace final_project
                 gameOver = true;
                 timer2.Stop();
                 moneyEarned = score * moneyPerPoint;
-                MessageBox.Show("You matched all the icons!\n" + $"You've earned {moneyEarned} coins.\n" + "Congrats!");
+                MessageBox.Show("You matched all the icons!\n" + $"You've earned {moneyEarned} coins.\n" + "Congrats!", "You Won !",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 updateData();
             }
         }

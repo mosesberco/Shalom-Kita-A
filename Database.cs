@@ -8,21 +8,11 @@ namespace final_project
 {
     public class Database : IDisposable
     {
-        private string pathToExcel = @"..\..\Users.xlsx";
+        private string pathToExcel = @"..\Users.xlsx";
 
-        public Database(string pathToExcel = @"..\..\Users.xlsx")
+        public Database(string pathToExcel = @"..\Users.xlsx")
         {
             this.pathToExcel = pathToExcel;
-            Console.WriteLine($"Excel file path: {Path.GetFullPath(pathToExcel)}");
-            if (File.Exists(pathToExcel))
-            {
-                Console.WriteLine("Excel file exists.");
-            }
-            else
-            {
-                Console.WriteLine("File does not exist.");
-                CreateExcelFile();
-            }
         }
         public bool has_ID(string id)
         {
@@ -50,7 +40,7 @@ namespace final_project
         }
         private void OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet)
         {
-            if (pathToExcel == @"..\..\Users.xlsx")
+            if (pathToExcel == @"..\Users.xlsx")
             {
                 xlWorkbook = new XLWorkbook(Path.GetFullPath(pathToExcel));
                 xlWorksheet = xlWorkbook.Worksheet("Users");
@@ -65,35 +55,12 @@ namespace final_project
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
-                    xlWorksheet = xlWorkbook.Worksheets.Add("Users");
+                    xlWorksheet = xlWorkbook.Worksheets.Add("store");
+                    Console.WriteLine("create the sheet 'store'");
                 }
 
             }
-        }
-
-        private void CreateExcelFile()
-        {
-            try
-            {
-                var xlWorkbook = new XLWorkbook();
-                var xlWorksheet = xlWorkbook.Worksheets.Add("Users");
-
-                xlWorksheet.Cell(1, 1).Value = "Username";
-                xlWorksheet.Cell(1, 2).Value = "Password";
-                xlWorksheet.Cell(1, 3).Value = "ID";
-                xlWorksheet.Cell(1, 4).Value = "Email";
-                xlWorksheet.Cell(1, 5).Value = "Gender";
-                xlWorksheet.Cell(1, 6).Value = "Balance";
-
-                xlWorkbook.SaveAs(this.pathToExcel); // Save the workbook to the specified path
-                Console.WriteLine("Excel file created successfully.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error creating Excel file: {ex.Message}");
-            }
-        }
-
+        }       
         public int ValidateUser(string username, string password)
         {
             int isValidIndex = -1;
@@ -154,7 +121,6 @@ namespace final_project
 
             return user;
         }
-
         public User getUser(string id)
         {
             User user = null;
@@ -187,7 +153,6 @@ namespace final_project
 
             return user;
         }
-
         public bool RegisterUser(string username, string password, string id, string email, string gender)
         {
             bool isRegistered = false;
@@ -220,7 +185,6 @@ namespace final_project
 
             return isRegistered;
         }
-
         public void SetBalance(int id, int wallet)
         {
             OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
@@ -249,7 +213,6 @@ namespace final_project
                 xlWorkbook.Dispose();
             }
         }
-
         public int GetBalance(int id)
         {
             int balance = -1;
@@ -340,7 +303,6 @@ namespace final_project
                 xlWorkbook.Dispose();
             }
         }
-
         public void SetPassword(int id, string newPassword)
         {
             OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
@@ -369,7 +331,6 @@ namespace final_project
                 xlWorkbook.Dispose();
             }
         }
-
         public User LoadUserData(int index)
         {
             OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
@@ -403,20 +364,19 @@ namespace final_project
                 xlWorkbook.Dispose();
             }
         }
-
         public Dictionary<string, (string, int)> GetItemsByUserId(User user)        // Returns <item_name, (path, number_of_items)>
         {
-            //pathToExcel = @"../../storeitems.xlsx";
             var items = new Dictionary<string, (string, int)>();
 
             OpenExcelFile(out XLWorkbook xlWorkbook, out IXLWorksheet xlWorksheet);
 
             try
             {
-                if (xlWorksheet.RangeUsed()==null)
-                {
-                    return items; // Return an empty dictionary
-                }
+              if (xlWorksheet.RangeUsed()==null)
+              {
+                  Console.WriteLine("the sheet 'store' is not exist");
+                  return items;         // Return an empty dictionary
+              }
                 var rows = xlWorksheet.RangeUsed().RowsUsed();
                 foreach (var row in rows)
                 {
@@ -429,6 +389,7 @@ namespace final_project
                         if (items.ContainsKey(itemName))
                         {
                             items[itemName] = (items[itemName].Item1, items[itemName].Item2+1);
+                            Console.WriteLine(items[itemName]);
                         }
                         else
                             items.Add(itemName, (itemPath ,1));
@@ -446,8 +407,6 @@ namespace final_project
 
             return items;
         }
-
-
         public void Dispose()
         {
             // No action needed here, as each method handles its own cleanup

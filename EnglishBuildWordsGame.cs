@@ -229,7 +229,8 @@ namespace final_project
             List<string> allGroups = new List<string>();
             groupWordsDict = new Dictionary<string, List<string>>();
             // Specify your Excel file path
-            string filePath = @"..\..\EnglishBuildWordsGameData.xlsx";
+            //string filePath = @"..\..\EnglishBuildWordsGameData.xlsx";     --original
+            string filePath = @"..\EnglishBuildWordsGameData.xlsx";
             try
             {
                 using (var workbook = new XLWorkbook(filePath))

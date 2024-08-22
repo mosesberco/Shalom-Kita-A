@@ -39,6 +39,7 @@ namespace final_project
             if (IsInputValid(userInput))
             {
                 database.SetUsername(int.Parse(user.ID), userInput);
+                MessageBox.Show("שם משתמש שונה בהצלחה", "שינוי שם משתמש", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             else MessageBox.Show("תקלה בשינוי שם משתמש", "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -19,3 +19,10 @@ Email: u@u.c
 Gender: נקבה
 Balance: 0
 
+Username: mosesb1
+Password: 123456!M
+ID: 206676843
+Email: m@m.c
+Gender: זכר
+Balance: 0
+

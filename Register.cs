@@ -13,25 +13,29 @@ namespace final_project
 {
     public partial class Register : Form
     {
+        Login loginForm;
         public Register()
         {
             InitializeComponent();
+            loginForm = new Login();
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormClosed += (s, args) =>
+            {
+                // This code runs when the form is closed               
+                loginForm.Show();
+            };
         }
-
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
         }
-
         private void label8_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             Login loginForm = new Login();
             loginForm.Show();
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -113,7 +117,6 @@ namespace final_project
             // If all validations pass
             return true;
         }
-
         private void ClearForm()
         {
             usernameTextBox.Clear();
@@ -121,7 +124,6 @@ namespace final_project
             idTextBox.Clear();
             emailTextBox.Clear();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string username = usernameTextBox.Text;
@@ -141,7 +143,7 @@ namespace final_project
             {
                 MessageBox.Show("ההרשמה למערכת בוצעה בהצלחה", "הרשמה בוצעה", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearForm();
-                Login loginForm = new Login();
+                
                 loginForm.Show();
                 Close();
             }

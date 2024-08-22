@@ -31,32 +31,32 @@ namespace final_project
         private void eng_BuildWords_Click(object sender, EventArgs e)
         {
             var eng1 = new EnglishMenu(user);
-            run(eng1);
+            Run(eng1);
         }
         private void eng_MemoryGame_Click(object sender, EventArgs e)
         {
             var eng2 = new EnglishMemoryGameMenu(user);
-            run(eng2);
+            Run(eng2);
         }
         private void heb_AddSub_Click(object sender, EventArgs e)
         {
             var math1 = new Game_Udi(user);
-            run(math1);
+            Run(math1);
         }
         private void heb_CountAnimals_Click(object sender, EventArgs e)
         {
             var math2 = new GameScreen(user);
-            run(math2);
+            Run(math2);
         }
         private void heb_MemoryGame_Click(object sender, EventArgs e)      //exception locating file img !!!!!
         {
             var heb1 = new Hebrew_Etai(user);
-            run(heb1);
+            Run(heb1);
         }
         private void heb_MatchLetterPhoto_Click(object sender, EventArgs e)
         {
             var heb2 = new HebrewGame_sapir(user);
-            run(heb2);
+            Run(heb2);
         }
         public void updateUserData(User user)
         {
@@ -75,19 +75,19 @@ namespace final_project
         private void Store_Click(object sender, EventArgs e)
         {
             var storeForm = new StoreForm(user);
-            run(storeForm);
+            Run(storeForm);
         }
         private void LogOut_Click(object sender, EventArgs e)
         {
             Login login = new Login();
-            run(login);
+            Run(login);
         }
         private void userInterface_Click(object sender, EventArgs e)
         {
             var userInterface = new UserInterface(new Database(), user);
-            run(userInterface);
+            Run(userInterface);
         }
-        private void run(Form form, Form game = null)
+        private void Run(Form form)
         {
             form.Show();
             Hide();

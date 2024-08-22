@@ -22,16 +22,14 @@ namespace final_project
             DB = new Database();
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.FormClosing += new FormClosingEventHandler(MainForm_FormClosing);
+            FormClosing += new FormClosingEventHandler(MainForm_FormClosing);
         }
         private void signupButton_Click(object sender, EventArgs e)
         {
             Hide();                                     // Hide the login form
             Register registerForm = new Register();     // Create an instance of the register form
             registerForm.Show();                        // Show the register form
-        }
-        
-        
+        }            
         private void loginButton_Click(object sender, EventArgs e)
         {
             string username = usernameTextBox.Text;

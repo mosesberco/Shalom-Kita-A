@@ -142,12 +142,23 @@ namespace final_project
         {
             try
             {
-                var filePath = @"../../storeitems.xlsx";
+                var filePath = @"../storeitems.xlsx";
                 string fullPath = Path.GetFullPath(filePath);
+                Console.WriteLine(fullPath);
 
+                Console.WriteLine("------------ full path of storeitems in load items func --------------");
                 using (var workbook = new XLWorkbook(filePath))
                 {
-                    var worksheet = workbook.Worksheet("items");
+                    IXLWorksheet worksheet = null;
+                    try
+                    {
+                        worksheet = workbook.Worksheet("items");
+                    }catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                        return;
+
+                    }
                     var rows = worksheet.RangeUsed().RowsUsed();
 
                     foreach (var row in rows) // Skip header row
@@ -160,7 +171,8 @@ namespace final_project
                         
                         var imagePath = row.Cell(3).GetValue<string>();
 
-                        string fullImagePath = Path.Combine(Application.StartupPath, @"..\..\" + imagePath);
+                        string fullImagePath = Path.Combine(Application.StartupPath, imagePath);
+                        Console.WriteLine(fullImagePath);
                         Itemstore item = new Itemstore(name, price, fullImagePath);
                         items.Add(item);
                     }
@@ -176,8 +188,7 @@ namespace final_project
                 MessageBox.Show($"Error: {ex.Message}\n{ex.StackTrace}");
             }
         }
-        
-        
+               
         private void BuyItem(Itemstore item)
         {
             if (wallet >= item.Price)
@@ -196,10 +207,11 @@ namespace final_project
         {
             try
             {
-                var filePath = @"../../storeitems.xlsx";
+                var filePath = @"../storeitems.xlsx";
+                Console.WriteLine("the add_to_excel path is");
+                Console.WriteLine( Path.GetFullPath(filePath));
                 bool fileExists = File.Exists(filePath);
                 string fullPath = Path.GetFullPath(filePath);
-                Console.WriteLine(fullPath);
                 string itempath = item.ImagePath;
                 int lastIndex = itempath.LastIndexOf(@"pics");
                 string secondPart = "";
@@ -241,6 +253,9 @@ namespace final_project
                     newRow.Cell(5).Value = secondPart;
 
                     workbook.SaveAs(filePath);
+                    Console.WriteLine("the buying saved in ", filePath);
+
+
                 }
             }
             catch (Exception ex)

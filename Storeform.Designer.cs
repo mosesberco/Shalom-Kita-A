@@ -56,7 +56,7 @@ namespace final_project
             this.westPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.westPanel.Location = new System.Drawing.Point(0, 0);
             this.westPanel.Name = "westPanel";
-            this.westPanel.Size = new System.Drawing.Size(300, 763);
+            this.westPanel.Size = new System.Drawing.Size(300, 781);
             this.westPanel.TabIndex = 0;
             // 
             // pictureBox1
@@ -150,7 +150,7 @@ namespace final_project
             this.AutoSize = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(252)))), ((int)(((byte)(220)))));
-            this.ClientSize = new System.Drawing.Size(1222, 763);
+            this.ClientSize = new System.Drawing.Size(1084, 781);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.westPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

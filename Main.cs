@@ -10,10 +10,19 @@ namespace final_project
         [STAThread]
         public static void Main() {
             //init the data
-            WriteItemsToTextFile(@"../../storeitems.xlsx", @"../../ItemsData.txt");
-            WriteTextFileToExcel(@"../../ItemsData.txt", @"../../storeitems.xlsx");
-            WriteUsersExcelToTextFile(@"../../Users.xlsx", @"../../UsersData.txt");
-            CreateUsersExcelFromTextFile(@"../../UsersData.txt", @"../../Users.xlsx");
+            //string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            //string[] files = Directory.GetFiles(exeDirectory);
+
+            // Print each file name to the console
+            //Console.WriteLine("Files in directory: " + Path.GetFullPath(exeDirectory));
+            //foreach (string file in files)
+            //{
+            //    Console.WriteLine(Path.GetFileName(file));
+            //}
+            //WriteItemsToTextFile(@"../storeitems.xlsx", @"../ItemsData.txt");
+            //WriteTextFileToExcel(@"../ItemsData.txt", @"../storeitems.xlsx");
+            //WriteUsersExcelToTextFile(@"../Users.xlsx", @"../UsersData.txt");
+            //CreateUsersExcelFromTextFile(@"../UsersData.txt", @"../Users.xlsx");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var appLogin = new Login();
@@ -23,13 +32,24 @@ namespace final_project
         {
             if (!File.Exists(excelFilePath))
             {
+                Console.WriteLine("excel file didnt exist");
                 return;
             }
             try
             {
                 using (var workbook = new XLWorkbook(excelFilePath))
                 {
-                    var worksheet = workbook.Worksheet("items");
+                    Console.WriteLine("found workbook, before finding items sheet");
+                    IXLWorksheet worksheet = null;
+                    try
+                    {
+                        worksheet = workbook.Worksheet("items");
+                    }catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                        return;
+
+                    }
                     var rows = worksheet.RangeUsed().RowsUsed();
 
                     using (StreamWriter writer = new StreamWriter(textFilePath))
@@ -49,7 +69,7 @@ namespace final_project
                         }
                     }
                 }
-
+                Console.WriteLine("write items to text ");
             }
             catch (Exception ex)
             {
@@ -60,19 +80,21 @@ namespace final_project
         {
             if (!File.Exists(textFilePath))
             {
+                Console.WriteLine(Path.GetFullPath(textFilePath));
+                Console.WriteLine("didnt find the items text file");
                 return;
             }
             try
             {
                 using (var workbook = new XLWorkbook())
                 {
+                    Console.WriteLine("adding items sheet to the storeitems.xlsx");
                     var worksheet = workbook.Worksheets.Add("items");
 
                     // Write headers
                     worksheet.Cell(1, 1).Value = "Name";
                     worksheet.Cell(1, 2).Value = "Price";
                     worksheet.Cell(1, 3).Value = "Image Path";
-
                     using (StreamReader reader = new StreamReader(textFilePath))
                     {
                         string line;
@@ -93,10 +115,15 @@ namespace final_project
                                 worksheet.Cell(currentRow, 3).Value = line.Substring("Image Path: ".Length);
                                 currentRow++;
                             }
+
+                            Console.WriteLine(worksheet.Cell(currentRow, 1).Value);
+                            Console.WriteLine(worksheet.Cell(currentRow, 2).Value);
+                            Console.WriteLine(worksheet.Cell(currentRow, 3).Value);
                         }
                     }
 
                     workbook.SaveAs(excelFilePath);
+                    Console.WriteLine("write items to excel ");
                 }
             }
             catch (Exception ex)
@@ -112,6 +139,9 @@ namespace final_project
             }
             try
             {
+                Console.WriteLine("--------------------------------");
+                Console.WriteLine(Path.GetFullPath(excelFilePath));
+                Console.WriteLine("--------------------------------");
                 using (var workbook = new XLWorkbook(excelFilePath))
                 {
                     var worksheet = workbook.Worksheet("Users");
@@ -140,6 +170,7 @@ namespace final_project
                         }
                     }
                 }
+                Console.WriteLine("write users to text ");
 
             }
             catch (Exception ex)
@@ -157,6 +188,7 @@ namespace final_project
             {
                 using (var workbook = new XLWorkbook())
                 {
+                    
                     var worksheet = workbook.Worksheets.Add("Users");
 
                     // Write headers
@@ -177,6 +209,7 @@ namespace final_project
                             if (line.StartsWith("Username: "))
                             {
                                 worksheet.Cell(currentRow, 1).Value = line.Substring("Username: ".Length);
+                                Console.WriteLine(worksheet.Cell(currentRow, 1).Value);
                             }
                             else if (line.StartsWith("Password: "))
                             {
@@ -203,6 +236,7 @@ namespace final_project
                     }
 
                     workbook.SaveAs(excelFilePath);
+                    Console.WriteLine("write users to excel ");
                 }
             }
             catch (Exception ex)
@@ -210,7 +244,5 @@ namespace final_project
                 MessageBox.Show($"Error creating Excel file: {ex.Message}");
             }
         }
-
-
     }
 }

@@ -28,10 +28,9 @@ namespace final_project
             UpdateForm();
             items_panel = new Panel();                 
         }
-
         private void loadItems()
         {
-            var storeDB = new Database(@"../../storeitems.xlsx");
+            var storeDB = new Database(@"../storeitems.xlsx");
             items = storeDB.GetItemsByUserId(user);
         }
         private void UpdateForm()
@@ -45,7 +44,6 @@ namespace final_project
             textBoxGender.Text = user.Gender;
             textBoxCoins.Text = database.GetBalance(int.Parse(user.ID)).ToString();
         }
-
         private void buttonChangeUserName_Click(object sender, EventArgs e)
         {
             ChangeUserName changeUserForm = new ChangeUserName(user);
@@ -56,7 +54,6 @@ namespace final_project
                 UpdateForm();
             };
         }
-
         private void buttonChangePassword_Click(object sender, EventArgs e)
         {
             ChangePassword changePasswordForm = new ChangePassword(database, user);
@@ -67,43 +64,6 @@ namespace final_project
                 UpdateForm();
             };
         }
-
-        // private void UpdateRecentPurchases(Dictionary<string, (string, int)> recentPurchases)
-        //{
-        //    // Clear existing images and labels
-        //    pictureBox1.ImageLocation = null;
-        //    pictureBox2.ImageLocation = null;
-        //    pictureBox3.ImageLocation = null;
-
-        //    labelProduct1.Text = string.Empty;
-        //    labelProduct2.Text = string.Empty;
-        //    labelProduct3.Text = string.Empty;
-
-        //    // Update controls based on recent purchases
-        //    int index = 0;
-        //    foreach (var purchase in recentPurchases)
-        //    {
-
-        //        if (index == 0)
-        //        {
-        //            pictureBox1.ImageLocation = purchase.Value.Item1;
-        //            labelProduct1.Text = purchase.Key;
-        //        }
-        //        else if (index == 1)
-        //        {
-        //            pictureBox2.ImageLocation = purchase.Value;
-        //            labelProduct2.Text = purchase.Key;
-        //        }
-        //        else if (index == 2)
-        //        {
-        //            pictureBox3.ImageLocation = purchase.Value;
-        //            labelProduct3.Text = purchase.Key;
-        //        }
-        //        else { break; }
-        //        index++;
-        //    }
-        //}
-        // Assuming flowLayoutPanel1 is your FlowLayoutPanel
         private void AddItemToUI(Dictionary<string, (string, int)> items)
         {
             // Clear existing controls
@@ -117,7 +77,7 @@ namespace final_project
                     Height = ItemHeight + 100,
                     Margin = new Padding(5)
                 };
-                string fullImagePath = Path.Combine(Application.StartupPath, @"..\..\" + item.Value.Item1);
+                string fullImagePath = Path.Combine(Application.StartupPath, item.Value.Item1);
 
                 var pictureBox = new PictureBox
                 {
